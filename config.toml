@@ -1478,16 +1478,14 @@ uglyURLs = false
     # 作者信息
     [params.author]
         # 名字
-        name = "reuixiy"
+        name = "wsw"
         # 邮箱
-        email = "reuixiy@gmail.com"
+        email = "wbzddwsw@gmail.com"
         # 座右铭或简介
-        motto = "Viva La Vida"
+        motto = "不作诗则做诗"
         # 头像
         avatar = "/icons/apple-touch-icon.png"
         # 网站（默认值：baseURL）
-        website = "https://io-oi.me/"
-        # 推特
-        twitter = "reuixiy"
+        website = "https://donbro.vercel.app/"
         # Fediverse
-        fediverse = "@reuixiy@bird.makeup"
+        fediverse = "@donbro@stelpolva.moe"

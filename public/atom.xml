@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">长眠动物的白天</title>
     <subtitle type="html">MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
-    <updated>2025-04-01T22:05:30&#43;08:00</updated>
+    <updated>2025-04-02T01:10:59&#43;08:00</updated>
     <id>http://localhost:1313/</id>
     <link rel="alternate" type="text/html" href="http://localhost:1313/" />
     <link rel="self" type="application/atom&#43;xml" href="http://localhost:1313/atom.xml" />
@@ -16,6 +16,179 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.145.0">Hugo</generator>
+        <entry>
+            <title type="text">小白博客部署记录</title>
+            <link rel="alternate" type="text/html" href="http://localhost:1313/posts/%E5%B0%8F%E7%99%BD%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/" />
+            <id>http://localhost:1313/posts/%E5%B0%8F%E7%99%BD%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/</id>
+            <updated>2025-04-02T01:10:28&#43;08:00</updated>
+            <published>2025-04-02T01:00:56&#43;08:00</published>
+            <author>
+                    <name>reuixiy</name>
+                    <uri>https://io-oi.me/</uri>
+                    <email>reuixiy@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">由于本人没有相关理论知识储备，所以这篇文章不包含原理讲解，纯粹的操作记录。</summary>
+            
+                <content type="html">&lt;blockquote&gt;
+&lt;p&gt;感谢“小球飞鱼”的教程，以及在这个过程提供帮助的各位朋友。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h1 id=&#34;下载软件注册账号&#34;&gt;&lt;a href=&#34;http://localhost:1313/posts/%E5%B0%8F%E7%99%BD%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/#下载软件注册账号&#34; class=&#34;anchor-link&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34; class=&#34;icon anchor-icon&#34;&gt;&lt;path d=&#34;M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;下载软件，注册账号&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Hugo 下载地址：&lt;a href=&#34;https://github.com/gohugoio/hugo/releases&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/gohugoio/hugo/releases&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;打开链接后往下拉，找到&lt;strong&gt;Assets&lt;/strong&gt;，下载最新的带&lt;strong&gt;extended&lt;/strong&gt;的版本，或者直接点&lt;a href=&#34;https://github.com/gohugoio/hugo/releases/download/v0.145.0/hugo_extended_0.145.0_windows-amd64.zip&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;hugo_extended_0.145.0_windows-amd64.zip&lt;/a&gt;下载&lt;/p&gt;
+&lt;p&gt;下载后解压到解压博客文件夹在的位置，比如说，我在D盘建了一个blog文件，那么解压后的hugo文件夹就要移动到这个blog文件夹里（后文举例都用这个）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Git 下载地址：&lt;a href=&#34;https://git-scm.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://git-scm.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;打开链接后点击&lt;code&gt;Download for Windows&lt;/code&gt;，下载64-bit Git for Windows Setup，或者直接点&lt;a href=&#34;https://github.com/git-for-windows/git/releases/download/v2.49.0.windows.1/Git-2.49.0-64-bit.exe&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Git-2.49.0-64-bit.exe&lt;/a&gt;下载&lt;/p&gt;
+&lt;p&gt;下载后安装，安装路径随意，一直点下一步直到安装成功&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Github账号 注册网址：&lt;a href=&#34;https://github.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;最好用谷歌邮箱，或者别的国外邮箱&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Github Desktop 下载地址：&lt;a href=&#34;https://github.com/apps/desktop&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/apps/desktop&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;VScode 下载地址：&lt;a href=&#34;https://code.visualstudio.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://code.visualstudio.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下载后点击左下角&lt;code&gt;设置&lt;/code&gt;，再点击&lt;code&gt;Extensions&lt;/code&gt;（扩展），搜索Chinese Language Pack for Visual Studio Code（汉化） 和Markdown All in One插件，点击install安装&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;汉化插件启动：快捷键【Ctrl+Shift+P】打开命令搜索框，输入【configure language】,点击【Display language】这行，点击【中文（简体）】这行，在弹出框中点【Restart】重启VScode&lt;/p&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;安装hugo&#34;&gt;&lt;a href=&#34;http://localhost:1313/posts/%E5%B0%8F%E7%99%BD%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/#安装hugo&#34; class=&#34;anchor-link&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34; class=&#34;icon anchor-icon&#34;&gt;&lt;path d=&#34;M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;安装HUGO&lt;/h1&gt;
+&lt;p&gt;Hugo.exe放在D盘的blog文件中，可以从文件上方看到文件路径为&lt;strong&gt;D:\blog\hugo_extended_0.145.0_windows-amd64&lt;/strong&gt;，复制路径&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;【win+R】，输入&lt;code&gt;sysmd.cpl&lt;/code&gt;，按回车&lt;/li&gt;
+&lt;li&gt;进入&lt;strong&gt;高级&lt;/strong&gt;选项卡，点击&lt;code&gt;环境变量&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;在&lt;strong&gt;系统变量&lt;/strong&gt;部分，找到&lt;strong&gt;Path变量&lt;/strong&gt;，点击&lt;code&gt;编辑&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;在&lt;strong&gt;编辑环境变量&lt;/strong&gt;窗口中，点击&lt;code&gt;新建&lt;/code&gt;，然后将上面的路径粘贴到这里&lt;/li&gt;
+&lt;li&gt;依次点&lt;strong&gt;确定&lt;/strong&gt;关闭所有窗口&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;测试是否成功：（命令窗口复制粘贴只能右键，不能用快捷键）&lt;/p&gt;
+&lt;p&gt;在&lt;strong&gt;D:\blog&lt;/strong&gt;中任意空白处&lt;code&gt;右键&lt;/code&gt;，点击&lt;code&gt;Open Git Bash Here&lt;/code&gt;，在弹出的命令行界面中输入：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo version
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果步骤正确，会显示：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo v0.145.0-666444f0a52132f9fec9f71cf25b441cc6a4f355+extended windows/amd64 BuildDate=2025-02-26T15:41:25Z VendorInfo=gohugoio
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;显示结果中的&lt;strong&gt;0.145.0&lt;/strong&gt;是hugo的版本号，后面需要用&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h1 id=&#34;搭建博客&#34;&gt;&lt;a href=&#34;http://localhost:1313/posts/%E5%B0%8F%E7%99%BD%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/#搭建博客&#34; class=&#34;anchor-link&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34; class=&#34;icon anchor-icon&#34;&gt;&lt;path d=&#34;M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;搭建博客&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;注册Verce：&lt;a href=&#34;https://vercel.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://vercel.com&lt;/a&gt;，点击右上角&lt;code&gt;Sign Up&lt;/code&gt;，选择&lt;code&gt;  I&#39;m working on personal projects&lt;/code&gt;（hobby），给自己取个名字，再点击&lt;code&gt;Continue&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;选择&lt;code&gt;使用Github账号注册&lt;/code&gt;，登录前面注册的github账号，弹出授权窗口时，点击&lt;code&gt;Authorize Vercel&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在Let&#39;s build something new页面，点击右边Clone Template项目下方的&lt;code&gt;Browse All Templates&lt;/code&gt;，左边搜索栏输入&lt;code&gt;hugo&lt;/code&gt;，会出现&lt;strong&gt;Hugo Starter&lt;/strong&gt;项目，点开&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果没有看到这个界面，点击右上角&lt;code&gt;头像&lt;/code&gt;，点击&lt;code&gt;Dashboard&lt;/code&gt;，点击右上角黑色的&lt;code&gt;Add New project&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;点击左边&lt;code&gt;Deploy&lt;/code&gt;，点击&lt;strong&gt;Git Scope&lt;/strong&gt;的&lt;code&gt;下拉列表&lt;/code&gt;，点击&lt;code&gt;Add GitHub Org or Account&lt;/code&gt;，弹出安装窗口，点击&lt;code&gt;Install&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在Git Scope下拉列表中点击&lt;code&gt;你的Github账户&lt;/code&gt;，在右侧Private Repository Name位置输入仓库名，我这里输入donbro==（这个名字很重要！它决定了博客的域名！）==，点击&lt;code&gt;Create&lt;/code&gt;，大概等1分钟左右，会弹出来一个**Congratulations！**的弹窗，代表Vercel已经自动搭建好一个Hugo博客&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;点击&lt;code&gt;Continue to Dashboard&lt;/code&gt;进入管理页面，Domains下面的&lt;strong&gt;donbro.vercel.app&lt;/strong&gt;就是自动分配的访问网址域名，点击可以直接进入博客&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;点击右上角&lt;code&gt;头像&lt;/code&gt;，点击&lt;code&gt;Dashboard&lt;/code&gt;，看到刚刚建立的Hugo项目，点击项目&lt;code&gt;右上角三个点&lt;/code&gt;后再点击&lt;code&gt;Setting&lt;/code&gt;进入设置&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;点击左侧&lt;code&gt;Environment Variables&lt;/code&gt;，key处填写&lt;code&gt;HUGO_VERSION&lt;/code&gt;，Value处填写&lt;code&gt;版本号&lt;/code&gt;(上面写了怎么查)，最后点击&lt;code&gt;save&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;推送到github&#34;&gt;&lt;a href=&#34;http://localhost:1313/posts/%E5%B0%8F%E7%99%BD%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/#推送到github&#34; class=&#34;anchor-link&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34; class=&#34;icon anchor-icon&#34;&gt;&lt;path d=&#34;M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;推送到Github&lt;/h1&gt;
+&lt;p&gt;这个博客更新的顺序是，你在本地新建一篇md文件，然后通过github Desktop同步更新到Github，然后再更新到你的博客域名&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在D盘的blog文件夹中新建一个名为&lt;strong&gt;donbro&lt;/strong&gt; 的==空==文件夹，这里特意和vercel的项目同名是为了方便自己看&lt;/li&gt;
+&lt;li&gt;打开Github Desktop，登录Github账号，选择&lt;code&gt;Clone a repository from the internet…&lt;/code&gt;（也就是把刚刚在vercel建立的项目克隆到github）&lt;/li&gt;
+&lt;li&gt;跳出的Clone a repository弹框中，注意下面的&lt;strong&gt;Local path&lt;/strong&gt;，这里要点击左边的&lt;code&gt;choose&lt;/code&gt;选择刚刚新建的donbro空文件夹&lt;/li&gt;
+&lt;li&gt;点击左边&lt;code&gt;Changes&lt;/code&gt;栏，点击文件名可以看到具体内容，&lt;code&gt;勾选要同步的文件&lt;/code&gt;，下方&lt;code&gt;Summary(required)&lt;/code&gt;为本次更新行为命名，再点击最下面&lt;code&gt;Commit to main&lt;/code&gt;提交，最后点击上方第三个大黑框&lt;code&gt;Push origin&lt;/code&gt;进行推送&lt;/li&gt;
+&lt;li&gt;登录github网页，点击右上角&lt;code&gt;头像&lt;/code&gt;，选择&lt;code&gt;Your repositories&lt;/code&gt;，点击&lt;code&gt;donbro&lt;/code&gt;仓库，左边是更新记录和文件，右边可以看到一个蓝色链接&lt;a href=&#34;https://donbro.vercel.app/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;donbro.vercel.app&lt;/a&gt;，点击就可以进入博客，也可以从vercel项目中进入&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果你想在同步到github之前预览效果：&lt;/p&gt;
+&lt;p&gt;编辑好文件后，在&lt;strong&gt;D:\blog\github_wsw_hugo\donbro&lt;/strong&gt;文件夹的空白处单击右键，选择&lt;code&gt;Open Git Bash Here&lt;/code&gt;，在弹出的命令行界面中输入：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo server
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果步骤正确，会显示：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Watching for changes in D:\blog\github_wsw_hugo\donbro\{archetypes,content,theme
+s}
+Watching for config changes in D:\blog\github_wsw_hugo\donbro\config.toml
+Start building sites …
+hugo v0.145.0-666444f0a52132f9fec9f71cf25b441cc6a4f355+extended windows/amd64 Bu
+ildDate=2025-02-26T15:41:25Z VendorInfo=gohugoio
+
+
+                | ZH-CN
+-------------------+--------
+Pages            |    11
+Paginator pages  |     0
+Non-page files   |     0
+Static files     |    11
+Processed images |     0
+Aliases          |     0
+Cleaned          |     0
+
+Built in 110 ms
+Environment: &amp;#34;development&amp;#34;
+Serving pages from disk
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableF
+astRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Press Ctrl+C to stop
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;显示结果最后的**&lt;a href=&#34;http://localhost:1313&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://localhost:1313&lt;/a&gt;**就是预览网址&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h1 id=&#34;新建文章&#34;&gt;&lt;a href=&#34;http://localhost:1313/posts/%E5%B0%8F%E7%99%BD%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/#新建文章&#34; class=&#34;anchor-link&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34; class=&#34;icon anchor-icon&#34;&gt;&lt;path d=&#34;M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;新建文章&lt;/h1&gt;
+&lt;p&gt;在&lt;strong&gt;D:\blog\github_wsw_hugo\donbro&lt;/strong&gt;文件夹的空白处单击右键，选择&lt;code&gt;Open Git Bash Here&lt;/code&gt;，在弹出的命令行界面中输入：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo new posts/文章名字.md
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;回车后，hugo会在&lt;strong&gt;D:\blog\github_wsw_hugo\donbro\content\posts&lt;/strong&gt;文件夹中创建一个新的md文件，用Markdown编辑器（比如Tyopa）打开后，就可以写文章了&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;文章属性模板：用以指定文章的标题、分类、Tag、是否为草稿、是否隐藏等属性。&lt;/p&gt;
+&lt;p&gt;打开&lt;strong&gt;D:\blog\github_wsw_hugo\donbro\content\posts\archetypes&lt;/strong&gt;文件夹下的&lt;code&gt;default.md&lt;/code&gt;文件，将下面的代码粘贴进去，不需要的属性可以自由删除（【】内是解释，请自行删除）&lt;/p&gt;&lt;/blockquote&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;---
+title: &amp;#34;{{ replace .Name &amp;#34;-&amp;#34; &amp;#34; &amp;#34; | title }}&amp;#34;【用git新建文章会自动填写】
+author: &amp;#34;&amp;#34;【作者，建议填入本人名字默认】
+description: &amp;#34;&amp;#34;【描述】
+date: {{ .Date }}【自动填写建立时间】
+categories: [&amp;#34;&amp;#34;]【分类】
+tags: [&amp;#34;&amp;#34;,&amp;#34;&amp;#34;]【标签】
+draft: 【是否为草稿，可以填false/ture默认，或者每次新建文件自行填写】
+hidden: 【是否隐藏，可以填false/ture默认，或者每次新建文件自行填写】
+---
+&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="http://localhost:1313/categories/%E5%8D%9A%E5%AE%A2%E5%AD%A6%E4%B9%A0/" term="博客学习" label="博客学习" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="http://localhost:1313/tags/%E8%BD%AF%E4%BB%B6%E6%93%8D%E4%BD%9C/" term="软件操作" label="软件操作" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">My First Post</title>
             <link rel="alternate" type="text/html" href="http://localhost:1313/posts/my-first-post/" />
