@@ -1,5 +1,10 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
+description: ""
+author: "wsw"
 date: {{ .Date }}
-draft: true
+categories: ["未分类"]
+tags: []
+draft: 
+hidden: 
 ---
