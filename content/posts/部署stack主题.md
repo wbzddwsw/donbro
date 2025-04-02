@@ -19,7 +19,9 @@ hidden: false
 
 2. 将/stack/exampleSite中的**Content**和**hugo.yaml**复制到博客主文件夹中
 
-3. 打开**hugo.yaml**，将theme内容修改为`stack`跟主题文件夹同名，保存退出
+3. 删除content/post/**rich-content**
+
+4. 打开**hugo.yaml**，将theme内容修改为`stack`跟主题文件夹同名，保存退出
 
 > 测试能否正常运行:
 >
