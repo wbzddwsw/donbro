@@ -1,6 +1,6 @@
 ---
 title: "Hugo-stack主题修改学习记录"
-description: "一点一点研究hugo.yaml文件"
+description: "这里是hugo.html文件的逐行讲解，会有一些改起来比较简单的地方东西，更复杂的自定义会单独记录"
 author: "wsw"
 date: 2025-04-02T14:08:36+08:00
 categories: ["博客学习"]
@@ -8,8 +8,6 @@ tags: ["Hugo","stack"]
 draft: false
 hidden: false
 ---
-
-### 关于hugo.html文档
 
 #### 基础设置
 
@@ -68,7 +66,7 @@ languages:
                 subtitle: 不作詩則做詩       
 ```
 
-#### 第三方服务，目前包含评论系统和谷歌分析（因为已经配置了waline评论，所以这段跳过）
+#### 第三方服务，目前包含评论系统和谷歌分析（已经单独记录怎么配置waline评论，所以这段跳过）
 
 ```
 services: 
@@ -134,7 +132,7 @@ article: //文章
 
 ##### comments //评论
 
-###### 多个评论系统的集成配置展示
+###### 多个评论系统的集成配置展示 //未启用，跳过
 
 ```
  enabled: true //是否启用评论功能
@@ -188,7 +186,7 @@ article: //文章
                 - url //个人网站链接
             locale:
                 admin: 博主
-                placeholder: //评论区占位符文本，可留空
+                placeholder:你好~ //评论区占位符文本，可留空
 ```
 
 ###### 多种评论系统的配置
@@ -236,13 +234,13 @@ cusdis: //未启用
 widgets: //小部件
       homepage: //首页
             - type: search //搜索框
-            - type: archives //归档
+            - type: archives //归档 准备改名文章并保留左边，所以这里我会删除
               params:
                   limit: 5 //最多显示5个项目
-            - type: categories //分类
+            - type: categories //分类 这个也准备保留左边，删除
               params:
                   limit: 10 //最多显示10个项目
-            - type: tag-cloud //标签云
+            - type: tag-cloud //标签云 保留左边，删除
               params:
                   limit: 10 //最多显示10个项目
         page: //文章

@@ -13,7 +13,7 @@ hidden: false
 >
 > 本文仅作为方便自己以后回顾的的操作记录
 
-# 下载软件，注册账号
+#### 下载软件，注册账号
 
 1. Hugo 下载地址：[https://github.com/gohugoio/hugo/releases](https://github.com/gohugoio/hugo/releases)
 
@@ -39,7 +39,7 @@ hidden: false
 
    > 汉化插件启动：快捷键【Ctrl+Shift+P】打开命令搜索框，输入【configure language】,点击【Display language】这行，点击【中文（简体）】这行，在弹出框中点【Restart】重启VScode
 
-# 安装HUGO
+#### 安装HUGO
 
 Hugo.exe放在D盘的blog文件中，可以从文件上方看到文件路径为**D:\blog\hugo_extended_0.145.0_windows-amd64**，在地址栏复制路径
 
@@ -59,7 +59,7 @@ Hugo.exe放在D盘的blog文件中，可以从文件上方看到文件路径为*
 >
 > 显示结果中的**0.145.0**是hugo的版本号，后面需要用
 
-# 搭建博客 
+#### 搭建博客
 
 1. 注册Verce：[https://vercel.com](https://vercel.com)，点击右上角`Sign Up`，选择`  I'm working on personal projects`（hobby），给自己取个名字，再点击`Continue`
 
@@ -79,7 +79,7 @@ Hugo.exe放在D盘的blog文件中，可以从文件上方看到文件路径为*
 
 8. 点击左侧`Environment Variables`，key处填写`HUGO_VERSION`，Value处填写`版本号`(上面写了怎么查)，最后点击`save`
 
-# 推送到Github
+#### 推送到Github
 
 这个博客更新的顺序是，你在本地新建一篇md文件，然后通过github Desktop同步更新到Github，然后再更新到你的博客域名
 
@@ -123,7 +123,7 @@ Hugo.exe放在D盘的blog文件中，可以从文件上方看到文件路径为*
 > 
 > 显示结果最后的**[http://localhost:1313](http://localhost:1313)**就是预览网址
 
-# 新建文章
+#### 新建文章
 
 在**D:\blog\github_wsw_hugo\donbro**文件夹的空白处单击右键，选择`Open Git Bash Here`，在弹出的命令行界面中输入`hugo new posts/文章名字.md`，回车后，hugo会在**D:\blog\github_wsw_hugo\donbro\content\posts**文件夹中创建一个新的md文件，用Markdown编辑器（比如Tyopa）打开后，就可以写文章了
 
@@ -144,3 +144,9 @@ Hugo.exe放在D盘的blog文件中，可以从文件上方看到文件路径为*
 >```
 
 > 提示：单击右键，选择`Open Git Bash Here`，然后在git中输入命令的前提是，==右键时文件夹内必须有config.toml文件==。
+
+#### 安装主题
+
+其实这篇流水账记录到上面就已经结束了，剩下的是更复杂的花里胡哨部分~
+
+在此附上Hugo主题下载网址：[https://themes.gohugo.io/](https://themes.gohugo.io/)，大(剩)家(下)自(的)由(我)发(不)挥(会)吧(了)！
