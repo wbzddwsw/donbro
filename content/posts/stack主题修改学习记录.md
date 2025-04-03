@@ -373,5 +373,3 @@ markup:
         lineNumbersInTable: true //行号放在表格里
         tabWidth: 4 //Tab键的宽度
 ```
-
-### 当我安装了这个主题，怎么按照心意修改
