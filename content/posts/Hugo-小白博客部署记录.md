@@ -1,10 +1,10 @@
 ---
-title: "小白博客部署记录"
+title: "Hugo-小白博客部署记录"
 description: "由于本人没有相关理论知识储备，所以这篇文章不包含原理讲解"
 author: "wsw"
 date: 2025-04-02T01:00:56+08:00
 categories: ["博客学习"]
-tags: ["软件操作"]
+tags: ["Hugo"]
 draft: false
 hidden: false
 ---

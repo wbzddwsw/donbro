@@ -1,10 +1,10 @@
 ---
-title: "部署stack主题"
+title: "Hugo-部署stack主题"
 description: "尝试git没成功，所以用的是手动下载的办法"
 author: "wsw"
 date: 2025-04-02T11:53:59+08:00
 categories: ["博客学习"]
-tags: [软件操作]
+tags: ["Hugo","stack"]
 draft: false
 hidden: false
 ---

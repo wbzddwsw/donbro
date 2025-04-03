@@ -1,10 +1,10 @@
 ---
-title: "用waline添加留言功能"
+title: "Hugo-用waline添加留言功能"
 description: "本记录基于stack主题"
 author: "wsw"
 date: 2025-04-02T11:55:04+08:00
 categories: ["博客学习"]
-tags: [软件操作]
+tags: ["Hugo","stack"]
 draft: false
 hidden: false
 ---

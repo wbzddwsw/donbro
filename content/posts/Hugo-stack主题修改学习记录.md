@@ -1,10 +1,10 @@
 ---
-title: "stack主题修改学习记录"
+title: "Hugo-stack主题修改学习记录"
 description: "一点一点研究hugo.yaml文件"
 author: "wsw"
 date: 2025-04-02T14:08:36+08:00
 categories: ["博客学习"]
-tags: [软件操作]
+tags: ["Hugo","stack"]
 draft: false
 hidden: false
 ---
