@@ -1,0 +1,125 @@
+{{- $name := .Get "name" | default (.Get 0) -}}
+{{- $url := .Get "url" | default (.Get 1) -}}
+{{- $avatar := .Get "avatar" | default (.Get 2) -}}
+{{- $bio := .Get "bio" | default (.Get 3) -}}
+
+
+<a href="{{- $url -}}" title="{{- $name -}}" class="friend-link" target="_blank" rel="friend">
+    <div class="friend-link-div">
+        <div class="friend-link-avatar">
+            <img src={{ .Get "avatar" }} class="friend-avatar" loading="lazy" alt="Avatar">
+        </div>
+        <div class="friend-link-info">
+            <i class="fa fa-link" aria-hidden="true"></i>
+            <i class="friend-name">{{ $name }}</i>
+            <p class="friend-bio">{{ $bio }}</p>
+        </div>
+    </div>
+</a>
+
+<style>
+  /* ---------- 友链卡片样式开始 ---------- */  a {  
+    text-decoration: none;  
+    color: inherit;  
+    background-size: 0 !important;  
+  }  
+  
+  a:hover {  
+    text-decoration: none;  
+    color: inherit;  
+    background-size: 0 !important;  
+  }  
+  
+  .friend-link {  
+    display: block;  
+    width: 100%;  
+    margin: 1rem auto;  
+    text-decoration: none;  
+    border-radius: 12px;  
+    overflow: hidden;  
+    background-color: #fff;  
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);  
+    transition: transform 0.2s ease;  
+  }  
+  
+  .friend-link-div {  
+    display: flex;  
+    align-items: center;  
+    padding: 0 16px;  
+  }  
+  
+  .friend-avatar {  
+    width: 56px;  
+    height: 56px;  
+    border-radius: 50%;  
+    object-fit: cover;  
+    flex-shrink: 0;  
+    margin-right: 10px;  
+  }  
+  
+  .friend-link-info {  
+    display: flex;  
+    flex-direction: column;  
+    justify-content: center;  
+  }  
+  
+  .friend-name {  
+    font-size: 16px;  
+    font-weight: bolder;  
+    font-style: normal;  
+    color: #444;  
+    margin-bottom: 0;  
+    margin-top: 0;  
+    margin-left: 12px;  
+  }  
+  
+  .friend-bio {  
+    font-size: 14px;  
+    color: #666;  
+    line-height: 1.4;  
+    overflow: hidden;  
+    text-overflow: ellipsis;  
+    margin-top: 0;  
+    margin-bottom: 0;  
+    margin-left: 12px;  
+  }  
+  
+  /* 夜间模式适配 */  .dark .friend-link {  
+    background-color: #5D5470;  
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);  
+  }  
+  
+  .dark .friend-name {  
+    color: #ddd;  
+  }  
+  
+  .dark .friend-bio {  
+    color: #F5F5F5;  
+  }  
+  
+  .dark .friend-avatar {  
+    border-color: #444;  
+  }  
+  
+  /* 响应式优化 */  @media screen and (max-width: 600px) {  
+    .friend-link-div {  
+      flex-direction: row;  
+      padding: 12px 16px;  
+    }  
+  
+    .friend-avatar {  
+      width: 56px;  
+      height: 56px;  
+      margin-right: 12px;  
+    }  
+  
+    .friend-name {  
+      font-size: 16px;  
+    }  
+  
+    .friend-bio {  
+      font-size: 14px;  
+    }  
+  }  
+  /* ---------- 友链卡片样式结束 ---------- */
+</style>
