@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on 树响集</title>
+    <title>Categories on Blog | 树响集</title>
     <link>http://localhost:1313/categories/</link>
-    <description>Recent content in Categories on 树响集</description>
+    <description>Recent content in Categories on Blog | 树响集</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <copyright>© 2025 </copyright>
+    <language>zh-cnn</language>
+    <copyright>&lt;small&gt;© 作者保留所有权利，禁止转载。&lt;br&gt;由 Hugo 和 Blowfish 驱动。</copyright>
     <lastBuildDate>Thu, 03 Apr 2025 10:45:16 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     
     <item>

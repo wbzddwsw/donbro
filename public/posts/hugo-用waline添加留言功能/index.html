@@ -3,13 +3,13 @@
   data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   
-  <meta http-equiv="content-language" content="zh-CN" />
+  <meta http-equiv="content-language" content="zh-cnn" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Hugo-用waline添加留言功能 &middot; 树响集</title>
-  <meta name="title" content="Hugo-用waline添加留言功能 &middot; 树响集" />
+  <title>Hugo-用waline添加留言功能 &middot; Blog | 树响集</title>
+  <meta name="title" content="Hugo-用waline添加留言功能 &middot; Blog | 树响集" />
   
   <meta name="description" content="本记录基于stack主题" />
   <meta name="keywords" content="Hugo, stack, " />
@@ -65,10 +65,10 @@
   
   
   <meta property="og:url" content="http://localhost:1313/posts/hugo-%E7%94%A8waline%E6%B7%BB%E5%8A%A0%E7%95%99%E8%A8%80%E5%8A%9F%E8%83%BD/">
-  <meta property="og:site_name" content="树响集">
+  <meta property="og:site_name" content="Blog | 树响集">
   <meta property="og:title" content="Hugo-用waline添加留言功能">
   <meta property="og:description" content="本记录基于stack主题">
-  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale" content="zh_cnn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-04-02T11:55:04+08:00">
@@ -90,12 +90,12 @@
     "name": "Hugo-用waline添加留言功能",
     "headline": "Hugo-用waline添加留言功能",
     "description": "本记录基于stack主题",
-    "abstract": "\u003ch1 class=\u0022relative group\u0022\u003e注册LeanCloud \n    \u003cdiv id=\u0022%E6%B3%A8%E5%86%8Cleancloud\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\n    \n    \u003cspan\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700\u0022\n            style=\u0022text-decoration-line: none !important;\u0022 href=\u0022#%E6%B3%A8%E5%86%8Cleancloud\u0022 aria-label=\u0022Anchor\u0022\u003e#\u003c\/a\u003e\n    \u003c\/span\u003e        \n    \n\u003c\/h1\u003e\n\u003cp\u003e注册地址：\u003ca href=\u0022https:\/\/console.leancloud.app\/register\u0022 target=\u0022_blank\u0022\u003ehttps:\/\/console.leancloud.app\/register（国际版）\u003c\/a\u003e（如果是自己网页搜索的，注意必须注册国际版）\u003c\/p\u003e\n\u003cp\u003e进入控制台，点击左上角\u003ccode\u003e创建应用\u003c\/code\u003e并起一个名字 ，这里必须选免费的开发版\u003c\/p\u003e\n\u003cp\u003e进入应用，点击项目左下角\u003ccode\u003e设置\u003c\/code\u003e，再选择左下角的 \u003ccode\u003e设置\u003c\/code\u003e、\u003ccode\u003e应用凭证\u003c\/code\u003e，记录\u003cstrong\u003eApp ID\u003c\/strong\u003e、\u003cstrong\u003eApp Key\u003c\/strong\u003e和\u003cstrong\u003eMaster Key\u003c\/strong\u003e的内容。\u003c\/p\u003e\n\n\n\u003ch1 class=\u0022relative group\u0022\u003eVercel 部署 (服务端) \n    \u003cdiv id=\u0022vercel-%E9%83%A8%E7%BD%B2-%E6%9C%8D%E5%8A%A1%E7%AB%AF\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\n    \n    \u003cspan\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700\u0022\n            style=\u0022text-decoration-line: none !important;\u0022 href=\u0022#vercel-%E9%83%A8%E7%BD%B2-%E6%9C%8D%E5%8A%A1%E7%AB%AF\u0022 aria-label=\u0022Anchor\u0022\u003e#\u003c\/a\u003e\n    \u003c\/span\u003e        \n    \n\u003c\/h1\u003e\n\u003cp\u003e如果已有账号请直接从第三步开始\u003c\/p\u003e\n\u003col\u003e\n\u003cli\u003e\n\u003cp\u003e注册Verce：\u003ca href=\u0022https:\/\/vercel.com\u0022 target=\u0022_blank\u0022\u003ehttps:\/\/vercel.com\u003c\/a\u003e，点击右上角\u003ccode\u003eSign Up\u003c\/code\u003e，选择\u003ccode\u003e  I\u0027m working on personal projects\u003c\/code\u003e（hobby），给自己取个名字，再点击\u003ccode\u003eContinue\u003c\/code\u003e\u003c\/p\u003e\n\u003c\/li\u003e\n\u003cli\u003e\n\u003cp\u003e选择\u003ccode\u003e使用Github账号注册\u003c\/code\u003e，登录前面注册的github账号，弹出授权窗口时，点击\u003ccode\u003eAuthorize Vercel\u003c\/code\u003e\u003c\/p\u003e\n\u003c\/li\u003e\n\u003cli\u003e\n\u003cp\u003e在Let\u0026rsquo;s build something new页面，点击右边Clone Template项目下方的\u003ccode\u003eBrowse All Templates\u003c\/code\u003e，左边搜索栏输入\u003ccode\u003ehugo\u003c\/code\u003e，会出现\u003cstrong\u003eHugo Starter\u003c\/strong\u003e项目，点开\u003c\/p\u003e\n\u003cblockquote\u003e\n\u003cp\u003e如果没有看到这个界面，点击右上角\u003ccode\u003e头像\u003c\/code\u003e，点击\u003ccode\u003eDashboard\u003c\/code\u003e，点击右上角黑色的\u003ccode\u003eAdd New project\u003c\/code\u003e\u003c\/p\u003e\u003c\/blockquote\u003e\n\u003c\/li\u003e\n\u003cli\u003e\n\u003cp\u003e点击左边\u003ccode\u003eDeploy\u003c\/code\u003e，点击\u003cstrong\u003eGit Scope\u003c\/strong\u003e的\u003ccode\u003e下拉列表\u003c\/code\u003e，点击\u003ccode\u003eAdd GitHub Org or Account\u003c\/code\u003e，弹出安装窗口，点击\u003ccode\u003eInstall\u003c\/code\u003e\u003c\/p\u003e\n\u003c\/li\u003e\n\u003cli\u003e\n\u003cp\u003e在Git Scope下拉列表中点击\u003ccode\u003e你的Github账户\u003c\/code\u003e，在右侧Private Repository Name位置输入仓库名，我这里输入liuyan，点击\u003ccode\u003eCreate\u003c\/code\u003e，大概等1分钟左右，会弹出来一个**Congratulations！**的弹窗，代表Vercel已经自动搭建好一个Hugo博客\u003c\/p\u003e",
-    "inLanguage": "zh-CN",
+    
+    "inLanguage": "zh-cnn",
     "url" : "http:\/\/localhost:1313\/posts\/hugo-%E7%94%A8waline%E6%B7%BB%E5%8A%A0%E7%95%99%E8%A8%80%E5%8A%9F%E8%83%BD\/",
     "author" : {
       "@type": "Person",
-      "name": ""
+      "name": "树响集"
     },
     "copyrightYear": "2025",
     "dateCreated": "2025-04-02T11:55:04\u002b08:00",
@@ -106,12 +106,27 @@
     "keywords": ["Hugo","stack"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "248"
+    "wordCount": "1830"
   }]
   </script>
 
 
   
+  
+  <meta name="author" content="树响集" />
+  
+  
+  
+  <link href="https://github.com/wbzddwsw/one" rel="me" />
+  
+  
+  <link href="https://stelpolva.moe/@donbro" rel="me" />
+  
+  
+  <link href="https://tube.pari.cafe/a/wsw/video-channels" rel="me" />
+  
+  
+  <link href="https://weibo.com/u/2506091025" rel="me" />
   
   
   
@@ -156,7 +171,7 @@
   <div id="the-top" class="absolute flex self-center">
     <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
       href="#main-content"><span
-        class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>Skip to main content</a>
+        class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>跳过正文</a>
   </div>
   
   
@@ -167,12 +182,155 @@
         <nav class="flex space-x-3">
 
             
-            <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">树响集</a>
-            
 
         </nav>
         <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
 
+            
+            
+            
+  <a href="/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="早上中午晚上好~">
+        首页
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="Posts">
+        文章
+    </p>
+</a>
+
+
+
+            
+             
+  <div>
+  <div class="cursor-pointer flex items-center nested-menu">
+    
+    <a  href="#"   class="text-base font-medium text-gray-500 hover:text-primary-600 dark:hover:text-primary-400" title="">
+      归档
+    </a>
+    <span>
+      
+
+  <span class="relative block icon">
+    <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+
+  </span>
+
+
+    </span>
+  </div>
+  <div class="absolute menuhide">
+    <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl">
+      <div class="flex flex-col space-y-3">
+        
+        <a href="/categories/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+          
+          <p class="text-sm font-sm" title="Categories">
+            分类
+          </p>
+        </a>
+        
+        <a href="/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+          
+          <p class="text-sm font-sm" title="Tags">
+            标签
+          </p>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+            
+             
+  <div>
+  <div class="cursor-pointer flex items-center nested-menu">
+    
+    <a  href="#"   class="text-base font-medium text-gray-500 hover:text-primary-600 dark:hover:text-primary-400" title="">
+      更多
+    </a>
+    <span>
+      
+
+  <span class="relative block icon">
+    <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+
+  </span>
+
+
+    </span>
+  </div>
+  <div class="absolute menuhide">
+    <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl">
+      <div class="flex flex-col space-y-3">
+        
+        <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+          
+          <p class="text-sm font-sm" title="">
+            关于
+          </p>
+        </a>
+        
+        <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+          
+          <p class="text-sm font-sm" title="">
+            友链
+          </p>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+            
+            
+  <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        
+    </p>
+</a>
+
+
+
+            
             
 
             
@@ -276,6 +434,195 @@
 
         <label id="menu-button" class="block">
             
+            <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+                
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+
+  </span>
+
+
+            </div>
+            <div id="menu-wrapper" style="padding-top:5px;"
+                class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50">
+                <ul
+                    class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+
+                    <li id="menu-close-button">
+                        <span
+                            class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+</span>
+                    </li>
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="早上中午晚上好~">
+            首页
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="Posts">
+            文章
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                     
+  <li class="mt-1">
+    <a href="#" class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            归档
+        </p>
+        <span>
+            
+
+  <span class="relative block icon">
+    <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+
+  </span>
+
+
+        </span>
+    </a>
+</li>
+
+<li class="mt-1">
+    <a href="/categories/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-sm font-small" title="Categories">
+            分类
+        </p>
+    </a>
+</li>
+
+<li class="mt-1">
+    <a href="/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-sm font-small" title="Tags">
+            标签
+        </p>
+    </a>
+</li>
+
+<li class="mb-2"></li>
+
+
+
+
+                    
+
+                     
+  <li class="mt-1">
+    <a href="#" class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            更多
+        </p>
+        <span>
+            
+
+  <span class="relative block icon">
+    <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+
+  </span>
+
+
+        </span>
+    </a>
+</li>
+
+<li class="mt-1">
+    <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-sm font-small" title="">
+            关于
+        </p>
+    </a>
+</li>
+
+<li class="mt-1">
+    <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-sm font-small" title="">
+            友链
+        </p>
+    </a>
+</li>
+
+<li class="mb-2"></li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                </ul>
+                
+                
 
             </div>
         </label>
@@ -332,7 +679,11 @@
 
 
 
+  
 
+
+
+  
 
 
 
@@ -343,7 +694,53 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-04-02T11:55:04&#43;08:00">April 2, 2025</time><span class="px-2 text-primary-500">&middot;</span><span>248 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
+  <time datetime="2025-04-02T11:55:04&#43;08:00">2025年4月2日</time><span class="px-2 text-primary-500">&middot;</span><span>1830 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">4 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
+  
+  
+    
+    
+      
+      
+        
+        
+      
+      
+    
+  
+  <span id="likes_posts\Hugo-用waline添加留言功能.md"
+    class="animate-pulse inline-block text-transparent max-h-3 rounded-full mt-[-2px] align-middle bg-neutral-300 dark:bg-neutral-400"
+    title="likes">loading</span>
+  <span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<path fill="currentColor" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
+  </span>
+
+</span>
+</span><span class="px-2 text-primary-500">&middot;</span><span>
+    <button id="button_likes"
+        class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
+        onclick="process_article()">
+        <span id="button_likes_heart" style="display:none" class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<path fill="currentColor" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
+  </span>
+
+ </span>
+        <span id="button_likes_emtpty_heart" class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<path fill="currentColor" d="M244 84L255.1 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 0 232.4 0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84C243.1 84 244 84.01 244 84L244 84zM255.1 163.9L210.1 117.1C188.4 96.28 157.6 86.4 127.3 91.44C81.55 99.07 48 138.7 48 185.1V190.9C48 219.1 59.71 246.1 80.34 265.3L256 429.3L431.7 265.3C452.3 246.1 464 219.1 464 190.9V185.1C464 138.7 430.4 99.07 384.7 91.44C354.4 86.4 323.6 96.28 301.9 117.1L255.1 163.9z"/></svg>
+  </span>
+
+</span>
+        <span id="button_likes_text">&nbsp;Like</span>
+    </button>
+</span>
   
 
   
@@ -353,6 +750,50 @@
 
 
 
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E5%8D%9A%E5%AE%A2%E5%AD%A6%E4%B9%A0/&#34;,'_self');return false;">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    博客学习
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/hugo/&#34;,'_self');return false;">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Hugo
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/stack/&#34;,'_self');return false;">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Stack
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
 
 
 
@@ -370,24 +811,9 @@
     
       
       
-        
-        
-<div class="flex author">
-  
-  <div class="place-self-center">
-    
-    
-    <div class="text-2xl sm:text-lg">
-</div>
-  </div>
-</div>
 
       
 
-      
-
-      
-      <div class="mb-5"></div>
       
 
     
@@ -412,7 +838,7 @@
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E6%B3%A8%E5%86%8Cleancloud" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#%E6%B3%A8%E5%86%8Cleancloud" aria-label="锚点">#</a>
     </span>        
     
 </h1>
@@ -427,7 +853,7 @@
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#vercel-%E9%83%A8%E7%BD%B2-%E6%9C%8D%E5%8A%A1%E7%AB%AF" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#vercel-%E9%83%A8%E7%BD%B2-%E6%9C%8D%E5%8A%A1%E7%AB%AF" aria-label="锚点">#</a>
     </span>        
     
 </h1>
@@ -468,7 +894,7 @@
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E5%BC%95%E5%85%A5%E5%8D%9A%E5%AE%A2" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#%E5%BC%95%E5%85%A5%E5%8D%9A%E5%AE%A2" aria-label="锚点">#</a>
     </span>        
     
 </h1>
@@ -551,7 +977,7 @@ Press Ctrl+C to stop
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E6%8E%A8%E9%80%81%E5%88%B0github" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#%E6%8E%A8%E9%80%81%E5%88%B0github" aria-label="锚点">#</a>
     </span>        
     
 </h1>
@@ -571,7 +997,7 @@ Press Ctrl+C to stop
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E8%AF%84%E8%AE%BA%E7%AE%A1%E7%90%86" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#%E8%AF%84%E8%AE%BA%E7%AE%A1%E7%90%86" aria-label="锚点">#</a>
     </span>        
     
 </h1>
@@ -639,7 +1065,7 @@ Press Ctrl+C to stop
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-04-02T11:53:59&#43;08:00">April 2, 2025</time>
+                    <time datetime="2025-04-02T11:53:59&#43;08:00">2025年4月2日</time>
                   
                 </span>
               </span>
@@ -656,7 +1082,7 @@ Press Ctrl+C to stop
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-04-02T14:08:36&#43;08:00">April 2, 2025</time>
+                    <time datetime="2025-04-02T14:08:36&#43;08:00">2025年4月2日</time>
                   
                 </span>
               </span>
@@ -683,7 +1109,7 @@ Press Ctrl+C to stop
       <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
   <a href="#the-top"
     class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
-    aria-label="Scroll to top" title="Scroll to top">
+    aria-label="返回顶部" title="返回顶部">
     &uarr;
   </a>
 </div>
@@ -691,27 +1117,31 @@ Press Ctrl+C to stop
   
   
     
+    <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
+      <ul class="flex flex-col list-none sm:flex-row">
+        
+        <li class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center" href=""
+            title="">
+            
+            
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+    
   
   <div class="flex items-center justify-between">
 
     
     
     <p class="text-sm text-neutral-500 dark:text-neutral-400">
-      &copy;
-      2025
-      
+      <small>© 作者保留所有权利，禁止转载。<br>由 Hugo 和 Blowfish 驱动。
     </p>
     
 
     
-    
-    <p class="text-xs text-neutral-500 dark:text-neutral-400">
-      
-      
-      Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
-        href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
-        href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
-    </p>
     
 
   </div>
@@ -756,14 +1186,14 @@ Press Ctrl+C to stop
           type="search"
           id="search-query"
           class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
-          placeholder="Search"
+          placeholder="搜索"
           tabindex="0"
         />
       </form>
       <button
         id="close-search-button"
         class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-        title="Close (Esc)"
+        title="关闭 (Esc)"
       >
         
 
