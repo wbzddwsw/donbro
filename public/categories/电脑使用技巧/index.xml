@@ -19,5 +19,15 @@
       
     </item>
     
+    <item>
+      <title>使用ffmpeg进行视频格式的无损转换</title>
+      <link>http://localhost:1313/zh-cn/posts/%E4%BD%BF%E7%94%A8ffmpeg%E8%BF%9B%E8%A1%8C%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%97%A0%E6%8D%9F%E8%BD%AC%E6%8D%A2/</link>
+      <pubDate>Wed, 02 Apr 2025 09:01:35 +0800</pubDate>
+      
+      <guid>http://localhost:1313/zh-cn/posts/%E4%BD%BF%E7%94%A8ffmpeg%E8%BF%9B%E8%A1%8C%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%97%A0%E6%8D%9F%E8%BD%AC%E6%8D%A2/</guid>
+      <description></description>
+      
+    </item>
+    
   </channel>
 </rss>
