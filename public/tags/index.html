@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='http://localhost:1313/tags/'>
 
-<link rel="stylesheet" href="/scss/style.min.4eb759a2f18f4e242c51cae7fe14da7787cc60eae16c22e464a60178967c3042.css"><meta property='og:title' content="Tags">
+<link rel="stylesheet" href="/scss/style.min.c023309f5972054c8aeafae2bdeb5ed8f6b0c3019ede83015bcdc4fcf7f51566.css"><meta property='og:title' content="Tags">
 <meta property='og:description' content="不作诗则做诗">
 <meta property='og:url' content='http://localhost:1313/tags/'>
 <meta property='og:site_name' content='树响集'>
@@ -318,7 +318,7 @@
             
         
             
-                <section class="widget tagCloud">
+                <section class="widget category">
     <div class="widget-icon">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -333,30 +333,36 @@
     </div>
     <h2 class="widget-title section-title">分类</h2>
 
-    <div class="tagCloud-tags">
+    <div class="category-label">
         
-            <a href="/categories/test/" class="font_size_3">
-                Test
-            </a>
+        <a href="/categories/test/" class="font_size_3"
+            style="border-left-color: #48a6a7; filter:saturate(1.7);">
+            Test<span class="category-count">3</span>
+        </a>
         
-            <a href="/categories/syntax/" class="font_size_1">
-                Syntax
-            </a>
+        <a href="/categories/syntax/" class="font_size_1"
+            style="border-left-color: ; filter:saturate(1.7);">
+            Syntax<span class="category-count">1</span>
+        </a>
         
-            <a href="/categories/themes/" class="font_size_1">
-                Themes
-            </a>
+        <a href="/categories/themes/" class="font_size_1"
+            style="border-left-color: ; filter:saturate(1.7);">
+            Themes<span class="category-count">1</span>
+        </a>
         
-            <a href="/categories/whitespaces/" class="font_size_1">
-                Whitespaces
-            </a>
+        <a href="/categories/whitespaces/" class="font_size_1"
+            style="border-left-color: ; filter:saturate(1.7);">
+            Whitespaces<span class="category-count">1</span>
+        </a>
         
-            <a href="/categories/%E6%B5%8B%E8%AF%95/" class="font_size_1">
-                测试
-            </a>
+        <a href="/categories/%E6%B5%8B%E8%AF%95/" class="font_size_1"
+            style="border-left-color: ; filter:saturate(1.7);">
+            测试<span class="category-count">1</span>
+        </a>
         
     </div>
 </section>
+
 
             
         
@@ -408,7 +414,6 @@
 </section>
 
 <span class="tagCloud-count-main"></span>
-
             
         
     </aside>
@@ -663,7 +668,7 @@
 
 
 <script>
-  let s1 = '2023-3-18'; 
+  let s1 = '2025-4-1'; 
   s1 = new Date(s1.replace(/-/g, "/"));
   let s2 = new Date();
   let timeDifference = s2.getTime() - s1.getTime();

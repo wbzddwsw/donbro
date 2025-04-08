@@ -285,7 +285,7 @@
         color: var(--code-text-color);
         background-color: var(--code-background-color);
         padding: 2px 4px;
-        border-radius: var(--tag-border-radius);
+        border-radius: var(--category-border-radius);
         font-family: var(--code-font-family);
     }
 
@@ -334,7 +334,7 @@
 
         &:hover {
             .copyCodeButton {
-                opacity: 1;
+                border-radius: var(--category-border-radius);
             }
         }
         // keep Codeblocks LTR
