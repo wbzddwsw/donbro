@@ -12,7 +12,7 @@ links:
 menu:
     main: 
         name: 友链
-        weight: -50
+        weight: -60
         params:
             icon: link
 readingtime: false

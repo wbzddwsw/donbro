@@ -11,7 +11,7 @@ lastmod: ''
 menu:
     main: 
         name: 关于
-        weight: -90
+        weight: -70
         params:
             icon: user
 ---

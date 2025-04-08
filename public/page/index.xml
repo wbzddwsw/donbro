@@ -7,35 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Mon, 07 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/page/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>我和树响集</title>
-        <link>http://localhost:1313/%E6%88%91%E5%92%8C%E6%A0%91%E5%93%8D%E9%9B%86/</link>
-        <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/%E6%88%91%E5%92%8C%E6%A0%91%E5%93%8D%E9%9B%86/</guid>
-        <description>&lt;p&gt;Written in Go, Hugo is an open source static site generator available under the &lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/blob/master/LICENSE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Apache License 2.0.&lt;/a&gt; Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.&lt;/p&gt;
-&lt;p&gt;Hugo makes use of a variety of open source projects including:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/yuin/goldmark&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/yuin/goldmark&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/alecthomas/chroma&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/alecthomas/chroma&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/muesli/smartcrop&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/muesli/smartcrop&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/spf13/cobra&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/spf13/cobra&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/spf13/viper&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/spf13/viper&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.&lt;/p&gt;
-&lt;p&gt;Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.&lt;/p&gt;
-&lt;p&gt;Websites built with Hugo are extremely fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.&lt;/p&gt;
-&lt;p&gt;Learn more and contribute on &lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-</description>
-        </item>
-        <item>
+        <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Archives</title>
         <link>http://localhost:1313/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
@@ -58,6 +30,29 @@
         
         <guid>http://localhost:1313/%E8%BF%9E%E6%9E%9D%E4%B8%8E%E5%8F%B6/</guid>
         <description>&lt;p&gt;这是我有趣的朋友们(ゝ∀･)&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>我和树响集</title>
+        <link>http://localhost:1313/%E6%88%91%E5%92%8C%E6%A0%91%E5%93%8D%E9%9B%86/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/%E6%88%91%E5%92%8C%E6%A0%91%E5%93%8D%E9%9B%86/</guid>
+        <description>&lt;h3 id=&#34;关于我&#34;&gt;关于我
+&lt;/h3&gt;&lt;p&gt;多年辗转各个社交平台，因此有相当多的名字&lt;del&gt;也还好啦&lt;/del&gt;，每一个都很喜欢大家喊什么都好，如果一个也不知道可以喊速速~&lt;/p&gt;
+&lt;p&gt;现在活跃的平台是&lt;a class=&#34;link&#34; href=&#34;https://stelpolva.moe/@donbro&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;星屑&lt;/a&gt;，那里有大量胡言乱语和零碎repo。&lt;/p&gt;
+&lt;h3 id=&#34;关于树响集&#34;&gt;关于树响集
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;诚挚感谢&lt;a class=&#34;link&#34; href=&#34;https://blog-sooty-beta.vercel.app/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;阿南&lt;/a&gt;和&lt;a class=&#34;link&#34; href=&#34;https://nanako-blog.web.app/about/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;菜菜子&lt;/a&gt;为本博客成功搭建提供的热心帮助。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;这里会放一些我觉得值得记录的东西，目标是做到自己时不时就想打开看看。&lt;/p&gt;
+&lt;h3 id=&#34;树响集维护日志&#34;&gt;树响集维护日志
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;2025.04.08&lt;/strong&gt; 更换stack主题&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2025.04.07&lt;/strong&gt; 更换blowfish主题，更换域名&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2025.04.01&lt;/strong&gt; 初次搭建成功，使用工具为hugo，安装主题MemE&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;最后更新时间：2025年04月08日&lt;/small&gt;&lt;/p&gt;
 </description>
         </item>
         

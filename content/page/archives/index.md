@@ -5,7 +5,8 @@ layout: "archives"
 slug: "archives"
 menu:
     main:
-        weight: -70
+        name: 归档
+        weight: -90
         params: 
             icon: archives
 ---
