@@ -1,6 +1,6 @@
 ---
 title: "操作记录"
-slug: "操作记录"
+slug: "caozuojilu"
 style:
     background: "#48a6a7"
     color: "#fff"

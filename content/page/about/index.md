@@ -1,5 +1,6 @@
 ---
 title: 我和树响集
+slug: about
 description: 
 readingtime: false
 aliases:

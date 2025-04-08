@@ -1,5 +1,6 @@
 ---
 title: 连枝与叶
+slug: friends
 links:
   - title: 漫游者迷路中
     description: 记生活迷思，做吟游诗人
