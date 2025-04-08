@@ -15,38 +15,6 @@
         <guid>http://localhost:1313/categories/%E6%93%8D%E4%BD%9C%E8%AE%B0%E5%BD%95/</guid>
         <description>&lt;img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/0874c291-1c07-4fbd-a50f-a1d02a9698c8.jpg" alt="Featured image of post 操作记录" /&gt;</description>
         </item>
-        <item>
-        <title>Syntax</title>
-        <link>http://localhost:1313/categories/syntax/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/categories/syntax/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Themes</title>
-        <link>http://localhost:1313/categories/themes/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/categories/themes/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Whitespaces</title>
-        <link>http://localhost:1313/categories/whitespaces/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/categories/whitespaces/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>测试</title>
-        <link>http://localhost:1313/categories/%E6%B5%8B%E8%AF%95/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/categories/%E6%B5%8B%E8%AF%95/</guid>
-        <description></description>
-        </item>
         
     </channel>
 </rss>
