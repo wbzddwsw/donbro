@@ -7,7 +7,7 @@
 
 <link rel='canonical' href='http://localhost:1313/'>
 
-<link rel="stylesheet" href="/scss/style.min.695f988c6a953eeb463dd93950f0ec9cff14843fec69be833c8e83d4f7963451.css"><meta property='og:title' content="树响集">
+<link rel="stylesheet" href="/scss/style.min.4eb759a2f18f4e242c51cae7fe14da7787cc60eae16c22e464a60178967c3042.css"><meta property='og:title' content="树响集">
 <meta property='og:description' content="不作诗则做诗">
 <meta property='og:url' content='http://localhost:1313/'>
 <meta property='og:site_name' content='树响集'>
@@ -407,6 +407,9 @@
         
     </div>
 </section>
+
+<span class="tagCloud-count-main"></span>
+
             
         
     </aside>
@@ -583,6 +586,38 @@
     </nav>
 
 <footer class="site-footer">
+    
+    <section class="running-time">
+    本博客已稳定运行
+    <span id="runningdays" class="running-days"></span>
+    </section>    
+    
+    
+    <section class="totalcount">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    发表了5篇文章 · 
+    总计1.20k字
+    </section>
+
     <section class="copyright">
         &copy; 
         
@@ -723,6 +758,21 @@
     }
   }
 </style>
+
+
+<script>
+  let s1 = '2025-4-1'; 
+  s1 = new Date(s1.replace(/-/g, "/"));
+  let s2 = new Date();
+  let timeDifference = s2.getTime() - s1.getTime();
+
+  let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+  let result = days + "天" + hours + "小时" + minutes + "分钟";
+  document.getElementById('runningdays').innerHTML = result;
+</script>
 
     </body>
 </html>

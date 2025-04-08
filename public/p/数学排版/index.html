@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='http://localhost:1313/p/%E6%95%B0%E5%AD%A6%E6%8E%92%E7%89%88/'>
 
-<link rel="stylesheet" href="/scss/style.min.695f988c6a953eeb463dd93950f0ec9cff14843fec69be833c8e83d4f7963451.css"><meta property='og:title' content="数学排版">
+<link rel="stylesheet" href="/scss/style.min.4eb759a2f18f4e242c51cae7fe14da7787cc60eae16c22e464a60178967c3042.css"><meta property='og:title' content="数学排版">
 <meta property='og:description' content="设置KaTeX的简要指南">
 <meta property='og:url' content='http://localhost:1313/p/%E6%95%B0%E5%AD%A6%E6%8E%92%E7%89%88/'>
 <meta property='og:site_name' content='树响集'>
@@ -361,11 +361,31 @@
     
     <p>Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.</p>
 <p>In this example we will be using <a class="link" href="https://katex.org/"  target="_blank" rel="noopener"
-    >KaTeX</a></p>
+    >KaTeX</a>
+
+
+<span style="white-space: nowrap;"><svg width=".7em"
+    height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+    <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+    <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+        fill="currentColor">
+</svg></span>
+
+</p>
 <ul>
 <li>Create a partial under <code>/layouts/partials/math.html</code></li>
 <li>Within this partial reference the <a class="link" href="https://katex.org/docs/autorender.html"  target="_blank" rel="noopener"
-    >Auto-render Extension</a> or host these scripts locally.</li>
+    >Auto-render Extension</a>
+
+
+<span style="white-space: nowrap;"><svg width=".7em"
+    height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+    <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+    <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+        fill="currentColor">
+</svg></span>
+
+ or host these scripts locally.</li>
 <li>Include the partial in your templates like so:</li>
 </ul>
 <div class="highlight"><div class="chroma">
@@ -385,7 +405,17 @@
 <li>To enable KaTeX on a per page basis include the parameter <code>math: true</code> in content files</li>
 </ul>
 <p><strong>Note:</strong> Use the online reference of <a class="link" href="https://katex.org/docs/supported.html"  target="_blank" rel="noopener"
-    >Supported TeX Functions</a></p>
+    >Supported TeX Functions</a>
+
+
+<span style="white-space: nowrap;"><svg width=".7em"
+    height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+    <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+    <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+        fill="currentColor">
+</svg></span>
+
+</p>
 
 <h3 id="examples">Examples
 </h3><p>Inline math: $\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…$</p>
@@ -494,6 +524,38 @@ $$
     
 
     <footer class="site-footer">
+    
+    <section class="running-time">
+    本博客已稳定运行
+    <span id="runningdays" class="running-days"></span>
+    </section>    
+    
+    
+    <section class="totalcount">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    发表了5篇文章 · 
+    总计1.20k字
+    </section>
+
     <section class="copyright">
         &copy; 
         
@@ -713,6 +775,21 @@ $$
     }
   }
 </style>
+
+
+<script>
+  let s1 = '2023-3-18'; 
+  s1 = new Date(s1.replace(/-/g, "/"));
+  let s2 = new Date();
+  let timeDifference = s2.getTime() - s1.getTime();
+
+  let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+  let result = days + "天" + hours + "小时" + minutes + "分钟";
+  document.getElementById('runningdays').innerHTML = result;
+</script>
 
     </body>
 </html>

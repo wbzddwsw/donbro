@@ -66,8 +66,7 @@
     }
 }
 
-.tagCloud {
-    .tagCloud-count {
-        color: var(--body-text-color);
-    }
+.tagCloud-count-main {
+    margin-left: 7px; // Use a separate setting so that it didn't affect the style in archive page
+    color: var(--body-text-color);
 }
