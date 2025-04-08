@@ -254,6 +254,14 @@
         }
     }
 
+    // Center image from url source
+    p > img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+    }
+
     blockquote {
         position: relative;
         margin: 1.5em 0;
