@@ -1,4 +1,4 @@
 baseURL = "https://donbro.vercel.app/"
 languageCode = "zh-CN"
 title = "树响集"
-theme = "blowfish"
+theme = "stack"
