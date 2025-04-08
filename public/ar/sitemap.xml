@@ -6,13 +6,13 @@
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/categories/"
+                hreflang="zh-cn"
+                href="http://localhost:1313/zh-cn/categories/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/categories/"
+                hreflang="zh-CN"
+                href="http://localhost:1313/categories/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -24,13 +24,13 @@
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/post/"
+                hreflang="zh-cn"
+                href="http://localhost:1313/zh-cn/post/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/post/"
+                hreflang="zh-CN"
+                href="http://localhost:1313/post/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -42,13 +42,13 @@
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/"
+                hreflang="zh-cn"
+                href="http://localhost:1313/zh-cn/tags/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/tags/"
+                hreflang="zh-CN"
+                href="http://localhost:1313/tags/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -65,30 +65,30 @@
     <loc>http://localhost:1313/ar/tags/%D9%85%D8%A7%D8%B1%D9%83%D8%AF%D8%A7%D9%88%D9%86/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ar/p/%D9%85%D8%AB%D8%A7%D9%84-%D9%86%D8%B5/</loc>
+    <loc>http://localhost:1313/ar/post/placeholder-text/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/p/placeholder-text/"
+                hreflang="zh-CN"
+                href="http://localhost:1313/post/placeholder-text/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="http://localhost:1313/ar/p/%D9%85%D8%AB%D8%A7%D9%84-%D9%86%D8%B5/"
+                href="http://localhost:1313/ar/post/placeholder-text/"
                 />
   </url><url>
     <loc>http://localhost:1313/ar/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/"
+                hreflang="zh-cn"
+                href="http://localhost:1313/zh-cn/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="http://localhost:1313/zh-cn/"
+                hreflang="zh-CN"
+                href="http://localhost:1313/"
                 />
     <xhtml:link
                 rel="alternate"
