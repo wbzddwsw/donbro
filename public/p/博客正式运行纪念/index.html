@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="转换速度很快而且无损，部署好后可以一直使用，非常方便">
-<title>使用ffmpeg进行视频格式的无损转换</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="非常唠叨的心路历程……">
+<title>博客正式运行纪念</title>
 
-<link rel='canonical' href='http://localhost:1313/posts/%E4%BD%BF%E7%94%A8ffmpeg%E8%BF%9B%E8%A1%8C%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%97%A0%E6%8D%9F%E8%BD%AC%E6%8D%A2/'>
+<link rel='canonical' href='http://localhost:1313/p/%E5%8D%9A%E5%AE%A2%E6%AD%A3%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%BA%AA%E5%BF%B5/'>
 
-<link rel="stylesheet" href="/scss/style.min.ccd19cdb26539656a1691196dc9ad8bb665b3d07ce7dc1987cae9ff9dd0b9faa.css"><meta property='og:title' content="使用ffmpeg进行视频格式的无损转换">
-<meta property='og:description' content="转换速度很快而且无损，部署好后可以一直使用，非常方便">
-<meta property='og:url' content='http://localhost:1313/posts/%E4%BD%BF%E7%94%A8ffmpeg%E8%BF%9B%E8%A1%8C%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%97%A0%E6%8D%9F%E8%BD%AC%E6%8D%A2/'>
+<link rel="stylesheet" href="/scss/style.min.ccd19cdb26539656a1691196dc9ad8bb665b3d07ce7dc1987cae9ff9dd0b9faa.css"><meta property='og:title' content="博客正式运行纪念">
+<meta property='og:description' content="非常唠叨的心路历程……">
+<meta property='og:url' content='http://localhost:1313/p/%E5%8D%9A%E5%AE%A2%E6%AD%A3%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%BA%AA%E5%BF%B5/'>
 <meta property='og:site_name' content='树响集'>
-<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:published_time' content='2025-04-02T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-04-02T00:00:00&#43;00:00'/><meta property='og:image' content='https://chatstorage.dvd.moe/dvdchat/dvdchat/dc679c68-35cd-4492-87cc-c3ba485219d7.jpg' />
-<meta name="twitter:title" content="使用ffmpeg进行视频格式的无损转换">
-<meta name="twitter:description" content="转换速度很快而且无损，部署好后可以一直使用，非常方便"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://chatstorage.dvd.moe/dvdchat/dvdchat/dc679c68-35cd-4492-87cc-c3ba485219d7.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-04-08T21:22:22&#43;08:00'/><meta property='article:modified_time' content='2025-04-08T21:22:22&#43;08:00'/><meta property='og:image' content='https://chatstorage.dvd.moe/dvdchat/dvdchat/b1211ddb-eb79-481d-b419-7123be01831f.jpg' />
+<meta name="twitter:title" content="博客正式运行纪念">
+<meta name="twitter:description" content="非常唠叨的心路历程……"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://chatstorage.dvd.moe/dvdchat/dvdchat/b1211ddb-eb79-481d-b419-7123be01831f.jpg' />
     </head>
     <body class="
     article-page
@@ -258,52 +258,15 @@
     </ol>
 </aside>
 
-    <aside class="sidebar right-sidebar sticky">
-        
-            
-                
-    <section class="widget archives">
-        <div class="widget-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-        </div>
-        <h2 class="widget-title section-title">目录</h2>
-        
-        <div class="widget--toc">
-            <nav id="TableOfContents">
-  <ol>
-    <li>
-      <ol>
-        <li><a href="#下载ffmpeg">下载ffmpeg</a></li>
-        <li><a href="#安装ffmpeg">安装ffmpeg</a></li>
-        <li><a href="#转换格式">转换格式</a></li>
-      </ol>
-    </li>
-  </ol>
-</nav>
-        </div>
-    </section>
-
-            
-        
-    </aside>
-
+    
 
             <main class="main full-width">
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/posts/%E4%BD%BF%E7%94%A8ffmpeg%E8%BF%9B%E8%A1%8C%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%97%A0%E6%8D%9F%E8%BD%AC%E6%8D%A2/">
+            <a href="/p/%E5%8D%9A%E5%AE%A2%E6%AD%A3%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%BA%AA%E5%BF%B5/">
                 
-                    <img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/dc679c68-35cd-4492-87cc-c3ba485219d7.jpg" loading="lazy" alt="Featured image of post 使用ffmpeg进行视频格式的无损转换" />
+                    <img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/b1211ddb-eb79-481d-b419-7123be01831f.jpg" loading="lazy" alt="Featured image of post 博客正式运行纪念" />
                 
             </a>
         </div>
@@ -311,23 +274,15 @@
 
     <div class="article-details">
     
-    <header class="article-category">
-        
-            <a href="/categories/%E6%93%8D%E4%BD%9C%E8%AE%B0%E5%BD%95/" style="background-color: #48a6a7; color: #fff;">
-                操作记录
-            </a>
-        
-    </header>
-    
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/posts/%E4%BD%BF%E7%94%A8ffmpeg%E8%BF%9B%E8%A1%8C%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%97%A0%E6%8D%9F%E8%BD%AC%E6%8D%A2/">使用ffmpeg进行视频格式的无损转换</a>
+            <a href="/p/%E5%8D%9A%E5%AE%A2%E6%AD%A3%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%BA%AA%E5%BF%B5/">博客正式运行纪念</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            转换速度很快而且无损，部署好后可以一直使用，非常方便
+            非常唠叨的心路历程……
         </h3>
         
     </div>
@@ -348,7 +303,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">2025年04月02日</time>
+                <time class="article-time--published">2025年04月08日</time>
             </div>
         
 
@@ -363,7 +318,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 2 分钟
+                    阅读时长: 1 分钟
                 </time>
             </div>
         
@@ -378,9 +333,19 @@
     <section class="article-content">
     
     
-    <h3 id="下载ffmpeg">下载ffmpeg
-</h3><p>下载地址：<a class="link" href="https://github.com/BtbN/FFmpeg-Builds/releases"  target="_blank" rel="noopener"
-    >https://github.com/BtbN/FFmpeg-Builds/releases</a>
+    <p>最开始了解博客是通过o3o的writee，那会儿研究公告栏看到就顺</p>
+<p>最开始了解博客是通过o3o的writee，那会儿研究公告栏看到就顺手注册了，然后就一直搁置……直到去年十月我从wxw赛博搬家到星屑，9号那天（特意去翻了记录确认）在tl看大家聊起星屑的博客，这才意识到，原来writee也是博客呀！</p>
+<p>随后用站长给的邀请码注册了星屑博客，并且抛弃了writee，因为它的文章不能删除！非常浅尝辄止地研究了一下新玩具，还借用了<strong>kon酱</strong>的美丽配色代码，但是因为一直没有系统输出文章，所以慢慢又忘却了。</p>
+<p>4月1日那天<del>怎么是愚人节啊</del>，看到<strong>阿南</strong>在tl上说要尝试搭建hugo博客，热血上头就说要一起，说的时候没想太多，但是按照阿南发给我的教程，我俩一点一点研究，居然真的搭出来了！</p>
+<p>说到代码相关，我是完全的小白，和代码唯一的接触就是之前在星屑写的几个插件，就这还是用的kon酱的代码，只是单纯的修改填充内容，还出了各种错误，幸好有kon酱一直耐心解答。</p>
+<p>随后进入了紧张刺激的主题装修环节！我从MemE到stack，最终和阿南一起确定了blowfish，开始了究极精神折磨。</p>
+<p>这个过程只能说，一把辛酸泪，一步一bug，我俩研究不同的设置，然后再互相教，完全照抄对面的操作，但就是不停报错，问gpt老师也不管用，直到赛博神医<strong>菜菜子</strong>热心为我俩提供帮助！</p>
+<p>我的主题安装后第一步改语言就出了问题，最后是把文件打包给菜菜子帮我改好再发给我的（磕头.jpg），后面还问了数不胜数的傻瓜问题，友不厌其烦地解答。还有阿南也是，虽然说是我俩一起研究，但我研究什么都报错，阿南总是把自己研究明白的代码直接发给我让我抄，真的泪目了TT</p>
+<p>本来我最开始注册的博客1安装的MemE，后来又注册了博客2研究stack，发现真不明白又切换成blowfish。博客2勉强运行后，我还是想用博客1的域名，于是试图把博客2的内容合并到博客1，果不其然bug频出……最后放弃了，注册了博客3，然后一点点照搬了博客2的内容，并且终于在昨天晚上成功发布。</p>
+<p>但是！好巧不巧！昨晚上床后，刷到一个非常完美的stack主题教程，我对stack的热情又重新燃起，或者说是一种不甘心，非得把他整明白不可，于是今天开工，初始化了博客1（上次合并的时候就是想初始化来着但是没成功），并且成功运行了！</p>
+<p>之所以速度这么快，一是前几天的经验累积（怎么不算熟能生巧呢），二就是这个教程！天哪简直是菩萨级别，直接贴在这里供有需要的人参考，完全是傻子都可以照抄的程度！</p>
+<p><a class="link" href="https://www.xalaok.top/post/stack-modify/"  target="_blank" rel="noopener"
+    >教程1</a>
 
 
 <span style="white-space: nowrap;"><svg width=".7em"
@@ -390,8 +355,8 @@
         fill="currentColor">
 </svg></span>
 
-，选择<a class="link" href="https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl-shared.zip"  target="_blank" rel="noopener"
-    >ffmpeg-master-latest-win64-gpl-shared.zip</a>
+ <a class="link" href="https://thirdshire.com/hugo-stack-renovation/"  target="_blank" rel="noopener"
+    >教程2</a>
 
 
 <span style="white-space: nowrap;"><svg width=".7em"
@@ -401,83 +366,8 @@
         fill="currentColor">
 </svg></span>
 
-版本</p>
-<h3 id="安装ffmpeg">安装ffmpeg
-</h3><p>假设已经解压，进入文件夹并且点开<strong>bin</strong>文件夹，此时文件路径为<strong>D:\rj\ffmpeg\ffmpeg\bin</strong>，在地址栏复制路径</p>
-<ol>
-<li>
-<p>【win+R】，输入<code>sysmd.cpl</code>，按回车</p>
-</li>
-<li>
-<p>进入<strong>高级</strong>选项卡，点击<code>环境变量</code></p>
-</li>
-<li>
-<p>在<strong>系统变量</strong>部分，找到<strong>Path变量</strong>，点击<code>编辑</code></p>
-</li>
-<li>
-<p>在<strong>编辑环境变量</strong>窗口中，点击<code>新建</code>，然后将上面的路径粘贴到这里</p>
-</li>
-<li>
-<p>依次点<strong>确定</strong>关闭所有窗口</p>
-</li>
-</ol>
-<blockquote>
-<p>测试是否成功：</p>
-<p>【win+R】打开命令提示符，输入<code>cmd</code>然后回车，在弹出的命令行界面中输入<code>ffmpeg</code>，如果步骤正确，会显示ffmpeg相关信息，比如：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ffmpeg version 2024-10-27-git-bb57b78013-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
-</span></span><span class="line"><span class="cl">built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
-</span></span><span class="line"><span class="cl">configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
-</span></span><span class="line"><span class="cl">libavutil      59. 46.100 / 59. 46.100
-</span></span><span class="line"><span class="cl">libavcodec     61. 22.100 / 61. 22.100
-</span></span><span class="line"><span class="cl">libavformat    61.  9.100 / 61.  9.100
-</span></span><span class="line"><span class="cl">libavdevice    61.  4.100 / 61.  4.100
-</span></span><span class="line"><span class="cl">libavfilter    10.  6.100 / 10.  6.100
-</span></span><span class="line"><span class="cl">libswscale      8.  9.101 /  8.  9.101
-</span></span><span class="line"><span class="cl">libswresample   5.  4.100 /  5.  4.100
-</span></span><span class="line"><span class="cl">libpostproc    58.  4.100 / 58.  4.100
-</span></span><span class="line"><span class="cl">Universal media converter
-</span></span><span class="line"><span class="cl">usage: ffmpeg [options] [[infile options] -i infile]... {[outfile options] outfile}...
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Use -h to get full help or, even better, run &#39;man ffmpeg&#39;
-</span></span></code></pre></td></tr></table>
-</div>
-</div></blockquote>
-<h3 id="转换格式">转换格式
-</h3><p>假设我需要转换的文件名为<strong>gavv01.mkv</strong>，并且文件路径为<strong>D:\resource\gavv</strong></p>
-<ol>
-<li>【win+R】打开命令提示符，输入<code>cmd</code>然后回车</li>
-<li>输入<code>cd D:\resource\gavv</code>导航到gavv文件夹</li>
-<li>单个转换：输入<code>ffmpeg -i &quot;gavv01.mkv&quot; -c:v copy -c:a copy &quot;gavv01.mp4&quot;</code>，按回车，其中<strong>gavv01.mkv</strong>是需要转换的文件，<strong>gavv01.mp4</strong>是转换后的文件</li>
-<li>批量转换：输入<code>for %i in (*.mkv) do ffmpeg -i &quot;%i&quot; -c:v copy -c:a copy &quot;%~ni.mp4&quot;</code></li>
-<li>切换来源文件夹：输入<code>cd D:新文件夹</code></li>
-</ol>
-<blockquote>
-<p>如果显示文件错误：</p>
-<ol>
-<li>【win+R】打开命令提示符，输入<code>cmd</code>然后回车</li>
-<li>输入<code>D:</code>，回车</li>
-<li>输入<code>cd &quot;D:\resource\gavv&quot;</code>（双引号确保路径正确）</li>
-<li>输入<code>dir</code>，回车，确认该文件夹中有需要转换的文件</li>
-</ol></blockquote>
+</p>
+<p>总之，到目前为止，我的博客进入平稳运行阶段，暂时不再需要装修啦，会努力多写点东西的，不能辜负这段时间的呕心沥血_(:3 」∠ )_</p>
 
 </section>
 
@@ -506,53 +396,6 @@
     
 
     
-
-<aside class="related-content--wrapper">
-    <h2 class="section-title">相关文章</h2>
-    <div class="related-content">
-        <div class="flex article-list--tile">
-            
-                
-<article class="has-image">
-    <a href="/posts/hugo-%E7%94%A8waline%E6%B7%BB%E5%8A%A0%E7%95%99%E8%A8%80%E5%8A%9F%E8%83%BD/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/44e51c87-6651-441d-8dc3-e188f9f30d8e.jpg" loading="lazy" data-key="" data-hash="https://chatstorage.dvd.moe/dvdchat/dvdchat/44e51c87-6651-441d-8dc3-e188f9f30d8e.jpg"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">配置waline添加留言功能</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/posts/hugo-%E5%B0%8F%E7%99%BD%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/8114f986-0e3a-4b7d-b8fc-65865cd5f636.jpg" loading="lazy" data-key="" data-hash="https://chatstorage.dvd.moe/dvdchat/dvdchat/8114f986-0e3a-4b7d-b8fc-65865cd5f636.jpg"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Hugo-小白博客部署记录</h2>
-        </div>
-    </a>
-</article>
-
-            
-        </div>
-    </div>
-</aside>
 
      
     
@@ -605,7 +448,7 @@
     
         
     
-    发表了0篇文章 · 
+    发表了4篇文章 · 
     总计0.85k字
     </section>
 

@@ -1,6 +1,5 @@
 ---
 title: 配置waline添加留言功能
-slug: 20cno
 description: 大陆地区加载很慢，配置结束后可能要等个把小时才会正常显示
 date: 2025-04-02
 categories: ["操作记录"]
