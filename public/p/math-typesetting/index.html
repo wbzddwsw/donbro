@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='http://localhost:1313/p/math-typesetting/'>
 
-<link rel="stylesheet" href="/scss/style.min.dcefc754a565371ad4171cddf6bac1bbabf894f04428025f0b4a0f5b6396aefa.css"><meta property='og:title' content="Math Typesetting">
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Math Typesetting">
 <meta property='og:description' content="A brief guide to setup KaTeX">
 <meta property='og:url' content='http://localhost:1313/p/math-typesetting/'>
 <meta property='og:site_name' content='树响集'>
@@ -153,7 +153,7 @@
         
         
         <li >
-            <a href='/%E5%85%B3%E4%BA%8E/' >
+            <a href='/about/' >
                 
                 
                 
@@ -166,7 +166,7 @@
 
 
                 
-                <span>关于</span>
+                <span>About</span>
             </a>
         </li>
         
@@ -361,31 +361,11 @@
     
     <p>Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.</p>
 <p>In this example we will be using <a class="link" href="https://katex.org/"  target="_blank" rel="noopener"
-    >KaTeX</a>
-
-
-<span style="white-space: nowrap;"><svg width=".7em"
-    height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
-    <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
-    <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
-        fill="currentColor">
-</svg></span>
-
-</p>
+    >KaTeX</a></p>
 <ul>
 <li>Create a partial under <code>/layouts/partials/math.html</code></li>
 <li>Within this partial reference the <a class="link" href="https://katex.org/docs/autorender.html"  target="_blank" rel="noopener"
-    >Auto-render Extension</a>
-
-
-<span style="white-space: nowrap;"><svg width=".7em"
-    height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
-    <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
-    <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
-        fill="currentColor">
-</svg></span>
-
- or host these scripts locally.</li>
+    >Auto-render Extension</a> or host these scripts locally.</li>
 <li>Include the partial in your templates like so:</li>
 </ul>
 <div class="highlight"><div class="chroma">
@@ -405,17 +385,7 @@
 <li>To enable KaTeX on a per page basis include the parameter <code>math: true</code> in content files</li>
 </ul>
 <p><strong>Note:</strong> Use the online reference of <a class="link" href="https://katex.org/docs/supported.html"  target="_blank" rel="noopener"
-    >Supported TeX Functions</a>
-
-
-<span style="white-space: nowrap;"><svg width=".7em"
-    height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
-    <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
-    <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
-        fill="currentColor">
-</svg></span>
-
-</p>
+    >Supported TeX Functions</a></p>
 
 <h3 id="examples">Examples
 </h3><p>Inline math: $\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…$</p>
@@ -534,39 +504,6 @@ $$
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
         主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
-
-    
-    <section class="running-time">
-    本博客已稳定运行
-    <span id="runningdays" class="running-days"></span>
-    </section>
-    
-    
-<section class="totalcount">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-    发表了5篇文章 · 
-    总计1.25k字
-</section>
-
 </footer>
 
 
@@ -656,37 +593,6 @@ $$
                 >
             </script><script type="text/javascript" src="/ts/main.cbfa88d3dce03409a5b7e74429680e064e0384e30a452e47ad69a935f03fc27f.js" defer></script>
 <script>
-    function backToTop() {
-      document.documentElement.scrollIntoView({
-        behavior: 'smooth',
-      })
-    }
-  
-    window.onload = function () {
-      let scrollTop =
-        this.document.documentElement.scrollTop || this.document.body.scrollTop
-      let totopBtn = this.document.getElementById('back-to-top')
-      if (scrollTop > 0) {
-        totopBtn.style.display = 'inline'
-      } else {
-        totopBtn.style.display = 'none'
-      }
-    }
-  
-    window.onscroll = function () {
-      let scrollTop =
-        this.document.documentElement.scrollTop || this.document.body.scrollTop
-      let totopBtn = this.document.getElementById('back-to-top')
-      if (scrollTop < 200) {
-        totopBtn.style.display = 'none'
-      } else {
-        totopBtn.style.display = 'inline'
-        totopBtn.addEventListener('click', backToTop, false)
-      }
-    }
-  </script>
-
-<script>
     (function () {
         const customFont = document.createElement('link');
         customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
@@ -697,100 +603,6 @@ $$
         document.head.appendChild(customFont);
     }());
 </script>
-
-<script>
-    let s1 = '2025-4-1'; 
-    s1 = new Date(s1.replace(/-/g, "/"));
-    let s2 = new Date();
-    let timeDifference = s2.getTime() - s1.getTime();
-
-    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-
-    let result = days + "天" + hours + "小时" + minutes + "分钟";
-    document.getElementById('runningdays').innerHTML = result;
-</script>
-
-
-<a href="#" id="back-to-top" title="返回顶部"></a>
-
-
-<style>
-  #back-to-top {
-    display: none;
-    position: fixed;
-    bottom: 5px;
-    right: 15px;
-    width: 40px;  
-    height: 40px;  
-    border-radius: 50%;  
-    background-color: var(--body-background);
-    box-shadow: var(--shadow-l2);
-    font-size: 20px;  
-    text-align: center;
-    line-height: 38px;  
-    cursor: pointer;
-    transition:
-      transform 0.3s ease,
-      background-color 0.3s ease;  
-  }
-
-  #back-to-top:before {
-    content: "";
-    display: inline-block;
-    position: relative;
-    transform: rotate(135deg);
-    height: 8px;  
-    width: 8px;  
-    border-width: 0 0 2px 2px;
-    border-color: var(--back-to-top-color);
-    border-style: solid;
-  }
-
-  #back-to-top:hover {
-    transform: scale(1.1);  
-    background-color: var(--accent-background);  
-  }
-
-  #back-to-top:hover:before {
-    border-color: var(--accent-color);  
-  }
-
-   
-  @media screen and (max-width: 768px) {
-    #back-to-top {
-      bottom: 5px;
-      right: var(--container-padding);
-      width: 30px;  
-      height: 30px;
-      font-size: 16px;
-      line-height: 32px;
-    }
-  }
-
-  @media screen and (min-width: 1024px) {
-    #back-to-top {
-      bottom: 10px;
-      right: 20px;
-    }
-  }
-
-  @media screen and (min-width: 1280px) {
-    #back-to-top {
-      bottom: 15px;
-      right: 25px;
-    }
-  }
-
-  @media screen and (min-width: 1536px) {
-    #back-to-top {
-      bottom: 15px;
-      right: 25px;
-       
-    }
-  }
-</style>
 
     </body>
 </html>

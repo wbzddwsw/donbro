@@ -1,14 +1,10 @@
 +++
-author = "Hugo Authors"
-title = "Emoji Support"
+author = "作者小a"
+title = "表情支持"
 date = "2019-03-05"
-description = "Guide to emoji usage in Hugo"
-categories = [
-    "Test"
-]
-tags = [
-    "emoji",
-]
+description = "hugo表情符号使用指南"
+categories = ["Test"]
+tags = ["emoji",]
 image = "the-creative-exchange-d2zvqp3fpro-unsplash.jpg"
 +++
 

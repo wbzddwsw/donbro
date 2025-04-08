@@ -1,18 +1,10 @@
 +++
 author = "Hugo Authors"
-title = "Markdown Syntax Guide"
+title = "Markdown语法指南"
 date = "2019-03-11"
-description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-tags = [
-    "markdown",
-    "css",
-    "html",
-    "themes",
-]
-categories = [
-    "themes",
-    "syntax",
-]
+description = "展示超文本标记语言元素的基本Markdown语法和格式的示例文章"
+tags = ["markdown", "css","html","themes",]
+categories = ["themes","syntax",]
 series = ["Themes Guide"]
 aliases = ["migrate-from-jekyl"]
 image = "pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg"

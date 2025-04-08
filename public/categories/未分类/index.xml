@@ -1,33 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>未分类 on Blog | 树响集</title>
-    <link>http://localhost:1313/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/</link>
-    <description>Recent content in 未分类 on Blog | 树响集</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cnn</language>
-    <copyright>&lt;small&gt;© 作者保留所有权利，禁止转载。&lt;br&gt;由 Hugo 和 Blowfish 驱动。</copyright>
-    <lastBuildDate>Thu, 03 Apr 2025 10:45:16 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>blog维护更新记录</title>
-      <link>http://localhost:1313/posts/blog%E7%BB%B4%E6%8A%A4%E6%9B%B4%E6%96%B0%E8%AE%B0%E5%BD%95/</link>
-      <pubDate>Thu, 03 Apr 2025 10:45:16 +0800</pubDate>
-      
-      <guid>http://localhost:1313/posts/blog%E7%BB%B4%E6%8A%A4%E6%9B%B4%E6%96%B0%E8%AE%B0%E5%BD%95/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>blog维护更新记录</title>
-      <link>http://localhost:1313/zh-cn/posts/blog%E7%BB%B4%E6%8A%A4%E6%9B%B4%E6%96%B0%E8%AE%B0%E5%BD%95/</link>
-      <pubDate>Thu, 03 Apr 2025 10:45:16 +0800</pubDate>
-      
-      <guid>http://localhost:1313/zh-cn/posts/blog%E7%BB%B4%E6%8A%A4%E6%9B%B4%E6%96%B0%E8%AE%B0%E5%BD%95/</guid>
-      <description></description>
-      
-    </item>
-    
-  </channel>
+    <channel>
+        <title>未分类 on 树响集</title>
+        <link>http://localhost:1313/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/</link>
+        <description>Recent content in 未分类 on 树响集</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Example Person</copyright>
+        <lastBuildDate>Tue, 08 Apr 2025 15:26:59 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>友链</title>
+        <link>http://localhost:1313/%E5%8F%8B%E9%93%BE/</link>
+        <pubDate>Tue, 08 Apr 2025 15:26:59 +0800</pubDate>
+        
+        <guid>http://localhost:1313/%E5%8F%8B%E9%93%BE/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
 </rss>

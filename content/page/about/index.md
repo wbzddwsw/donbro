@@ -1,34 +1,39 @@
 ---
-title: About
-description: Hugo, the world's fastest framework for building websites
-date: '2019-02-28'
+title: 我和树响集
+description: 
+readingtime: false
 aliases:
   - about-us
   - about-hugo
   - contact
-license: CC BY-NC-ND
-lastmod: '2020-10-09'
+license: false
+lastmod: ''
 menu:
     main: 
+        name: 关于
         weight: -90
         params:
             icon: user
 ---
 
-Written in Go, Hugo is an open source static site generator available under the [Apache License 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+### 关于我
 
-Hugo makes use of a variety of open source projects including:
+多年辗转各个社交平台，因此有相当多的名字~~也还好啦~~，每一个都很喜欢大家喊什么都好，如果一个也不知道可以喊速速~
 
-* https://github.com/yuin/goldmark
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+现在活跃的平台是[星屑](https://stelpolva.moe/@donbro)，那里有大量胡言乱语和零碎repo。
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+### 关于树响集
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+> 诚挚感谢[阿南](https://blog-sooty-beta.vercel.app/)和[菜菜子](https://nanako-blog.web.app/about/)为本博客成功搭建提供的热心帮助。
 
-Websites built with Hugo are extremely fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
+这里会放一些我觉得值得记录的东西，目标是做到自己时不时就想打开看看。
 
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+### 树响集维护日志
+
+**2025.04.08** 更换stack主题
+
+**2025.04.07** 更换blowfish主题，更换域名
+
+**2025.04.01** 初次搭建成功，使用工具为hugo，安装主题MemE
+
+<small>最后更新时间：2025年04月08日</small>

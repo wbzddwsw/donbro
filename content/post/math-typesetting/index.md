@@ -1,8 +1,8 @@
 ---
 author: Hugo Authors
-title: Math Typesetting
+title: 数学排版
 date: 2019-03-08
-description: A brief guide to setup KaTeX
+description: 设置KaTeX的简要指南
 math: true
 ---
 
@@ -41,5 +41,5 @@ Inline math: $\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…$
 
 Block math:
 $$
- \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } 
+\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
 $$

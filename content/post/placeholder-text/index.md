@@ -1,17 +1,10 @@
 +++
 author = "Hugo Authors"
-title = "Placeholder Text"
+title = "占位符文本"
 date = "2019-03-09"
-description = "Lorem Ipsum Dolor Si Amet"
-categories = [
-    "Test",
-    "whitespaces"
-]
-tags = [
-    "markdown",
-    "text",
-    "tag with whitespaces"
-]
+description = "这是描述"
+categories = ["Test","whitespaces"]
+tags = ["markdown","text","whitespaces"]
 image = "matt-le-SJSpo9hQf7s-unsplash.jpg"
 +++
 

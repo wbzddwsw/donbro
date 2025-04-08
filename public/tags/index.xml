@@ -40,19 +40,19 @@
         <description></description>
         </item>
         <item>
-        <title>Tag With Whitespaces</title>
-        <link>http://localhost:1313/tags/tag-with-whitespaces/</link>
-        <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/tags/tag-with-whitespaces/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>Text</title>
         <link>http://localhost:1313/tags/text/</link>
         <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/tags/text/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Whitespaces</title>
+        <link>http://localhost:1313/tags/whitespaces/</link>
+        <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/tags/whitespaces/</guid>
         <description></description>
         </item>
         <item>
