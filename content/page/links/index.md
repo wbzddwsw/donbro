@@ -41,4 +41,4 @@ readingtime: false
 这是我有趣的朋友们(ゝ∀･)
 
 <small>欢迎与我交换友链!<br>名称：树响集<br>
-简介：不作诗则做诗<br>主页：https://wbzddwsw.vercel.app<br>头像：https://chatstorage.dvd.moe/dvdchat/dvdchat/8801c649-6842-4150-9a2a-83ae4b5badfa.jpg</small>
+简介：不作诗则做诗<br>主页：https://donbro.vercel.app/<br>头像：https://chatstorage.dvd.moe/dvdchat/dvdchat/8801c649-6842-4150-9a2a-83ae4b5badfa.jpg</small>
