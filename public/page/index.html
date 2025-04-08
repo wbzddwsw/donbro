@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='http://localhost:1313/page/'>
 
-<link rel="stylesheet" href="/scss/style.min.d2dab65af4d3ac08bdc33fcc41b9a726a0a50f552f26f0b0925e1644581deb84.css"><meta property='og:title' content="Pages">
+<link rel="stylesheet" href="/scss/style.min.dcefc754a565371ad4171cddf6bac1bbabf894f04428025f0b4a0f5b6396aefa.css"><meta property='og:title' content="Pages">
 <meta property='og:description' content="不作诗则做诗">
 <meta property='og:url' content='http://localhost:1313/page/'>
 <meta property='og:site_name' content='树响集'>
@@ -145,7 +145,7 @@
 
 
                 
-                <span>主页</span>
+                <span>Home</span>
             </a>
         </li>
         
@@ -440,6 +440,8 @@
             </footer>
         </div>
     </a>
+    <h2 class="article-title">Archives</h2>
+    
 </article>
         
             <article>
@@ -451,6 +453,8 @@
             </footer>
         </div>
     </a>
+    <h2 class="article-title">Links</h2>
+    
 </article>
         
             <article>
@@ -462,6 +466,8 @@
             </footer>
         </div>
     </a>
+    <h2 class="article-title">Search</h2>
+    
 </article>
         
     </section>
@@ -535,6 +541,37 @@
                 >
             </script><script type="text/javascript" src="/ts/main.cbfa88d3dce03409a5b7e74429680e064e0384e30a452e47ad69a935f03fc27f.js" defer></script>
 <script>
+    function backToTop() {
+      document.documentElement.scrollIntoView({
+        behavior: 'smooth',
+      })
+    }
+  
+    window.onload = function () {
+      let scrollTop =
+        this.document.documentElement.scrollTop || this.document.body.scrollTop
+      let totopBtn = this.document.getElementById('back-to-top')
+      if (scrollTop > 0) {
+        totopBtn.style.display = 'inline'
+      } else {
+        totopBtn.style.display = 'none'
+      }
+    }
+  
+    window.onscroll = function () {
+      let scrollTop =
+        this.document.documentElement.scrollTop || this.document.body.scrollTop
+      let totopBtn = this.document.getElementById('back-to-top')
+      if (scrollTop < 200) {
+        totopBtn.style.display = 'none'
+      } else {
+        totopBtn.style.display = 'inline'
+        totopBtn.addEventListener('click', backToTop, false)
+      }
+    }
+  </script>
+
+<script>
     (function () {
         const customFont = document.createElement('link');
         customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
@@ -559,6 +596,86 @@
     let result = days + "天" + hours + "小时" + minutes + "分钟";
     document.getElementById('runningdays').innerHTML = result;
 </script>
+
+
+<a href="#" id="back-to-top" title="返回顶部"></a>
+
+
+<style>
+  #back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 5px;
+    right: 15px;
+    width: 40px;  
+    height: 40px;  
+    border-radius: 50%;  
+    background-color: var(--body-background);
+    box-shadow: var(--shadow-l2);
+    font-size: 20px;  
+    text-align: center;
+    line-height: 38px;  
+    cursor: pointer;
+    transition:
+      transform 0.3s ease,
+      background-color 0.3s ease;  
+  }
+
+  #back-to-top:before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    transform: rotate(135deg);
+    height: 8px;  
+    width: 8px;  
+    border-width: 0 0 2px 2px;
+    border-color: var(--back-to-top-color);
+    border-style: solid;
+  }
+
+  #back-to-top:hover {
+    transform: scale(1.1);  
+    background-color: var(--accent-background);  
+  }
+
+  #back-to-top:hover:before {
+    border-color: var(--accent-color);  
+  }
+
+   
+  @media screen and (max-width: 768px) {
+    #back-to-top {
+      bottom: 5px;
+      right: var(--container-padding);
+      width: 30px;  
+      height: 30px;
+      font-size: 16px;
+      line-height: 32px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    #back-to-top {
+      bottom: 10px;
+      right: 20px;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    #back-to-top {
+      bottom: 15px;
+      right: 25px;
+    }
+  }
+
+  @media screen and (min-width: 1536px) {
+    #back-to-top {
+      bottom: 15px;
+      right: 25px;
+       
+    }
+  }
+</style>
 
     </body>
 </html>
