@@ -37,25 +37,7 @@ image: https://chatstorage.dvd.moe/dvdchat/dvdchat/44e51c87-6651-441d-8dc3-e188f
 
 1. 登录vercel，点击右上角`头像`，点击`Dashboard`，复制Domains下面自动分配网址域名
 
-2. 进入博客文件夹里的**D:xx\themes\stack\layouts\partials\comments\provider**，确认有**waline.html**文件
-
-   > 如果没有waline.html文件要自己创建：
-   >
-   > 1. 打开VScode，右上角新建文件，将下面的代码复制粘贴进去
-   > ```
-   > <div id="waline"></div>
-   > <script src="https://cdn.jsdelivr.net/npm/@waline/client"></script>
-   > <script>
-   >   Waline.init({
-   >       el: '#waline',
-   >       serverURL: '{{ site.Params.comments.waline.serverURL }}',
-   >       dark: '{{ site.Params.comments.waline.dark }}',
-   >       lang: '{{ site.Params.comments.waline.lang }}',
-   >       emoji: {{ site.Params.comments.waline.emoji | jsonify }}, 
-   >     });
-   > </script>
-   > ```
-   > 2. 将文件另存为`waline.html`,保存地址为**D:xx\themes\stack\layouts\partials\comments\provider**
+2. 进入博客文件夹里的**D:xx\themes\stack\layouts\partials\comments\provider**，将**waline.html**文件复制到对应的根目录文件夹
 
 3. 在博客文件夹中打开**hugo.yaml**，下拉到**params**
 

@@ -446,43 +446,7 @@
 <p>登录vercel，点击右上角<code>头像</code>，点击<code>Dashboard</code>，复制Domains下面自动分配网址域名</p>
 </li>
 <li>
-<p>进入博客文件夹里的<strong>D:xx\themes\stack\layouts\partials\comments\provider</strong>，确认有<strong>waline.html</strong>文件</p>
-<blockquote>
-<p>如果没有waline.html文件要自己创建：</p>
-<ol>
-<li>打开VScode，右上角新建文件，将下面的代码复制粘贴进去</li>
-</ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;div id=&#34;waline&#34;&gt;&lt;/div&gt;
-</span></span><span class="line"><span class="cl">&lt;script src=&#34;https://cdn.jsdelivr.net/npm/@waline/client&#34;&gt;&lt;/script&gt;
-</span></span><span class="line"><span class="cl">&lt;script&gt;
-</span></span><span class="line"><span class="cl">  Waline.init({
-</span></span><span class="line"><span class="cl">      el: &#39;#waline&#39;,
-</span></span><span class="line"><span class="cl">      serverURL: &#39;{{ site.Params.comments.waline.serverURL }}&#39;,
-</span></span><span class="line"><span class="cl">      dark: &#39;{{ site.Params.comments.waline.dark }}&#39;,
-</span></span><span class="line"><span class="cl">      lang: &#39;{{ site.Params.comments.waline.lang }}&#39;,
-</span></span><span class="line"><span class="cl">      emoji: {{ site.Params.comments.waline.emoji | jsonify }}, 
-</span></span><span class="line"><span class="cl">    });
-</span></span><span class="line"><span class="cl">&lt;/script&gt;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ol start="2">
-<li>将文件另存为<code>waline.html</code>,保存地址为<strong>D:xx\themes\stack\layouts\partials\comments\provider</strong></li>
-</ol></blockquote>
+<p>进入博客文件夹里的<strong>D:xx\themes\stack\layouts\partials\comments\provider</strong>，将<strong>waline.html</strong>文件复制到对应的根目录文件夹</p>
 </li>
 <li>
 <p>在博客文件夹中打开<strong>hugo.yaml</strong>，下拉到<strong>params</strong></p>
@@ -721,7 +685,7 @@
         
     
     发表了4篇文章 · 
-    总计0.85k字
+    总计0.81k字
     </section>
 
     <section class="copyright">
