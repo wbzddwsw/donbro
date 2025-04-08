@@ -40,11 +40,11 @@
         <description></description>
         </item>
         <item>
-        <title>Test With Whitespaces</title>
-        <link>http://localhost:1313/categories/test-with-whitespaces/</link>
+        <title>Whitespaces</title>
+        <link>http://localhost:1313/categories/whitespaces/</link>
         <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/categories/test-with-whitespaces/</guid>
+        <guid>http://localhost:1313/categories/whitespaces/</guid>
         <description></description>
         </item>
         
