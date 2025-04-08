@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='http://localhost:1313/categories/test-with-whitespaces/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Category: Test With Whitespaces - 树响集">
+<link rel="stylesheet" href="/scss/style.min.cc6cf92efb722a15c421aae4f3099be5577a264771b5afa12aa5a107470cff5d.css"><meta property='og:title' content="Category: Test With Whitespaces - 树响集">
 <meta property='og:description' content="不作诗则做诗">
 <meta property='og:url' content='http://localhost:1313/categories/test-with-whitespaces/'>
 <meta property='og:site_name' content='树响集'>
@@ -318,7 +318,7 @@
             
         
             
-                <section class="widget tagCloud">
+                <section class="widget category">
     <div class="widget-icon">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -333,30 +333,31 @@
     </div>
     <h2 class="widget-title section-title">分类</h2>
 
-    <div class="tagCloud-tags">
+    <div class="category-label">
         
             <a href="/categories/test/" class="font_size_3">
-                Test
+                Test<span class="category-count">3</span>
             </a>
         
             <a href="/categories/syntax/" class="font_size_1">
-                Syntax
+                Syntax<span class="category-count">1</span>
             </a>
         
             <a href="/categories/test-with-whitespaces/" class="font_size_1">
-                Test With Whitespaces
+                Test With Whitespaces<span class="category-count">1</span>
             </a>
         
             <a href="/categories/themes/" class="font_size_1">
-                Themes
+                Themes<span class="category-count">1</span>
             </a>
         
             <a href="/categories/%E6%B5%8B%E8%AF%95/" class="font_size_1">
-                测试
+                测试<span class="category-count">1</span>
             </a>
         
     </div>
 </section>
+
 
             
         
@@ -462,6 +463,13 @@
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
         主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
+
+    
+    <section class="running-time">
+    本博客已稳定运行
+    <span id="runningdays" class="running-days"></span>
+    </section>
+    
 </footer>
 
 
@@ -482,6 +490,20 @@
 
         document.head.appendChild(customFont);
     }());
+</script>
+
+<script>
+    let s1 = '2025-4-1'; 
+    s1 = new Date(s1.replace(/-/g, "/"));
+    let s2 = new Date();
+    let timeDifference = s2.getTime() - s1.getTime();
+
+    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+    let result = days + "天" + hours + "小时" + minutes + "分钟";
+    document.getElementById('runningdays').innerHTML = result;
 </script>
 
     </body>

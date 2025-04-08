@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='http://localhost:1313/p/markdown-syntax-guide/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Markdown Syntax Guide">
+<link rel="stylesheet" href="/scss/style.min.cc6cf92efb722a15c421aae4f3099be5577a264771b5afa12aa5a107470cff5d.css"><meta property='og:title' content="Markdown Syntax Guide">
 <meta property='og:description' content="Sample article showcasing basic Markdown syntax and formatting for HTML elements.">
 <meta property='og:url' content='http://localhost:1313/p/markdown-syntax-guide/'>
 <meta property='og:site_name' content='树响集'>
@@ -756,6 +756,13 @@
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
         主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
+
+    
+    <section class="running-time">
+    本博客已稳定运行
+    <span id="runningdays" class="running-days"></span>
+    </section>
+    
 </footer>
 
 
@@ -854,6 +861,20 @@
 
         document.head.appendChild(customFont);
     }());
+</script>
+
+<script>
+    let s1 = '2025-4-1'; 
+    s1 = new Date(s1.replace(/-/g, "/"));
+    let s2 = new Date();
+    let timeDifference = s2.getTime() - s1.getTime();
+
+    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+    let result = days + "天" + hours + "小时" + minutes + "分钟";
+    document.getElementById('runningdays').innerHTML = result;
 </script>
 
     </body>
