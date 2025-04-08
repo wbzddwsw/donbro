@@ -42,3 +42,76 @@
     padding-bottom: 15px;
   }
   
+/*------------------右侧导航栏--------------*/
+// 搜索菜单动画
+.search-form.widget {
+  transition: transform 0.6s ease;
+}
+
+.search-form.widget:hover {
+  transform: scale(1.1, 1.1);
+}
+
+
+//归档小图标放大动画
+.widget.archives .widget-archive--list {
+  transition: transform .3s ease;
+}
+
+.widget.archives .widget-archive--list:hover {
+  transform: scale(1.05, 1.05);
+}
+
+
+//右侧标签放大动画
+.tagCloud .tagCloud-tags a {
+  border-radius: 10px;
+  font-size: 1.4rem;
+  transition: transform .3s ease;
+}
+
+.tagCloud .tagCloud-tags a:hover {
+  transform: scale(1.1, 1.1);
+}
+
+// 归档页面两栏
+@media (min-width: 1024px) {
+  .article-list--compact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: none;
+    box-shadow: none;
+    gap: 1rem;
+
+    article {
+      background: var(--card-background);
+      border: none;
+      box-shadow: var(--shadow-l2);
+      margin-bottom: 8px;
+      border-radius: 16px;
+    }
+  }
+}
+
+// 友情链接三栏
+@media (min-width: 1024px) {
+  .article-list--compact.links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background: none;
+    box-shadow: none;
+    gap: 1rem;
+
+    article {
+      background: var(--card-background);
+      border: none;
+      box-shadow: var(--shadow-l2);
+      margin-bottom: 8px;
+      border-radius: var(--card-border-radius);
+
+      &:nth-child(odd) {
+        margin-right: 8px;
+      }
+    }
+  }
+}
