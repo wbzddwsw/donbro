@@ -6,7 +6,7 @@
         <description>Recent content in Pages on 树响集</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>Example Person</copyright>
+        <copyright>WSW</copyright>
         <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Archives</title>
         <link>http://localhost:1313/archives/</link>
@@ -30,6 +30,8 @@
         
         <guid>http://localhost:1313/%E8%BF%9E%E6%9E%9D%E4%B8%8E%E5%8F%B6/</guid>
         <description>&lt;p&gt;这是我有趣的朋友们(ゝ∀･)&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;欢迎与我交换友链!&lt;br&gt;名称：树响集&lt;br&gt;
+简介：不作诗则做诗&lt;br&gt;主页：https://wbzddwsw.vercel.app&lt;br&gt;头像：https://chatstorage.dvd.moe/dvdchat/dvdchat/8801c649-6842-4150-9a2a-83ae4b5badfa.jpg&lt;/small&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -79,7 +81,7 @@
 为本博客成功搭建提供的热心帮助。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;这里会放一些我觉得值得记录的东西，目标是做到自己时不时就想打开看看。&lt;/p&gt;
 &lt;h3 id=&#34;树响集维护日志&#34;&gt;树响集维护日志
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;2025.04.08&lt;/strong&gt; 更换stack主题&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;2025.04.08&lt;/strong&gt; 更换stack主题，更换回原域名，进入稳定运行状态&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;2025.04.07&lt;/strong&gt; 更换blowfish主题，更换域名&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;2025.04.01&lt;/strong&gt; 初次搭建成功，使用工具为hugo，安装主题MemE&lt;/p&gt;
 &lt;p&gt;&lt;small&gt;最后更新时间：2025年04月08日&lt;/small&gt;&lt;/p&gt;
