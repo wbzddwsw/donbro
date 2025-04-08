@@ -7,7 +7,7 @@ outputs:
     - json
 menu:
     main:
-        name: 查找
+        name: 搜索
         weight: -80
         params: 
             icon: search
