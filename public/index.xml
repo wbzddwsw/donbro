@@ -447,8 +447,8 @@ $$</description>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/%E8%BF%9E%E6%9E%9D%E4%B8%8E%E5%8F%B6/</guid>
-        <description>&lt;p&gt;这是我有趣的朋友们(ゝ∀･)&lt;/p&gt;
-</description>
+        <description>&lt;h3 id=&#34;这是我有趣的朋友们ゝ&#34;&gt;这是我有趣的朋友们(ゝ∀･)
+&lt;/h3&gt;</description>
         </item>
         <item>
         <title>我和树响集</title>

@@ -1,5 +1,7 @@
 ---
 title: 连枝与叶
+display:
+  header: false
 links:
   - title: GitHub
     description: GitHub is the world's largest software development platform.
@@ -19,4 +21,4 @@ readingtime: false
 comments: false
 ---
 
-这是我有趣的朋友们(ゝ∀･)
+### 这是我有趣的朋友们(ゝ∀･)
