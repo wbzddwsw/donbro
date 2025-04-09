@@ -219,7 +219,7 @@
 &lt;p&gt;发布频道帖子理论上要点进频道内，但没关系我们有很多快捷办法&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;右侧小部件1：支持跳转到任意链接&lt;/p&gt;
+&lt;p&gt;&lt;span id=&#34;big&#34;&gt;右侧小部件1：支持跳转到任意链接&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;点击&lt;code&gt;编辑部件&lt;/code&gt;、&lt;code&gt;增加AiScript APP&lt;/code&gt;、&lt;code&gt;设置&lt;/code&gt;，把下面的css粘贴进去并修改内容：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -649,7 +649,7 @@
 &lt;ol&gt;
 &lt;li&gt;投稿窗口：像mastodon一样的发帖窗口&lt;/li&gt;
 &lt;li&gt;个人资料：跳转个人主页更加方便快捷&lt;/li&gt;
-&lt;li&gt;AiScript APP：本人用来实现多种跳转功能&lt;/li&gt;
+&lt;li&gt;AiScript APP：&lt;span&gt;&lt;a href=&#34;#big&#34; style=&#34;text-decoration: underline;&#34;&gt;本人用来实现多种跳转功能&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;便签：和导航栏的便签不一样，这个类似于一个小备忘录，随手复制了什么可以粘贴在这里&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;信息过载如何拯救&#34;&gt;信息过载如何拯救
