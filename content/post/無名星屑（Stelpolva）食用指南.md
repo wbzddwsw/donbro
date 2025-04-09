@@ -372,6 +372,8 @@ misskey系实例的功能星屑当然都有，鉴于有些朋友是从mastodon�
      >
      > 8、在使用的主题里选择你刚刚安装的主题
 
+   夹带私货安利一下我做的主题：[SereneAccent](https://stelpolva.moe/notes/a0nuvtfp1r8825hw)
+
 4. 导航栏：设置导航栏选项，没选的会进入“更多！”
 
 5. 插件：目前星屑的插件大多是转换用的
