@@ -76,7 +76,7 @@ misskey系实例的功能星屑当然都有，鉴于有些朋友是从mastodon�
 
 ### 时间线
 
-不需要时间线的可以通过【设置-客户端设置-Stelpolva Plus】隐藏，还可以手动用css隐藏不同时间轴的重复内容，这个在设置里单独介绍
+不需要时间线的可以通过【设置-客户端设置-Stelpolva Plus】隐藏，还可以手动用css隐藏不同时间轴的重复内容，这个在信息过载里单独介绍
 
 ![时间线](https://chatstorage.dvd.moe/dvdchat/dvdchat/8c79afda-1ef4-450b-b378-63beae273ba5.png)
 
