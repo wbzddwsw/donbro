@@ -193,6 +193,10 @@ params:
         content:
             enabled: true
 
+    features:
+        copyCode: false
+
+
 ### Custom menu
 ### See https://stack.jimmycai.com/config/menu
 ### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
