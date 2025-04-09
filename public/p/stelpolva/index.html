@@ -306,6 +306,7 @@
       </ol>
     </li>
     <li><a href="#右侧小部件">右侧小部件</a></li>
+    <li><a href="#信息过载如何拯救">信息过载如何拯救</a></li>
   </ol>
 </nav>
         </div>
@@ -382,7 +383,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 3 分钟
+                    阅读时长: 4 分钟
                 </time>
             </div>
         
@@ -959,7 +960,7 @@
 <li>
 <p>壁纸：时间轴背景，只有半透明主题才会显示</p>
 <blockquote>
-<p>怎么把普通主题改成半透明：（教程来自星屑用户@bidyy ）</p>
+<p>怎么把普通主题改成半透明：（教程来自星友<code>@bidyy</code> ）</p>
 <p>1、进入设置-主题-看你现在用的主题是哪个</p>
 <p>2、进入主题管理，选择你现在使用的主题</p>
 <p>3、复制主题代码</p>
@@ -1035,6 +1036,173 @@
 <li>个人资料：跳转个人主页更加方便快捷</li>
 <li>AiScript APP：本人用来实现多种跳转功能</li>
 <li>便签：和导航栏的便签不一样，这个类似于一个小备忘录，随手复制了什么可以粘贴在这里</li>
+</ol>
+<h2 id="信息过载如何拯救">信息过载如何拯救
+</h2><blockquote>
+<p>以下内容来自站长<code>@nosquito</code>和kon酱<code>@cpursuit</code></p></blockquote>
+<ol>
+<li>
+<p>隐藏气泡：粘贴到“常规设置-自定义css”</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/* 帖文详情之外 不显示 文字背景、边框、特殊颜色 */
+</span></span><span class="line"><span class="cl">.SkNote-text-9t7i span, .SkNoteSub-text-VAZL span, .SkNoteSimple-text-5RJB span, .SkNote-collapsedRenoteTargetText-pNlm span {
+</span></span><span class="line"><span class="cl">    background: transparent !important;
+</span></span><span class="line"><span class="cl">    border: none !important;
+</span></span><span class="line"><span class="cl">    color: unset !important;
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>通知页不显示头像装饰</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/* 通知页 不显示 头像装饰 */
+</span></span><span class="line"><span class="cl">.pages-notifications-notifications-tfIf .MkAvatar-decoration-1fJq {display: none;}
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>时间轴不显示头像装饰</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/* 时间轴 不显示 头像装饰 */
+</span></span><span class="line"><span class="cl">.pages-timeline-tl-jptQ .MkAvatar-decoration-1fJq {display: none;}
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>时间轴不显示帖子下方回应</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/* 时间轴 不显示 帖子下方回应 */
+</span></span><span class="line"><span class="cl">.pages-timeline-tl-jptQ .MkReactionsViewer-root-lT1y {display: none;}
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>在Bubble、全局时间轴上隐藏本地内容</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/* Bubble时间轴 不显示 本实例内容 */
+</span></span><span class="line"><span class="cl">.MkTimeline[data-timeline-src=&#34;bubble&#34;] .d-is-local {
+</span></span><span class="line"><span class="cl">    display: none;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">/* 全局时间轴 不显示 本实例内容 */
+</span></span><span class="line"><span class="cl">.MkTimeline[data-timeline-src=&#34;global&#34;] .d-is-local {
+</span></span><span class="line"><span class="cl">    display: none;
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>时间轴不显示被回复帖子</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/* 时间轴 不显示 被回复帖子 */
+</span></span><span class="line"><span class="cl">.SkNote-replyTo-De1I {
+</span></span><span class="line"><span class="cl">    display:none;
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>时间轴不显示频道内容</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/* 时间轴 不显示 频道内容 */
+</span></span><span class="line"><span class="cl">.pages-timeline-tl-jptQ .SkNote-root-1aC8:has(a.SkNote-channel-wQdW) {
+</span></span><span class="line"><span class="cl">    display:none;
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>修改被回复原帖的外观</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/* 时间轴、个人资料 被回复原帖的外观修改 */
+</span></span><span class="line"><span class="cl">.SkNote-replyTo-De1I {
+</span></span><span class="line"><span class="cl">    font-size: 90%;
+</span></span><span class="line"><span class="cl">    opacity: 0.75; /* 修改字体大小和透明度 */
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">.SkNote-replyTo-De1I .MkMediaList-container-bIzI {
+</span></span><span class="line"><span class="cl">    height: 10em; /* 修改原帖媒体栏大小 */
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">.SkNote-replyTo-De1I .MkReactionsViewer-root-lT1y {
+</span></span><span class="line"><span class="cl">    display: none; /* 不显示原帖收到的表情回应 */
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">.SkNote-replyTo-De1I .MkSubNoteContent-reply-8ivL {
+</span></span><span class="line"><span class="cl">    display: none; /* 不显示原帖内容开头的箭头 */
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">.SkNote-replyTo-De1I .SkNoteSub-footer-8Mdq {
+</span></span><span class="line"><span class="cl">    display: none; /* 不显示原帖下方操作菜单 */
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
 </ol>
 <p>好了，这篇啰里吧嗦的介绍/安利到这里终于结束了，总之欢迎大家来星屑玩！</p>
 
@@ -1126,7 +1294,7 @@
         
     
     发表了5篇文章 · 
-    总计1.34k字
+    总计1.53k字
     </section>
 
     <section class="copyright">

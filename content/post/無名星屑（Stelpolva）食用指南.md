@@ -354,7 +354,7 @@ misskey系实例的功能星屑当然都有，鉴于有些朋友是从mastodon�
 
    - 壁纸：时间轴背景，只有半透明主题才会显示
 
-     > 怎么把普通主题改成半透明：（教程来自星屑用户@bidyy ）
+     > 怎么把普通主题改成半透明：（教程来自星友`@bidyy` ）
      >
      > 1、进入设置-主题-看你现在用的主题是哪个
      >
@@ -399,5 +399,94 @@ misskey系实例的功能星屑当然都有，鉴于有些朋友是从mastodon�
 2. 个人资料：跳转个人主页更加方便快捷
 3. AiScript APP：本人用来实现多种跳转功能
 4. 便签：和导航栏的便签不一样，这个类似于一个小备忘录，随手复制了什么可以粘贴在这里
+
+## 信息过载如何拯救
+
+> 以下内容来自站长`@nosquito`和kon酱`@cpursuit`
+
+1. 隐藏气泡：粘贴到“常规设置-自定义css”
+
+   ```
+   /* 帖文详情之外 不显示 文字背景、边框、特殊颜色 */
+   .SkNote-text-9t7i span, .SkNoteSub-text-VAZL span, .SkNoteSimple-text-5RJB span, .SkNote-collapsedRenoteTargetText-pNlm span {
+       background: transparent !important;
+       border: none !important;
+       color: unset !important;
+   }
+   ```
+
+2. 通知页不显示头像装饰
+
+   ```
+   /* 通知页 不显示 头像装饰 */
+   .pages-notifications-notifications-tfIf .MkAvatar-decoration-1fJq {display: none;}
+   ```
+
+3. 时间轴不显示头像装饰
+
+   ```
+   /* 时间轴 不显示 头像装饰 */
+   .pages-timeline-tl-jptQ .MkAvatar-decoration-1fJq {display: none;}
+   ```
+
+4. 时间轴不显示帖子下方回应
+
+   ```
+   /* 时间轴 不显示 帖子下方回应 */
+   .pages-timeline-tl-jptQ .MkReactionsViewer-root-lT1y {display: none;}
+   ```
+
+5. 在Bubble、全局时间轴上隐藏本地内容
+
+   ```
+   /* Bubble时间轴 不显示 本实例内容 */
+   .MkTimeline[data-timeline-src="bubble"] .d-is-local {
+       display: none;
+   }
+   /* 全局时间轴 不显示 本实例内容 */
+   .MkTimeline[data-timeline-src="global"] .d-is-local {
+       display: none;
+   }
+   ```
+
+6. 时间轴不显示被回复帖子
+
+   ```
+   /* 时间轴 不显示 被回复帖子 */
+   .SkNote-replyTo-De1I {
+       display:none;
+   }
+   ```
+
+7. 时间轴不显示频道内容
+
+   ```
+   /* 时间轴 不显示 频道内容 */
+   .pages-timeline-tl-jptQ .SkNote-root-1aC8:has(a.SkNote-channel-wQdW) {
+       display:none;
+   }
+   ```
+
+8. 修改被回复原帖的外观
+
+   ```
+   /* 时间轴、个人资料 被回复原帖的外观修改 */
+   .SkNote-replyTo-De1I {
+       font-size: 90%;
+       opacity: 0.75; /* 修改字体大小和透明度 */
+   }
+   .SkNote-replyTo-De1I .MkMediaList-container-bIzI {
+       height: 10em; /* 修改原帖媒体栏大小 */
+   }
+   .SkNote-replyTo-De1I .MkReactionsViewer-root-lT1y {
+       display: none; /* 不显示原帖收到的表情回应 */
+   }
+   .SkNote-replyTo-De1I .MkSubNoteContent-reply-8ivL {
+       display: none; /* 不显示原帖内容开头的箭头 */
+   }
+   .SkNote-replyTo-De1I .SkNoteSub-footer-8Mdq {
+       display: none; /* 不显示原帖下方操作菜单 */
+   }
+   ```
 
 好了，这篇啰里吧嗦的介绍/安利到这里终于结束了，总之欢迎大家来星屑玩！
