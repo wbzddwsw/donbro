@@ -7,13 +7,29 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WSW</copyright>
-        <lastBuildDate>Wed, 02 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>操作记录</title>
-        <link>http://localhost:1313/categories/%E6%93%8D%E4%BD%9C%E8%AE%B0%E5%BD%95/</link>
+        <lastBuildDate>Wed, 09 Apr 2025 09:52:03 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>小径指北</title>
+        <link>http://localhost:1313/categories/%E5%B0%8F%E5%BE%84%E6%8C%87%E5%8C%97/</link>
+        <pubDate>Wed, 09 Apr 2025 09:52:03 +0800</pubDate>
+        
+        <guid>http://localhost:1313/categories/%E5%B0%8F%E5%BE%84%E6%8C%87%E5%8C%97/</guid>
+        <description>&lt;img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/df2a7a01-dbd0-4b5c-b1fb-2b5233cadab7.jpg" alt="Featured image of post 小径指北" /&gt;</description>
+        </item>
+        <item>
+        <title>未名之地</title>
+        <link>http://localhost:1313/categories/%E6%9C%AA%E5%90%8D%E4%B9%8B%E5%9C%B0/</link>
+        <pubDate>Tue, 08 Apr 2025 21:22:22 +0800</pubDate>
+        
+        <guid>http://localhost:1313/categories/%E6%9C%AA%E5%90%8D%E4%B9%8B%E5%9C%B0/</guid>
+        <description>&lt;img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/113956bc-437a-4034-98aa-7fa0c12041b7.jpg" alt="Featured image of post 未名之地" /&gt;</description>
+        </item>
+        <item>
+        <title>数枝横斜</title>
+        <link>http://localhost:1313/categories/%E6%95%B0%E6%9E%9D%E6%A8%AA%E6%96%9C/</link>
         <pubDate>Wed, 02 Apr 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/categories/%E6%93%8D%E4%BD%9C%E8%AE%B0%E5%BD%95/</guid>
-        <description>&lt;img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/0874c291-1c07-4fbd-a50f-a1d02a9698c8.jpg" alt="Featured image of post 操作记录" /&gt;</description>
+        <guid>http://localhost:1313/categories/%E6%95%B0%E6%9E%9D%E6%A8%AA%E6%96%9C/</guid>
+        <description>&lt;img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/d0f3b35a-ee62-4576-9821-21898cbacba6.jpg" alt="Featured image of post 数枝横斜" /&gt;</description>
         </item>
         
     </channel>

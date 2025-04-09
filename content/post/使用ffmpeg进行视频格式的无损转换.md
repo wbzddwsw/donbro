@@ -2,8 +2,8 @@
 title: "使用ffmpeg进行视频格式的无损转换"
 description: "转换速度很快而且无损，部署好后可以一直使用，非常方便"
 date: 2025-04-02
-categories: ["操作记录"]
-tags: []
+categories: ["数枝横斜"]
+tags: [实用工具]
 image: https://chatstorage.dvd.moe/dvdchat/dvdchat/dc679c68-35cd-4492-87cc-c3ba485219d7.jpg
 ---
 

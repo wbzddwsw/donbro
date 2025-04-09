@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>随想记录 on 树响集</title>
+        <link>http://localhost:1313/tags/%E9%9A%8F%E6%83%B3%E8%AE%B0%E5%BD%95/</link>
+        <description>Recent content in 随想记录 on 树响集</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>WSW</copyright>
+        <lastBuildDate>Tue, 08 Apr 2025 21:22:22 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E9%9A%8F%E6%83%B3%E8%AE%B0%E5%BD%95/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>博客正式运行纪念</title>
+        <link>http://localhost:1313/p/%E5%8D%9A%E5%AE%A2%E6%AD%A3%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%BA%AA%E5%BF%B5/</link>
+        <pubDate>Tue, 08 Apr 2025 21:22:22 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/%E5%8D%9A%E5%AE%A2%E6%AD%A3%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%BA%AA%E5%BF%B5/</guid>
+        <description>&lt;img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/b1211ddb-eb79-481d-b419-7123be01831f.jpg" alt="Featured image of post 博客正式运行纪念" /&gt;&lt;p&gt;最开始了解博客是通过o3o的writee，那会儿研究公告栏看到就顺手注册了，然后就一直搁置……直到去年十月我从wxw赛博搬家到星屑，9号那天（特意去翻了记录确认）在tl看大家聊起星屑的博客，这才意识到，原来writee也是博客呀！&lt;/p&gt;
+&lt;p&gt;随后用站长给的邀请码注册了星屑博客，并且抛弃了writee，因为它的文章不能删除！非常浅尝辄止地研究了一下新玩具，还借用了&lt;strong&gt;kon酱&lt;/strong&gt;的美丽配色代码，但是因为一直没有系统输出文章，所以慢慢又忘却了。&lt;/p&gt;
+&lt;p&gt;4月1日那天&lt;del&gt;怎么是愚人节啊&lt;/del&gt;，看到&lt;strong&gt;阿南&lt;/strong&gt;在tl上说要尝试搭建hugo博客，热血上头就说要一起，说的时候没想太多，但是按照阿南发给我的教程，我俩一点一点研究，居然真的搭出来了！&lt;/p&gt;
+&lt;p&gt;说到代码相关，我是完全的小白，和代码唯一的接触就是之前在星屑写的几个插件，就这还是用的kon酱的代码，只是单纯的修改填充内容，还出了各种错误，幸好有kon酱一直耐心解答。&lt;/p&gt;
+&lt;p&gt;随后进入了紧张刺激的主题装修环节！我从MemE到stack，最终和阿南一起确定了blowfish，开始了究极精神折磨。&lt;/p&gt;
+&lt;p&gt;这个过程只能说，一把辛酸泪，一步一bug，我俩研究不同的设置，然后再互相教，完全照抄对面的操作，但就是不停报错，问gpt老师也不管用，直到赛博神医&lt;strong&gt;菜菜子&lt;/strong&gt;热心为我俩提供帮助！&lt;/p&gt;
+&lt;p&gt;我的主题安装后第一步改语言就出了问题，最后是把文件打包给菜菜子帮我改好再发给我的（磕头.jpg），后面还问了数不胜数的傻瓜问题，友不厌其烦地解答。还有阿南也是，虽然说是我俩一起研究，但我研究什么都报错，阿南总是把自己研究明白的代码直接发给我让我抄，真的泪目了TT&lt;/p&gt;
+&lt;p&gt;本来我最开始注册的博客1安装的MemE，后来又注册了博客2研究stack，发现整不明白又切换成blowfish。博客2勉强运行后，我还是想用博客1的域名，于是试图把博客2的内容合并到博客1，果不其然bug频出……最后放弃了，注册了博客3，然后一点点照搬了博客2的内容，并且终于在昨天晚上成功发布。&lt;/p&gt;
+&lt;p&gt;但是！好巧不巧！昨晚上床后，刷到一个非常完美的stack主题教程，我对stack的热情又重新燃起，或者说是一种不甘心，非得把它整明白不可，于是今天开工，初始化了博客1（上次合并的时候就是想初始化来着但是没成功），并且成功运行了！&lt;/p&gt;
+&lt;p&gt;之所以速度这么快，一是前几天的经验累积（怎么不算熟能生巧呢），二就是这个教程！天哪简直是菩萨级别，直接贴在这里供有需要的人参考，完全是傻子都可以照抄的程度！&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.xalaok.top/post/stack-modify/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;教程1&lt;/a&gt;
+
+
+&lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+    height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+    &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+    &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+        fill=&#34;currentColor&#34;&gt;
+&lt;/svg&gt;&lt;/span&gt;
+
+ &lt;a class=&#34;link&#34; href=&#34;https://thirdshire.com/hugo-stack-renovation/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;教程2&lt;/a&gt;
+
+
+&lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+    height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+    &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+    &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+        fill=&#34;currentColor&#34;&gt;
+&lt;/svg&gt;&lt;/span&gt;
+
+&lt;/p&gt;
+&lt;p&gt;总之，到目前为止，我的博客进入平稳运行阶段，暂时不再需要装修啦，会努力多写点东西的，不能辜负这段时间的呕心沥血_(:3 」∠ )_&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

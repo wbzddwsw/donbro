@@ -1,9 +1,9 @@
 ---
 title: 配置waline添加留言功能
-description: 大陆地区加载很慢，配置结束后可能要等个把小时才会正常显示
+description: stack主题加载很快，但blowfish要个把小时，不理解
 date: 2025-04-02
-categories: ["操作记录"]
-tags: ["blog"]
+categories: ["数枝横斜"]
+tags: ["Hugo"]
 image: https://chatstorage.dvd.moe/dvdchat/dvdchat/44e51c87-6651-441d-8dc3-e188f9f30d8e.jpg
 ---
 
@@ -23,7 +23,7 @@ image: https://chatstorage.dvd.moe/dvdchat/dvdchat/44e51c87-6651-441d-8dc3-e188f
 
 3. 在右侧Private Repository Name位置输入仓库名，我这里输入liuyan，点击`Create`，大概等1分钟左右，会弹出来一个**Congratulations！**的弹窗，代表Vercel已经自动搭建好一个Hugo博客
 
-   > 注意：waline和你的博客在vercel是两个独立的hugo项目
+   > 注意：waline和你的博客在vercel是两个独立的项目
 
 4. 点击`Continue to Dashboard`进入管理页面，对应项目Domains下面的**liuyan-ochre.vercel.app**就是自动分配的访问网址域名，点击可以直接进入留言区
 
