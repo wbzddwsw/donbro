@@ -211,9 +211,9 @@ menu:
           params:
               icon: brand-github
 
-        - identifier: email
-          name: email
-          url: mailto:wbzddwsw@gmail.com
+        - identifier: NeKoBox
+          name: NeKoBox
+          url: https://box.n3ko.cc/_/donbro
           weight: 2
           params:
               icon: mail
