@@ -219,7 +219,7 @@
 &lt;p&gt;发布频道帖子理论上要点进频道内，但没关系我们有很多快捷办法&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;右侧小部件1：支持跳转到任意链接&lt;/p&gt;
+&lt;p&gt;&lt;span id=&#34;big&#34;&gt;右侧小部件1：支持跳转到任意链接&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;点击&lt;code&gt;编辑部件&lt;/code&gt;、&lt;code&gt;增加AiScript APP&lt;/code&gt;、&lt;code&gt;设置&lt;/code&gt;，把下面的css粘贴进去并修改内容：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -586,6 +586,18 @@
 &lt;p&gt;8、在使用的主题里选择你刚刚安装的主题&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;夹带私货安利一下我做的主题：&lt;a class=&#34;link&#34; href=&#34;https://stelpolva.moe/notes/a0nuvtfp1r8825hw&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SereneAccent&lt;/a&gt;
+
+
+&lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+    height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+    &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+    &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+        fill=&#34;currentColor&#34;&gt;
+&lt;/svg&gt;&lt;/span&gt;
+
+&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;导航栏：设置导航栏选项，没选的会进入“更多！”&lt;/p&gt;
@@ -649,7 +661,7 @@
 &lt;ol&gt;
 &lt;li&gt;投稿窗口：像mastodon一样的发帖窗口&lt;/li&gt;
 &lt;li&gt;个人资料：跳转个人主页更加方便快捷&lt;/li&gt;
-&lt;li&gt;AiScript APP：本人用来实现多种跳转功能&lt;/li&gt;
+&lt;li&gt;AiScript APP：&lt;span&gt;&lt;a href=&#34;#big&#34; style=&#34;text-decoration: underline;&#34;&gt;本人用来实现多种跳转功能&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;便签：和导航栏的便签不一样，这个类似于一个小备忘录，随手复制了什么可以粘贴在这里&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;信息过载如何拯救&#34;&gt;信息过载如何拯救
