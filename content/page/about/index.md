@@ -30,7 +30,7 @@ menu:
 
 ### 树响集维护日志
 
-{{< timeline date="2025-04-08" title="更换主题、域名" description="安装主题stack，更换回原域名，进入稳定运行状态"tags="blog" >}}
+{{< timeline date="2025-04-08" title="更换主题、域名" description="安装主题stack，更换回原域名，进入稳定运行状态" >}}
 
 {{< timeline date="2025-04-08" title="更换主题、域名" description="安装主题blowfish" tags="blog"  >}}
 
