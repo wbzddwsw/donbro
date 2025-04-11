@@ -8,7 +8,6 @@ aliases:
   - about-hugo
   - contact
 license: false
-lastmod: ''
 menu:
     main: 
         name: 关于
@@ -25,16 +24,14 @@ menu:
 
 ### 关于树响集
 
-> 诚挚感谢[阿南](https://blog-sooty-beta.vercel.app/)和[菜菜子](https://nanako-blog.web.app/about/)为本博客成功搭建提供的热心帮助。
+{{< card >}}诚挚感谢[阿南](https://blog-sooty-beta.vercel.app/)和[菜菜子](https://nanako-blog.web.app/about/)为本博客成功搭建提供的热心帮助。{{< /card >}}
 
 这里会放一些我觉得值得记录的东西，目标是做到自己时不时就想打开看看。
 
 ### 树响集维护日志
 
-**2025.04.08** 更换stack主题，更换回原域名，进入稳定运行状态
+{{< timeline date="2025-04-08" title="更换主题、域名" description="安装主题stack，更换回原域名，进入稳定运行状态"tags="blog" >}}
 
-**2025.04.07** 更换blowfish主题，更换域名
+{{< timeline date="2025-04-08" title="更换主题、域名" description="安装主题blowfish" tags="blog"  >}}
 
-**2025.04.01** 初次搭建成功，使用工具为hugo，安装主题MemE
-
-<small>最后更新时间：2025年04月08日</small>
+{{< timeline date="2025-04-01" title="第一次运行" description="初次搭建成功，使用工具为hugo，安装主题MemE" tags="blog"  >}}

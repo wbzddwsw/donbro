@@ -375,7 +375,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 2 分钟
+                    阅读时长: 1 分钟
                 </time>
             </div>
         
@@ -408,7 +408,7 @@
 <p>进入控制台，点击左上角<code>创建应用</code>并起一个名字 ，这里必须选免费的开发版</p>
 </li>
 <li>
-<p>进入应用，点击项目左下角<code>设置</code>，再选择左下角的 <code>设置</code>、<code>应用凭证</code>，记录<strong>App ID</strong>、<strong>App Key</strong>和<strong>Master Key</strong>的内容。</p>
+<p>进入应用，点击项目左下角<code>设置</code>，再选择左下角的 <code>设置</code>、<code>应用凭证</code>，记录 <strong>App ID</strong>、<strong>App Key</strong> 和 <strong>Master Key</strong> 的内容。</p>
 </li>
 </ol>
 <h3 id="vercel-部署-服务端">Vercel 部署 (服务端)
@@ -431,37 +431,39 @@
 <p>如果你未登录的话，Vercel 会让你注册或登录，请使用 GitHub 账户进行快捷登录。</p>
 </li>
 <li>
-<p>在右侧Private Repository Name位置输入仓库名，我这里输入liuyan，点击<code>Create</code>，大概等1分钟左右，会弹出来一个**Congratulations！**的弹窗，代表Vercel已经自动搭建好一个Hugo博客</p>
-<blockquote>
-<p>注意：waline和你的博客在vercel是两个独立的项目</p></blockquote>
+<p>在右侧 Private Repository Name 位置输入仓库名，点击 <code>Create</code>，大概等1分钟左右，会弹出来一个**Congratulations！**的弹窗</p>
+<div class="mycard">
+      <div class="content"> 注意：waline和你的博客在vercel是两个独立的项目 </div>
+    </div>
+
 </li>
 <li>
-<p>点击<code>Continue to Dashboard</code>进入管理页面，对应项目Domains下面的<strong>liuyan-ochre.vercel.app</strong>就是自动分配的访问网址域名，点击可以直接进入留言区</p>
+<p>点击 <code>Continue to Dashboard</code> 进入管理页面，对应项目Domains下面的 <strong>xxx.vercel.app</strong>就是自动分配的访问网址域名，点击可以直接进入留言区</p>
 </li>
 <li>
-<p>点击右上角<code>头像</code>，点击<code>Dashboard</code>，看到刚刚建立的Hugo项目，点击项目<code>右上角三个点</code>后再点击<code>Setting</code>进入设置</p>
+<p>点击右上角<code>头像</code>，点击 <code>Dashboard</code> ，看到刚刚建立的项目，点击项目<code>右上角三个点</code>后再点击 <code>Setting</code> 进入设置</p>
 </li>
 <li>
-<p>点击左侧<code>Environment Variables</code>，Key处填写<code>LEAN_ID</code>, <code>LEAN_KEY</code> 和 <code>LEAN_MASTER_KEY</code> ，它们的值分别对应上一步在 LeanCloud 中获得的 <code>APP ID</code>, <code>APP KEY</code>, <code>Master Key</code>，Value处填写<code>对应的内容</code>，最后点击<code>save</code></p>
+<p>点击左侧 <code>Environment Variables</code>，Key 处填写<code>LEAN_ID</code>, <code>LEAN_KEY</code> 和 <code>LEAN_MASTER_KEY</code> ，它们的值分别对应上一步在 LeanCloud 中获得的 <code>APP ID</code>，<code>APP KEY</code>， <code>Master Key</code>，Value 处填写<code>对应的内容</code>，最后点击 <code>save</code></p>
 </li>
 </ol>
 <h3 id="引入博客">引入博客
 </h3><h4 id="stack主题">stack主题
 </h4><ol>
 <li>
-<p>登录vercel，点击右上角<code>头像</code>，点击<code>Dashboard</code>，复制Domains下面自动分配网址域名</p>
+<p>登录 vercel，点击右上角<code>头像</code>，点击 <code>Dashboard</code>，复制 Domains 下面自动分配网址域名</p>
 </li>
 <li>
-<p>进入博客文件夹里的<strong>D:xx\themes\stack\layouts\partials\comments\provider</strong>，将<strong>waline.html</strong>文件复制到对应的根目录文件夹</p>
+<p>进入博客文件夹里的**\themes\stack\layouts\partials\comments\provider**，将<strong>waline.html</strong>文件复制到对应的根目录文件夹</p>
 </li>
 <li>
-<p>在博客文件夹中打开<strong>hugo.yaml</strong>，下拉到<strong>params</strong></p>
+<p>在博客文件夹中打开 <strong>hugo.yaml</strong>，下拉到 <strong>params</strong></p>
 <ul>
 <li>
-<p>找到<strong>comments:</strong>，将<code> provider:</code>修改为<code> provider: waline</code></p>
+<p>找到 <strong>comments:</strong>，将 <code> provider:</code>修改为<code> provider: waline</code></p>
 </li>
 <li>
-<p>找到<strong>waline:</strong>，将<code>serverURL:</code>修改为<code>serverURL: https://你的留言项目域名.vercel.app</code>，将<code>lang:</code>修改为<code>lang: zh-CN</code></p>
+<p>找到<strong>waline:</strong>，将<code>serverURL:</code>修改为<code>serverURL: https://xxx.vercel.app</code>，将<code>lang:</code>修改为<code>lang: zh-CN</code></p>
 </li>
 <li>
 <p>保存并关闭</p>
@@ -469,86 +471,46 @@
 </ul>
 </li>
 </ol>
-<blockquote>
-<p>测试能否正常运行：</p>
-<p>编辑好文件后，在博客所在文件夹的空白处单击<code>右键</code>（文件夹内必须有config.toml文件），选择<code>Open Git Bash Here</code>，在弹出的命令行界面中输入<code>hugo server --disableFastRender</code>，如果步骤正确，会显示：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Watching for changes in D:\blog\github_wsw_hugo\hugo\hugo\{archetypes,content,th
-</span></span><span class="line"><span class="cl">emes}
-</span></span><span class="line"><span class="cl">Watching for config changes in D:\blog\github_wsw_hugo\hugo\hugo\hugo.yaml, D:\b
-</span></span><span class="line"><span class="cl">log\github_wsw_hugo\hugo\hugo\themes\stack\config.yaml
-</span></span><span class="line"><span class="cl">Start building sites …
-</span></span><span class="line"><span class="cl">hugo v0.145.0-666444f0a52132f9fec9f71cf25b441cc6a4f355+extended windows/amd64 Bu
-</span></span><span class="line"><span class="cl">ildDate=2025-02-26T15:41:25Z VendorInfo=gohugoio
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">WARN  Search page not found. Create a page with layout: search.
-</span></span><span class="line"><span class="cl">WARN  Archives page not found. Create a page with layout: archives.
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">                  | EN | ZH-CN | AR
-</span></span><span class="line"><span class="cl">-------------------+----+-------+-----
-</span></span><span class="line"><span class="cl"> Pages            | 47 |    18 | 21
-</span></span><span class="line"><span class="cl"> Paginator pages  |  6 |     0 |  0
-</span></span><span class="line"><span class="cl"> Non-page files   |  5 |     1 |  1
-</span></span><span class="line"><span class="cl"> Static files     |  0 |     0 |  0
-</span></span><span class="line"><span class="cl"> Processed images | 14 |     0 |  0
-</span></span><span class="line"><span class="cl"> Aliases          | 22 |     7 |  9
-</span></span><span class="line"><span class="cl"> Cleaned          |  0 |     0 |  0
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Built in 614 ms
-</span></span><span class="line"><span class="cl">Environment: &#34;development&#34;
-</span></span><span class="line"><span class="cl">Serving pages from disk
-</span></span><span class="line"><span class="cl">Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
-</span></span><span class="line"><span class="cl">Press Ctrl+C to stop
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>显示结果最后的<a class="link" href="http://localhost:1313"  target="_blank" rel="noopener"
-    >http://localhost:1313</a>
+<details>
+    <summary>测试能否正常运行</summary>
+    <p>编辑好文件后，在<b>donbro</b>文件夹的空白处单击右键，选择<b>Open Git Bash Here</b>，在弹出的命令行界面中输入<b>ugo server --disableFastRender</b>，如果步骤正确，会显示：</p>
+<pre><code class="code-highlight"><span class="code-line line-number" line="1">Watching for changes in D:\blog\github_wsw_hugo\donbro\{archetypes,content,theme
+s}
+Watching for config changes in D:\blog\github_wsw_hugo\donbro\config.toml
+Start building sites …
+hugo v0.145.0-666444f0a52132f9fec9f71cf25b441cc6a4f355+extended windows/amd64 Bu
+ildDate=2025-02-26T15:41:25Z VendorInfo=gohugoio
 
+          | ZH-CN
 
-<span style="white-space: nowrap;"><svg width=".7em"
-    height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
-    <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
-    <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
-        fill="currentColor">
-</svg></span>
+-------------------+--------
+Pages            |    11
+Paginator pages  |     0
+Non-page files   |     0
+Static files     |    11
+Processed images |     0
+Aliases          |     0
+Cleaned          |     0
 
-就是预览网址</p></blockquote>
+Built in 110 ms
+Environment: "development"
+Serving pages from disk
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableF
+astRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Press Ctrl+C to stop
+</span></code></pre>
+<p>显示结果最后的 http://localhost:1313 就是预览网址</p>
+
+</details>
+
 <h3 id="推送到github">推送到Github
 </h3><ol>
 <li>
-<p>打开Github Desktop，登录Github账号</p>
+<p>打开 Github Desktop ，登录 Github 账号</p>
 </li>
 <li>
-<p>点击左边<code>Changes</code>栏，点击文件名可以看到具体内容，勾选要同步的文件，下方<code>Summary(required)</code>为本次更新行为命名，再点击最下面<code>Commit to main</code>提交，最后点击上方第三个大黑框<code>Push origin</code>进行推送</p>
+<p>点击左边 <code>Changes</code> 栏，点击文件名可以看到具体内容，勾选要同步的文件，下方 <code>Summary(required)</code> 为本次更新行为命名，再点击最下面 <code>Commit to main</code> 提交，最后点击上方第三个大黑框 <code>Push origin</code> 进行推送</p>
 </li>
 </ol>
 <h3 id="评论管理">评论管理
@@ -693,7 +655,7 @@
         
     
     发表了5篇文章 · 
-    总计1.54k字
+    总计1.63k字
     </section>
 
     <section class="copyright">

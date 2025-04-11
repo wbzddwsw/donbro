@@ -1,6 +1,7 @@
 ---
 title: 连枝与叶
 slug: friends
+license: false
 links:
   - title: 漫游者迷路中
     description: 记生活迷思，做吟游诗人
@@ -45,5 +46,9 @@ readingtime: false
 
 这是我有趣的朋友们(ゝ∀･)
 
-<small>欢迎与我交换友链!<br>名称：树响集<br>
+{{< card >}}
+{{< detail "欢迎与我交换友链!" >}}
+<small>名称：树响集<br>
 简介：不作诗则做诗<br>主页：https://donbro.vercel.app/<br>头像：https://chatstorage.dvd.moe/dvdchat/dvdchat/8801c649-6842-4150-9a2a-83ae4b5badfa.jpg</small>
+{{< /detail >}}
+{{< /card >}}
