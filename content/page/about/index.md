@@ -32,6 +32,6 @@ menu:
 
 {{< timeline date="2025-04-08" title="更换主题、域名" description="安装主题stack，更换回原域名，进入稳定运行状态" >}}
 
-{{< timeline date="2025-04-08" title="更换主题、域名" description="安装主题blowfish" tags="blog"  >}}
+{{< timeline date="2025-04-08" title="更换主题、域名" description="安装主题blowfish" >}}
 
-{{< timeline date="2025-04-01" title="第一次运行" description="初次搭建成功，使用工具为hugo，安装主题MemE" tags="blog"  >}}
+{{< timeline date="2025-04-01" title="第一次运行" description="初次搭建成功，使用工具为hugo，安装主题MemE">}}

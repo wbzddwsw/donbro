@@ -1647,7 +1647,7 @@ Press Ctrl+C to stop
     &lt;/div&gt;
     &lt;div class=&#34;timeline__content&#34;&gt;
         &lt;div class=&#34;timeline__tags&#34;&gt;
-            &lt;span class=&#34;timeline__tag&#34;&gt;blog&lt;/span&gt;
+            &lt;span class=&#34;timeline__tag&#34;&gt;&lt;/span&gt;
         &lt;/div&gt;
             &lt;div class=&#34;timeline__title&#34;&gt;更换主题、域名&lt;/div&gt;
         &lt;div class=&#34;timeline__description&#34;&gt;
@@ -1816,7 +1816,7 @@ Press Ctrl+C to stop
     &lt;/div&gt;
     &lt;div class=&#34;timeline__content&#34;&gt;
         &lt;div class=&#34;timeline__tags&#34;&gt;
-            &lt;span class=&#34;timeline__tag&#34;&gt;blog&lt;/span&gt;
+            &lt;span class=&#34;timeline__tag&#34;&gt;&lt;/span&gt;
         &lt;/div&gt;
             &lt;div class=&#34;timeline__title&#34;&gt;第一次运行&lt;/div&gt;
         &lt;div class=&#34;timeline__description&#34;&gt;
