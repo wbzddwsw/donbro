@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>未名之地 on 树响集</title>
-        <link>http://localhost:1313/categories/%E6%9C%AA%E5%90%8D%E4%B9%8B%E5%9C%B0/</link>
+        <link>https://donbro.vercel.app/categories/%E6%9C%AA%E5%90%8D%E4%B9%8B%E5%9C%B0/</link>
         <description>Recent content in 未名之地 on 树响集</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WSW</copyright>
-        <lastBuildDate>Tue, 08 Apr 2025 21:22:22 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E6%9C%AA%E5%90%8D%E4%B9%8B%E5%9C%B0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 08 Apr 2025 21:22:22 +0800</lastBuildDate><atom:link href="https://donbro.vercel.app/categories/%E6%9C%AA%E5%90%8D%E4%B9%8B%E5%9C%B0/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>博客正式运行纪念</title>
-        <link>http://localhost:1313/p/yunxing/</link>
+        <link>https://donbro.vercel.app/p/yunxing/</link>
         <pubDate>Tue, 08 Apr 2025 21:22:22 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/yunxing/</guid>
+        <guid>https://donbro.vercel.app/p/yunxing/</guid>
         <description>&lt;img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/b1211ddb-eb79-481d-b419-7123be01831f.jpg" alt="Featured image of post 博客正式运行纪念" /&gt;&lt;p&gt;最开始了解博客是通过o3o的writee，那会儿研究公告栏看到就顺手注册了，然后就一直搁置……直到去年十月我从wxw赛博搬家到星屑，9号那天（特意去翻了记录确认）在tl看大家聊起星屑的博客，这才意识到，原来writee也是博客呀！&lt;/p&gt;
 &lt;p&gt;随后用站长给的邀请码注册了星屑博客，并且抛弃了writee，因为它的文章不能删除！非常浅尝辄止地研究了一下新玩具，还借用了&lt;strong&gt;kon酱&lt;/strong&gt;的美丽配色代码，但是因为一直没有系统输出文章，所以慢慢又忘却了。&lt;/p&gt;
 &lt;p&gt;4月1日那天&lt;del&gt;怎么是愚人节啊&lt;/del&gt;，看到&lt;strong&gt;阿南&lt;/strong&gt;在tl上说要尝试搭建hugo博客，热血上头就说要一起，说的时候没想太多，但是按照阿南发给我的教程，我俩一点一点研究，居然真的搭出来了！&lt;/p&gt;

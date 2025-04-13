@@ -101,5 +101,3 @@ draft: false
 
 ### neodb
 
-{{< neodb "https://neodb.social/review/7AcUGiNj8fChCFegRKsF7t" >}}{{< /neodb >}}
-

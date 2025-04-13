@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on 树响集</title>
-        <link>http://localhost:1313/post/</link>
+        <link>https://donbro.vercel.app/post/</link>
         <description>Recent content in Posts on 树响集</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WSW</copyright>
-        <lastBuildDate>Fri, 11 Apr 2025 15:28:13 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 11 Apr 2025 15:28:13 +0800</lastBuildDate><atom:link href="https://donbro.vercel.app/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>短代码应用</title>
-        <link>http://localhost:1313/p/%E7%9F%AD%E4%BB%A3%E7%A0%81%E5%BA%94%E7%94%A8/</link>
+        <link>https://donbro.vercel.app/p/%E7%9F%AD%E4%BB%A3%E7%A0%81%E5%BA%94%E7%94%A8/</link>
         <pubDate>Fri, 11 Apr 2025 15:28:13 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E7%9F%AD%E4%BB%A3%E7%A0%81%E5%BA%94%E7%94%A8/</guid>
+        <guid>https://donbro.vercel.app/p/%E7%9F%AD%E4%BB%A3%E7%A0%81%E5%BA%94%E7%94%A8/</guid>
         <description>&lt;h3 id=&#34;高亮标记&#34;&gt;高亮标记
 &lt;/h3&gt;&lt;mark&gt;好喜欢蓝色！&lt;/mark&gt;
 
@@ -678,7 +678,7 @@
 
 
 &lt;h3 id=&#34;对话框&#34;&gt;对话框
-&lt;/h3&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/message.css&#34; /&gt;
+&lt;/h3&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://donbro.vercel.app/css/message.css&#34; /&gt;
 
 &lt;div class=&#34;message --self&#34;&gt;
     &lt;div class=&#34;message__inner&#34;&gt;
@@ -702,7 +702,7 @@
     &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/message.css&#34; /&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://donbro.vercel.app/css/message.css&#34; /&gt;
 
 &lt;div class=&#34;message &#34;&gt;
     &lt;div class=&#34;message__inner&#34;&gt;
@@ -727,48 +727,14 @@
 &lt;/div&gt;
 
 &lt;h3 id=&#34;neodb&#34;&gt;neodb
-&lt;/h3&gt;
-
-
- 
-
-
-
-
-    
-    &lt;div class=&#34;db-card&#34;&gt;
-        &lt;div class=&#34;db-card-subject&#34;&gt;
-            &lt;div class=&#34;db-card-post&#34;&gt;
-                &lt;img src=&#34;&#34;&gt;
-                     alt=&#34;开发模式占位图片&#34; 
-                     style=&#34;max-width: 100%; height: auto;&#34;&gt;
-            &lt;/div&gt;
-            &lt;div class=&#34;db-card-content&#34;&gt;
-                &lt;div class=&#34;db-card-title&#34;&gt;
-                    &lt;a href=&#34;https://neodb.social/review/7AcUGiNj8fChCFegRKsF7t&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;示例标题&lt;/a&gt;
-                &lt;/div&gt;
-                &lt;div class=&#34;db-card-comment&#34;&gt;
-                    2025-03-04 想读
-                    &lt;span style=&#34;color: #6b0f0f;&#34;&gt;#示例分类&lt;/span&gt;
-                    
-                    
-                    &lt;p&gt;这是开发模式下的占位数据。&lt;/p&gt;
-                    
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-
- 
-
-</description>
+&lt;/h3&gt;</description>
         </item>
         <item>
         <title>無名星屑（Stelpolva）食用指南</title>
-        <link>http://localhost:1313/p/stelpolva/</link>
+        <link>https://donbro.vercel.app/p/stelpolva/</link>
         <pubDate>Wed, 09 Apr 2025 09:52:03 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/stelpolva/</guid>
+        <guid>https://donbro.vercel.app/p/stelpolva/</guid>
         <description>&lt;img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/ada427a7-2b1f-4092-bcb1-6834c2899ba0.jpg" alt="Featured image of post 無名星屑（Stelpolva）食用指南" /&gt;&lt;p&gt;星屑被广大星友们戏称为联邦宇宙的QQ空间，还是至尊黄钻版本，其花里胡哨程度可见一斑，如果你是个喜欢装扮自己账号的人，那可算是来对地方了！当然如果你觉得太花哨，也可以隐藏，自由程度相当高喔&lt;/p&gt;
 &lt;p&gt;misskey系实例的功能星屑当然都有，鉴于有些朋友是从mastodon搬过来，所以这方面也会顺带讲一下，互通的内容就略过，本文的重点是&lt;del&gt;如何花式玩转&lt;/del&gt;星屑的特别功能&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1592,10 +1558,10 @@
         </item>
         <item>
         <title>博客正式运行纪念</title>
-        <link>http://localhost:1313/p/yunxing/</link>
+        <link>https://donbro.vercel.app/p/yunxing/</link>
         <pubDate>Tue, 08 Apr 2025 21:22:22 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/yunxing/</guid>
+        <guid>https://donbro.vercel.app/p/yunxing/</guid>
         <description>&lt;img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/b1211ddb-eb79-481d-b419-7123be01831f.jpg" alt="Featured image of post 博客正式运行纪念" /&gt;&lt;p&gt;最开始了解博客是通过o3o的writee，那会儿研究公告栏看到就顺手注册了，然后就一直搁置……直到去年十月我从wxw赛博搬家到星屑，9号那天（特意去翻了记录确认）在tl看大家聊起星屑的博客，这才意识到，原来writee也是博客呀！&lt;/p&gt;
 &lt;p&gt;随后用站长给的邀请码注册了星屑博客，并且抛弃了writee，因为它的文章不能删除！非常浅尝辄止地研究了一下新玩具，还借用了&lt;strong&gt;kon酱&lt;/strong&gt;的美丽配色代码，但是因为一直没有系统输出文章，所以慢慢又忘却了。&lt;/p&gt;
 &lt;p&gt;4月1日那天&lt;del&gt;怎么是愚人节啊&lt;/del&gt;，看到&lt;strong&gt;阿南&lt;/strong&gt;在tl上说要尝试搭建hugo博客，热血上头就说要一起，说的时候没想太多，但是按照阿南发给我的教程，我俩一点一点研究，居然真的搭出来了！&lt;/p&gt;
@@ -1634,10 +1600,10 @@
         </item>
         <item>
         <title>配置waline添加留言功能</title>
-        <link>http://localhost:1313/p/waline/</link>
+        <link>https://donbro.vercel.app/p/waline/</link>
         <pubDate>Wed, 02 Apr 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/p/waline/</guid>
+        <guid>https://donbro.vercel.app/p/waline/</guid>
         <description>&lt;img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/44e51c87-6651-441d-8dc3-e188f9f30d8e.jpg" alt="Featured image of post 配置waline添加留言功能" /&gt;&lt;h3 id=&#34;注册leancloud&#34;&gt;注册LeanCloud
 &lt;/h3&gt;&lt;p&gt;注册地址：&lt;a class=&#34;link&#34; href=&#34;https://console.leancloud.app/register&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://console.leancloud.app/register（国际版）&lt;/a&gt;
@@ -1771,10 +1737,10 @@ Press Ctrl+C to stop
         </item>
         <item>
         <title>使用ffmpeg进行视频格式的无损转换</title>
-        <link>http://localhost:1313/p/ffmpeg/</link>
+        <link>https://donbro.vercel.app/p/ffmpeg/</link>
         <pubDate>Wed, 02 Apr 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/p/ffmpeg/</guid>
+        <guid>https://donbro.vercel.app/p/ffmpeg/</guid>
         <description>&lt;img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/dc679c68-35cd-4492-87cc-c3ba485219d7.jpg" alt="Featured image of post 使用ffmpeg进行视频格式的无损转换" /&gt;&lt;h3 id=&#34;下载ffmpeg&#34;&gt;下载ffmpeg
 &lt;/h3&gt;&lt;p&gt;下载地址：&lt;a class=&#34;link&#34; href=&#34;https://github.com/BtbN/FFmpeg-Builds/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://github.com/BtbN/FFmpeg-Builds/releases&lt;/a&gt;
@@ -1862,10 +1828,10 @@ Use -h to get full help or, even better, run &#39;man ffmpeg&#39;
         </item>
         <item>
         <title>Hugo-小白博客部署记录</title>
-        <link>http://localhost:1313/p/hugo/</link>
+        <link>https://donbro.vercel.app/p/hugo/</link>
         <pubDate>Wed, 02 Apr 2025 01:00:56 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/hugo/</guid>
+        <guid>https://donbro.vercel.app/p/hugo/</guid>
         <description>&lt;img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/8114f986-0e3a-4b7d-b8fc-65865cd5f636.jpg" alt="Featured image of post Hugo-小白博客部署记录" /&gt;&lt;blockquote&gt;
 &lt;p&gt;感谢&lt;a class=&#34;link&#34; href=&#34;https://mantyke.icu/posts/2021/hugo-build-blog/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;“小球飞鱼”的教程&lt;/a&gt;
