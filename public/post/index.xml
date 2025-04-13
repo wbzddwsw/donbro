@@ -7,7 +7,763 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WSW</copyright>
-        <lastBuildDate>Wed, 09 Apr 2025 09:52:03 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 11 Apr 2025 15:28:13 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>短代码应用</title>
+        <link>http://localhost:1313/p/%E7%9F%AD%E4%BB%A3%E7%A0%81%E5%BA%94%E7%94%A8/</link>
+        <pubDate>Fri, 11 Apr 2025 15:28:13 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/%E7%9F%AD%E4%BB%A3%E7%A0%81%E5%BA%94%E7%94%A8/</guid>
+        <description>&lt;h3 id=&#34;高亮标记&#34;&gt;高亮标记
+&lt;/h3&gt;&lt;mark&gt;好喜欢蓝色！&lt;/mark&gt;
+
+&lt;h3 id=&#34;折叠&#34;&gt;折叠
+&lt;/h3&gt;&lt;details&gt;
+    &lt;summary&gt;叠叠乐&lt;/summary&gt;
+    &lt;p&gt;这是第一个段落的内容。&lt;/p&gt;
+&lt;p&gt;这是第二个段落的内容，位于折叠部分，实际使用别忘了双括号！&lt;/p&gt;
+
+&lt;/details&gt;
+
+&lt;h3 id=&#34;模糊&#34;&gt;模糊
+&lt;/h3&gt;&lt;p&gt;&lt;span class=&#34;blur&#34;&gt;一些手动打码效果！&lt;br&gt;但总之换行的话就加个空标签。&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;黑色打码&#34;&gt;黑色打码
+&lt;/h3&gt;&lt;p&gt;&lt;span class=&#34;shady&#34;&gt;数据删除！数据删除！&lt;br&gt;但总之换行的话就加个空标签。&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;抖动&#34;&gt;抖动
+&lt;/h3&gt;&lt;p&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/csshake/1.5.3/csshake.min.css&#34; /&gt;
+
+&lt;div class=&#34;shake shake&#34;&gt;这是基本的摇晃效果。&lt;/div&gt;
+
+&lt;div class=&#34;shake&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-hard&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-slow&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-little&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-horizontal&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-vertical&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-rotate&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-opacity&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-crazy&#34;&gt;&lt;/div&gt;
+ 
+&lt;div class=&#34;shake shake-freeze&#34;&gt;&lt;/div&gt; 
+ 
+&lt;div class=&#34;shake shake-constant&#34;&gt;&lt;/div&gt; 
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/csshake/1.5.3/csshake.min.css&#34; /&gt;
+
+&lt;div class=&#34;shake shake-hard&#34;&gt;这个段落有剧烈摇晃效果。&lt;/div&gt;
+
+&lt;div class=&#34;shake&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-hard&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-slow&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-little&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-horizontal&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-vertical&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-rotate&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-opacity&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-crazy&#34;&gt;&lt;/div&gt;
+ 
+&lt;div class=&#34;shake shake-freeze&#34;&gt;&lt;/div&gt; 
+ 
+&lt;div class=&#34;shake shake-constant&#34;&gt;&lt;/div&gt; 
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/csshake/1.5.3/csshake.min.css&#34; /&gt;
+
+&lt;div class=&#34;shake shake-slow&#34;&gt;这个段落有慢速摇晃效果。&lt;/div&gt;
+
+&lt;div class=&#34;shake&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-hard&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-slow&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-little&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-horizontal&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-vertical&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-rotate&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-opacity&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-crazy&#34;&gt;&lt;/div&gt;
+ 
+&lt;div class=&#34;shake shake-freeze&#34;&gt;&lt;/div&gt; 
+ 
+&lt;div class=&#34;shake shake-constant&#34;&gt;&lt;/div&gt; 
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/csshake/1.5.3/csshake.min.css&#34; /&gt;
+
+&lt;div class=&#34;shake shake-little&#34;&gt;这个段落有轻微摇晃效果。&lt;/div&gt;
+
+&lt;div class=&#34;shake&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-hard&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-slow&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-little&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-horizontal&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-vertical&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-rotate&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-opacity&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-crazy&#34;&gt;&lt;/div&gt;
+ 
+&lt;div class=&#34;shake shake-freeze&#34;&gt;&lt;/div&gt; 
+ 
+&lt;div class=&#34;shake shake-constant&#34;&gt;&lt;/div&gt; 
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/csshake/1.5.3/csshake.min.css&#34; /&gt;
+
+&lt;div class=&#34;shake shake-horizontal&#34;&gt;这个段落有水平摇晃效果。&lt;/div&gt;
+
+&lt;div class=&#34;shake&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-hard&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-slow&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-little&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-horizontal&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-vertical&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-rotate&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-opacity&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-crazy&#34;&gt;&lt;/div&gt;
+ 
+&lt;div class=&#34;shake shake-freeze&#34;&gt;&lt;/div&gt; 
+ 
+&lt;div class=&#34;shake shake-constant&#34;&gt;&lt;/div&gt; 
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/csshake/1.5.3/csshake.min.css&#34; /&gt;
+
+&lt;div class=&#34;shake shake-vertical&#34;&gt;这个段落有垂直摇晃效果。&lt;/div&gt;
+
+&lt;div class=&#34;shake&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-hard&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-slow&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-little&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-horizontal&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-vertical&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-rotate&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-opacity&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-crazy&#34;&gt;&lt;/div&gt;
+ 
+&lt;div class=&#34;shake shake-freeze&#34;&gt;&lt;/div&gt; 
+ 
+&lt;div class=&#34;shake shake-constant&#34;&gt;&lt;/div&gt; 
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/csshake/1.5.3/csshake.min.css&#34; /&gt;
+
+&lt;div class=&#34;shake shake-rotate&#34;&gt;这个段落有旋转摇晃效果。&lt;/div&gt;
+
+&lt;div class=&#34;shake&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-hard&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-slow&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-little&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-horizontal&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-vertical&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-rotate&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-opacity&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-crazy&#34;&gt;&lt;/div&gt;
+ 
+&lt;div class=&#34;shake shake-freeze&#34;&gt;&lt;/div&gt; 
+ 
+&lt;div class=&#34;shake shake-constant&#34;&gt;&lt;/div&gt; 
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/csshake/1.5.3/csshake.min.css&#34; /&gt;
+
+&lt;div class=&#34;shake shake-opacity&#34;&gt;这个段落有透明度变化摇晃效果。&lt;/div&gt;
+
+&lt;div class=&#34;shake&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-hard&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-slow&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-little&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-horizontal&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-vertical&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-rotate&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-opacity&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-crazy&#34;&gt;&lt;/div&gt;
+ 
+&lt;div class=&#34;shake shake-freeze&#34;&gt;&lt;/div&gt; 
+ 
+&lt;div class=&#34;shake shake-constant&#34;&gt;&lt;/div&gt; 
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/csshake/1.5.3/csshake.min.css&#34; /&gt;
+
+&lt;div class=&#34;shake shake-crazy&#34;&gt;这个段落有疯狂摇晃效果。&lt;/div&gt;
+
+&lt;div class=&#34;shake&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-hard&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-slow&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-little&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-horizontal&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-vertical&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-rotate&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-opacity&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-crazy&#34;&gt;&lt;/div&gt;
+ 
+&lt;div class=&#34;shake shake-freeze&#34;&gt;&lt;/div&gt; 
+ 
+&lt;div class=&#34;shake shake-constant&#34;&gt;&lt;/div&gt; 
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/csshake/1.5.3/csshake.min.css&#34; /&gt;
+
+&lt;div class=&#34;shake shake-freeze&#34;&gt;这个段落在悬停时冻结。&lt;/div&gt;
+
+&lt;div class=&#34;shake&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-hard&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-slow&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-little&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-horizontal&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-vertical&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-rotate&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-opacity&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-crazy&#34;&gt;&lt;/div&gt;
+ 
+&lt;div class=&#34;shake shake-freeze&#34;&gt;&lt;/div&gt; 
+ 
+&lt;div class=&#34;shake shake-constant&#34;&gt;&lt;/div&gt; 
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/csshake/1.5.3/csshake.min.css&#34; /&gt;
+
+&lt;div class=&#34;shake shake-constant&#34;&gt;这个段落持续摇晃。&lt;/div&gt;
+
+&lt;div class=&#34;shake&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-hard&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-slow&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-little&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-horizontal&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-vertical&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-rotate&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-opacity&#34;&gt;&lt;/div&gt; 
+&lt;div class=&#34;shake shake-crazy&#34;&gt;&lt;/div&gt;
+ 
+&lt;div class=&#34;shake shake-freeze&#34;&gt;&lt;/div&gt; 
+ 
+&lt;div class=&#34;shake shake-constant&#34;&gt;&lt;/div&gt; 
+&lt;/p&gt;
+&lt;h3 id=&#34;渐变&#34;&gt;渐变
+&lt;/h3&gt;&lt;p&gt;&lt;font class=&#34;colorfulfont&#34;&gt; 我挑的配色很好看吧！&lt;br&gt;好喜欢蓝色（再次）（再次）&lt;br&gt; 但总之换行的话就加个空标签。&lt;/font&gt;&lt;/p&gt;
+&lt;h3 id=&#34;文字位置&#34;&gt;文字位置
+&lt;/h3&gt;&lt;p&gt;&lt;p style=&#34;text-align:left&#34;&gt;文字居左&lt;/p&gt;
+
+&lt;p style=&#34;text-align:center&#34;&gt;文字居中&lt;/p&gt;
+
+&lt;p style=&#34;text-align:right&#34;&gt;文字居右&lt;/p&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;引用&#34;&gt;引用
+&lt;/h3&gt;
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+
+
+  
+
+
+&lt;blockquote&gt;
+  &lt;p&gt;这里写引用内容，实际使用记得换成双括号。&lt;/p&gt;
+  &lt;footer style=&#34;text-align:right&#34;&gt;
+    &lt;strong&gt;作者&lt;/strong&gt;
+    
+      
+        &lt;cite&gt;
+          &lt;a href=&#34;%e4%b9%9f%e5%8f%af%e4%bb%a5%e4%b8%8d%e5%8a%a0%e5%95%a6&#34; title=&#34;也可以不加啦&#34; rel=&#34;noopener noreferrer&#34;&gt;作品名&lt;/a&gt; 
+        &lt;/cite&gt;
+      
+    
+  &lt;/footer&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;中心引用&#34;&gt;中心引用
+&lt;/h3&gt;&lt;blockquote class=&#34;quote-center&#34;&gt; 
+    &lt;/p&gt;
+  &lt;p&gt;左右两边的符号可以自定义&lt;br&gt;使用需要双括号&lt;br&gt;换行需要空标签&lt;/p&gt;
+  &lt;/blockquote&gt;
+
+&lt;h3 id=&#34;键盘样式&#34;&gt;键盘样式
+&lt;/h3&gt;&lt;p&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;Del&lt;/kbd&gt;&lt;/p&gt;
+&lt;h3 id=&#34;评分&#34;&gt;评分
+&lt;/h3&gt;&lt;span class=&#34;star-rating&#34;&gt;&lt;i class=&#34;star&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 576 512&#34;&gt;&lt;path d=&#34;M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z&#34;/&gt;&lt;/svg&gt;&lt;/i&gt;&lt;i class=&#34;star&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 576 512&#34;&gt;&lt;path d=&#34;M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z&#34;/&gt;&lt;/svg&gt;&lt;/i&gt;&lt;i class=&#34;star&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 576 512&#34;&gt;&lt;path d=&#34;M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z&#34;/&gt;&lt;/svg&gt;&lt;/i&gt;&lt;i class=&#34;star&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 576 512&#34;&gt;&lt;path d=&#34;M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z&#34;/&gt;&lt;/svg&gt;&lt;/i&gt;&lt;i class=&#34;star&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 576 512&#34;&gt;&lt;path d=&#34;M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z&#34;/&gt;&lt;/svg&gt;&lt;/i&gt;&lt;i class=&#34;star&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 576 512&#34;&gt;&lt;path d=&#34;M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z&#34;/&gt;&lt;/svg&gt;&lt;/i&gt;&lt;i class=&#34;star&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 576 512&#34;&gt;&lt;path d=&#34;M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z&#34;/&gt;&lt;/svg&gt;&lt;/i&gt;&lt;i class=&#34;star-outline&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 576 512&#34;&gt;&lt;path d=&#34;M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z&#34;/&gt;&lt;/svg&gt;&lt;/i&gt;&lt;i class=&#34;star-outline&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 576 512&#34;&gt;&lt;path d=&#34;M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z&#34;/&gt;&lt;/svg&gt;&lt;/i&gt;&lt;i class=&#34;star-outline&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 576 512&#34;&gt;&lt;path d=&#34;M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z&#34;/&gt;&lt;/svg&gt;&lt;/i&gt;&lt;/span&gt;
+
+&lt;h3 id=&#34;卡片链接&#34;&gt;卡片链接
+&lt;/h3&gt;&lt;div class=&#34;mycard&#34;&gt;
+      &lt;div class=&#34;content&#34;&gt; 可以在这里插入链接假装是卡片式链接。
+&lt;br&gt;
+好像不能插入图片？
+&lt;br&gt;
+换行需要空标签。实际使用需要双括号。 &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;h3 id=&#34;时间轴&#34;&gt;时间轴
+&lt;/h3&gt;&lt;div class=&#34;timeline__row&#34;&gt;
+    &lt;div class=&#34;timeline__time&#34;&gt;
+        &lt;div class=&#34;timeline__time&#34;&gt;2025-04-01&lt;/div&gt;
+        &lt;div class=&#34;timeline__split-line&#34;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;timeline__content&#34;&gt;
+        &lt;div class=&#34;timeline__tags&#34;&gt;
+            &lt;span class=&#34;timeline__tag&#34;&gt;试试&lt;/span&gt;
+        &lt;/div&gt;
+            &lt;div class=&#34;timeline__title&#34;&gt;新建博客&lt;/div&gt;
+        &lt;div class=&#34;timeline__description&#34;&gt;
+            成功了好耶！
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+    .timeline {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .timeline__row {
+        display: flex;
+        padding-left: 4%;
+        height: 90px;
+    }
+    
+    .timeline__time {
+        flex: 0 0 110px;
+        color: #5d5d5d;
+        font-size: 17px;
+        text-transform: uppercase;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem 0;
+    }
+    
+    .timeline__time-text {
+        margin: 0;
+    }
+    
+    .timeline__split-line {
+        position: absolute;
+        top: 0.5rem;
+        right: -20px;
+        height: 100%;
+        width: 2px;
+        background-color: #84c4e240;
+        z-index: 0;
+    }
+    
+    .timeline__split-line:before {
+        content: &#34;&#34;;
+        position: absolute;
+        top: 24%;
+        right: -4px;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 10px;
+        background-color: #c9e5f2;
+        box-shadow: 0 0 0 4px var(--theme);
+        border-radius: 50%;
+        border: 0px solid #84c4e2;
+        z-index: -1;
+    }
+    
+    .timeline__content {
+        flex: 1;
+        margin-left: 4.5rem;
+        padding: 0.5rem 0 1.2rem 0;
+    }
+    
+    .timeline__title {
+        margin: 0;
+        margin-bottom: 2px;
+        padding-top: 3px;
+        margin-left: 0.5rem;
+        color: var(--content);
+        font-family: var(--font-family-teshu);
+        font-size: 19px;
+        font-weight: 600;
+        width: fit-content;
+        display: inline-block;
+        vertical-align: middle;
+         
+    }
+    
+    .timeline__tags {
+        display: inline-block;
+        padding: 0;
+        margin-left: 0.3rem;
+        align-items: center;
+        gap: 0.3rem;
+    }
+    
+    .timeline__tag {
+        display: inline-block;
+        color: var(--secondary);
+        background-color: #84c4e230;
+        border: 1.5px solid #84c4e230;
+        border-radius: 999px;
+        padding: 0rem 0.5rem;
+        font-size: 12px;
+        white-space: nowrap;
+        line-height: 1.4rem;
+        opacity: 0.8;
+        vertical-align: middle;
+         
+    }
+    
+    .timeline__description {
+        font-size: 15px;
+        line-height: 1.6;
+        color: #5d5d5d;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0.5rem 0 0.4rem 1.5rem;
+         
+    }
+     
+    
+    .timeline__tag-style {
+        background-color: #c581da;
+         
+        border-color: #c581da;
+         
+        color: #FFFFFF;
+         
+    }
+     
+    
+    .timeline__tag-article {
+        background-color: #92d392;
+         
+        border-color: #92d392;
+         
+        color: #000000;
+         
+    }
+     
+    
+    .timeline__tag-page {
+        background-color: #707070;
+         
+        border-color: #707070;
+         
+        color: #FFFFFF;
+         
+    }
+    
+    @media screen and (max-width: 768px) {
+        .timeline__time {
+            font-size: 14px;
+             
+        }
+        .timeline__title {
+            font-size: 16px;
+             
+        }
+        .timeline__description {
+            font-size: 14px;
+             
+        }
+    }
+&lt;/style&gt;
+
+&lt;div class=&#34;timeline__row&#34;&gt;
+    &lt;div class=&#34;timeline__time&#34;&gt;
+        &lt;div class=&#34;timeline__time&#34;&gt;2025-04-02&lt;/div&gt;
+        &lt;div class=&#34;timeline__split-line&#34;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;timeline__content&#34;&gt;
+        &lt;div class=&#34;timeline__tags&#34;&gt;
+            &lt;span class=&#34;timeline__tag&#34;&gt;到的&lt;/span&gt;
+        &lt;/div&gt;
+            &lt;div class=&#34;timeline__title&#34;&gt;场吃得好&lt;/div&gt;
+        &lt;div class=&#34;timeline__description&#34;&gt;
+            充不了电补充进来！
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+    .timeline {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .timeline__row {
+        display: flex;
+        padding-left: 4%;
+        height: 90px;
+    }
+    
+    .timeline__time {
+        flex: 0 0 110px;
+        color: #5d5d5d;
+        font-size: 17px;
+        text-transform: uppercase;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem 0;
+    }
+    
+    .timeline__time-text {
+        margin: 0;
+    }
+    
+    .timeline__split-line {
+        position: absolute;
+        top: 0.5rem;
+        right: -20px;
+        height: 100%;
+        width: 2px;
+        background-color: #84c4e240;
+        z-index: 0;
+    }
+    
+    .timeline__split-line:before {
+        content: &#34;&#34;;
+        position: absolute;
+        top: 24%;
+        right: -4px;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 10px;
+        background-color: #c9e5f2;
+        box-shadow: 0 0 0 4px var(--theme);
+        border-radius: 50%;
+        border: 0px solid #84c4e2;
+        z-index: -1;
+    }
+    
+    .timeline__content {
+        flex: 1;
+        margin-left: 4.5rem;
+        padding: 0.5rem 0 1.2rem 0;
+    }
+    
+    .timeline__title {
+        margin: 0;
+        margin-bottom: 2px;
+        padding-top: 3px;
+        margin-left: 0.5rem;
+        color: var(--content);
+        font-family: var(--font-family-teshu);
+        font-size: 19px;
+        font-weight: 600;
+        width: fit-content;
+        display: inline-block;
+        vertical-align: middle;
+         
+    }
+    
+    .timeline__tags {
+        display: inline-block;
+        padding: 0;
+        margin-left: 0.3rem;
+        align-items: center;
+        gap: 0.3rem;
+    }
+    
+    .timeline__tag {
+        display: inline-block;
+        color: var(--secondary);
+        background-color: #84c4e230;
+        border: 1.5px solid #84c4e230;
+        border-radius: 999px;
+        padding: 0rem 0.5rem;
+        font-size: 12px;
+        white-space: nowrap;
+        line-height: 1.4rem;
+        opacity: 0.8;
+        vertical-align: middle;
+         
+    }
+    
+    .timeline__description {
+        font-size: 15px;
+        line-height: 1.6;
+        color: #5d5d5d;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0.5rem 0 0.4rem 1.5rem;
+         
+    }
+     
+    
+    .timeline__tag-style {
+        background-color: #c581da;
+         
+        border-color: #c581da;
+         
+        color: #FFFFFF;
+         
+    }
+     
+    
+    .timeline__tag-article {
+        background-color: #92d392;
+         
+        border-color: #92d392;
+         
+        color: #000000;
+         
+    }
+     
+    
+    .timeline__tag-page {
+        background-color: #707070;
+         
+        border-color: #707070;
+         
+        color: #FFFFFF;
+         
+    }
+    
+    @media screen and (max-width: 768px) {
+        .timeline__time {
+            font-size: 14px;
+             
+        }
+        .timeline__title {
+            font-size: 16px;
+             
+        }
+        .timeline__description {
+            font-size: 14px;
+             
+        }
+    }
+&lt;/style&gt;
+
+&lt;h3 id=&#34;图片轮播&#34;&gt;图片轮播
+&lt;/h3&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css&#34;&gt;
+    
+    &lt;div class=&#34;swiper-container&#34;&gt;
+        &lt;div class=&#34;swiper-wrapper&#34;&gt;
+            
+            
+            &lt;div class=&#34;swiper-slide&#34;&gt;
+                &lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/b1211ddb-eb79-481d-b419-7123be01831f.jpg&#34; alt=&#34;&#34;&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&#34;swiper-slide&#34;&gt;
+                &lt;img src=&#34;#ZgotmplZ&#34; alt=&#34;&#34;&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&#34;swiper-slide&#34;&gt;
+                &lt;img src=&#34;#ZgotmplZ&#34; alt=&#34;&#34;&gt;
+            &lt;/div&gt;
+            
+        &lt;/div&gt;
+        
+        &lt;div class=&#34;swiper-pagination&#34;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js&#34;&gt;&lt;/script&gt;
+     
+     &lt;script&gt;
+        var swiper = new Swiper(&#39;.swiper-container&#39;, {
+            pagination: &#39;.swiper-pagination&#39;,
+            paginationClickable: true,
+        
+        autoHeight: true,
+        
+        keyboardControl : true,
+        
+        mousewheelControl : true,
+        
+        
+        
+        lazyLoading : true,
+		lazyLoadingInPrevNext : true,
+		
+		loop : true,
+        });
+        &lt;/script&gt;
+
+
+&lt;h3 id=&#34;对话框&#34;&gt;对话框
+&lt;/h3&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/message.css&#34; /&gt;
+
+&lt;div class=&#34;message --self&#34;&gt;
+    &lt;div class=&#34;message__inner&#34;&gt;
+        
+        &lt;img class=&#34;avatar&#34; src=&#34;https://unavatar.io/twitter/%e6%98%b5%e7%a7%b0&#34; width=&#34;24&#34; height=&#34;24&#34;&gt;
+        
+        &lt;div class=&#34;message__text&#34;&gt;
+            &lt;hstack class=&#34;message__meta&#34;&gt;我 &lt;spacer&gt;&lt;/spacer&gt; 2025-04-01&lt;/hstack&gt;
+            这里是自定义的信息内容。 
+
+            
+            &lt;div class=&#34;grid-container&#34;&gt;
+                
+                &lt;div class=&#34;grid-item&#34;&gt;
+                    &lt;img class=&#34;message__img&#34; src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/b1211ddb-eb79-481d-b419-7123be01831f.jpg&#34; alt=&#34;Image&#34;&gt;
+                &lt;/div&gt;
+                
+            &lt;/div&gt;
+            
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/message.css&#34; /&gt;
+
+&lt;div class=&#34;message &#34;&gt;
+    &lt;div class=&#34;message__inner&#34;&gt;
+        
+        &lt;img class=&#34;avatar&#34; src=&#34;https://unavatar.io/twitter/%e6%98%b5%e7%a7%b0&#34; width=&#34;24&#34; height=&#34;24&#34;&gt;
+        
+        &lt;div class=&#34;message__text&#34;&gt;
+            &lt;hstack class=&#34;message__meta&#34;&gt;你 &lt;spacer&gt;&lt;/spacer&gt; 2025-04-01&lt;/hstack&gt;
+            这是恢复。 
+
+            
+            &lt;div class=&#34;grid-container&#34;&gt;
+                
+                &lt;div class=&#34;grid-item&#34;&gt;
+                    &lt;img class=&#34;message__img&#34; src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/b1211ddb-eb79-481d-b419-7123be01831f.jpg&#34; alt=&#34;Image&#34;&gt;
+                &lt;/div&gt;
+                
+            &lt;/div&gt;
+            
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;neodb&#34;&gt;neodb
+&lt;/h3&gt;
+
+
+ 
+
+
+
+
+    
+    &lt;div class=&#34;db-card&#34;&gt;
+        &lt;div class=&#34;db-card-subject&#34;&gt;
+            &lt;div class=&#34;db-card-post&#34;&gt;
+                &lt;img src=&#34;&#34;&gt;
+                     alt=&#34;开发模式占位图片&#34; 
+                     style=&#34;max-width: 100%; height: auto;&#34;&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-content&#34;&gt;
+                &lt;div class=&#34;db-card-title&#34;&gt;
+                    &lt;a href=&#34;https://neodb.social/review/7AcUGiNj8fChCFegRKsF7t&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;示例标题&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;db-card-comment&#34;&gt;
+                    2025-03-04 想读
+                    &lt;span style=&#34;color: #6b0f0f;&#34;&gt;#示例分类&lt;/span&gt;
+                    
+                    
+                    &lt;p&gt;这是开发模式下的占位数据。&lt;/p&gt;
+                    
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+ 
+
+</description>
+        </item>
+        <item>
         <title>無名星屑（Stelpolva）食用指南</title>
         <link>http://localhost:1313/p/stelpolva/</link>
         <pubDate>Wed, 09 Apr 2025 09:52:03 +0800</pubDate>

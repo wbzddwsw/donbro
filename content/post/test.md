@@ -6,7 +6,7 @@ categories: ["未分类"]
 tags: []
 slug: 
 image: 
-draft: true
+draft: false
 ---
 
 ### 高亮标记
@@ -98,3 +98,7 @@ draft: true
 {{< message from="self" accountID="twitter/昵称" images="https://chatstorage.dvd.moe/dvdchat/dvdchat/b1211ddb-eb79-481d-b419-7123be01831f.jpg" timestamp="2025-04-01" name="我" >}}这里是自定义的信息内容。 {{< /message >}}
 
 {{< message accountID="twitter/昵称" images="https://chatstorage.dvd.moe/dvdchat/dvdchat/b1211ddb-eb79-481d-b419-7123be01831f.jpg" timestamp="2025-04-01" name="你" >}}这是恢复。 {{< /message >}} 
+
+### neodb
+
+{{< neodb "https://neodb.social/review/7AcUGiNj8fChCFegRKsF7t" >}}{{< /neodb >}}
