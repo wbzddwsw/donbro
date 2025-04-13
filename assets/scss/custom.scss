@@ -424,20 +424,6 @@ html {
   transform: scale(1.1, 1.1);
 }
 
-//代码复制按钮
-.article-content .copyCodeButton {
-  position: absolute;
-  top: 10px;
-  right: 18px;
-  border-radius: 12px;
-  opacity: 1;
-  color: #f3aa52ed;
-  background: none;
-  border: none;
-  padding: 0;
-  font-weight: 500;
-}
-
 .article-content .languageCodeButton {
   position: absolute;
   border: none;
@@ -467,20 +453,6 @@ kbd {
   font-family: monospace;
 }
 
-// 为代码块顶部添加 macos 样式
-.article-content {
-  .highlight:before {
-    content: "";
-    display: block;
-    background: url(/img/code-header.svg);
-    height: 25px;
-    width: 100%;
-    background-size: 52px;
-    background-repeat: no-repeat;
-    margin-top: -10px;
-    margin-bottom: 0;
-  }
-}
 
 // Neodb card style
 .db-card {
