@@ -72,7 +72,3 @@ Use -h to get full help or, even better, run 'man ffmpeg'
 
 {{< /detail >}}
 
-
-
-{{< neodb "https://neodb.social/review/7AcUGiNj8fChCFegRKsF7t" >}}{{< /neodb >}}
-
