@@ -8,17 +8,17 @@
   // 卡片间距
   --section-separation: 40px;
   // 全局字体大小
-  --article-font-size: 1.8rem;
+  --article-font-size: 1.6rem;
   // 行内代码背景色
   --code-background-color: #f8f8f8;
   // 行内代码前景色
-  --code-text-color: #e96900;
+  --code-text-color: #408ec3;
   // 暗色模式下样式
   &[data-scheme="dark"] {
     // 行内代码背景色
     --code-background-color: #ff6d1b17;
     // 行内代码前景色
-    --code-text-color: #e96900;
+    --code-text-color: #b9d4d1;
   }
 }
 
@@ -83,12 +83,12 @@ code {
 
 // light模式下的代码块样式调整
 [data-scheme="light"] .article-content .highlight {
-  background-color: #fff9f3;
+  background-color: #f3f4ff;
 }
 
 [data-scheme="light"] .chroma {
-  color: #ff6f00;
-  background-color: #fff9f3cc;
+  color: #384c71;
+  background-color: #f3f4ff;
 }
 
 //-------------------------------------------
@@ -108,7 +108,7 @@ a {
   }
 
   &.link {
-    color: #4288b9ad;
+    color: #4287b9e1;
     font-weight: 600;
     padding: 0 2px;
     text-decoration: none;
@@ -549,7 +549,7 @@ kbd {
 
 //重点标记
 mark{
-  background: hsla(199, 64%, 63%, 0.696);
+  background: #6481c5aa;
 }
 
 //文本高斯模糊
@@ -619,11 +619,11 @@ blockquote.quote-center {
 
 //星星评级
 i.star{
-  color: hsl(61, 79%, 63%); /*星星的颜色*/
+  color: #4ca4e7; /*星星的颜色*/
 }
 
 i.star-outline{
-  color: hsl(211, 31%, 74%);/*空星星的颜色*/
+  color: #b9c1cb;/*空星星的颜色*/
 }
 
 i.star svg, i.star-outline svg{
