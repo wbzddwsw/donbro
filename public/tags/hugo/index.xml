@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Hugo on 树响集</title>
-        <link>https://donbro.vercel.app/tags/hugo/</link>
+        <link>http://localhost:1313/tags/hugo/</link>
         <description>Recent content in Hugo on 树响集</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WSW</copyright>
-        <lastBuildDate>Wed, 02 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://donbro.vercel.app/tags/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 02 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>配置waline添加留言功能</title>
-        <link>https://donbro.vercel.app/p/waline/</link>
+        <link>http://localhost:1313/p/waline/</link>
         <pubDate>Wed, 02 Apr 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://donbro.vercel.app/p/waline/</guid>
+        <guid>http://localhost:1313/p/waline/</guid>
         <description>&lt;img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/44e51c87-6651-441d-8dc3-e188f9f30d8e.jpg" alt="Featured image of post 配置waline添加留言功能" /&gt;&lt;h3 id=&#34;注册leancloud&#34;&gt;注册LeanCloud
 &lt;/h3&gt;&lt;p&gt;注册地址：&lt;a class=&#34;link&#34; href=&#34;https://console.leancloud.app/register&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://console.leancloud.app/register（国际版）&lt;/a&gt;
@@ -146,10 +146,10 @@ Press Ctrl+C to stop
         </item>
         <item>
         <title>Hugo-小白博客部署记录</title>
-        <link>https://donbro.vercel.app/p/hugo/</link>
+        <link>http://localhost:1313/p/hugo/</link>
         <pubDate>Wed, 02 Apr 2025 01:00:56 +0800</pubDate>
         
-        <guid>https://donbro.vercel.app/p/hugo/</guid>
+        <guid>http://localhost:1313/p/hugo/</guid>
         <description>&lt;img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/8114f986-0e3a-4b7d-b8fc-65865cd5f636.jpg" alt="Featured image of post Hugo-小白博客部署记录" /&gt;&lt;blockquote&gt;
 &lt;p&gt;感谢&lt;a class=&#34;link&#34; href=&#34;https://mantyke.icu/posts/2021/hugo-build-blog/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;“小球飞鱼”的教程&lt;/a&gt;
