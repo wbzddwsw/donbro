@@ -5,7 +5,7 @@ date: 2025-04-11T15:28:13+08:00
 categories: ["未名之地"]
 tags: []
 slug: daima
-image: 
+image: https://chatstorage.dvd.moe/dvdchat/dvdchat/c0a12f8a-8820-4558-b140-01026e6a610c.jpg
 draft: false
 ---
 
@@ -193,6 +193,14 @@ draft: false
 
 ### neodb
 
+### B站
+
+{{< bilibili BV1XXxce2ErE 0 >}}
+
+```
+{< bilibili BV1V7411d7iW 0 1 >} //BV号，0/1为是否自动播放,分p数；使用记得双括号
+```
+
 ### 图片轮播
 
 {{< imgloop "https://chatstorage.dvd.moe/dvdchat/dvdchat/b1211ddb-eb79-481d-b419-7123be01831f.jpg,https://chatstorage.dvd.moe/dvdchat/dvdchat/44e51c87-6651-441d-8dc3-e188f9f30d8e.jpg,https://chatstorage.dvd.moe/dvdchat/dvdchat/dc679c68-35cd-4492-87cc-c3ba485219d7.jpg" >}}
@@ -200,3 +208,7 @@ draft: false
 ```
 {< imgloop "1,2,3" >}
 ```
+
+### 多图排版
+
+![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/b1211ddb-eb79-481d-b419-7123be01831f.jpg)![2](https://chatstorage.dvd.moe/dvdchat/dvdchat/44e51c87-6651-441d-8dc3-e188f9f30d8e.jpg)![3](https://chatstorage.dvd.moe/dvdchat/dvdchat/dc679c68-35cd-4492-87cc-c3ba485219d7.jpg)

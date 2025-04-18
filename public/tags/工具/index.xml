@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>工具 on 树响集</title>
+        <link>http://localhost:1313/tags/%E5%B7%A5%E5%85%B7/</link>
+        <description>Recent content in 工具 on 树响集</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>WSW</copyright>
+        <lastBuildDate>Wed, 02 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>使用ffmpeg进行视频格式的无损转换</title>
+        <link>http://localhost:1313/p/ffmpeg/</link>
+        <pubDate>Wed, 02 Apr 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/ffmpeg/</guid>
+        <description>&lt;img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/dc679c68-35cd-4492-87cc-c3ba485219d7.jpg" alt="Featured image of post 使用ffmpeg进行视频格式的无损转换" /&gt;&lt;h3 id=&#34;下载ffmpeg&#34;&gt;下载ffmpeg
+&lt;/h3&gt;&lt;p&gt;下载地址：&lt;a class=&#34;link&#34; href=&#34;https://github.com/BtbN/FFmpeg-Builds/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/BtbN/FFmpeg-Builds/releases&lt;/a&gt;
+
+
+&lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+    height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+    &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+    &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+        fill=&#34;currentColor&#34;&gt;
+&lt;/svg&gt;&lt;/span&gt;
+
+，选择&lt;a class=&#34;link&#34; href=&#34;https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl-shared.zip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ffmpeg-master-latest-win64-gpl-shared.zip&lt;/a&gt;
+
+
+&lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+    height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+    &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+    &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+        fill=&#34;currentColor&#34;&gt;
+&lt;/svg&gt;&lt;/span&gt;
+
+版本&lt;/p&gt;
+&lt;h3 id=&#34;安装ffmpeg&#34;&gt;安装ffmpeg
+&lt;/h3&gt;&lt;p&gt;假设已经解压，进入文件夹并且点开 &lt;strong&gt;bin&lt;/strong&gt; 文件夹，此时文件路径为 &lt;strong&gt;xx\ffmpeg\ffmpeg\bin&lt;/strong&gt;，在地址栏复制路径&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;kbd&gt;win&lt;/kbd&gt;+&lt;kbd&gt;R&lt;/kbd&gt;，输入&lt;code&gt;sysmd.cpl&lt;/code&gt;，按&lt;kbd&gt;ENTER&lt;/kbd&gt;回车&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入&lt;strong&gt;高级&lt;/strong&gt;选项卡，点击&lt;code&gt;环境变量&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在&lt;strong&gt;系统变量&lt;/strong&gt;部分，找到&lt;strong&gt;Path变量&lt;/strong&gt;，点击&lt;code&gt;编辑&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在&lt;strong&gt;编辑环境变量&lt;/strong&gt;窗口中，点击&lt;code&gt;新建&lt;/code&gt;，然后将上面的路径粘贴到这里&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;依次点&lt;strong&gt;确定&lt;/strong&gt;关闭所有窗口&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;details&gt;
+    &lt;summary&gt;测试是否成功&lt;/summary&gt;
+    &lt;p&gt;&lt;kbd&gt;win&lt;/kbd&gt;+&lt;kbd&gt;R&lt;/kbd&gt;打开命提示符，输入&lt;b&gt;cmd
+    &lt;/b&gt;然后&lt;kbd&gt;ENTER&lt;/kbd&gt;回车，弹出框中输入&lt;b&gt;ffmpeg&lt;/b&gt;，如果步骤无误会显示ffmpeg相关信息：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;code-highlight&#34;&gt;&lt;span class=&#34;code-line line-number&#34; line=&#34;1&#34;&gt;ffmpeg version 2024-10-27-git-bb57b78013-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+libavutil      59. 46.100 / 59. 46.100
+libavcodec     61. 22.100 / 61. 22.100
+libavformat    61.  9.100 / 61.  9.100
+libavdevice    61.  4.100 / 61.  4.100
+libavfilter    10.  6.100 / 10.  6.100
+libswscale      8.  9.101 /  8.  9.101
+libswresample   5.  4.100 /  5.  4.100
+libpostproc    58.  4.100 / 58.  4.100
+Universal media converter
+usage: ffmpeg [options] [[infile options] -i infile]... {[outfile options] outfile}...
+Use -h to get full help or, even better, run &#39;man ffmpeg&#39;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+
+&lt;h3 id=&#34;转换格式&#34;&gt;转换格式
+&lt;/h3&gt;&lt;p&gt;假设我需要转换的文件名为 &lt;strong&gt;gavv01.mkv&lt;/strong&gt;，并且文件路径为 &lt;strong&gt;D:\resource\gavv&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;kbd&gt;win&lt;/kbd&gt;+&lt;kbd&gt;R&lt;/kbd&gt;打开命提示符，输入&lt;b&gt;cmd
+&lt;/b&gt;然后&lt;kbd&gt;ENTER&lt;/kbd&gt;回车&lt;/li&gt;
+&lt;li&gt;输入 &lt;code&gt;cd D:\resource\gavv&lt;/code&gt; 导航到 gavv 文件夹&lt;/li&gt;
+&lt;li&gt;单个转换：输入 &lt;code&gt;ffmpeg -i &amp;quot;gavv01.mkv&amp;quot; -c:v copy -c:a copy &amp;quot;gavv01.mp4&amp;quot;&lt;/code&gt; ，按&lt;kbd&gt;ENTER&lt;/kbd&gt;回车，其中 &lt;strong&gt;gavv01.mkv&lt;/strong&gt; 是需要转换的文件，&lt;strong&gt;gavv01.mp4&lt;/strong&gt; 是转换后的文件&lt;/li&gt;
+&lt;li&gt;批量转换：输入 &lt;code&gt;for %i in (*.mkv) do ffmpeg -i &amp;quot;%i&amp;quot; -c:v copy -c:a copy &amp;quot;%~ni.mp4&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;切换来源文件夹：输入 &lt;code&gt;cd D:新文件夹&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;details&gt;
+    &lt;summary&gt;如果显示文件错误&lt;/summary&gt;
+    &lt;p&gt;1.&lt;kbd&gt;win&lt;/kbd&gt;+&lt;kbd&gt;R&lt;/kbd&gt;打开命提示符，输入&lt;b&gt;cmd&lt;/b&gt;然后&lt;kbd&gt;ENTER&lt;/kbd&gt;回车&lt;/p&gt;
+&lt;p&gt;2.输入&lt;b&gt;D:&lt;/b&gt;，&lt;kbd&gt;ENTER&lt;/kbd&gt;回车&lt;/p&gt;
+&lt;p&gt;3.输入&lt;b&gt;cd &#34;D:\resource\gavv&#34;&lt;/b&gt;（双引号确保路径正确）&lt;/p&gt;
+&lt;p&gt;4.输入&lt;b&gt;dir&lt;/b&gt;，回车，确认该文件夹中有需要转换的文件&lt;/p&gt;
+
+&lt;/details&gt;
+
+</description>
+        </item>
+        
+    </channel>
+</rss>
