@@ -39,14 +39,6 @@
         <guid>http://localhost:1313/categories/%E6%95%B0%E6%9E%9D%E6%A8%AA%E6%96%9C/</guid>
         <description>&lt;img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/d0f3b35a-ee62-4576-9821-21898cbacba6.jpg" alt="Featured image of post 数枝横斜" /&gt;</description>
         </item>
-        <item>
-        <title>未分类</title>
-        <link>http://localhost:1313/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/</guid>
-        <description></description>
-        </item>
         
     </channel>
 </rss>
