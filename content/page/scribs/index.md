@@ -15,8 +15,9 @@ readingtime: false
 {{< detail "设备" >}}
 
 <p>{{< card >}}
-工具：ipad air5+apple pencil<br>软件：procrate<br>
+工具：ipad air5+apple pencil<br>软件：procreate<br>
 {{< /card >}}</p>
+
 
 {{< /detail >}}
 
