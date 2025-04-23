@@ -46,7 +46,7 @@ image: https://chatstorage.dvd.moe/dvdchat/dvdchat/8114f986-0e3a-4b7d-b8fc-65865
 
 Hugo.exe 放在 D 盘的 blog 文件中，可以从文件上方看到文件路径为 **D:\blog\hugo_extended_0.145.0_windows-amd64** ，在地址栏复制路径
 
-1. <kbd>win</kbd>+<kbd>R</kbd>，输入`sysmd.cpl`，按<kbd>ENTER</kbd>回车
+1. <kbd>win</kbd>+<kbd>R</kbd>，输入`sysdm.cpl`，按<kbd>ENTER</kbd>回车
 2. 进入**高级**选项卡，点击`环境变量`
 3. 在**系统变量**部分，找到 **Path 变量**，点击`编辑`
 4. 在**编辑环境变量**窗口中，点击`新建`，然后将上面的路径粘贴到这里

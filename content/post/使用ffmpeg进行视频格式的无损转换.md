@@ -16,7 +16,7 @@ image: https://chatstorage.dvd.moe/dvdchat/dvdchat/dc679c68-35cd-4492-87cc-c3ba4
 
 假设已经解压，进入文件夹并且点开 **bin** 文件夹，此时文件路径为 **xx\ffmpeg\ffmpeg\bin**，在地址栏复制路径
 
-1. <kbd>win</kbd>+<kbd>R</kbd>，输入`sysmd.cpl`，按<kbd>ENTER</kbd>回车
+1. <kbd>win</kbd>+<kbd>R</kbd>，输入`sysdm.cpl`，按<kbd>ENTER</kbd>回车
 
 2. 进入**高级**选项卡，点击`环境变量`
 
