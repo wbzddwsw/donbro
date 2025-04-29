@@ -17,7 +17,7 @@ image: https://chatstorage.dvd.moe/dvdchat/dvdchat/8114f986-0e3a-4b7d-b8fc-65865
 
    打开链接后往下拉，找到 **Assets** ，下载最新的带 **extended** 的版本，或者直接点 [hugo_extended_0.145.0_windows-amd64.zip](https://github.com/gohugoio/hugo/releases/download/v0.145.0/hugo_extended_0.145.0_windows-amd64.zip) 下载
 
-   下载后解压到解压博客文件夹在的位置，比如说，我在 D 盘建了一个 blog 文件，那么解压后的 hugo 文件夹就要移动到这个 blog 文件夹里（后文举例都用这个）
+   下载后解压到博客文件夹在的位置，比如说，我在 D 盘建了一个 blog 文件，那么解压后的 hugo 文件夹就要移动到这个 blog 文件夹里（后文举例都用这个）
 
 2. Git 下载地址：[https://git-scm.com](https://git-scm.com)
 
