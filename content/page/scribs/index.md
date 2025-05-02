@@ -25,6 +25,10 @@ readingtime: false
 
 ### 2025
 
+**4.30** 给温末的黄诗扶无料题字 
+
+![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/d3658cb0-86af-485e-a372-36a826422d67.JPEG)
+
 **3.24** 里里组的《相逢无期》合札
 
 ![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/807995e3-be7c-4baf-afe3-84d02965b41b.jpeg)![2](https://chatstorage.dvd.moe/dvdchat/dvdchat/158ccb54-7f95-49ef-8658-36a58146ff0d.jpeg)
