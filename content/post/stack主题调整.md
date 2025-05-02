@@ -250,6 +250,7 @@ draft: false
 
 <details>
 <summary><strong>代码</strong> 1.在 layouts/_default/archives.html里的<code>/header</code>后添加：</summary>
+
 ```
 {{- $taxonomy := $.Site.GetPage "taxonomyTerm" "tags" -}}
 {{- $terms := $taxonomy.Pages -}}

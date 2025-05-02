@@ -888,27 +888,49 @@
 ></p>
 <details>
 <summary><strong>代码</strong> 1.在 layouts/_default/archives.html里的<code>/header</code>后添加：</summary>
-```
-{{- $taxonomy := $.Site.GetPage "taxonomyTerm" "tags" -}}
-{{- $terms := $taxonomy.Pages -}}
-{{ if $terms }}
-<section class="widget tagCloud">
-<h2 class="section-title">{{ $taxonomy.Title }}</h2>
-<pre><code>&lt;div class=&quot;tagCloud-tags&quot;&gt;
-    {{ if ne (len $.Site.Taxonomies.tags) 0 }}
-        {{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
-            {{ $tagCount := len $taxonomy.Pages }}
-            &lt;a href=&quot;{{ &quot;/tags/&quot; | relURL }}{{ $name | urlize }}&quot; class=&quot;tagCloud-tags&quot;&gt;
-                {{ $name }}&lt;span class=&quot;tagCloud-count&quot;&gt;{{ $tagCount }}&lt;/span&gt;
-            &lt;/a&gt;
-        {{ end }}
-    {{ end }}
-&lt;/div&gt;
-</code></pre>
-<section>
-{{ end }}
-```
-</details>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{{- $taxonomy := $.Site.GetPage &#34;taxonomyTerm&#34; &#34;tags&#34; -}}
+</span></span><span class="line"><span class="cl">{{- $terms := $taxonomy.Pages -}}
+</span></span><span class="line"><span class="cl">{{ if $terms }}
+</span></span><span class="line"><span class="cl">&lt;section class=&#34;widget tagCloud&#34;&gt;
+</span></span><span class="line"><span class="cl">&lt;h2 class=&#34;section-title&#34;&gt;{{ $taxonomy.Title }}&lt;/h2&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    &lt;div class=&#34;tagCloud-tags&#34;&gt;
+</span></span><span class="line"><span class="cl">        {{ if ne (len $.Site.Taxonomies.tags) 0 }}
+</span></span><span class="line"><span class="cl">            {{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
+</span></span><span class="line"><span class="cl">                {{ $tagCount := len $taxonomy.Pages }}
+</span></span><span class="line"><span class="cl">                &lt;a href=&#34;{{ &#34;/tags/&#34; | relURL }}{{ $name | urlize }}&#34; class=&#34;tagCloud-tags&#34;&gt;
+</span></span><span class="line"><span class="cl">                    {{ $name }}&lt;span class=&#34;tagCloud-count&#34;&gt;{{ $tagCount }}&lt;/span&gt;
+</span></span><span class="line"><span class="cl">                &lt;/a&gt;
+</span></span><span class="line"><span class="cl">            {{ end }}
+</span></span><span class="line"><span class="cl">        {{ end }}
+</span></span><span class="line"><span class="cl">    &lt;/div&gt;
+</span></span><span class="line"><span class="cl">&lt;section&gt;
+</span></span><span class="line"><span class="cl">{{ end }}
+</span></span></code></pre></td></tr></table>
+</div>
+</div></details>
 <details>
 <summary><strong>代码</strong> 2.在 assets/scss/partials/widgets.scss 中添加：(设置数字颜色)</summary>
 <div class="highlight"><div class="chroma">
