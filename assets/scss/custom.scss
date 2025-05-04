@@ -344,15 +344,8 @@ html {
     }
   }
 }
-/*-----------归档页面----------*/
-//归档页面卡片缩放
-.article-list--tile article {
-  transition: .6s ease;
-}
 
-.article-list--tile article:hover {
-  transform: scale(1.03, 1.03);
-}
+
 
 // 友情链接三栏
 @media (min-width: 1024px) {
@@ -392,51 +385,6 @@ html {
   padding-bottom: 15px;
 }
 
-/*------------------右侧导航栏--------------*/
-// 搜索菜单动画
-.search-form.widget {
-  transition: transform 0.6s ease;
-}
-
-.search-form.widget:hover {
-  transform: scale(1.1, 1.1);
-}
-
-
-//归档小图标放大动画
-.widget.archives .widget-archive--list {
-  transition: transform .3s ease;
-}
-
-.widget.archives .widget-archive--list:hover {
-  transform: scale(1.05, 1.05);
-}
-
-
-//右侧标签放大动画
-.tagCloud .tagCloud-tags a {
-  border-radius: 24px;
-  font-size: 1.4rem;
-  transition: transform .3s ease;
-}
-
-.tagCloud .tagCloud-tags a:hover {
-  transform: scale(1.1, 1.1);
-}
-
-.article-content .languageCodeButton {
-  position: absolute;
-  border: none;
-  top: 9px;
-  right: 69px;
-  border-radius: 12px;
-  opacity: 1;
-  padding: 0 5px;
-  background: 0;
-  color: #ffffffad;
-  font-family: lato;
-  font-size: 1.5rem;
-}
 
 // 键盘样式
 kbd {

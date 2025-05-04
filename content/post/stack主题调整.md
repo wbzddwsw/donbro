@@ -1874,8 +1874,9 @@ img.message__img {
 ```
 </details>
 
-
 #### neodb
+
+{{< neodb-review "https://neodb.social/book/1jt41ggFdzK0MlaiGFPuSf" >}}
 
 #### B站
 

@@ -1,124 +1,108 @@
-{{ $dbUrl := .Get 0 }}
-{{ $apiUrl := "https://neodb.social/api/me/shelf/item/" }}
-{{ $itemUuid := "" }}
-{{ $authToken := "iSK2jvTstcBcGqdIbZ6vJNU2t-PWJG958AeAWVYRV9Zlu8WI0mB2yVNTtw" }} <!-- 请替换为你的 API Personal Token -->
+{{ $dbUrl := .Get 0 }} {{ $apiUrl := "https://neodb.social/api/me/shelf/item/"
+}} {{ $itemUuid := "" }}
+{{ $authToken := "iSK2jvTstcBcGqdIbZ6vJNU2t-PWJG958AeAWVYRV9Zlu8WI0mB2yVNTtw" }} <!-- Replace with your actual API token -->
 
-<!-- 判断是否为开发模式 -->
-{{ if eq (hugo.Environment) "production" }}
+<!-- Extract item_uuid from the URL -->
+{{ if (findRE `.*neodb\.social\/.*\/(.*)` $dbUrl) }} {{ $itemUuid = replaceRE
+`.*neodb\.social\/.*\/(.*)` "$1" $dbUrl }} {{ else }}
+<p style="text-align: center"><small>Invalid URL format.</small></p>
+{{ return }} {{ end }}
 
-    <!-- 解析 item_uuid -->
-    {{ if (findRE `.*neodb\.social\/.*\/(.*)` $dbUrl) }}
-        {{ $itemUuid = replaceRE `.*neodb\.social\/.*\/(.*)` "$1" $dbUrl }}
-    {{ else }}
-        <p style="text-align: center;"><small>无效的 URL 格式。</small></p>
-        {{ return }}
-    {{ end }}
+<!-- Construct the API URL -->
+{{ $dbApiUrl := print $apiUrl $itemUuid }}
 
-    <!-- 构造 API 请求地址 -->
-    {{ $dbApiUrl := print $apiUrl $itemUuid }}
-    {{ $headers := dict "Authorization" (print "Bearer " $authToken) }}
+<!-- Set up the Authorization header -->
+{{ $opts := dict "headers" (dict "Authorization" (print "Bearer " $authToken))
+}}
 
-    <!-- 获取 API 数据 -->
-    {{ $dbFetch := getJSON $dbApiUrl $headers }}
+<!-- Fetch JSON from the API using resources.GetRemote -->
+{{ $dbFetch := resources.GetRemote $dbApiUrl $opts | transform.Unmarshal }}
 
-    {{ if $dbFetch }}
-        {{ $shelfType := $dbFetch.shelf_type }}
-        {{ $category := $dbFetch.item.category }}
-        {{ $action := "" }}
-        {{ $prefix := "" }}
-        {{ $suffix := "" }}
-        {{ $displayText := "" }}
+<!-- Determine shelf status -->
+{{ $shelfType := $dbFetch.shelf_type }} {{ $category := $dbFetch.item.category
+}} {{ $action := "" }} {{ $prefix := "" }} {{ $suffix := "" }} {{ $displayText
+:= "" }}
 
-        <!-- 根据类别决定动作 -->
-        {{ if eq $category "book" }}{{ $action = "读" }}
-        {{ else if or (eq $category "tv") (eq $category "movie") (eq $category "performance") }}{{ $action = "看" }}
-        {{ else if or (eq $category "podcast") (eq $category "album") }}{{ $action = "听" }}
-        {{ else if eq $category "game" }}{{ $action = "玩" }}
-        {{ end }}
+<!-- Determine the action based on category -->
+{{ if eq $category "book" }} {{ $action = "读" }} {{ else if or (eq $category
+"tv") (eq $category "movie") }} {{ $action = "看" }} {{ else if or (eq $category
+"podcast") (eq $category "album") }} {{ $action = "听" }} {{ else if eq
+$category "game" }} {{ $action = "玩" }} {{ end }}
 
-        <!-- 根据状态决定前缀和后缀 -->
-        {{ if eq $shelfType "wishlist" }}{{ $prefix = "想" }}
-        {{ else if eq $shelfType "complete" }}{{ $suffix = "过" }}
-        {{ else if eq $shelfType "progress" }}{{ $prefix = "在" }}
-        {{ else if eq $shelfType "dropped" }}{{ $prefix = "不" }}{{ $suffix = "了" }}
-        {{ end }}
+<!-- Determine the prefix and suffix based on shelf type -->
+{{ if eq $shelfType "wishlist" }} {{ $prefix = "想" }} {{ else if eq $shelfType
+"complete" }} {{ $suffix = "过" }} {{ else if eq $shelfType "progress" }} {{
+$prefix = "在" }} {{ else if eq $shelfType "dropped" }} {{ $prefix = "不" }} {{
+$suffix = "了" }} {{ end }}
 
-        {{ $displayText = print $prefix $action $suffix }}
+<!-- Combine prefix, action, and suffix -->
+{{ $displayText = print $prefix $action $suffix }}
 
-        <!-- 唯一 ID -->
-        {{ $uniqueId := (print "coverImage-" $itemUuid) }}
+<!-- Prep for star rating -->
+{{ $fullStars := 0 }} {{ $starCount := 0 }} {{ $halfStar := 0 }} {{ $emptyStars
+:= 5 }}
+<!-- Calc star rating -->
+{{ $rating := $dbFetch.rating_grade }}
+<!-- Get the rating -->
+{{ if $rating }} {{ $starCount = div (mul $rating 5) 10 }} {{ $fullStars = int
+$starCount }}
+<!-- Full stars count -->
 
-        <div class="db-card">
-            <div class="db-card-subject">
-                <div class="db-card-post">
-                    <img src="">
-                         alt="Placeholder Image" 
-                         style="max-width: 100%; height: auto;" 
-                         id="{{ $uniqueId }}">
-                </div>
-                <div class="db-card-content">
-                    <div class="db-card-title">
-                        <a href="{{ $dbUrl }}" class="cute" target="_blank" rel="noreferrer">{{ $dbFetch.item.title }}</a>
-                    </div>
-                    <div class="db-card-comment">
-                        {{ $dbFetch.created_time | time.Format "2006-01-02" }} {{ $displayText }}
-                        <span style="color: #6b0f0f;">#{{ $category | title }}</span>
-                        {{ $comment := trim .Inner " \n\r" }}
-                        {{ if $comment }}
-                        <p>{{ $comment | safeHTML }}</p>
-                        {{ else }}
-                        <p>{{ replace $dbFetch.comment_text "\n" "<br>" | safeHTML }}</p>
-                        {{ end }}
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- Determine if there is a half star -->
+{{ if (mod $rating 2) }} {{ $halfStar = 1 }} {{ end }}
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const img = document.getElementById('{{ $uniqueId }}');
-                const newImgSrc = '{{ $dbFetch.item.cover_image_url }}';
+<!-- Calculate empty stars -->
+{{ $emptyStars = sub 5 (add $fullStars $halfStar) }}
+<!-- Empty stars count -->
+{{ end }}
 
-                if (newImgSrc) {
-                    const tempImg = new Image();
-                    tempImg.src = newImgSrc;
-                    tempImg.onload = function() {
-                        img.src = newImgSrc;
-                    };
-                }
-            });
-        </script>
-
-    {{ else }}
-        <p style="text-align: center;"><small>获取数据失败，请检查 API 是否有效。</small></p>
-    {{ end }}
-
-{{ else }}
-
-    <!-- 开发模式下显示占位图，并正常显示自定义评论内容 -->
-    <div class="db-card">
-        <div class="db-card-subject">
-            <div class="db-card-post">
-                <img src="">
-                     alt="开发模式占位图片" 
-                     style="max-width: 100%; height: auto;">
-            </div>
-            <div class="db-card-content">
-                <div class="db-card-title">
-                    <a href="{{ $dbUrl }}" class="cute" target="_blank" rel="noreferrer">示例标题</a>
-                </div>
-                <div class="db-card-comment">
-                    2025-03-04 想读
-                    <span style="color: #6b0f0f;">#示例分类</span>
-                    {{ $comment := trim .Inner " \n\r" }}
-                    {{ if $comment }}
-                    <p>{{ $comment | safeHTML }}</p>
-                    {{ else }}
-                    <p>这是开发模式下的占位数据。</p>
-                    {{ end }}
-                </div>
-            </div>
-        </div>
+<!-- Check if data is retrieved -->
+{{ if $dbFetch }}
+<div class="db-card">
+  <div class="db-card-subject">
+    <div class="db-card-post">
+      <img
+        src="{{ $dbFetch.item.cover_image_url }}"
+        alt="Cover Image"
+        style="max-width: 100%; height: auto"
+      />
     </div>
+    <div class="db-card-content">
+      <div class="db-card-title">
+        <a href="{{ $dbUrl }}" class="cute" target="_blank" rel="noreferrer"
+          >{{ $dbFetch.item.title }}</a
+        >
+      </div>
+      <div class="db-card-rating">
+        {{ $dbFetch.created_time | time.Format "2006-01-02T15:04:05Z" |
+        time.Format "2006 年 01 月 02 日" }} {{ $displayText }}
+        <!-- Add the rating as stars -->
+        <div class="db-card-rating-stars">
+          <!-- Full stars -->
+          {{ if $fullStars }} {{ range $i := (seq 1 $fullStars) }}
+          <i class="fa-solid fa-star"></i>
+          {{ end }} {{ end }}
 
-{{ end }} <!-- 结束环境判断 -->
+          <!-- Half star -->
+          {{ if $halfStar }}
+          <i class="fa-regular fa-star-half-stroke"></i>
+          {{ end }}
+
+          <!-- Empty stars -->
+          {{ if $emptyStars }} {{ range $i := (seq 1 $emptyStars) }}
+          <i class="fa-regular fa-star"></i>
+          {{ end }} {{ end }}
+        </div>
+      </div>
+      <div class="db-card-comment">
+        {{ $dbFetch.comment_text | markdownify }}
+      </div>
+    </div>
+    <div class="db-card-cate">{{ $dbFetch.item.category }}</div>
+  </div>
+</div>
+{{ else }}
+<p style="text-align: center">
+  <small>Failed to fetch content, please check the API validity.</small>
+</p>
+{{ end }}
