@@ -14,7 +14,7 @@
         
         <guid>http://localhost:1313/p/daima/</guid>
         <description>&lt;img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/c0a12f8a-8820-4558-b140-01026e6a610c.jpg" alt="Featured image of post stack主题调整" /&gt;&lt;h2 id=&#34;基础设置&#34;&gt;基础设置
-&lt;/h2&gt;&lt;h3 id=&#34;页面&#34;&gt;页面
+&lt;/h2&gt;&lt;h3 id=&#34;布局&#34;&gt;布局
 &lt;/h3&gt;&lt;h4 id=&#34;首页布局调整&#34;&gt;首页布局调整
 &lt;/h4&gt;&lt;details&gt;
 &lt;summary&gt;&lt;strong&gt;代码&lt;/strong&gt; 在 /assets/scss/custom.scss 中添加：&lt;/summary&gt;
@@ -425,27 +425,49 @@
 &gt;&lt;/p&gt;
 &lt;details&gt;
 &lt;summary&gt;&lt;strong&gt;代码&lt;/strong&gt; 1.在 layouts/_default/archives.html里的&lt;code&gt;/header&lt;/code&gt;后添加：&lt;/summary&gt;
-```
-{{- $taxonomy := $.Site.GetPage &#34;taxonomyTerm&#34; &#34;tags&#34; -}}
-{{- $terms := $taxonomy.Pages -}}
-{{ if $terms }}
-&lt;section class=&#34;widget tagCloud&#34;&gt;
-&lt;h2 class=&#34;section-title&#34;&gt;{{ $taxonomy.Title }}&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;tagCloud-tags&amp;quot;&amp;gt;
-    {{ if ne (len $.Site.Taxonomies.tags) 0 }}
-        {{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
-            {{ $tagCount := len $taxonomy.Pages }}
-            &amp;lt;a href=&amp;quot;{{ &amp;quot;/tags/&amp;quot; | relURL }}{{ $name | urlize }}&amp;quot; class=&amp;quot;tagCloud-tags&amp;quot;&amp;gt;
-                {{ $name }}&amp;lt;span class=&amp;quot;tagCloud-count&amp;quot;&amp;gt;{{ $tagCount }}&amp;lt;/span&amp;gt;
-            &amp;lt;/a&amp;gt;
-        {{ end }}
-    {{ end }}
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;section&gt;
-{{ end }}
-```
-&lt;/details&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{- $taxonomy := $.Site.GetPage &amp;#34;taxonomyTerm&amp;#34; &amp;#34;tags&amp;#34; -}}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{- $terms := $taxonomy.Pages -}}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{ if $terms }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;section class=&amp;#34;widget tagCloud&amp;#34;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;h2 class=&amp;#34;section-title&amp;#34;&amp;gt;{{ $taxonomy.Title }}&amp;lt;/h2&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;lt;div class=&amp;#34;tagCloud-tags&amp;#34;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {{ if ne (len $.Site.Taxonomies.tags) 0 }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            {{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                {{ $tagCount := len $taxonomy.Pages }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &amp;lt;a href=&amp;#34;{{ &amp;#34;/tags/&amp;#34; | relURL }}{{ $name | urlize }}&amp;#34; class=&amp;#34;tagCloud-tags&amp;#34;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    {{ $name }}&amp;lt;span class=&amp;#34;tagCloud-count&amp;#34;&amp;gt;{{ $tagCount }}&amp;lt;/span&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &amp;lt;/a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            {{ end }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {{ end }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;section&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{ end }}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
 &lt;details&gt;
 &lt;summary&gt;&lt;strong&gt;代码&lt;/strong&gt; 2.在 assets/scss/partials/widgets.scss 中添加：(设置数字颜色)&lt;/summary&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -994,7 +1016,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/details&gt;
-&lt;h4 id=&#34;滚动条&#34;&gt;滚动条
+&lt;h4 id=&#34;滚动条样式&#34;&gt;滚动条样式
 &lt;/h4&gt;&lt;details&gt;
 &lt;summary&gt;&lt;strong&gt;代码&lt;/strong&gt; 在 /assets/scss/custom.scss 中添加：&lt;/summary&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -4006,7 +4028,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;特别感谢&#34;&gt;特别感谢
-&lt;/h2&gt;&lt;p&gt;以上内容参考了很多博主的分享：&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;以上内容参考了下列博文：&lt;/p&gt;
 &lt;div class=&#34;mycard&#34;&gt;
       &lt;div class=&#34;content&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;https://thirdshire.com/hugo-stack-renovation/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Hugo Stack主题装修笔记&lt;/a&gt;

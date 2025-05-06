@@ -5398,6 +5398,250 @@
 </description>
         </item>
         <item>
+        <title>ffmpeg的视频处理方案</title>
+        <link>http://localhost:1313/p/ffmpeg/</link>
+        <pubDate>Wed, 02 Apr 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/ffmpeg/</guid>
+        <description>&lt;img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/dc679c68-35cd-4492-87cc-c3ba485219d7.jpg" alt="Featured image of post ffmpeg的视频处理方案" /&gt;&lt;h2 id=&#34;准备工作&#34;&gt;准备工作
+&lt;/h2&gt;&lt;h3 id=&#34;下载ffmpeg&#34;&gt;下载ffmpeg
+&lt;/h3&gt;&lt;p&gt;下载地址：&lt;a class=&#34;link&#34; href=&#34;https://github.com/BtbN/FFmpeg-Builds/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/BtbN/FFmpeg-Builds/releases&lt;/a&gt;
+
+
+&lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+    height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+    &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+    &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+        fill=&#34;currentColor&#34;&gt;
+&lt;/svg&gt;&lt;/span&gt;
+
+，选择&lt;a class=&#34;link&#34; href=&#34;https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl-shared.zip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ffmpeg-master-latest-win64-gpl-shared.zip&lt;/a&gt;
+
+
+&lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+    height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+    &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+    &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+        fill=&#34;currentColor&#34;&gt;
+&lt;/svg&gt;&lt;/span&gt;
+
+版本&lt;/p&gt;
+&lt;h3 id=&#34;安装ffmpeg&#34;&gt;安装ffmpeg
+&lt;/h3&gt;&lt;p&gt;假设已经解压，进入文件夹并且点开 &lt;strong&gt;bin&lt;/strong&gt; 文件夹，此时文件路径为 &lt;strong&gt;xx\ffmpeg\ffmpeg\bin&lt;/strong&gt;，在地址栏复制路径&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;kbd&gt;win&lt;/kbd&gt;+&lt;kbd&gt;R&lt;/kbd&gt;，输入&lt;code&gt;sysdm.cpl&lt;/code&gt;，按&lt;kbd&gt;ENTER&lt;/kbd&gt;回车&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入&lt;strong&gt;高级&lt;/strong&gt;选项卡，点击&lt;code&gt;环境变量&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在&lt;strong&gt;系统变量&lt;/strong&gt;部分，找到&lt;strong&gt;Path变量&lt;/strong&gt;，点击&lt;code&gt;编辑&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在&lt;strong&gt;编辑环境变量&lt;/strong&gt;窗口中，点击&lt;code&gt;新建&lt;/code&gt;，然后将上面的路径粘贴到这里&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;依次点&lt;strong&gt;确定&lt;/strong&gt;关闭所有窗口&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;details&gt;
+    &lt;summary&gt;测试是否成功&lt;/summary&gt;
+    &lt;p&gt;&lt;kbd&gt;win&lt;/kbd&gt;+&lt;kbd&gt;R&lt;/kbd&gt;打开命提示符，输入&lt;b&gt;cmd
+    &lt;/b&gt;然后&lt;kbd&gt;ENTER&lt;/kbd&gt;回车，弹出框中输入&lt;b&gt;ffmpeg&lt;/b&gt;，如果步骤无误会显示ffmpeg相关信息：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;code-highlight&#34;&gt;&lt;span class=&#34;code-line line-number&#34; line=&#34;1&#34;&gt;ffmpeg version 2024-10-27-git-bb57b78013-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+libavutil      59. 46.100 / 59. 46.100
+libavcodec     61. 22.100 / 61. 22.100
+libavformat    61.  9.100 / 61.  9.100
+libavdevice    61.  4.100 / 61.  4.100
+libavfilter    10.  6.100 / 10.  6.100
+libswscale      8.  9.101 /  8.  9.101
+libswresample   5.  4.100 /  5.  4.100
+libpostproc    58.  4.100 / 58.  4.100
+Universal media converter
+usage: ffmpeg [options] [[infile options] -i infile]... {[outfile options] outfile}...
+Use -h to get full help or, even better, run &#39;man ffmpeg&#39;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+
+&lt;h2 id=&#34;实际运用&#34;&gt;实际运用
+&lt;/h2&gt;&lt;p&gt;需要自己修改文件路径与内容。&lt;/p&gt;
+&lt;h3 id=&#34;转换格式&#34;&gt;转换格式
+&lt;/h3&gt;&lt;p&gt;假设我需要转换的文件名为 &lt;strong&gt;gavv01.mkv&lt;/strong&gt;，并且文件路径为 &lt;strong&gt;D:\resource\gavv&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;kbd&gt;win&lt;/kbd&gt;+&lt;kbd&gt;R&lt;/kbd&gt;打开命提示符，输入&lt;b&gt;cmd
+&lt;/b&gt;然后&lt;kbd&gt;ENTER&lt;/kbd&gt;回车，输入 &lt;code&gt;cd D:\resource\gavv&lt;/code&gt; 导航到 gavv 文件夹；或者直接在对应文件夹打开命令提示符&lt;/p&gt;
+&lt;h4 id=&#34;单个转换&#34;&gt;单个转换
+&lt;/h4&gt;&lt;p&gt;输入 &lt;code&gt;ffmpeg -i &amp;quot;gavv01.mkv&amp;quot; -c:v copy -c:a copy &amp;quot;gavv01.mp4&amp;quot;&lt;/code&gt; ，按&lt;kbd&gt;ENTER&lt;/kbd&gt;回车，其中 &lt;strong&gt;gavv01.mkv&lt;/strong&gt; 是需要转换的文件，&lt;strong&gt;gavv01.mp4&lt;/strong&gt; 是转换后的文件&lt;/p&gt;
+&lt;h4 id=&#34;批量转换&#34;&gt;批量转换
+&lt;/h4&gt;&lt;p&gt;输入&lt;code&gt;for %i in (*.mkv) do ffmpeg -i &amp;quot;%i&amp;quot; -c:v copy -c:a copy &amp;quot;%~ni.mp4&amp;quot;&lt;/code&gt;，按&lt;kbd&gt;ENTER&lt;/kbd&gt;回车，这个命令会转换对应文件夹中的所有文件&lt;/p&gt;
+&lt;details&gt;
+    &lt;summary&gt;如果显示文件错误&lt;/summary&gt;
+    &lt;p&gt;1.&lt;kbd&gt;win&lt;/kbd&gt;+&lt;kbd&gt;R&lt;/kbd&gt;打开命提示符，输入&lt;b&gt;cmd&lt;/b&gt;然后&lt;kbd&gt;ENTER&lt;/kbd&gt;回车&lt;/p&gt;
+&lt;p&gt;2.输入&lt;b&gt;D:&lt;/b&gt;，&lt;kbd&gt;ENTER&lt;/kbd&gt;回车&lt;/p&gt;
+&lt;p&gt;3.输入&lt;b&gt;cd &#34;D:\resource\gavv&#34;&lt;/b&gt;（双引号确保路径正确）&lt;/p&gt;
+&lt;p&gt;4.输入&lt;b&gt;dir&lt;/b&gt;，回车，确认该文件夹中有需要转换的文件&lt;/p&gt;
+
+&lt;/details&gt;
+
+&lt;h3 id=&#34;压缩视频&#34;&gt;压缩视频
+&lt;/h3&gt;&lt;p&gt;crf值越高压缩得越严重，视频体积也越小，20接近无损，22为高质量，24中高画质推荐用，28有明显压缩痕迹。&lt;/p&gt;
+&lt;p&gt;假设我需要压缩的文件名为 &lt;strong&gt;gavv01.mp4&lt;/strong&gt;，并且文件路径为 &lt;strong&gt;D:\resource\gavv&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;kbd&gt;win&lt;/kbd&gt;+&lt;kbd&gt;R&lt;/kbd&gt;打开命提示符，输入&lt;b&gt;cmd
+&lt;/b&gt;然后&lt;kbd&gt;ENTER&lt;/kbd&gt;回车，输入 &lt;code&gt;cd D:\resource\gavv&lt;/code&gt; 导航到 gavv 文件夹；或者直接在对应文件夹打开命令提示符&lt;/p&gt;
+&lt;h4 id=&#34;单个压缩&#34;&gt;单个压缩
+&lt;/h4&gt;&lt;p&gt;输入&lt;code&gt;ffmpeg -i &amp;quot;D:\resource\gavv\gavv01.mp4&amp;quot; -c:v libx265 -crf 23 -c:a copy &amp;quot;D:\resource\gavv\gavv01 压缩后.mp4&amp;quot;&lt;/code&gt;，按&lt;kbd&gt;ENTER&lt;/kbd&gt;回车&lt;/p&gt;
+&lt;p&gt;&lt;span id=&#34;big&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h4 id=&#34;批量压缩&#34;&gt;批量压缩
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;新建文本文档，用记事本打开，将以下内容粘贴进去：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@echo off
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set &amp;#34;input_dir=D:\resource\gavv&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set &amp;#34;output_dir=D:D:\resource\gavv\压缩后&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;for %%F in (&amp;#34;%input_dir%\*.mp4&amp;#34;) do (
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    echo 正在压缩：%%~nxF
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ffmpeg -i &amp;#34;%%F&amp;#34; -c:v libx265 -crf 23 -c:a copy &amp;#34;%output_dir%\%%~nxF&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo 全部完成！
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pause
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;第2行 input 是视频所在地址，第3行 output 是输出地址，我这里新建了一个“压缩后”文件夹&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;点击&lt;code&gt;另存为&lt;/code&gt;，修改文件名为 &lt;code&gt;xx.bat&lt;/code&gt;，保存类型选择&lt;code&gt;所有文件(*.*)&lt;/code&gt;，编码选择 &lt;code&gt;ANSI&lt;/code&gt;，保存地址与需要转换的文件在同一文件夹&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/92e9129a-4c6c-47bf-9744-a037b4723736.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;1&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;双击此 bat 文件即可运行&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;裁剪视频&#34;&gt;裁剪视频
+&lt;/h3&gt;&lt;p&gt;假设我需要裁剪的文件名为 &lt;strong&gt;gavv01.mp4&lt;/strong&gt;，裁剪开始时间为 &lt;strong&gt;00:01:20&lt;/strong&gt;,并且文件路径为 &lt;strong&gt;D:\resource\gavv&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;kbd&gt;win&lt;/kbd&gt;+&lt;kbd&gt;R&lt;/kbd&gt;打开命提示符，输入&lt;b&gt;cmd
+&lt;/b&gt;然后&lt;kbd&gt;ENTER&lt;/kbd&gt;回车，输入 &lt;code&gt;cd D:\resource\gavv&lt;/code&gt; 导航到 gavv 文件夹；或者直接在对应文件夹打开命令提示符&lt;/p&gt;
+&lt;h4 id=&#34;单个裁剪&#34;&gt;单个裁剪
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;按持续时长，持续 &lt;strong&gt;00:02:00&lt;/strong&gt;，命名为&lt;strong&gt;开场&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;输入 &lt;code&gt;ffmpeg -i &amp;quot;D:\resource\gavv\gavv01.mp4&amp;quot; -ss 00:01:20 -t 00:02:00 -c:v libx265 -crf 23 -c:a aac -b:a 128k -fflags +genpts -shortest &amp;quot;D:\resource\gavv\cut\开场.mp4&amp;quot;&lt;/code&gt;，按&lt;kbd&gt;ENTER&lt;/kbd&gt;回车&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;按结束时间，结束时间 &lt;strong&gt;00:03:20&lt;/strong&gt;，命名为&lt;strong&gt;开场&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;输入 &lt;code&gt;ffmpeg -i &amp;quot;D:\resource\gavv\gavv01.mp4&amp;quot; -ss 00:01:30 -to 00:02:10 -c:v libx265 -crf 23 -c:a aac -b:a 128k -fflags +genpts -shortest &amp;quot;D:\resource\gavv\cut\开场.mp4&amp;quot;&lt;/code&gt;，按&lt;kbd&gt;ENTER&lt;/kbd&gt;回车&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;批量裁剪&#34;&gt;批量裁剪
+&lt;/h4&gt;&lt;p&gt;新建 bat 文档，步骤同&lt;span&gt;&lt;a href=&#34;#big&#34; style=&#34;text-decoration: underline;&#34;&gt;批量压缩&lt;/a&gt;&lt;/span&gt;，文档内容如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;按持续时长&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@echo off
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;setlocal
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set input=&amp;#34;D:\resource\gavv\gavv01.mp4&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set outputdir=&amp;#34;D:\resource\gavv\cut&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:: 格式：开始时间   持续时间   输出文件名
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;call :cut 00:01:00 00:00:30 clip1.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;call :cut 00:02:15 00:00:20 clip2.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;call :cut 00:04:00 00:01:00 clip3.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;goto :eof
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:cut
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ffmpeg -i %input% -ss %1 -t %2 -c:v libx265 -crf 23 -c:a aac -b:a 128k -fflags +genpts -shortest %outputdir%\%3
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exit /b
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;按结束时间&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@echo off
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;setlocal
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set input=&amp;#34;D:\resource\gavv\gavv01.mp4&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set outputdir=&amp;#34;D:\resource\gavv\cut&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:: 格式：开始时间   结束时间   输出文件名
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;call :cut 00:00:50 00:01:20 clip1.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;call :cut 00:02:00 00:02:30 clip2.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;call :cut 00:04:00 00:05:15 clip3.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;goto :eof
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:cut
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ffmpeg -i %input% -ss %1 -to %2 -c:v libx265 -crf 23 -c:a aac -b:a 128k -fflags +genpts -shortest %outputdir%\%3
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exit /b
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
         <title>配置waline添加留言功能</title>
         <link>http://localhost:1313/p/waline/</link>
         <pubDate>Wed, 02 Apr 2025 00:00:00 +0000</pubDate>
@@ -5532,97 +5776,6 @@ Press Ctrl+C to stop
 &lt;li&gt;管理员登陆后，即可看到评论管理界面。在这里可以修改、标记或删除评论。&lt;/li&gt;
 &lt;li&gt;用户也可通过评论框注册账号，登陆后会跳转到自己的档案页。&lt;/li&gt;
 &lt;/ol&gt;
-</description>
-        </item>
-        <item>
-        <title>使用ffmpeg进行视频格式的无损转换</title>
-        <link>http://localhost:1313/p/ffmpeg/</link>
-        <pubDate>Wed, 02 Apr 2025 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/p/ffmpeg/</guid>
-        <description>&lt;img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/dc679c68-35cd-4492-87cc-c3ba485219d7.jpg" alt="Featured image of post 使用ffmpeg进行视频格式的无损转换" /&gt;&lt;h3 id=&#34;下载ffmpeg&#34;&gt;下载ffmpeg
-&lt;/h3&gt;&lt;p&gt;下载地址：&lt;a class=&#34;link&#34; href=&#34;https://github.com/BtbN/FFmpeg-Builds/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/BtbN/FFmpeg-Builds/releases&lt;/a&gt;
-
-
-&lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
-    height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
-    &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
-    &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
-        fill=&#34;currentColor&#34;&gt;
-&lt;/svg&gt;&lt;/span&gt;
-
-，选择&lt;a class=&#34;link&#34; href=&#34;https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl-shared.zip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;ffmpeg-master-latest-win64-gpl-shared.zip&lt;/a&gt;
-
-
-&lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
-    height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
-    &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
-    &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
-        fill=&#34;currentColor&#34;&gt;
-&lt;/svg&gt;&lt;/span&gt;
-
-版本&lt;/p&gt;
-&lt;h3 id=&#34;安装ffmpeg&#34;&gt;安装ffmpeg
-&lt;/h3&gt;&lt;p&gt;假设已经解压，进入文件夹并且点开 &lt;strong&gt;bin&lt;/strong&gt; 文件夹，此时文件路径为 &lt;strong&gt;xx\ffmpeg\ffmpeg\bin&lt;/strong&gt;，在地址栏复制路径&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;kbd&gt;win&lt;/kbd&gt;+&lt;kbd&gt;R&lt;/kbd&gt;，输入&lt;code&gt;sysdm.cpl&lt;/code&gt;，按&lt;kbd&gt;ENTER&lt;/kbd&gt;回车&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;进入&lt;strong&gt;高级&lt;/strong&gt;选项卡，点击&lt;code&gt;环境变量&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;在&lt;strong&gt;系统变量&lt;/strong&gt;部分，找到&lt;strong&gt;Path变量&lt;/strong&gt;，点击&lt;code&gt;编辑&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;在&lt;strong&gt;编辑环境变量&lt;/strong&gt;窗口中，点击&lt;code&gt;新建&lt;/code&gt;，然后将上面的路径粘贴到这里&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;依次点&lt;strong&gt;确定&lt;/strong&gt;关闭所有窗口&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;details&gt;
-    &lt;summary&gt;测试是否成功&lt;/summary&gt;
-    &lt;p&gt;&lt;kbd&gt;win&lt;/kbd&gt;+&lt;kbd&gt;R&lt;/kbd&gt;打开命提示符，输入&lt;b&gt;cmd
-    &lt;/b&gt;然后&lt;kbd&gt;ENTER&lt;/kbd&gt;回车，弹出框中输入&lt;b&gt;ffmpeg&lt;/b&gt;，如果步骤无误会显示ffmpeg相关信息：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;code-highlight&#34;&gt;&lt;span class=&#34;code-line line-number&#34; line=&#34;1&#34;&gt;ffmpeg version 2024-10-27-git-bb57b78013-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
-built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
-configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
-libavutil      59. 46.100 / 59. 46.100
-libavcodec     61. 22.100 / 61. 22.100
-libavformat    61.  9.100 / 61.  9.100
-libavdevice    61.  4.100 / 61.  4.100
-libavfilter    10.  6.100 / 10.  6.100
-libswscale      8.  9.101 /  8.  9.101
-libswresample   5.  4.100 /  5.  4.100
-libpostproc    58.  4.100 / 58.  4.100
-Universal media converter
-usage: ffmpeg [options] [[infile options] -i infile]... {[outfile options] outfile}...
-Use -h to get full help or, even better, run &#39;man ffmpeg&#39;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/details&gt;
-
-&lt;h3 id=&#34;转换格式&#34;&gt;转换格式
-&lt;/h3&gt;&lt;p&gt;假设我需要转换的文件名为 &lt;strong&gt;gavv01.mkv&lt;/strong&gt;，并且文件路径为 &lt;strong&gt;D:\resource\gavv&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;kbd&gt;win&lt;/kbd&gt;+&lt;kbd&gt;R&lt;/kbd&gt;打开命提示符，输入&lt;b&gt;cmd
-&lt;/b&gt;然后&lt;kbd&gt;ENTER&lt;/kbd&gt;回车&lt;/li&gt;
-&lt;li&gt;输入 &lt;code&gt;cd D:\resource\gavv&lt;/code&gt; 导航到 gavv 文件夹&lt;/li&gt;
-&lt;li&gt;单个转换：输入 &lt;code&gt;ffmpeg -i &amp;quot;gavv01.mkv&amp;quot; -c:v copy -c:a copy &amp;quot;gavv01.mp4&amp;quot;&lt;/code&gt; ，按&lt;kbd&gt;ENTER&lt;/kbd&gt;回车，其中 &lt;strong&gt;gavv01.mkv&lt;/strong&gt; 是需要转换的文件，&lt;strong&gt;gavv01.mp4&lt;/strong&gt; 是转换后的文件&lt;/li&gt;
-&lt;li&gt;批量转换：输入 &lt;code&gt;for %i in (*.mkv) do ffmpeg -i &amp;quot;%i&amp;quot; -c:v copy -c:a copy &amp;quot;%~ni.mp4&amp;quot;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;切换来源文件夹：输入 &lt;code&gt;cd D:新文件夹&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;details&gt;
-    &lt;summary&gt;如果显示文件错误&lt;/summary&gt;
-    &lt;p&gt;1.&lt;kbd&gt;win&lt;/kbd&gt;+&lt;kbd&gt;R&lt;/kbd&gt;打开命提示符，输入&lt;b&gt;cmd&lt;/b&gt;然后&lt;kbd&gt;ENTER&lt;/kbd&gt;回车&lt;/p&gt;
-&lt;p&gt;2.输入&lt;b&gt;D:&lt;/b&gt;，&lt;kbd&gt;ENTER&lt;/kbd&gt;回车&lt;/p&gt;
-&lt;p&gt;3.输入&lt;b&gt;cd &#34;D:\resource\gavv&#34;&lt;/b&gt;（双引号确保路径正确）&lt;/p&gt;
-&lt;p&gt;4.输入&lt;b&gt;dir&lt;/b&gt;，回车，确认该文件夹中有需要转换的文件&lt;/p&gt;
-
-&lt;/details&gt;
-
 </description>
         </item>
         <item>

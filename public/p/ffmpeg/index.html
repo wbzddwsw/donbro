@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="转换速度很快而且无损，部署好后可以一直使用，非常方便">
-<title>使用ffmpeg进行视频格式的无损转换</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="制作cut的天选工具！强烈安利！">
+<title>ffmpeg的视频处理方案</title>
 
 <link rel='canonical' href='http://localhost:1313/p/ffmpeg/'>
 
-<link rel="stylesheet" href="/scss/style.min.aaf4d3b794d64a74182b2c9b84947998df5a2c52ac431e8f1cbe735f73807943.css"><meta property='og:title' content="使用ffmpeg进行视频格式的无损转换">
-<meta property='og:description' content="转换速度很快而且无损，部署好后可以一直使用，非常方便">
+<link rel="stylesheet" href="/scss/style.min.6d95154cb4c2dc9de665a68b51b6aba141ed086703e03ce5f51e7b67f4c0630c.css"><meta property='og:title' content="ffmpeg的视频处理方案">
+<meta property='og:description' content="制作cut的天选工具！强烈安利！">
 <meta property='og:url' content='http://localhost:1313/p/ffmpeg/'>
 <meta property='og:site_name' content='树响集'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='工具' /><meta property='article:published_time' content='2025-04-02T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-04-02T00:00:00&#43;00:00'/><meta property='og:image' content='https://chatstorage.dvd.moe/dvdchat/dvdchat/dc679c68-35cd-4492-87cc-c3ba485219d7.jpg' />
-<meta name="twitter:title" content="使用ffmpeg进行视频格式的无损转换">
-<meta name="twitter:description" content="转换速度很快而且无损，部署好后可以一直使用，非常方便"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ffmpeg的视频处理方案">
+<meta name="twitter:description" content="制作cut的天选工具！强烈安利！"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://chatstorage.dvd.moe/dvdchat/dvdchat/dc679c68-35cd-4492-87cc-c3ba485219d7.jpg' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -298,11 +298,32 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li>
+    <li><a href="#准备工作">准备工作</a>
       <ol>
         <li><a href="#下载ffmpeg">下载ffmpeg</a></li>
         <li><a href="#安装ffmpeg">安装ffmpeg</a></li>
-        <li><a href="#转换格式">转换格式</a></li>
+      </ol>
+    </li>
+    <li><a href="#实际运用">实际运用</a>
+      <ol>
+        <li><a href="#转换格式">转换格式</a>
+          <ol>
+            <li><a href="#单个转换">单个转换</a></li>
+            <li><a href="#批量转换">批量转换</a></li>
+          </ol>
+        </li>
+        <li><a href="#压缩视频">压缩视频</a>
+          <ol>
+            <li><a href="#单个压缩">单个压缩</a></li>
+            <li><a href="#批量压缩">批量压缩</a></li>
+          </ol>
+        </li>
+        <li><a href="#裁剪视频">裁剪视频</a>
+          <ol>
+            <li><a href="#单个裁剪">单个裁剪</a></li>
+            <li><a href="#批量裁剪">批量裁剪</a></li>
+          </ol>
+        </li>
       </ol>
     </li>
   </ol>
@@ -321,7 +342,7 @@
         <div class="article-image">
             <a href="/p/ffmpeg/">
                 
-                    <img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/dc679c68-35cd-4492-87cc-c3ba485219d7.jpg" loading="lazy" alt="Featured image of post 使用ffmpeg进行视频格式的无损转换" />
+                    <img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/dc679c68-35cd-4492-87cc-c3ba485219d7.jpg" loading="lazy" alt="Featured image of post ffmpeg的视频处理方案" />
                 
             </a>
         </div>
@@ -340,12 +361,12 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/ffmpeg/">使用ffmpeg进行视频格式的无损转换</a>
+            <a href="/p/ffmpeg/">ffmpeg的视频处理方案</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            转换速度很快而且无损，部署好后可以一直使用，非常方便
+            制作cut的天选工具！强烈安利！
         </h3>
         
     </div>
@@ -381,7 +402,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 2 分钟
+                    阅读时长: 4 分钟
                 </time>
             </div>
         
@@ -396,7 +417,8 @@
     <section class="article-content">
     
     
-    <h3 id="下载ffmpeg">下载ffmpeg
+    <h2 id="准备工作">准备工作
+</h2><h3 id="下载ffmpeg">下载ffmpeg
 </h3><p>下载地址：<a class="link" href="https://github.com/BtbN/FFmpeg-Builds/releases"  target="_blank" rel="noopener"
     >https://github.com/BtbN/FFmpeg-Builds/releases</a>
 
@@ -460,16 +482,16 @@ Use -h to get full help or, even better, run 'man ffmpeg'
 </span></code></pre>
 </details>
 
+<h2 id="实际运用">实际运用
+</h2><p>需要自己修改文件路径与内容。</p>
 <h3 id="转换格式">转换格式
 </h3><p>假设我需要转换的文件名为 <strong>gavv01.mkv</strong>，并且文件路径为 <strong>D:\resource\gavv</strong></p>
-<ol>
-<li><kbd>win</kbd>+<kbd>R</kbd>打开命提示符，输入<b>cmd
-</b>然后<kbd>ENTER</kbd>回车</li>
-<li>输入 <code>cd D:\resource\gavv</code> 导航到 gavv 文件夹</li>
-<li>单个转换：输入 <code>ffmpeg -i &quot;gavv01.mkv&quot; -c:v copy -c:a copy &quot;gavv01.mp4&quot;</code> ，按<kbd>ENTER</kbd>回车，其中 <strong>gavv01.mkv</strong> 是需要转换的文件，<strong>gavv01.mp4</strong> 是转换后的文件</li>
-<li>批量转换：输入 <code>for %i in (*.mkv) do ffmpeg -i &quot;%i&quot; -c:v copy -c:a copy &quot;%~ni.mp4&quot;</code></li>
-<li>切换来源文件夹：输入 <code>cd D:新文件夹</code></li>
-</ol>
+<p><kbd>win</kbd>+<kbd>R</kbd>打开命提示符，输入<b>cmd
+</b>然后<kbd>ENTER</kbd>回车，输入 <code>cd D:\resource\gavv</code> 导航到 gavv 文件夹；或者直接在对应文件夹打开命令提示符</p>
+<h4 id="单个转换">单个转换
+</h4><p>输入 <code>ffmpeg -i &quot;gavv01.mkv&quot; -c:v copy -c:a copy &quot;gavv01.mp4&quot;</code> ，按<kbd>ENTER</kbd>回车，其中 <strong>gavv01.mkv</strong> 是需要转换的文件，<strong>gavv01.mp4</strong> 是转换后的文件</p>
+<h4 id="批量转换">批量转换
+</h4><p>输入<code>for %i in (*.mkv) do ffmpeg -i &quot;%i&quot; -c:v copy -c:a copy &quot;%~ni.mp4&quot;</code>，按<kbd>ENTER</kbd>回车，这个命令会转换对应文件夹中的所有文件</p>
 <details>
     <summary>如果显示文件错误</summary>
     <p>1.<kbd>win</kbd>+<kbd>R</kbd>打开命提示符，输入<b>cmd</b>然后<kbd>ENTER</kbd>回车</p>
@@ -479,7 +501,159 @@ Use -h to get full help or, even better, run 'man ffmpeg'
 
 </details>
 
-
+<h3 id="压缩视频">压缩视频
+</h3><p>crf值越高压缩得越严重，视频体积也越小，20接近无损，22为高质量，24中高画质推荐用，28有明显压缩痕迹。</p>
+<p>假设我需要压缩的文件名为 <strong>gavv01.mp4</strong>，并且文件路径为 <strong>D:\resource\gavv</strong></p>
+<p><kbd>win</kbd>+<kbd>R</kbd>打开命提示符，输入<b>cmd
+</b>然后<kbd>ENTER</kbd>回车，输入 <code>cd D:\resource\gavv</code> 导航到 gavv 文件夹；或者直接在对应文件夹打开命令提示符</p>
+<h4 id="单个压缩">单个压缩
+</h4><p>输入<code>ffmpeg -i &quot;D:\resource\gavv\gavv01.mp4&quot; -c:v libx265 -crf 23 -c:a copy &quot;D:\resource\gavv\gavv01 压缩后.mp4&quot;</code>，按<kbd>ENTER</kbd>回车</p>
+<p><span id="big"></span></p>
+<h4 id="批量压缩">批量压缩
+</h4><ol>
+<li>
+<p>新建文本文档，用记事本打开，将以下内容粘贴进去：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">@echo off
+</span></span><span class="line"><span class="cl">set &#34;input_dir=D:\resource\gavv&#34;
+</span></span><span class="line"><span class="cl">set &#34;output_dir=D:D:\resource\gavv\压缩后&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">for %%F in (&#34;%input_dir%\*.mp4&#34;) do (
+</span></span><span class="line"><span class="cl">    echo 正在压缩：%%~nxF
+</span></span><span class="line"><span class="cl">    ffmpeg -i &#34;%%F&#34; -c:v libx265 -crf 23 -c:a copy &#34;%output_dir%\%%~nxF&#34;
+</span></span><span class="line"><span class="cl">)
+</span></span><span class="line"><span class="cl">echo 全部完成！
+</span></span><span class="line"><span class="cl">pause
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>第2行 input 是视频所在地址，第3行 output 是输出地址，我这里新建了一个“压缩后”文件夹</p>
+</li>
+<li>
+<p>点击<code>另存为</code>，修改文件名为 <code>xx.bat</code>，保存类型选择<code>所有文件(*.*)</code>，编码选择 <code>ANSI</code>，保存地址与需要转换的文件在同一文件夹</p>
+<p><img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/92e9129a-4c6c-47bf-9744-a037b4723736.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="1"
+	
+	
+></p>
+</li>
+<li>
+<p>双击此 bat 文件即可运行</p>
+</li>
+</ol>
+<h3 id="裁剪视频">裁剪视频
+</h3><p>假设我需要裁剪的文件名为 <strong>gavv01.mp4</strong>，裁剪开始时间为 <strong>00:01:20</strong>,并且文件路径为 <strong>D:\resource\gavv</strong></p>
+<p><kbd>win</kbd>+<kbd>R</kbd>打开命提示符，输入<b>cmd
+</b>然后<kbd>ENTER</kbd>回车，输入 <code>cd D:\resource\gavv</code> 导航到 gavv 文件夹；或者直接在对应文件夹打开命令提示符</p>
+<h4 id="单个裁剪">单个裁剪
+</h4><ol>
+<li>
+<p>按持续时长，持续 <strong>00:02:00</strong>，命名为<strong>开场</strong></p>
+<p>输入 <code>ffmpeg -i &quot;D:\resource\gavv\gavv01.mp4&quot; -ss 00:01:20 -t 00:02:00 -c:v libx265 -crf 23 -c:a aac -b:a 128k -fflags +genpts -shortest &quot;D:\resource\gavv\cut\开场.mp4&quot;</code>，按<kbd>ENTER</kbd>回车</p>
+</li>
+<li>
+<p>按结束时间，结束时间 <strong>00:03:20</strong>，命名为<strong>开场</strong></p>
+<p>输入 <code>ffmpeg -i &quot;D:\resource\gavv\gavv01.mp4&quot; -ss 00:01:30 -to 00:02:10 -c:v libx265 -crf 23 -c:a aac -b:a 128k -fflags +genpts -shortest &quot;D:\resource\gavv\cut\开场.mp4&quot;</code>，按<kbd>ENTER</kbd>回车</p>
+</li>
+</ol>
+<h4 id="批量裁剪">批量裁剪
+</h4><p>新建 bat 文档，步骤同<span><a href="#big" style="text-decoration: underline;">批量压缩</a></span>，文档内容如下：</p>
+<ol>
+<li>按持续时长</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">@echo off
+</span></span><span class="line"><span class="cl">setlocal
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">set input=&#34;D:\resource\gavv\gavv01.mp4&#34;
+</span></span><span class="line"><span class="cl">set outputdir=&#34;D:\resource\gavv\cut&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">:: 格式：开始时间   持续时间   输出文件名
+</span></span><span class="line"><span class="cl">call :cut 00:01:00 00:00:30 clip1.mp4
+</span></span><span class="line"><span class="cl">call :cut 00:02:15 00:00:20 clip2.mp4
+</span></span><span class="line"><span class="cl">call :cut 00:04:00 00:01:00 clip3.mp4
+</span></span><span class="line"><span class="cl">goto :eof
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">:cut
+</span></span><span class="line"><span class="cl">ffmpeg -i %input% -ss %1 -t %2 -c:v libx265 -crf 23 -c:a aac -b:a 128k -fflags +genpts -shortest %outputdir%\%3
+</span></span><span class="line"><span class="cl">exit /b
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>按结束时间</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">@echo off
+</span></span><span class="line"><span class="cl">setlocal
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">set input=&#34;D:\resource\gavv\gavv01.mp4&#34;
+</span></span><span class="line"><span class="cl">set outputdir=&#34;D:\resource\gavv\cut&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">:: 格式：开始时间   结束时间   输出文件名
+</span></span><span class="line"><span class="cl">call :cut 00:00:50 00:01:20 clip1.mp4
+</span></span><span class="line"><span class="cl">call :cut 00:02:00 00:02:30 clip2.mp4
+</span></span><span class="line"><span class="cl">call :cut 00:04:00 00:05:15 clip3.mp4
+</span></span><span class="line"><span class="cl">goto :eof
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">:cut
+</span></span><span class="line"><span class="cl">ffmpeg -i %input% -ss %1 -to %2 -c:v libx265 -crf 23 -c:a aac -b:a 128k -fflags +genpts -shortest %outputdir%\%3
+</span></span><span class="line"><span class="cl">exit /b
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </section>
 
 
@@ -644,7 +818,7 @@ Use -h to get full help or, even better, run 'man ffmpeg'
         
 
         发表了7篇文章 ·
-        总计2万0千字
+        总计2万1千字
         <br>
     </section>
 
