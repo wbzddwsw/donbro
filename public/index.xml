@@ -5545,25 +5545,8 @@ Use -h to get full help or, even better, run &#39;man ffmpeg&#39;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&#34;裁剪视频&#34;&gt;裁剪视频
-&lt;/h3&gt;&lt;p&gt;假设我需要裁剪的文件名为 &lt;strong&gt;gavv01.mp4&lt;/strong&gt;，裁剪开始时间为 &lt;strong&gt;00:01:20&lt;/strong&gt;,并且文件路径为 &lt;strong&gt;D:\resource\gavv&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;kbd&gt;win&lt;/kbd&gt;+&lt;kbd&gt;R&lt;/kbd&gt;打开命提示符，输入&lt;b&gt;cmd
-&lt;/b&gt;然后&lt;kbd&gt;ENTER&lt;/kbd&gt;回车，输入 &lt;code&gt;cd D:\resource\gavv&lt;/code&gt; 导航到 gavv 文件夹；或者直接在对应文件夹打开命令提示符&lt;/p&gt;
-&lt;h4 id=&#34;单个裁剪&#34;&gt;单个裁剪
-&lt;/h4&gt;&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;按持续时长，持续 &lt;strong&gt;00:02:00&lt;/strong&gt;，命名为&lt;strong&gt;开场&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;输入 &lt;code&gt;ffmpeg -i &amp;quot;D:\resource\gavv\gavv01.mp4&amp;quot; -ss 00:01:20 -t 00:02:00 -c:v libx265 -crf 23 -c:a aac -b:a 128k -fflags +genpts -shortest &amp;quot;D:\resource\gavv\cut\开场.mp4&amp;quot;&lt;/code&gt;，按&lt;kbd&gt;ENTER&lt;/kbd&gt;回车&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;按结束时间，结束时间 &lt;strong&gt;00:03:20&lt;/strong&gt;，命名为&lt;strong&gt;开场&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;输入 &lt;code&gt;ffmpeg -i &amp;quot;D:\resource\gavv\gavv01.mp4&amp;quot; -ss 00:01:30 -to 00:02:10 -c:v libx265 -crf 23 -c:a aac -b:a 128k -fflags +genpts -shortest &amp;quot;D:\resource\gavv\cut\开场.mp4&amp;quot;&lt;/code&gt;，按&lt;kbd&gt;ENTER&lt;/kbd&gt;回车&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&#34;批量裁剪&#34;&gt;批量裁剪
-&lt;/h4&gt;&lt;p&gt;新建 bat 文档，步骤同&lt;span&gt;&lt;a href=&#34;#big&#34; style=&#34;text-decoration: underline;&#34;&gt;批量压缩&lt;/a&gt;&lt;/span&gt;，文档内容如下：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;按持续时长&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/h3&gt;&lt;p&gt;假设我需要裁剪的文件名为 &lt;strong&gt;gavv01.mp4&lt;/strong&gt;，文件路径为 &lt;strong&gt;D:\resource\gavv&lt;/strong&gt;，裁剪开始时间为 &lt;strong&gt;00:01:20&lt;/strong&gt;，结束时间为 &lt;strong&gt;00:03:20&lt;/strong&gt;，&lt;/p&gt;
+&lt;p&gt;新建 bat 文档，步骤同&lt;span&gt;&lt;a href=&#34;#big&#34; style=&#34;text-decoration: underline;&#34;&gt;批量压缩&lt;/a&gt;&lt;/span&gt;，文档内容如下：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -5578,65 +5561,20 @@ Use -h to get full help or, even better, run &#39;man ffmpeg&#39;
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@echo off
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;setlocal
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set input=&amp;#34;D:\resource\gavv\gavv01.mp4&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set outputdir=&amp;#34;D:\resource\gavv\cut&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set &amp;#34;input=D:\resource\gavv\gavv01.mp44&amp;#34;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:: 格式：开始时间   持续时间   输出文件名
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;call :cut 00:01:00 00:00:30 clip1.mp4
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;call :cut 00:02:15 00:00:20 clip2.mp4
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;call :cut 00:04:00 00:01:00 clip3.mp4
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;goto :eof
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo 正在裁剪片段1：出场
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ffmpeg -y -i &amp;#34;%input%&amp;#34; -ss 00:01:20 -to 00:03:20 -avoid_negative_ts 1 -b:v 4000k -c:v libx264 -pass 1 -an -f mp4 NUL
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ffmpeg -y -i &amp;#34;%input%&amp;#34; -ss 00:01:20 -to 00:03:20 -avoid_negative_ts 1 -b:v 4000k -c:v libx264 -c:a copy -pass 2 &amp;#34;D:\resource\gavv\出场.mp4&amp;#34;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:cut
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ffmpeg -i %input% -ss %1 -t %2 -c:v libx265 -crf 23 -c:a aac -b:a 128k -fflags +genpts -shortest %outputdir%\%3
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exit /b
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;按结束时间&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@echo off
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;setlocal
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set input=&amp;#34;D:\resource\gavv\gavv01.mp4&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set outputdir=&amp;#34;D:\resource\gavv\cut&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:: 格式：开始时间   结束时间   输出文件名
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;call :cut 00:00:50 00:01:20 clip1.mp4
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;call :cut 00:02:00 00:02:30 clip2.mp4
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;call :cut 00:04:00 00:05:15 clip3.mp4
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;goto :eof
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:cut
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ffmpeg -i %input% -ss %1 -to %2 -c:v libx265 -crf 23 -c:a aac -b:a 128k -fflags +genpts -shortest %outputdir%\%3
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exit /b
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;del ffmpeg2pass-0.log
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo 所有片段已完成。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pause
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description>

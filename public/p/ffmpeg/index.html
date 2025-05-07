@@ -318,12 +318,7 @@
             <li><a href="#批量压缩">批量压缩</a></li>
           </ol>
         </li>
-        <li><a href="#裁剪视频">裁剪视频</a>
-          <ol>
-            <li><a href="#单个裁剪">单个裁剪</a></li>
-            <li><a href="#批量裁剪">批量裁剪</a></li>
-          </ol>
-        </li>
+        <li><a href="#裁剪视频">裁剪视频</a></li>
       </ol>
     </li>
   </ol>
@@ -402,7 +397,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 4 分钟
+                    阅读时长: 3 分钟
                 </time>
             </div>
         
@@ -559,25 +554,8 @@ Use -h to get full help or, even better, run 'man ffmpeg'
 </li>
 </ol>
 <h3 id="裁剪视频">裁剪视频
-</h3><p>假设我需要裁剪的文件名为 <strong>gavv01.mp4</strong>，裁剪开始时间为 <strong>00:01:20</strong>,并且文件路径为 <strong>D:\resource\gavv</strong></p>
-<p><kbd>win</kbd>+<kbd>R</kbd>打开命提示符，输入<b>cmd
-</b>然后<kbd>ENTER</kbd>回车，输入 <code>cd D:\resource\gavv</code> 导航到 gavv 文件夹；或者直接在对应文件夹打开命令提示符</p>
-<h4 id="单个裁剪">单个裁剪
-</h4><ol>
-<li>
-<p>按持续时长，持续 <strong>00:02:00</strong>，命名为<strong>开场</strong></p>
-<p>输入 <code>ffmpeg -i &quot;D:\resource\gavv\gavv01.mp4&quot; -ss 00:01:20 -t 00:02:00 -c:v libx265 -crf 23 -c:a aac -b:a 128k -fflags +genpts -shortest &quot;D:\resource\gavv\cut\开场.mp4&quot;</code>，按<kbd>ENTER</kbd>回车</p>
-</li>
-<li>
-<p>按结束时间，结束时间 <strong>00:03:20</strong>，命名为<strong>开场</strong></p>
-<p>输入 <code>ffmpeg -i &quot;D:\resource\gavv\gavv01.mp4&quot; -ss 00:01:30 -to 00:02:10 -c:v libx265 -crf 23 -c:a aac -b:a 128k -fflags +genpts -shortest &quot;D:\resource\gavv\cut\开场.mp4&quot;</code>，按<kbd>ENTER</kbd>回车</p>
-</li>
-</ol>
-<h4 id="批量裁剪">批量裁剪
-</h4><p>新建 bat 文档，步骤同<span><a href="#big" style="text-decoration: underline;">批量压缩</a></span>，文档内容如下：</p>
-<ol>
-<li>按持续时长</li>
-</ol>
+</h3><p>假设我需要裁剪的文件名为 <strong>gavv01.mp4</strong>，文件路径为 <strong>D:\resource\gavv</strong>，裁剪开始时间为 <strong>00:01:20</strong>，结束时间为 <strong>00:03:20</strong>，</p>
+<p>新建 bat 文档，步骤同<span><a href="#big" style="text-decoration: underline;">批量压缩</a></span>，文档内容如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -592,65 +570,20 @@ Use -h to get full help or, even better, run 'man ffmpeg'
 </span><span class="lnt">10
 </span><span class="lnt">11
 </span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">@echo off
 </span></span><span class="line"><span class="cl">setlocal
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">set input=&#34;D:\resource\gavv\gavv01.mp4&#34;
-</span></span><span class="line"><span class="cl">set outputdir=&#34;D:\resource\gavv\cut&#34;
+</span></span><span class="line"><span class="cl">set &#34;input=D:\resource\gavv\gavv01.mp44&#34;
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">:: 格式：开始时间   持续时间   输出文件名
-</span></span><span class="line"><span class="cl">call :cut 00:01:00 00:00:30 clip1.mp4
-</span></span><span class="line"><span class="cl">call :cut 00:02:15 00:00:20 clip2.mp4
-</span></span><span class="line"><span class="cl">call :cut 00:04:00 00:01:00 clip3.mp4
-</span></span><span class="line"><span class="cl">goto :eof
+</span></span><span class="line"><span class="cl">echo 正在裁剪片段1：出场
+</span></span><span class="line"><span class="cl">ffmpeg -y -i &#34;%input%&#34; -ss 00:01:20 -to 00:03:20 -avoid_negative_ts 1 -b:v 4000k -c:v libx264 -pass 1 -an -f mp4 NUL
+</span></span><span class="line"><span class="cl">ffmpeg -y -i &#34;%input%&#34; -ss 00:01:20 -to 00:03:20 -avoid_negative_ts 1 -b:v 4000k -c:v libx264 -c:a copy -pass 2 &#34;D:\resource\gavv\出场.mp4&#34;
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">:cut
-</span></span><span class="line"><span class="cl">ffmpeg -i %input% -ss %1 -t %2 -c:v libx265 -crf 23 -c:a aac -b:a 128k -fflags +genpts -shortest %outputdir%\%3
-</span></span><span class="line"><span class="cl">exit /b
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ol start="2">
-<li>按结束时间</li>
-</ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">@echo off
-</span></span><span class="line"><span class="cl">setlocal
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">set input=&#34;D:\resource\gavv\gavv01.mp4&#34;
-</span></span><span class="line"><span class="cl">set outputdir=&#34;D:\resource\gavv\cut&#34;
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">:: 格式：开始时间   结束时间   输出文件名
-</span></span><span class="line"><span class="cl">call :cut 00:00:50 00:01:20 clip1.mp4
-</span></span><span class="line"><span class="cl">call :cut 00:02:00 00:02:30 clip2.mp4
-</span></span><span class="line"><span class="cl">call :cut 00:04:00 00:05:15 clip3.mp4
-</span></span><span class="line"><span class="cl">goto :eof
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">:cut
-</span></span><span class="line"><span class="cl">ffmpeg -i %input% -ss %1 -to %2 -c:v libx265 -crf 23 -c:a aac -b:a 128k -fflags +genpts -shortest %outputdir%\%3
-</span></span><span class="line"><span class="cl">exit /b
+</span></span><span class="line"><span class="cl">del ffmpeg2pass-0.log
+</span></span><span class="line"><span class="cl">echo 所有片段已完成。
+</span></span><span class="line"><span class="cl">pause
 </span></span></code></pre></td></tr></table>
 </div>
 </div>

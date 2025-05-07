@@ -125,64 +125,22 @@ crf值越高压缩得越严重，视频体积也越小，20接近无损，22为�
 
 ### 裁剪视频
 
-假设我需要裁剪的文件名为 **gavv01.mp4**，裁剪开始时间为 **00:01:20**,并且文件路径为 **D:\resource\gavv**
-
-<kbd>win</kbd>+<kbd>R</kbd>打开命提示符，输入<b>cmd
-       </b>然后<kbd>ENTER</kbd>回车，输入 `cd D:\resource\gavv` 导航到 gavv 文件夹；或者直接在对应文件夹打开命令提示符
-
-#### 单个裁剪
-
-1. 按持续时长，持续 **00:02:00**，命名为**开场**
-
-   输入 `ffmpeg -i "D:\resource\gavv\gavv01.mp4" -ss 00:01:20 -t 00:02:00 -c:v libx265 -crf 23 -c:a aac -b:a 128k -fflags +genpts -shortest "D:\resource\gavv\cut\开场.mp4"`，按<kbd>ENTER</kbd>回车
-
-2. 按结束时间，结束时间 **00:03:20**，命名为**开场**
-
-   输入 `ffmpeg -i "D:\resource\gavv\gavv01.mp4" -ss 00:01:30 -to 00:02:10 -c:v libx265 -crf 23 -c:a aac -b:a 128k -fflags +genpts -shortest "D:\resource\gavv\cut\开场.mp4"`，按<kbd>ENTER</kbd>回车
-
-
-
-#### 批量裁剪
+假设我需要裁剪的文件名为 **gavv01.mp4**，文件路径为 **D:\resource\gavv**，裁剪开始时间为 **00:01:20**，结束时间为 **00:03:20**，
 
 新建 bat 文档，步骤同<span><a href="#big" style="text-decoration: underline;">批量压缩</a></span>，文档内容如下：
 
-1. 按持续时长
-
 ```
 @echo off
 setlocal
 
-set input="D:\resource\gavv\gavv01.mp4"
-set outputdir="D:\resource\gavv\cut"
+set "input=D:\resource\gavv\gavv01.mp44"
 
-:: 格式：开始时间   持续时间   输出文件名
-call :cut 00:01:00 00:00:30 clip1.mp4
-call :cut 00:02:15 00:00:20 clip2.mp4
-call :cut 00:04:00 00:01:00 clip3.mp4
-goto :eof
+echo 正在裁剪片段1：出场
+ffmpeg -y -i "%input%" -ss 00:01:20 -to 00:03:20 -avoid_negative_ts 1 -b:v 4000k -c:v libx264 -pass 1 -an -f mp4 NUL
+ffmpeg -y -i "%input%" -ss 00:01:20 -to 00:03:20 -avoid_negative_ts 1 -b:v 4000k -c:v libx264 -c:a copy -pass 2 "D:\resource\gavv\出场.mp4"
 
-:cut
-ffmpeg -i %input% -ss %1 -t %2 -c:v libx265 -crf 23 -c:a aac -b:a 128k -fflags +genpts -shortest %outputdir%\%3
-exit /b
-```
-
-2. 按结束时间
-
-```
-@echo off
-setlocal
-
-set input="D:\resource\gavv\gavv01.mp4"
-set outputdir="D:\resource\gavv\cut"
-
-:: 格式：开始时间   结束时间   输出文件名
-call :cut 00:00:50 00:01:20 clip1.mp4
-call :cut 00:02:00 00:02:30 clip2.mp4
-call :cut 00:04:00 00:05:15 clip3.mp4
-goto :eof
-
-:cut
-ffmpeg -i %input% -ss %1 -to %2 -c:v libx265 -crf 23 -c:a aac -b:a 128k -fflags +genpts -shortest %outputdir%\%3
-exit /b
+del ffmpeg2pass-0.log
+echo 所有片段已完成。
+pause
 ```
 
