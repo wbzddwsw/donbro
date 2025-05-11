@@ -1876,7 +1876,12 @@ img.message__img {
 
 #### neodb
 
+#### misskey
 
+直接复制帖子生成的嵌入代码
+
+<iframe src="https://stelpolva.moe/embed/notes/9zt4qsy6tlk039ya" data-misskey-embed-id="v1_9c12e303-3d61-45da-8174-62549ce642bd" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" style="border: none; width: 100%; max-width: 500px; height: 300px; color-scheme: light dark;"></iframe>
+<script defer src="https://stelpolva.moe/embed.js"></script>
 
 #### B站
 
