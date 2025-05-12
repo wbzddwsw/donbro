@@ -35,6 +35,10 @@ links:
     description: 梦是现实的延续，现实是梦的终结
     website: https://nanako-blog.web.app/
     image: https://stelpolva.moe/proxy/avatar.webp?url=https%3A%2F%2Fres.stelpolva.moe%2Fstpv%2F985bb002-3454-4574-a32c-0e7fbfa147ff.png&avatar=1
+  - title: 夜航南飞
+    description: The world is beautiful. Let me come through it to you.1
+    website: https://banshou-air.netlify.app/
+    image: https://banshou-air.netlify.app/img/logo.png
 menu:
     main: 
         name: 友链
