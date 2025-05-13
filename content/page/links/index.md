@@ -39,6 +39,10 @@ links:
     description: The world is beautiful. Let me come through it to you.1
     website: https://banshou-air.netlify.app/
     image: https://banshou-air.netlify.app/img/logo.png
+  - title: 卷毛羊丨Curly Sheep
+    description: 没有想好先空着吧……！
+    website: https://curly-sheep.netlify.app/
+    image: 
 menu:
     main: 
         name: 友链
