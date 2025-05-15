@@ -3684,7 +3684,11 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/details&gt;
 &lt;h4 id=&#34;neodb&#34;&gt;neodb
-&lt;/h4&gt;&lt;h4 id=&#34;b站&#34;&gt;B站
+&lt;/h4&gt;&lt;h4 id=&#34;misskey&#34;&gt;misskey
+&lt;/h4&gt;&lt;p&gt;直接复制帖子生成的嵌入代码&lt;/p&gt;
+&lt;iframe src=&#34;https://stelpolva.moe/embed/notes/9zt4qsy6tlk039ya&#34; data-misskey-embed-id=&#34;v1_9c12e303-3d61-45da-8174-62549ce642bd&#34; loading=&#34;lazy&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; style=&#34;border: none; width: 100%; max-width: 500px; height: 300px; color-scheme: light dark;&#34;&gt;&lt;/iframe&gt;
+&lt;script defer src=&#34;https://stelpolva.moe/embed.js&#34;&gt;&lt;/script&gt;
+&lt;h4 id=&#34;b站&#34;&gt;B站
 &lt;/h4&gt;
 
 

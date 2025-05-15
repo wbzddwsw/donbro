@@ -33,7 +33,7 @@ links:
     image: https://p.sda1.dev/19/cd2435239c448b1784a7c14ef72e9953/avatar.png
   - title: 昼梦日和
     description: 梦是现实的延续，现实是梦的终结
-    website: https://nanako-blog.web.app/
+    website: https://nanako.icu/
     image: https://stelpolva.moe/proxy/avatar.webp?url=https%3A%2F%2Fres.stelpolva.moe%2Fstpv%2F985bb002-3454-4574-a32c-0e7fbfa147ff.png&avatar=1
   - title: 夜航南飞
     description: The world is beautiful. Let me come through it to you.1

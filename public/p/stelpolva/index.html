@@ -319,7 +319,25 @@
       </ol>
     </li>
     <li><a href="#右侧小部件">右侧小部件</a></li>
-    <li><a href="#信息过载如何拯救">信息过载如何拯救</a></li>
+    <li><a href="#信息过载如何拯救">信息过载如何拯救</a>
+      <ol>
+        <li><a href="#联邦宇宙">联邦宇宙</a></li>
+        <li><a href="#misskey">misskey</a></li>
+        <li><a href="#注册账号">注册账号</a></li>
+        <li><a href="#页面简介">页面简介</a></li>
+        <li><a href="#导航栏">导航栏</a>
+          <ol>
+            <li><a href="#时间线-1">时间线</a></li>
+            <li><a href="#网盘收藏便签-1">网盘、收藏、便签</a></li>
+            <li><a href="#聊天">聊天</a></li>
+            <li><a href="#搜索查询清除缓存">搜索、查询、清除缓存</a></li>
+            <li><a href="#列表天线切换页面-1">列表、天线、切换页面</a></li>
+            <li><a href="#成就gamesplay-1">成就、games、play</a></li>
+            <li><a href="#页面图库-1">页面、图库</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
   </ol>
 </nav>
         </div>
@@ -396,7 +414,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 10 分钟
+                    阅读时长: 13 分钟
                 </time>
             </div>
         
@@ -1230,6 +1248,171 @@
 </div></li>
 </ol>
 <p>好了，这篇啰里吧嗦的介绍/安利到这里终于结束了，总之欢迎大家来星屑玩！</p>
+<blockquote>
+<p>本文发出以后没多久，我就得知misskey就进行了一个大版本的更新，相比以往的零零碎碎，简直称得上是大刀阔斧了，因此不得不也进行一个更新。</p></blockquote>
+<p>本指南适用于<mark>Misskey2025.5.0</mark>。</p>
+<p>我所在的星屑站有很多“魔改”代码，许多新来的朋友对于一些没见过的功能难免摸不着头脑，我自己也用得迷迷糊糊，因此最开始萌生了写一篇食用指南的想法。</p>
+<p>后来发现中文 fedi 几乎被 mastodon（长毛象）占领，我曾在许多 mastodon 站点活跃过，甚至都没有听说过 misskey 。而同为联邦宇宙的一部分，misskey 拥有更加丰富的功能，想到很多人因为 mastodon 过于简洁而离开，心中遗憾万分，所以想请大家看看 misskey 吧。</p>
+<h3 id="联邦宇宙">联邦宇宙
+</h3><p>想象一下：微信、微博、QQ 、小红书，这些都是一个大公司开的社交平台，你可以用qq账号刷微博，也可以用微信给小红书网友发消息，还可以自己建一个新平台加入这个大家庭。</p>
+<p>联邦宇宙（Fediverse，简称Fedi）就是这样的东西，是所有可以通过ActivityPub（一种标准化的、开放的协议，用来实现站点之间的互动） 和互联网互相交流的网站的统称。</p>
+<p>这包括所有 misskey 服务器，还有 Mastodon、Pleroma、Pixefed……不管你在哪个站点注册账号，都可以和其他站点的用户互相关注、聊天互动，还可以携带自己旧账号的信息（关注列表、帖文等）搬家至新账号。</p>
+<h3 id="misskey">misskey
+</h3><p><a class="link" href="https://misskey-hub.net/cn/"  target="_blank" rel="noopener"
+    >misskey</a>
+
+
+<span style="white-space: nowrap;"><svg width=".7em"
+    height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+    <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+    <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+        fill="currentColor">
+</svg></span>
+
+ 是联邦宇宙的一部分，和mastodon属于并列关系<mark>（因此称呼misskey的朋友为象友其实是并不恰当的）</mark>，它由日本人进行开发，特点是功能丰富，包括“网盘”、“回应”等，以及拥有一个高度可定制的用户界面。</p>
+<p><img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/e17de123-7c48-418d-85eb-9d85c4566319.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="1"
+	
+	
+></p>
+<p>同时由于他的代码是开源的，所以有开发者在其基础上进行了修改，形成了许多分支（fork），比如 sharkey ，可以理解为私人订制版 misskey。</p>
+<h3 id="注册账号">注册账号
+</h3><p>找一个自己心仪的站点，绝大部分站点只需提供邮箱和申请理由即可，也有一些站点需要邀请码才可以注册，目前misskey的官方站点只允许日本ip注册，不在日本的朋友基本可以不用考虑。</p>
+<h3 id="页面简介">页面简介
+</h3><p><img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/aaa47297-8f0b-4ffa-b6b2-b80afbd23284.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="1"
+	
+	
+></p>
+<ol>
+<li>站点logo：查看站点信息，分享邀请码</li>
+<li>导航栏：可自定义的目录，没有选中的内容都在“更多”里面</li>
+<li>时间线：除了常见的主页轴、社交轴等，还有推荐轴、天线、频道等</li>
+<li>时间轴：显示选中的时间线</li>
+<li>小部件：完全自定义的部分</li>
+</ol>
+<h3 id="导航栏">导航栏
+</h3><p><img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/40aee55a-5619-47bb-b1b5-eb366b82aa0b.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="导航栏"
+	
+	
+></p>
+<h4 id="时间线-1">时间线
+</h4><p><img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/8c79afda-1ef4-450b-b378-63beae273ba5.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="时间线"
+	
+	
+></p>
+<ol>
+<li>
+<p>首页：关注用户的公开帖子，包括本站用户和其他实例用户</p>
+<ul>
+<li>你关注的人给其他人的公开回复也会显示在这里</li>
+<li>如果有未关注用户给你的帖子回复，你只能在通知里查看而不能在首页刷到</li>
+</ul>
+</li>
+<li>
+<p>本地：本站用户发布的公开帖子</p>
+</li>
+<li>
+<p>社交：首页+本地</p>
+</li>
+<li>
+<p>Bubble：推荐时间线，显示站长选择的部分实例的公开帖子</p>
+</li>
+<li>
+<p>全局：所有与本站联合的实例的公开帖子</p>
+</li>
+<li>
+<p>关注中：显示“你关注的人”、“关注你的人”、“你的互关”的最新一条帖子。「只显示原创帖子」的简洁版主页，用户顺序按照最新帖子的发布时间排序，无法搜索</p>
+</li>
+<li>
+<p>列表：单方便将任何用户加入一个列表</p>
+</li>
+<li>
+<p>天线：自行抓取包含关键词的帖子</p>
+</li>
+<li>
+<p>频道：同列表</p>
+</li>
+<li>
+<p>刷新</p>
+</li>
+<li>
+<p>更多：时光机功能，可以显示指定时间的帖子，另外个人主页也有单独的时光机</p>
+</li>
+</ol>
+<h4 id="网盘收藏便签-1">网盘、收藏、便签
+</h4><ol>
+<li>网盘：发帖时上传的所有文件，包括图片音频视频等，可以分类进文件夹并通过命名搜索
+<ul>
+<li>如果删除网盘内文件，包含该文件的帖子内的文件也会消失，但帖子本身依然存在</li>
+<li>新用户800MB，注册3天+拥有3个关注者+发布50个帖子后，升级为8G，后续还会增加</li>
+<li>也可以不通过帖子直接在网盘里上传</li>
+</ul>
+</li>
+<li>收藏</li>
+<li>便签：可以分类的收藏夹，可以在【设置-常规设置】中打开显示在帖子下方，每个便签上限 200 条帖子</li>
+</ol>
+<h4 id="聊天">聊天
+</h4><p>私聊+群聊，可以和发帖一样发送文件</p>
+<h4 id="搜索查询清除缓存">搜索、查询、清除缓存
+</h4><ol>
+<li>搜索：可以用关键词搜索指定用户的帖子，或者全局搜索</li>
+<li>查询：与搜索类似</li>
+<li>清除缓存：表情无法正常显示时专用</li>
+</ol>
+<h4 id="列表天线切换页面-1">列表、天线、切换页面
+</h4><ol>
+<li>
+<p>列表：将任何联邦宇宙用户加入一个列表，可以不用关注就能刷到ta的帖子
+加入方式有两种：</p>
+<ul>
+<li>点击用户主页右上角三个点-加入列表</li>
+<li>点击帖子右下角三个点-用户-加入列表</li>
+</ul>
+</li>
+<li>
+<p>天线：自行抓取包含关键词的帖子，可以设定帖子内容和来源以及添加屏蔽词</p>
+<p>注意它只会抓取天线建立以后发布的帖子</p>
+</li>
+<li>
+<p>切换页面，切换成Deck模式——类似mastodon，可以自由添加不同栏目，更改每个栏目的宽度等</p>
+</li>
+</ol>
+<h4 id="成就gamesplay-1">成就、games、play
+</h4><ol>
+<li>成就：misskey 系列都有的成就系统</li>
+<li>games：misskey 自带的小游戏</li>
+<li>play：用户自制上传的游戏</li>
+</ol>
+<h4 id="页面图库-1">页面、图库
+</h4><ol>
+<li>页面：发布长文的地方</li>
+<li>图库：建立自己的图库放图片，这个操作区别于发帖，不会显示在时间轴上</li>
+</ol>
+<iframe src="https://stelpolva.moe/embed/notes/a7r17nio84fl0007" data-misskey-embed-id="v1_a96c0c77-81e9-4dba-a42a-b5c7356af140" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" style="border: none; width: 100%; max-width: 500px; height: 300px; color-scheme: light dark;"></iframe>
+<script defer src="https://stelpolva.moe/embed.js"></script>
 
 </section>
 
@@ -1327,10 +1510,8 @@
         
         
         
-        
-        
 
-        发表了8篇文章 ·
+        发表了7篇文章 ·
         总计2万3千字
         <br>
     </section>
