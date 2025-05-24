@@ -5,7 +5,7 @@ date: 2025-04-02
 categories: ["数枝横斜"]
 tags: [工具]
 slug: ffmpeg
-image: https://chatstorage.dvd.moe/dvdchat/dvdchat/dc679c68-35cd-4492-87cc-c3ba485219d7.jpg
+image: 
 ---
 
 ## 准备工作

@@ -5,7 +5,7 @@ date: 2025-04-09T09:52:03+08:00
 categories: ["小径指北"]
 tags: ["Misskey"]
 slug:  Stelpolva
-image: https://chatstorage.dvd.moe/dvdchat/dvdchat/ada427a7-2b1f-4092-bcb1-6834c2899ba0.jpg
+image: 
 draft: true
 ---
 

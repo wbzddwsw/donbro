@@ -5,7 +5,7 @@ date: 2025-04-11T15:28:13+08:00
 categories: ["数枝横斜"]
 tags: [hugo]
 slug: daima
-image: https://chatstorage.dvd.moe/dvdchat/dvdchat/c0a12f8a-8820-4558-b140-01026e6a610c.jpg
+image: 
 draft: false
 ---
 

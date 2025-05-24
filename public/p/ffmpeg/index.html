@@ -6,14 +6,13 @@
 
 <link rel='canonical' href='http://localhost:1313/p/ffmpeg/'>
 
-<link rel="stylesheet" href="/scss/style.min.df1ea019e6ca1ff7cf513d980c0c5d666d165a96bbb363334f4d8da5a0c41b8d.css"><meta property='og:title' content="ffmpeg的视频处理方案">
+<link rel="stylesheet" href="/scss/style.min.3d7b9087d2da079873fb337d0e56cd8310398eaf78cdd10af8cd94d1c8219cd8.css"><meta property='og:title' content="ffmpeg的视频处理方案">
 <meta property='og:description' content="制作cut的天选工具！强烈安利！">
 <meta property='og:url' content='http://localhost:1313/p/ffmpeg/'>
 <meta property='og:site_name' content='树响集'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='工具' /><meta property='article:published_time' content='2025-04-02T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-04-02T00:00:00&#43;00:00'/><meta property='og:image' content='https://chatstorage.dvd.moe/dvdchat/dvdchat/dc679c68-35cd-4492-87cc-c3ba485219d7.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='工具' /><meta property='article:published_time' content='2025-04-02T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-04-02T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="ffmpeg的视频处理方案">
-<meta name="twitter:description" content="制作cut的天选工具！强烈安利！"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://chatstorage.dvd.moe/dvdchat/dvdchat/dc679c68-35cd-4492-87cc-c3ba485219d7.jpg' />
+<meta name="twitter:description" content="制作cut的天选工具！强烈安利！">
     <link rel="shortcut icon" href="/favicon.ico" />
 
 <script src="https://kit.fontawesome.com/4ef17de36c.js" crossorigin="anonymous"></script><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -332,16 +331,8 @@
 
 
             <main class="main full-width">
-    <article class="has-image main-article">
+    <article class="main-article">
     <header class="article-header">
-        <div class="article-image">
-            <a href="/p/ffmpeg/">
-                
-                    <img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/dc679c68-35cd-4492-87cc-c3ba485219d7.jpg" loading="lazy" alt="Featured image of post ffmpeg的视频处理方案" />
-                
-            </a>
-        </div>
-    
 
     <div class="article-details">
     
@@ -410,9 +401,12 @@
 </header>
 
     <section class="article-content">
-    
-    
-    <h2 id="准备工作">准备工作
+  
+  
+  
+  
+
+  <h2 id="准备工作">准备工作
 </h2><h3 id="下载ffmpeg">下载ffmpeg
 </h3><p>下载地址：<a class="link" href="https://github.com/BtbN/FFmpeg-Builds/releases"  target="_blank" rel="noopener"
     >https://github.com/BtbN/FFmpeg-Builds/releases</a>
@@ -524,7 +518,7 @@ Use -h to get full help or, even better, run 'man ffmpeg'
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">@echo off
 </span></span><span class="line"><span class="cl">set &#34;input_dir=D:\resource\gavv&#34;
-</span></span><span class="line"><span class="cl">set &#34;output_dir=D:D:\resource\gavv\压缩后&#34;
+</span></span><span class="line"><span class="cl">set &#34;output_dir=D<img class="emoji" src="/emoji/D.png" alt=":D:" loading="lazy">\resource\gavv\压缩后&#34;
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">for %%F in (&#34;%input_dir%\*.mp4&#34;) do (
 </span></span><span class="line"><span class="cl">    echo 正在压缩：%%~nxF
@@ -554,7 +548,7 @@ Use -h to get full help or, even better, run 'man ffmpeg'
 </li>
 </ol>
 <h3 id="裁剪视频">裁剪视频
-</h3><p>假设我需要裁剪的文件名为 <strong>gavv01.mp4</strong>，文件路径为 <strong>D:\resource\gavv</strong>，裁剪开始时间为 <strong>00:01:20</strong>，结束时间为 <strong>00:03:20</strong>，</p>
+</h3><p>假设我需要裁剪的文件名为 <strong>gavv01.mp4</strong>，文件路径为 <strong>D:\resource\gavv</strong>，裁剪开始时间为 <strong>00<img class="emoji" src="/emoji/01.png" alt=":01:" loading="lazy">20</strong>，结束时间为 <strong>00<img class="emoji" src="/emoji/03.png" alt=":03:" loading="lazy">20</strong>，</p>
 <p>新建 bat 文档，步骤同<span><a href="#big" style="text-decoration: underline;">批量压缩</a></span>，文档内容如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -578,8 +572,8 @@ Use -h to get full help or, even better, run 'man ffmpeg'
 </span></span><span class="line"><span class="cl">set &#34;input=D:\resource\gavv\gavv01.mp44&#34;
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">echo 正在裁剪片段1：出场
-</span></span><span class="line"><span class="cl">ffmpeg -y -i &#34;%input%&#34; -ss 00:01:20 -to 00:03:20 -avoid_negative_ts 1 -b:v 4000k -c:v libx264 -pass 1 -an -f mp4 NUL
-</span></span><span class="line"><span class="cl">ffmpeg -y -i &#34;%input%&#34; -ss 00:01:20 -to 00:03:20 -avoid_negative_ts 1 -b:v 4000k -c:v libx264 -c:a copy -pass 2 &#34;D:\resource\gavv\出场.mp4&#34;
+</span></span><span class="line"><span class="cl">ffmpeg -y -i &#34;%input%&#34; -ss 00<img class="emoji" src="/emoji/01.png" alt=":01:" loading="lazy">20 -to 00<img class="emoji" src="/emoji/03.png" alt=":03:" loading="lazy">20 -avoid_negative_ts 1 -b:v 4000k -c:v libx264 -pass 1 -an -f mp4 NUL
+</span></span><span class="line"><span class="cl">ffmpeg -y -i &#34;%input%&#34; -ss 00<img class="emoji" src="/emoji/01.png" alt=":01:" loading="lazy">20 -to 00<img class="emoji" src="/emoji/03.png" alt=":03:" loading="lazy">20 -avoid_negative_ts 1 -b:v 4000k -c:v libx264 -c:a copy -pass 2 &#34;D:\resource\gavv\出场.mp4&#34;
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">del ffmpeg2pass-0.log
 </span></span><span class="line"><span class="cl">echo 所有片段已完成。
@@ -627,15 +621,9 @@ Use -h to get full help or, even better, run 'man ffmpeg'
         <div class="flex article-list--tile">
             
                 
-<article class="has-image">
+<article class="">
     <a href="/p/daima/">
         
-        
-            <div class="article-image">
-                
-                    <img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/c0a12f8a-8820-4558-b140-01026e6a610c.jpg" loading="lazy" data-key="daima" data-hash="https://chatstorage.dvd.moe/dvdchat/dvdchat/c0a12f8a-8820-4558-b140-01026e6a610c.jpg"/>
-                
-            </div>
         
 
         <div class="article-details">
@@ -646,15 +634,9 @@ Use -h to get full help or, even better, run 'man ffmpeg'
 
             
                 
-<article class="has-image">
+<article class="">
     <a href="/p/waline/">
         
-        
-            <div class="article-image">
-                
-                    <img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/44e51c87-6651-441d-8dc3-e188f9f30d8e.jpg" loading="lazy" data-key="waline" data-hash="https://chatstorage.dvd.moe/dvdchat/dvdchat/44e51c87-6651-441d-8dc3-e188f9f30d8e.jpg"/>
-                
-            </div>
         
 
         <div class="article-details">
@@ -665,15 +647,9 @@ Use -h to get full help or, even better, run 'man ffmpeg'
 
             
                 
-<article class="has-image">
+<article class="">
     <a href="/p/hugo/">
         
-        
-            <div class="article-image">
-                
-                    <img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/8114f986-0e3a-4b7d-b8fc-65865cd5f636.jpg" loading="lazy" data-key="hugo" data-hash="https://chatstorage.dvd.moe/dvdchat/dvdchat/8114f986-0e3a-4b7d-b8fc-65865cd5f636.jpg"/>
-                
-            </div>
         
 
         <div class="article-details">
@@ -982,6 +958,36 @@ Use -h to get full help or, even better, run 'man ffmpeg'
   let result = days + "天" + hours + "小时" + minutes + "分钟";
   document.getElementById('runningdays').innerHTML = result;
 </script>
+
+<style>
+  body {
+    background: url(http://localhost:1313/background/IMG_8275.jpg) no-repeat center top;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+</style>
+
+
+<div id="particles-js"></div>
+
+<script src=http://localhost:1313/background/particles.min.js></script>
+<script>
+  particlesJS.load('particles-js', "http://localhost:1313/background/particlesjs-config.json", function() {
+    console.log('particles.js loaded - callback');
+  });
+</script>
+
+<style>
+  #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+</style>
+
+
 
     </body>
 </html>

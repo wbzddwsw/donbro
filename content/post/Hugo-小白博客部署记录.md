@@ -5,7 +5,7 @@ date: 2025-04-02T01:00:56+08:00
 categories: ["数枝横斜"]
 tags: ["Hugo"]
 slug: hugo
-image: https://chatstorage.dvd.moe/dvdchat/dvdchat/8114f986-0e3a-4b7d-b8fc-65865cd5f636.jpg
+image: 
 ---
 
 > 感谢[“小球飞鱼”的教程](https://mantyke.icu/posts/2021/hugo-build-blog/)，以及在这个过程提供帮助的各位朋友。

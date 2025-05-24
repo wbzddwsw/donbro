@@ -5,7 +5,7 @@ date: 2025-04-02
 categories: ["数枝横斜"]
 tags: ["Hugo"]
 slug: waline
-image: https://chatstorage.dvd.moe/dvdchat/dvdchat/44e51c87-6651-441d-8dc3-e188f9f30d8e.jpg
+image: 
 ---
 
 ### 注册LeanCloud
