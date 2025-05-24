@@ -1010,6 +1010,10 @@ code {
 
 </details>
 
+#### 自定义emoji
+
+参考[赛博房子装修计划（4）自定义emoji](https://xyzxy.me/p/赛博房子装修计划4自定义emoji/)
+
 ## 短代码应用
 
 > custom.scss 在 \assets\scss 文件中，新建x.html文件放在 \layouts\shortcodes
@@ -1449,6 +1453,107 @@ i.star{
 </details>
 
 
+
+#### 系列文章
+
+```
+{{< seriesbox >}}
+```
+
+
+
+<details>
+<summary><strong>代码</strong> 1.在对应文章的 front matter 中添加：</summary>
+
+
+```
+series = ["建站"]
+series_order = 1
+```
+
+</details>
+
+
+
+<details>
+<summary><strong>代码</strong> 2.在 layouts/shortcodes/seriesbox.html 中添加：</summary>
+
+
+```
+{{ $series := index .Page.Params.series 0 }}
+{{ if $series }}
+  {{ $pages := where site.RegularPages "Params.series" "intersect" (slice $series) }}
+  {{ $pages = where $pages ".Params.series_order" "!=" nil }}
+  {{ $pages = sort $pages "Params.series_order" }}
+  {{ if gt (len $pages) 1 }}
+    <details class="series-box" open>
+      <summary class="series-title">
+        本文属于 <strong>{{ $series }}</strong> 系列
+      </summary>
+      <ol class="series-list">
+        {{ range $pages }}
+          <li>
+            <a href="{{ .RelPermalink }}" class="{{ if eq $.Page.Permalink .Permalink }}active{{ end }}">
+              {{ printf "§ %d: %s" .Params.series_order .Title }}
+            </a>
+          </li>
+        {{ end }}
+      </ol>
+    </details>
+  {{ end }}
+{{ end }}
+
+```
+
+</details>
+
+<details>
+<summary><strong>代码</strong> 3在 custom.scss 中添加：</summary>
+
+
+```
+// series
+.series-box {
+  background: var(--card-background);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 2rem 0;
+  box-shadow: var(--shadow-l1);
+  color: var(--card-text-color-main);
+}
+
+.series-box summary,
+.series-box .series-title {
+  color: var(--body-text-color);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+}
+
+.series-box ol.series-list {
+  padding-left: 1.25rem;
+  margin: 0.5rem 0 0 0;
+}
+
+.series-box li {
+  margin: 0.25rem 0;
+  list-style: none;
+}
+
+.series-box a {
+  color: var(--card-text-color-main);
+  text-decoration: none;
+}
+
+.series-box a.active {
+  font-weight: bold;
+  color: var(--accent-color);
+}
+```
+
+</details>
+
+
 #### 卡片链接
 
 {{< card >}}
@@ -1874,7 +1979,272 @@ img.message__img {
 ```
 </details>
 
+
+
+#### 聊天气泡
+
+{{< chat position="left" name="John Doe" timestamp="2023-09-12 14:30">}}
+这是左边的消息内容。
+{{< /chat >}}
+
+{{< chat position="right" name="Alice" timestamp="2023-09-12 14:45" >}} 
+这是右边的消息内容，测试长长长长长长长长长长长长长长长长长长长长长长长长度。
+{{< /chat >}}
+
+```
+{< chat position="left" name="John Doe" timestamp="2023-09-12 14:30">}
+这是左边的消息内容。
+{< /chat >}
+
+{< chat position="right" name="Alice" timestamp="2023-09-12 14:45" >}
+这是右边的消息内容，测试长长长长长长长长长长长长长长长长长长长长长长长长度。
+{< /chat >}
+
+```
+
+<details>
+<summary><strong>代码</strong> 新建 /layouts/shortcodes/chat.html：</summary>
+
+```
+  {{ if eq (.Get "position") "left" }}
+<div class="chat --other">
+    <div class="chat__inner">
+        <div class="chat__meta">{{ .Get "name" }}&nbsp;&nbsp;&nbsp;{{ .Get "timestamp" }}</div>
+        <div class="chat__text">
+            {{ .Inner }}
+        </div>
+    </div>
+</div>
+{{ else if eq (.Get "position") "right" }}
+<div class="chat --self">
+    <div class="chat__inner">
+        <div class="chat__meta" style="text-align: right;">{{ .Get "timestamp" }}&nbsp;&nbsp;&nbsp;{{ .Get "name" }}</div>
+        <div class="chat__text">
+            {{ .Inner }}
+        </div>
+    </div>
+</div>
+{{ end }}
+
+<style>
+    .chat {
+        margin: 10px;
+        padding: 10px;
+        position: relative;
+        /* 添加相对定位，以便定位尖角箭头 */
+        transition: transform 0.2s;
+        /* 添加过渡效果，使放大平滑 */
+        max-width: 80%;
+        min-width: 15%;
+    }
+    
+    .chat:hover {
+        transform: scale(1.05);
+    }
+    
+    .chat.--self {
+        text-align: left;
+        background-color: #ecf5ff;
+        color: #000000;
+        border-radius: 15px;
+        width: fit-content;
+        margin-left: auto;
+    }
+    /* 尖角箭头 */
+    
+    .chat.--self::before {
+        content: "";
+        position: absolute;
+        right: -18px;
+        /* 调整箭头位置 */
+        bottom: 5px;
+        transform: translateY(-50%);
+        border-width: 15px 0 0 20px;
+        border-style: solid;
+        border-color: transparent transparent transparent #ecf5ff;
+        /* 箭头颜色与对话框背景颜色一致 */
+    }
+    /* 左边对话框样式 */
+    
+    .chat.--other {
+        text-align: left;
+        background-color: #ffecec;
+        color: #333;
+        border-radius: 15px;
+        position: relative;
+        width: fit-content;
+    }
+    /* 左边对话框的尖角箭头 */
+    
+    .chat.--other::before {
+        content: "";
+        position: absolute;
+        left: -18px;
+        bottom: 5px;
+        transform: translateY(-50%);
+        border-width: 15px 20px 0 0;
+        border-style: solid;
+        border-color: transparent #ffecec transparent transparent;
+    }
+    /* 消息元数据样式（名称和时间戳） */
+    
+    .chat__meta {
+        font-weight: bold;
+        font-size: 0.67em;
+        color: #707070;
+        margin-bottom: 5px;
+    }
+    /* 消息文本样式 */
+    
+    .chat__text {
+        font-size: 0.9em;
+        margin-left: 10px;
+        word-break: break-all;
+    }
+    
+    [data-scheme="dark"] {
+        .chat.--self {
+            color: #fefefe;
+            background-color: #253958;
+        }
+        .chat.--self::before {
+            border-color: transparent transparent transparent #253958;
+        }
+        .chat.--other {
+            color: #fefefe;
+            background-color: #1a1a1a;
+        }
+        .chat.--other::before {
+            border-color: transparent #1a1a1a transparent transparent;
+        }
+        .chat__meta {
+            color: #b1b1b1;
+        }
+    }
+</style>
+
+```
+</details>
+
+
+
+
+
+<details>
+<summary><strong>代码</strong> 2.在 custom.scss 中添加：</summary>
+
+
+```
+// notice 短代码
+.notice {
+    position:relative;
+    padding: 1em 1em 1em 2.5em;
+    margin-bottom: 1em;
+    border-radius: 4px;
+    p:last-child {
+        margin-bottom: 0;
+    }
+    .notice-title {
+        position: absolute;
+        left: 0.8em;
+        .notice-icon {
+            width: 1.2em;
+            height: 1.2em;
+        }
+    }
+    &.notice-warning {
+        background: hsla(0, 65%, 65%, 0.15);
+        border-left: 5px solid hsl(0, 65%, 65%);
+        .notice-title {
+            color: hsl(0, 65%, 65%);
+        }
+    }
+    &.notice-info {
+        background: hsla(30, 80%, 70%, 0.15);
+        border-left: 5px solid hsl(30, 80%, 70%);
+        .notice-title {
+            color: hsl(30, 80%, 70%);
+        }
+    }
+    &.notice-note {
+        background: hsla(200, 65%, 65%, 0.15);
+        border-left: 5px solid hsl(200, 65%, 65%);
+        .notice-title {
+            color: hsl(200, 65%, 65%);
+        }
+    }
+    &.notice-tip {
+        background: hsla(140, 65%, 65%, 0.15);
+        border-left: 5px solid hsl(140, 65%, 65%);
+        .notice-title {
+            color: hsl(140, 65%, 65%);
+        }
+    }
+}
+
+[data-theme="dark"] .notice {
+    &.notice-warning {
+        background: hsla(0, 25%, 35%, 0.15);
+        border-left: 5px solid hsl(0, 25%, 35%);
+        .notice-title {
+            color: hsl(0, 25%, 35%);
+        }
+    }
+    &.notice-info {
+        background: hsla(30, 25%, 35%, 0.15);
+        border-left: 5px solid hsl(30, 25%, 35%);
+        .notice-title {
+            color: hsl(30, 25%, 35%);
+        }
+    }
+    &.notice-note {
+        background: hsla(200, 25%, 35%, 0.15);
+        border-left: 5px solid hsl(200, 25%, 35%);
+        .notice-title {
+            color: hsl(200, 25%, 35%);
+        }
+    }
+    &.notice-tip {
+        background: hsla(140, 25%, 35%, 0.15);
+        border-left: 5px solid hsl(140, 25%, 35%);
+        .notice-title {
+            color: hsl(140, 25%, 35%);
+        }
+    }
+}
+```
+
+</details>
+
 #### neodb
+
+
+
+```
+{< neodb "NeoDB 网址/豆瓣网址" >}
+```
+
+
+
+<details>
+<summary><strong>代码</strong> 1.在 /layouts/shortcodes/neodb.html 中添加：</summary>
+
+
+```
+
+```
+
+</details>
+
+<details>
+<summary><strong>代码</strong> 2.在 /assets/scss/custom.scss 中添加：</summary>
+
+
+```
+ 
+```
+
+</details>
 
 #### misskey
 
@@ -1920,6 +2290,52 @@ img.message__img {
 </div>
 ```
 </details>
+
+####  调色盘
+
+{{< swatches "#537d5d" "#73946b" "#9ebc8a" >}}
+
+```
+{< swatches "#537d5d" "#73946b" "#9ebc8a" >}
+
+```
+
+<details>
+<summary><strong>代码</strong> 1.新建 layouts/shortcodes/swatches.html：</summary>
+
+
+```
+  <div class="swatches-container">
+    {{ range .Params }}
+      <div class="swatch" style="background-color: {{ . }}" title="{{ . }}"></div>
+    {{ end }}
+  </div>
+
+
+```
+</details>
+
+<details>
+<summary><strong>代码</strong> 2.在 custom.scss 中添加：</summary>
+
+
+```
+// 调色盘
+.swatches-container {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.swatch {
+  flex: 1 1 0;
+  height: 3rem;
+  border-radius: 0.5rem;
+}
+
+```
+</details>
+
 
 
 #### 图片轮播
@@ -2042,4 +2458,4 @@ img.message__img {
 以上内容参考了下列博文：
 
 {{< card >}}
-[Hugo Stack主题装修笔记](https://thirdshire.com/hugo-stack-renovation/)<br>[Hugo Stack 魔改美化](https://www.xalaok.top/post/stack-modify/)<br>[Hugo | 在 Stack 主题上可行的短代码们](https://www.sleepymoon.cyou/2023/hugo-shortcodes/)<br>[Hugo Stack 主题美化](https://weiqifun.com/posts/2024/10/hugo+stack主题美化/){{< /card >}}
+[Hugo Stack主题装修笔记](https://thirdshire.com/hugo-stack-renovation/)<br>[Hugo Stack 魔改美化](https://www.xalaok.top/post/stack-modify/)<br>[Hugo | 在 Stack 主题上可行的短代码们](https://www.sleepymoon.cyou/2023/hugo-shortcodes/)<br>[Hugo Stack 主题美化](https://weiqifun.com/posts/2024/10/hugo+stack主题美化/)<br>[赛博房子装修计划（1）文章样式](https://xyzxy.me/p/赛博房子装修计划1文章样式/){{< /card >}}
