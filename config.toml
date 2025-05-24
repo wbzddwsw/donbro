@@ -2,3 +2,8 @@ baseURL = "https://donbro.vercel.app/"
 languageCode = "zh-CN"
 title = "树响集"
 theme = "stack"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
