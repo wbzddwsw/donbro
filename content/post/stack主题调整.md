@@ -11,6 +11,20 @@ draft: false
 
 ## 基础设置
 
+### 整体
+
+#### 背景图片
+
+参考[【Hugo】修改博客背景并引入动态背景](https://letere-gzj.github.io/hugo-stack/p/hugo/custom-background/)
+
+#### 动态背景
+
+参考[【Hugo】修改博客背景并引入动态背景](https://letere-gzj.github.io/hugo-stack/p/hugo/custom-background/)
+
+#### 鼠标图案
+
+参考[【Hugo】修改博客背景并引入动态背景](https://letere-gzj.github.io/hugo-stack/p/hugo/custom-background/)
+
 ### 布局
 
 #### 首页布局调整
@@ -2458,4 +2472,4 @@ img.message__img {
 以上内容参考了下列博文：
 
 {{< card >}}
-[Hugo Stack主题装修笔记](https://thirdshire.com/hugo-stack-renovation/)<br>[Hugo Stack 魔改美化](https://www.xalaok.top/post/stack-modify/)<br>[Hugo | 在 Stack 主题上可行的短代码们](https://www.sleepymoon.cyou/2023/hugo-shortcodes/)<br>[Hugo Stack 主题美化](https://weiqifun.com/posts/2024/10/hugo+stack主题美化/)<br>[赛博房子装修计划（1）文章样式](https://xyzxy.me/p/赛博房子装修计划1文章样式/){{< /card >}}
+[Hugo Stack主题装修笔记](https://thirdshire.com/hugo-stack-renovation/)<br>[Hugo Stack 魔改美化](https://www.xalaok.top/post/stack-modify/)<br>[Hugo | 在 Stack 主题上可行的短代码们](https://www.sleepymoon.cyou/2023/hugo-shortcodes/)<br>[Hugo Stack 主题美化](https://weiqifun.com/posts/2024/10/hugo+stack主题美化/)<br>[赛博房子装修计划（1）文章样式](https://xyzxy.me/p/赛博房子装修计划1文章样式/)<br>[【Hugo】修改博客背景并引入动态背景](https://letere-gzj.github.io/hugo-stack/p/hugo/custom-background/){{< /card >}}
