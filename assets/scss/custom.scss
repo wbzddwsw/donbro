@@ -784,3 +784,11 @@ img.message__img {
   font-weight: bold;
   color: var(--accent-color);
 }
+
+//表情对齐
+img.emoji {
+  height:        1.8em;
+  width:         1.8em;
+  margin:        0 .15em;
+  vertical-align: -0.2em;
+}

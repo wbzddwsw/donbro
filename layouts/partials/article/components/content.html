@@ -1,0 +1,12 @@
+<section class="article-content">
+  {{/* 1) 匹配 \:emoji_name\: */}}
+  {{ $emojiPattern := `:([A-Za-z0-9_-]+):` }}
+  {{/* 2) 包裹表格 */}}
+  {{ $tableWrapper := printf "<div class=\"table-wrapper\">${1}</div>" }}
+
+  {{ .Content
+     | replaceRE $emojiPattern `<img class="emoji" src="/emoji/$1.png" alt=":$1:" loading="lazy">`
+     | replaceRE "(<table>(?:.|\n)+?</table>)" $tableWrapper
+     | safeHTML
+  }}
+</section>
