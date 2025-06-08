@@ -43,6 +43,10 @@ links:
     description: 没有想好先空着吧……！
     website: https://curly-sheep.netlify.app/
     image: 
+  - title: 病例簿
+    description: 按需服药 谨遵医嘱
+    website: https://lodka.vercel.app/
+    image: https://lodka.vercel.app/img/avatar_hu_e6d7fbaf02febd8c.png
 menu:
     main: 
         name: 友链
