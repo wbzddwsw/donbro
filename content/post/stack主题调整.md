@@ -2228,7 +2228,7 @@ img.message__img {
 
 #### neodb
 
-
+{{< neodb "https://neodb.social/book/1qPRxweiyxXlGqN3azjEy8" >}}
 
 ```
 {< neodb "NeoDB 网址/豆瓣网址" >}
