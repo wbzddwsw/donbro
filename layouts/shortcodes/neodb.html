@@ -1,9 +1,126 @@
-{{ $url := .Get 0 }}
-<iframe
-  src="https://neodb.social/api/embed?url={{ $url }}"
-  width="100%"
-  height="180"
-  style="border:none;overflow:hidden;border-radius:6px;"
-  allowtransparency="true"
-  sandbox="allow-scripts allow-same-origin">
-</iframe>
+{{ $dbUrl := .Get 0 }}
+{{ $apiUrl := "https://neodb.social/api/me/shelf/item/" }}
+{{ $itemUuid := "" }}
+{{ $authToken := "iSK2jvTstcBcGqdIbZ6vJNU2t-PWJG958AeAWVYRV9Zlu8WI0mB2yVNTtw" }} <!-- 请替换为你的 API Personal Token -->
+
+<!-- 判断是否为开发模式 -->
+{{ if eq (hugo.Environment) "production" }}
+
+    <!-- 解析 item_uuid -->
+    {{ if (findRE `.*neodb\.social\/.*\/(.*)` $dbUrl) }}
+        {{ $itemUuid = replaceRE `.*neodb\.social\/.*\/(.*)` "$1" $dbUrl }}
+    {{ else }}
+        <p style="text-align: center;"><small>无效的 URL 格式。</small></p>
+        {{ return }}
+    {{ end }}
+
+    <!-- 构造 API 请求地址 -->
+    {{ $dbApiUrl := print $apiUrl $itemUuid }}
+    {{ $headers := dict "Authorization" (print "Bearer " $authToken) }}
+
+    <!-- 获取 API 数据 -->
+    {{ $dbFetch := getJSON $dbApiUrl $headers }}
+
+    {{ if $dbFetch }}
+        {{ $shelfType := $dbFetch.shelf_type }}
+        {{ $category := $dbFetch.item.category }}
+        {{ $action := "" }}
+        {{ $prefix := "" }}
+        {{ $suffix := "" }}
+        {{ $displayText := "" }}
+
+        <!-- 根据类别决定动作 -->
+        {{ if eq $category "book" }}{{ $action = "读" }}
+        {{ else if or (eq $category "tv") (eq $category "movie") (eq $category "performance") }}{{ $action = "看" }}
+        {{ else if or (eq $category "podcast") (eq $category "album") }}{{ $action = "听" }}
+        {{ else if eq $category "game" }}{{ $action = "玩" }}
+        {{ end }}
+
+        <!-- 根据状态决定前缀和后缀 -->
+        {{ if eq $shelfType "wishlist" }}{{ $prefix = "想" }}
+        {{ else if eq $shelfType "complete" }}{{ $suffix = "过" }}
+        {{ else if eq $shelfType "progress" }}{{ $prefix = "在" }}
+        {{ else if eq $shelfType "dropped" }}{{ $prefix = "不" }}{{ $suffix = "了" }}
+        {{ end }}
+
+        {{ $displayText = print $prefix $action $suffix }}
+
+        <!-- 唯一 ID -->
+        {{ $uniqueId := (print "coverImage-" $itemUuid) }}
+
+        <div class="db-card">
+            <div class="db-card-subject">
+                <div class="db-card-post">
+                    <!-- 占位图片链接 -->
+                    <img src="" 
+                         alt="Placeholder Image" 
+                         style="max-width: 100%; height: auto;" 
+                         id="{{ $uniqueId }}">
+                </div>
+                <div class="db-card-content">
+                    <div class="db-card-title">
+                        <a href="{{ $dbUrl }}" class="cute" target="_blank" rel="noreferrer">{{ $dbFetch.item.title }}</a>
+                    </div>
+                    <div class="db-card-comment">
+                        {{ $dbFetch.created_time | time.Format "2006-01-02" }} {{ $displayText }}
+                        <span style="color: #6b0f0f;">#{{ $category | title }}</span>
+                        {{ $comment := trim .Inner " \n\r" }}
+                        {{ if $comment }}
+                        <p>{{ $comment | safeHTML }}</p>
+                        {{ else }}
+                        <p>{{ replace $dbFetch.comment_text "\n" "<br>" | safeHTML }}</p>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const img = document.getElementById('{{ $uniqueId }}');
+                const newImgSrc = '{{ $dbFetch.item.cover_image_url }}';
+
+                if (newImgSrc) {
+                    const tempImg = new Image();
+                    tempImg.src = newImgSrc;
+                    tempImg.onload = function() {
+                        img.src = newImgSrc;
+                    };
+                }
+            });
+        </script>
+
+    {{ else }}
+        <p style="text-align: center;"><small>获取数据失败，请检查 API 是否有效。</small></p>
+    {{ end }}
+
+{{ else }}
+
+    <!-- 开发模式下显示占位图，并正常显示自定义评论内容 -->
+    <div class="db-card">
+        <div class="db-card-subject">
+            <div class="db-card-post">
+                <!-- 占位图片链接 -->
+                <img src="" 
+                     alt="开发模式占位图片" 
+                     style="max-width: 100%; height: auto;">
+            </div>
+            <div class="db-card-content">
+                <div class="db-card-title">
+                    <a href="{{ $dbUrl }}" class="cute" target="_blank" rel="noreferrer">示例标题</a>
+                </div>
+                <div class="db-card-comment">
+                    2025-03-04 想读
+                    <span style="color: #6b0f0f;">#示例分类</span>
+                    {{ $comment := trim .Inner " \n\r" }}
+                    {{ if $comment }}
+                    <p>{{ $comment | safeHTML }}</p>
+                    {{ else }}
+                    <p>这是开发模式下的占位数据。</p>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{{ end }} <!-- 结束环境判断 -->
