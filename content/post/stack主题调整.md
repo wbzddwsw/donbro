@@ -2227,12 +2227,6 @@ img.message__img {
 
 #### neodb
 
-{{< neodb "https://neodb.social/book/1qPRxweiyxXlGqN3azjEy8" >}} 在这里写评论内容，留白则自动拉取标记短评{{< /neodb >}}
-
-```
-{< neodb "https://neodb.social/book/1qPRxweiyxXlGqN3azjEy8" >} 在这里写评论内容，留白则自动拉取标记短评{< /neodb >}
-```
-
 
 
 <details>
