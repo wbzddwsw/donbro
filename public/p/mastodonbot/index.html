@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="用来建设家产轰炸tl也是极好的（不是）">
+<title>搭建一个定时发送消息的mastodon机器人</title>
+
+<link rel='canonical' href='http://localhost:1313/p/mastodonbot/'>
+
+<link rel="stylesheet" href="/scss/style.min.a5a05736115805ef924a4104fdcf8fab8ff326415671e6bfbca27dc45ac1c1a5.css"><meta property='og:title' content="搭建一个定时发送消息的mastodon机器人">
+<meta property='og:description' content="用来建设家产轰炸tl也是极好的（不是）">
+<meta property='og:url' content='http://localhost:1313/p/mastodonbot/'>
+<meta property='og:site_name' content='树响集'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='mastodon' /><meta property='article:published_time' content='2025-06-21T21:25:34&#43;08:00'/><meta property='article:modified_time' content='2025-06-21T21:25:34&#43;08:00'/>
+<meta name="twitter:title" content="搭建一个定时发送消息的mastodon机器人">
+<meta name="twitter:description" content="用来建设家产轰炸tl也是极好的（不是）">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+<script src="https://kit.fontawesome.com/4ef17de36c.js" crossorigin="anonymous"></script><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/8801c649-6842-4150-9a2a-83ae4b5badfa.jpg" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">树响集</a></h1>
+            <h2 class="site-description">不作诗则做诗</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/wbzddwsw/donbro'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://box.n3ko.cc/_/donbro'
+                        target="_blank"
+                        title="NeKoBox"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2"> <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path> <path d="M3 7l9 6l9 -6"></path> </svg> 
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://tube.pari.cafe/a/wsw/video-channels'
+                        target="_blank"
+                        title="Pari Tube"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2"> <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path> <path d="M8 4l0 16"></path> <path d="M16 4l0 16"></path> <path d="M4 8l4 0"></path> <path d="M4 16l4 0"></path> <path d="M4 12l16 0"></path> <path d="M16 8l4 0"></path> <path d="M16 16l4 0"></path> </svg> 
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://stelpolva.moe/@donbro'
+                        target="_blank"
+                        title="misskey"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2"> <path d="M17.286 21.09q -1.69 .001 -5.288 -2.615q -3.596 2.617 -5.288 2.616q -2.726 0 -.495 -6.8q -9.389 -6.775 2.135 -6.775h.076q 1.785 -5.516 3.574 -5.516q 1.785 0 3.574 5.516h.076q 11.525 0 2.133 6.774q 2.23 6.802 -.497 6.8"></path> </svg> 
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/scribs/' >
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-pencil-heart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 11l1.5 -1.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4h4l2 -2" /><path d="M13.5 6.5l4 4" /><path d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296z" /></svg>
+                
+                <span>笔迹</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/friends/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友链</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#一些唠叨">一些唠叨</a></li>
+    <li><a href="#正式部署">正式部署</a>
+      <ol>
+        <li><a href="#下载与注册">下载与注册</a></li>
+        <li><a href="#准备文件">准备文件</a>
+          <ol>
+            <li><a href="#1botpy">1.bot.py</a></li>
+            <li><a href="#2procfile">2.Procfile</a></li>
+            <li><a href="#3sentencestxt">3.sentences.txt</a></li>
+            <li><a href="#4images">4.images/</a></li>
+            <li><a href="#5requirementstxt">5.requirements.txt</a></li>
+            <li><a href="#6railwayjson">6.railway.json</a></li>
+          </ol>
+        </li>
+        <li><a href="#新建github仓库">新建github仓库</a></li>
+        <li><a href="#将本地代码上传到github">将本地代码上传到github</a></li>
+        <li><a href="#部署railway">部署railway</a></li>
+      </ol>
+    </li>
+    <li><a href="#后续维护更新">后续维护更新</a></li>
+    <li><a href="#结语">结语</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E6%95%B0%E6%9E%9D%E6%A8%AA%E6%96%9C/" style="background-color: #48a6a7; color: #fff;">
+                数枝横斜
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/mastodonbot/">搭建一个定时发送消息的mastodon机器人</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            用来建设家产轰炸tl也是极好的（不是）
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025年06月21日</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 7 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+  
+  
+  
+  
+
+  <h2 id="一些唠叨">一些唠叨
+</h2><p>很久很久之前就对首页刷到的 bot 感兴趣，以前还把自己的账号标记成机器人玩（大家不要学），今天我终于拥有机器人账号了 <code>@w3w@o3o.ca</code> ！是发送特摄相关内容的，欢迎大家来玩！！！<del>这篇博客不是教程吗怎么还夹带私货</del></p>
+<p>做事情有时候真的看缘分的，前两天突然就这么灵光一闪开始捣腾，刚开始做的是 misskey 的文字 bot，而且因为是从本地发帖，操作起来也相当简单。之后 kon酱给我发了<a class="link" href="https://me.ag925.top/archives/6fcf4471.html"  target="_blank" rel="noopener"
+    >一个Firefish/Misskey上的定时发图bot</a>
+
+
+<span style="white-space: nowrap;"><svg width=".7em"
+    height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+    <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+    <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+        fill="currentColor">
+</svg></span>
+
+，再加上特摄真的很多表情包，勾起了我做图片bot的心，但是！我根本看不懂！！！</p>
+<p>天呐我真的对代码一无所知，何况还是 json 这种一听就吓得我退避三舍的东西，所以我选择直接对 gpt 提要求，它给出的方案是在本地建一个图片文件夹并加入随机列表。</p>
+<p>misskey 是有网盘的，kon 酱那个方案就是读取网盘里的图片列表并且直接从网盘上传，这样就不会占用太多资源。我还想加上定时删除功能，这样未免太过复杂。</p>
+<p>但 mastodon 有自带的定时删除，而且由于我技术力不够显然也是不太用得上网盘的，于是最终决定在 mastodon 上运营这个账号。我的诉求是：</p>
+<ol>
+<li>文字和图片中随机选一条</li>
+<li>每天上午和晚上9点自动发送</li>
+<li>半年之前的帖子自动删除</li>
+</ol>
+<p>1 和 2 都请 gpt 老师帮我实现了，3 依靠 mastodon 实现了，于是我美美入睡满心期待等第二天的帖子，然后一觉醒来什么都没有……</p>
+<p>这才知道本地的发帖程序只有电脑保持开机才可以运行，上午我没开电脑程序的发送请求就被系统拒绝了！！！</p>
+<p>询问 gpt 后无奈接受了部署云端的建议，又是一个我听都没听过的操作方案，经过一整天的不断调整，好歹是弄出来了，因此特意写这篇记录<del>绝对不是因为太久没写博客了手痒</del></p>
+<h2 id="正式部署">正式部署
+</h2><p>这个操作流程，我大概描述一下就是，在本地准备好文件，推送到 github 仓库，再把这个仓库部署到 railway ，让 railway 根据文件里写的脚本自动运行。</p>
+<p>听起来不是很难，问题不大我一步一步写。</p>
+<h3 id="下载与注册">下载与注册
+</h3><ol>
+<li>
+<p>安装 Python：https://www.python.org/downloads</p>
+<p>下载自己电脑型号对应的版本，安装的时候下方有个 <code>Add Python to PATH</code> 必须勾选</p>
+<details>
+<summary>检查是否安装成功</summary>
+    1.在电脑上按<kbd>win</kbd>+<kbd>R</kbd><br>
+    2.输入<code>cmd</code>然后按<kbd>enter</kbd>回车，打开命令提示符<br>
+    3.输入<code>python --version</code><br>
+    4.如果看到类似<code>Python 3.12.3</code>说明安装成功
+</details>
+</li>
+<li>
+<p>获取 API Token</p>
+<ul>
+<li>
+<p>登录准备用来作为 bot 的 mastodon 账号，打开<code>设置</code>-<code>开发</code>，点击<code>创建新应用</code></p>
+</li>
+<li>
+<p>给应用取个名字，这个名字之后会出现在帖子下方用作发帖来源</p>
+</li>
+<li>
+<p>勾选权限，<code>write:media 上传媒体文件</code>和<code>write:statuses 发表嘟文</code>，再点击<code>提交</code></p>
+</li>
+<li>
+<p>点开应用，复制“你的访问令牌”，也就是 Token</p>
+<p><img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/55cd005c-9394-4824-b325-aac52d5e4297.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="1"
+	
+	
+></p>
+</li>
+</ul>
+</li>
+<li>
+<p>注册一个 github 账号，下载 Github Desktop 、Git 和 VScode</p>
+<p>具体操作可以参考这篇文章：<a class="link" href="https://donbro.vercel.app/p/hugo/"  target="_blank" rel="noopener"
+    >Hugo-小白博客部署记录</a>
+
+
+<span style="white-space: nowrap;"><svg width=".7em"
+    height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+    <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+    <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+        fill="currentColor">
+</svg></span>
+
+</p>
+</li>
+<li>
+<p>注册railway：https://railway.com/</p>
+<p>点击右上角 <code>Sign in</code> ，选择用 github 账号登录</p>
+</li>
+</ol>
+<h3 id="准备文件">准备文件
+</h3><p>在 D 盘新建一个mastodon_bot 文件夹，在其中准备以下6个文件：</p>
+<h4 id="1botpy">1.bot.py
+</h4><p>最主要的运行脚本。先新建一个 txt 文档，然后另存为 <code>bot.py</code> 就好了</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">import</span> <span class="n">random</span>
+</span></span><span class="line"><span class="cl"><span class="n">import</span> <span class="n">requests</span>
+</span></span><span class="line"><span class="cl"><span class="n">from</span> <span class="n">datetime</span> <span class="n">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timezone</span><span class="p">,</span> <span class="n">timedelta</span>
+</span></span><span class="line"><span class="cl"><span class="n">import</span> <span class="n">os</span>
+</span></span><span class="line"><span class="cl"><span class="n">import</span> <span class="n">schedule</span>
+</span></span><span class="line"><span class="cl"><span class="n">import</span> <span class="n">time</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 从环境变量读取 Mastodon 访问令牌和实例地址</span>
+</span></span><span class="line"><span class="cl"><span class="n">ACCESS_TOKEN</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;ACCESS_TOKEN&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">INSTANCE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;INSTANCE_URL&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 如果环境变量未设置，则程序退出并提示用户</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="ow">not</span> <span class="n">ACCESS_TOKEN</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">INSTANCE</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;请设置环境变量 ACCESS_TOKEN 和 INSTANCE_URL&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 存放文本内容的文件路径</span>
+</span></span><span class="line"><span class="cl"><span class="n">TEXT_FILE</span> <span class="o">=</span> <span class="s2">&#34;sentences.txt&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 存放图片的文件夹路径</span>
+</span></span><span class="line"><span class="cl"><span class="n">IMAGE_FOLDER</span> <span class="o">=</span> <span class="s2">&#34;images&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">get_random_content</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    随机获取待发送的内容（文字或图片路径）
+</span></span></span><span class="line"><span class="cl"><span class="s2">    1. 先从文本文件读取非空行，加入候选列表
+</span></span></span><span class="line"><span class="cl"><span class="s2">    2. 再从图片文件夹读取所有支持格式的图片路径，加入候选列表
+</span></span></span><span class="line"><span class="cl"><span class="s2">    3. 如果候选列表为空，返回 None
+</span></span></span><span class="line"><span class="cl"><span class="s2">    4. 否则返回随机选中的一条内容
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">content_list</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 检查文本文件是否存在并读取内容</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">TEXT_FILE</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">with</span> <span class="n">open</span><span class="p">(</span><span class="n">TEXT_FILE</span><span class="p">,</span> <span class="s2">&#34;r&#34;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&#34;utf-8&#34;</span><span class="p">)</span> <span class="n">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># 读取每一行并去除空白字符，过滤空行</span>
+</span></span><span class="line"><span class="cl">            <span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span> <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()]</span>
+</span></span><span class="line"><span class="cl">            <span class="n">content_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 检查图片文件夹是否存在并读取支持的图片文件</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">IMAGE_FOLDER</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">IMAGE_FOLDER</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># 支持 png, jpg, jpeg, gif, webp 格式（不区分大小写）</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">((</span><span class="s2">&#34;.png&#34;</span><span class="p">,</span> <span class="s2">&#34;.jpg&#34;</span><span class="p">,</span> <span class="s2">&#34;.jpeg&#34;</span><span class="p">,</span> <span class="s2">&#34;.gif&#34;</span><span class="p">,</span> <span class="s2">&#34;.webp&#34;</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># 拼接完整路径加入候选列表</span>
+</span></span><span class="line"><span class="cl">                <span class="n">content_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">IMAGE_FOLDER</span><span class="p">,</span> <span class="n">file</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 如果没有任何可用内容，打印提示并返回 None</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="ow">not</span> <span class="n">content_list</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;没有可发送的文字或图片。&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">None</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 从候选内容中随机选择一条返回</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">content_list</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">upload_media</span><span class="p">(</span><span class="n">image_path</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    上传图片到 Mastodon 实例，返回媒体 ID 以供发帖时引用
+</span></span></span><span class="line"><span class="cl"><span class="s2">    失败时打印错误并返回 None
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">url</span> <span class="o">=</span> <span class="n">f</span><span class="s2">&#34;{INSTANCE}/api/v2/media&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Authorization&#34;</span><span class="p">:</span> <span class="n">f</span><span class="s2">&#34;Bearer {ACCESS_TOKEN}&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 以二进制方式打开图片文件</span>
+</span></span><span class="line"><span class="cl">        <span class="n">with</span> <span class="n">open</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span> <span class="s2">&#34;rb&#34;</span><span class="p">)</span> <span class="n">as</span> <span class="n">img</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;file&#34;</span><span class="p">:</span> <span class="n">img</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># 发送 POST 请求上传图片</span>
+</span></span><span class="line"><span class="cl">            <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="n">files</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># 成功返回媒体 ID</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&#34;id&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&#34;图片上传失败：{response.text}&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">None</span>
+</span></span><span class="line"><span class="cl">    <span class="n">except</span> <span class="n">Exception</span> <span class="n">as</span> <span class="n">e</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&#34;上传图片异常：{e}&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">None</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">post_status</span><span class="p">(</span><span class="n">content</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    发帖函数
+</span></span></span><span class="line"><span class="cl"><span class="s2">    - 如果传入的是图片路径，先调用 upload_media 上传，再发空文字附带图片的帖子
+</span></span></span><span class="line"><span class="cl"><span class="s2">    - 如果是普通文字，则直接发文字帖子
+</span></span></span><span class="line"><span class="cl"><span class="s2">    发送完成后打印响应状态码和内容
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">url</span> <span class="o">=</span> <span class="n">f</span><span class="s2">&#34;{INSTANCE}/api/v1/statuses&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Authorization&#34;</span><span class="p">:</span> <span class="n">f</span><span class="s2">&#34;Bearer {ACCESS_TOKEN}&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">content</span><span class="p">):</span>  <span class="c1"># 判断是否为文件（图片）</span>
+</span></span><span class="line"><span class="cl">            <span class="n">media_id</span> <span class="o">=</span> <span class="n">upload_media</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>  <span class="c1"># 上传图片，获取媒体 ID</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="ow">not</span> <span class="n">media_id</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span>  <span class="c1"># 上传失败，跳过发帖</span>
+</span></span><span class="line"><span class="cl">            <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;status&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>            <span class="c1"># 不附带文字</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;media_ids[]&#34;</span><span class="p">:</span> <span class="p">[</span><span class="n">media_id</span><span class="p">]</span>  <span class="c1"># 附带上传成功的图片 ID</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># 普通文字直接发帖</span>
+</span></span><span class="line"><span class="cl">            <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;status&#34;</span><span class="p">:</span> <span class="n">content</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 发送发帖请求</span>
+</span></span><span class="line"><span class="cl">        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 打印当前 UTC 时间（带时区），响应状态码和返回内容，方便调试</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&#34;{datetime.now(timezone.utc)} 状态码: {r.status_code}&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">except</span> <span class="n">Exception</span> <span class="n">as</span> <span class="n">e</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&#34;发帖异常：{e}&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">job</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    定时任务执行函数
+</span></span></span><span class="line"><span class="cl"><span class="s2">    - 获取一条随机内容（文字或图片）
+</span></span></span><span class="line"><span class="cl"><span class="s2">    - 如果有内容，调用发帖函数发送
+</span></span></span><span class="line"><span class="cl"><span class="s2">    - 如果没有，打印提示信息
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&#34;{datetime.now(timezone.utc)} 开始执行定时任务&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">selected</span> <span class="o">=</span> <span class="n">get_random_content</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">selected</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;将发送：&#34;</span><span class="p">,</span> <span class="n">selected</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">post_status</span><span class="p">(</span><span class="n">selected</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;没有内容发送&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">heartbeat</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    心跳函数，用于每隔一段时间打印日志，防止容器被平台判定为空闲自动休眠。
+</span></span></span><span class="line"><span class="cl"><span class="s2">    使用带时区的 UTC 时间打印，避免弃用警告。
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">now_utc</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span>  <span class="c1"># 获取当前UTC时间，带时区信息</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&#34;{now_utc} 心跳：程序仍在运行... 防止容器休眠&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;机器人启动，等待定时发送...&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 由于服务器时区是 UTC，我们要把北京时间 09:00 和 21:00 转换为 UTC 时间</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 北京时间 = UTC +8小时</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 所以北京时间 09:00 = UTC 01:00</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 北京时间 21:00 = UTC 13:00</span>
+</span></span><span class="line"><span class="cl">    <span class="n">schedule</span><span class="o">.</span><span class="n">every</span><span class="p">()</span><span class="o">.</span><span class="n">day</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="s2">&#34;01:00&#34;</span><span class="p">)</span><span class="o">.</span><span class="k">do</span><span class="p">(</span><span class="n">job</span><span class="p">)</span>  <span class="c1"># UTC 时间 01:00 -&gt; 北京时间 09:00</span>
+</span></span><span class="line"><span class="cl">    <span class="n">schedule</span><span class="o">.</span><span class="n">every</span><span class="p">()</span><span class="o">.</span><span class="n">day</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="s2">&#34;13:00&#34;</span><span class="p">)</span><span class="o">.</span><span class="k">do</span><span class="p">(</span><span class="n">job</span><span class="p">)</span>  <span class="c1"># UTC 时间 13:00 -&gt; 北京时间 21:00</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 每 5 分钟执行一次心跳打印，防止容器因无日志输出被休眠</span>
+</span></span><span class="line"><span class="cl">    <span class="n">schedule</span><span class="o">.</span><span class="n">every</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">minutes</span><span class="o">.</span><span class="k">do</span><span class="p">(</span><span class="n">heartbeat</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 主循环，持续运行等待任务执行</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">schedule</span><span class="o">.</span><span class="n">run_pending</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="2procfile">2.Procfile
+</h4><p>python 后面就是那个脚本名字，也是新建 txt 文档，另存为命名的时候一定要注意这个文件是<mark>没有后缀名</mark>的</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">worker: python bot.py
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="3sentencestxt">3.sentences.txt
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">这个文件里就是
+</span></span><span class="line"><span class="cl">随机发送的帖子内容
+</span></span><span class="line"><span class="cl">用换行来区分
+</span></span><span class="line"><span class="cl">一行一个帖子内容
+</span></span><span class="line"><span class="cl">行与行之间不要空格
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="4images">4.images/
+</h4><p>图片文件夹（.jpg/.png/.webp），用来放随机发送的图片</p>
+<h4 id="5requirementstxt">5.requirements.txt
+</h4><p>Python 依赖列表</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">requests
+</span></span><span class="line"><span class="cl">schedule
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="6railwayjson">6.railway.json
+</h4><p>Railway 配置</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">  &#34;build&#34;: {
+</span></span><span class="line"><span class="cl">    &#34;env&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;PYTHONUNBUFFERED&#34;: &#34;1&#34;
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">  },
+</span></span><span class="line"><span class="cl">  &#34;start&#34;: &#34;python bot.py&#34;
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="新建github仓库">新建github仓库
+</h3><ol>
+<li>
+<p>登录后点击右上角  <code>+</code> → <code>New repository</code></p>
+</li>
+<li>
+<p>填写信息：</p>
+<p>Repository name: mastodon-bot（或其他名字）</p>
+<p>Description（可选）</p>
+<p>选择 Public 或 Private</p>
+<p>不要勾选 README 等初始化选项（我们用自己已有的文件）</p>
+</li>
+<li>
+<p>点击 <code>Create repository</code></p>
+</li>
+</ol>
+<h3 id="将本地代码上传到github">将本地代码上传到github
+</h3><p>在D:\mastodon_bot 中任意空白处<strong>右键</strong>，点击 <strong>Open Git Bash Here</strong>，在弹出的命令行界面中输入：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd /d D:\mastodon_bot
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m &#34;Initial commit&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><kbd>enter</kbd>回车，再输入：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git remote add origin https://github.com/你的用户名/mastodon-bot.git
+</span></span><span class="line"><span class="cl">git branch -M main
+</span></span><span class="line"><span class="cl">git push -u origin main
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>https://github.com/你的用户名/mastodon-bot.git</code> 就是你的仓库地址，可以在这里直接复制：</p>
+<p><img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/dd108686-f49c-4d1c-b41c-9567a0fd6cdd.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="1"
+	
+	
+></p>
+<p>成功后可以在github仓库看到本地的代码文件</p>
+<h3 id="部署railway">部署railway
+</h3><p>点击新建项目，选择刚刚建立的 github 仓库</p>
+<p><img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/c64b17d7-8607-441d-99dd-104ac6465fb7.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="1"
+	
+	
+></p>
+<p>点击左边 worker 召唤出右边面板，点击 <code>Varibles</code> ，点击 <code>+ New Varibles</code></p>
+<p>在 <code>VARIABLE_NAME</code> 中分别输入 <strong>ACCESS_TOKEN</strong> 和 <strong>INSTANCE_URL</strong>，对应的 <code>VALUE or ${{REF}}</code> 中分别输入 <strong>TOKEN</strong> 和<strong>实例地址</strong></p>
+<p><img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/78b21690-a5b2-4e4f-8c9a-5eb613af881c.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="1"
+	
+	
+></p>
+<h2 id="后续维护更新">后续维护更新
+</h2><p>打开 Github Desktop，登录 Github 账号，点击添加已经存在的仓库，并且在本地选择对应的文件夹</p>
+<p><img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/46f9cb12-ec23-49c7-a99f-1c929f164151.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="1"
+	
+	
+></p>
+<p>修改内容后，点击左边 <code>Changes</code> 栏，点击文件名可以看到具体内容，<code>勾选要同步的文件</code>，下方 <code>Summary(required)</code> 为本次更新行为命名，再点击最下面 <code>Commit to main</code> 提交，最后点击上方第三个大黑框 <code>Push origin</code> 进行推送即可，推送成功后rail会自动更新部署无需手动操作。</p>
+<h2 id="结语">结语
+</h2><p>不出意外的话这样就是成功了！中间其实还有一个步骤是 github 的授权没有给到 railway，导致新建项目的时候首页看不到那个 github 仓库，我记得自己重新搞了个什么授权操作，但是不记得具体操作步骤是什么了，也没有办法复刻这一步……</p>
+<p>总之如果有人根据我这个流程设置bot遇到了这个问题的话，可以评论留言或者从fedi联系我，看到界面我应该能想起来吧（大概</p>
+<p>本文到此结束了，感谢gpt老师对此做出的重大贡献，祝大家都能玩上喜欢的bot！！！</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/mastodon/">Mastodon</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/daima/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">stack主题调整</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/ffmpeg/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">ffmpeg的视频处理方案</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/waline/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">配置waline添加留言功能</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/hugo/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo-小白博客部署记录</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src='//unpkg.com/@waline/client@v2/dist/waline.js'></script>
+<link href='//unpkg.com/@waline/client@v2/dist/waline.css' rel='stylesheet'/>
+<div id="waline" class="waline-container"></div>
+<style>
+    .waline-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+        --waline-font-size: var(--article-font-size);
+    }
+    .waline-container .wl-count {
+        color: var(--card-text-color-main);
+    }
+</style><script>
+    
+    Waline.init({"dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://unpkg.com/@waline/emojis@1.0.1/weibo"],"lang":"zh-cn","locale":{"admin":"Admin","placeholder":null},"pageview":"也许你想留下些什么……","requiredMeta":["name","email","url"],"serverURL":"https://liuyan-ochre.vercel.app/"});
+</script>
+
+    
+
+    <footer class="site-footer">
+    
+    <section class="running-time">
+    本博客已稳定运行
+    <span id="runningdays" class="running-days"></span>
+    </section>    
+    
+    
+    <section class="totalcount">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        发表了7篇文章 ·
+        总计2万1千字
+        <br>
+    </section>
+
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.cbfa88d3dce03409a5b7e74429680e064e0384e30a452e47ad69a935f03fc27f.js" defer></script>
+<script>
+    function backToTop() {
+      document.documentElement.scrollIntoView({
+        behavior: 'smooth',
+      })
+    }
+  
+    window.onload = function () {
+      let scrollTop =
+        this.document.documentElement.scrollTop || this.document.body.scrollTop
+      let totopBtn = this.document.getElementById('back-to-top')
+      if (scrollTop > 0) {
+        totopBtn.style.display = 'inline'
+      } else {
+        totopBtn.style.display = 'none'
+      }
+    }
+  
+    window.onscroll = function () {
+      let scrollTop =
+        this.document.documentElement.scrollTop || this.document.body.scrollTop
+      let totopBtn = this.document.getElementById('back-to-top')
+      if (scrollTop < 200) {
+        totopBtn.style.display = 'none'
+      } else {
+        totopBtn.style.display = 'inline'
+        totopBtn.addEventListener('click', backToTop, false)
+      }
+    }
+  </script>
+
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<a href="#" id="back-to-top" title="返回顶部"></a>
+
+
+<style>
+  #back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 5px;
+    right: 15px;
+    width: 40px;  
+    height: 40px;  
+    border-radius: 50%;  
+    background-color: var(--body-background);
+    box-shadow: var(--shadow-l2);
+    font-size: 20px;  
+    text-align: center;
+    line-height: 38px;  
+    cursor: pointer;
+    transition:
+      transform 0.3s ease,
+      background-color 0.3s ease;  
+  }
+
+  #back-to-top:before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    transform: rotate(135deg);
+    height: 8px;  
+    width: 8px;  
+    border-width: 0 0 2px 2px;
+    border-color: var(--back-to-top-color);
+    border-style: solid;
+  }
+
+  #back-to-top:hover {
+    transform: scale(1.1);  
+    background-color: var(--accent-background);  
+  }
+
+  #back-to-top:hover:before {
+    border-color: var(--accent-color);  
+  }
+
+   
+  @media screen and (max-width: 768px) {
+    #back-to-top {
+      bottom: 5px;
+      right: var(--container-padding);
+      width: 30px;  
+      height: 30px;
+      font-size: 16px;
+      line-height: 32px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    #back-to-top {
+      bottom: 10px;
+      right: 20px;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    #back-to-top {
+      bottom: 15px;
+      right: 25px;
+    }
+  }
+
+  @media screen and (min-width: 1536px) {
+    #back-to-top {
+      bottom: 15px;
+      right: 25px;
+       
+    }
+  }
+</style>
+
+
+<script>
+  let s1 = '2025-4-1'; 
+  s1 = new Date(s1.replace(/-/g, "/"));
+  let s2 = new Date();
+  let timeDifference = s2.getTime() - s1.getTime();
+
+  let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+  let result = days + "天" + hours + "小时" + minutes + "分钟";
+  document.getElementById('runningdays').innerHTML = result;
+</script>
+
+<style>
+  body {
+    background: url(http://localhost:1313/background/IMG_8275.jpg) no-repeat center top;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+</style>
+
+
+<div id="particles-js"></div>
+
+<script src=http://localhost:1313/background/particles.min.js></script>
+<script>
+  particlesJS.load('particles-js', "http://localhost:1313/background/particlesjs-config.json", function() {
+    console.log('particles.js loaded - callback');
+  });
+</script>
+
+<style>
+  #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+</style>
+
+
+
+    </body>
+</html>

@@ -1078,7 +1078,6 @@ mark{
 ```
 </details>
 
-
 #### 模糊
 
 <span class="blur">blur模糊<br>换行加空标签</span>
@@ -2231,7 +2230,7 @@ img.message__img {
 {{< neodb "https://neodb.social/book/1qPRxweiyxXlGqN3azjEy8" >}} 在这里写评论内容，留白则自动拉取标记短评{{< /neodb >}}
 
 ```
-{< neodb "NeoDB 网址/豆瓣网址" >}
+{< neodb "https://neodb.social/book/1qPRxweiyxXlGqN3azjEy8" >} 在这里写评论内容，留白则自动拉取标记短评{< /neodb >}
 ```
 
 
