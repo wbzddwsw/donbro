@@ -38,7 +38,7 @@ image:
 
 1. 登录 vercel，点击右上角`头像`，点击 `Dashboard`，复制 Domains 下面自动分配网址域名
 
-2. 进入博客文件夹里的**\themes\stack\layouts\partials\comments\provider**，将**waline.html**文件复制到对应的根目录文件夹
+2. 进入博客文件夹里的**\themes\stack\layouts\partials\comments\provider** ，将**waline.html**文件复制到对应的根目录文件夹
 
 3. 在博客文件夹中打开 **hugo.yaml**，下拉到 **params**
 

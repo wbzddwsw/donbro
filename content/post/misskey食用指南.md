@@ -7,7 +7,7 @@ tags: [misskey]
 slug: misskey
 ---
 
-> 这篇文章是的扩展出来的misskey基础介绍，产生原因是我越写越啰嗦，于是干脆独立出来另成一篇了。
+> 这篇文章是的扩展出来的 misskey 基础介绍，产生原因是我越写越啰嗦，于是干脆独立出来另成一篇了。
 >
 > 星屑作为 misskey 的一员基本遵循本指南的介绍，特色功能请看[無名星屑（Stelpolva）食用指南](https://donbro.vercel.app/p/stelpolva/)
 
@@ -31,7 +31,7 @@ slug: misskey
 
 ## 注册账号
 
-找一个自己心仪的站点，绝大部分站点只需提供邮箱和申请理由，也有一些站点需要邀请码才可以注册，目前misskey的官方站点只允许日本ip注册，不在日本的朋友基本可以不用考虑。
+找一个自己心仪的站点，绝大部分站点只需提供邮箱和申请理由，也有一些站点需要邀请码才可以注册，目前 misskey 的官方站点只允许日本 ip 注册，不在日本的朋友基本可以不用考虑。
 
 如果初次注册的站点使用后不太满意，后续搬家是非常轻松的，因此不必有什么负担，而且联邦宇宙很多用户都同时拥有多个”魂器“以发布不同内容。
 
@@ -61,7 +61,7 @@ misskey：[https://misskey-hub.net/cn/servers](https://misskey-hub.net/cn/server
 
 ![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/911d622f-dcf7-4b05-b7c9-6b3cd58af965.png)
 
-1. 站点logo：查看站点信息
+1. 站点 logo：查看站点信息
 2. 导航栏：可自定义的目录，没有选中的内容都在“更多”里面
 3. 时间轴：除了常见的主页轴、社交轴等，还有天线、频道等
 4. 帖子
@@ -94,15 +94,15 @@ misskey：[https://misskey-hub.net/cn/servers](https://misskey-hub.net/cn/server
 
 11. 提及
 
-12. 添加装饰：即MFM快速选择器，在【设置-投稿窗口】中打开
+12. 添加装饰：即 MFM 快速选择器，在【设置-投稿窗口】中打开
 
-    使用MFM的常见办法：
+    使用 MFM 的常见办法：
 
     - 输入`$`
     - 点击投稿窗口下面的调色盘按键
     - 点击帖子右下角复制内容，再粘贴到自己的输入框
 
-    这里演示几种常用的mfm：
+    这里演示几种常用的 mfm ：
 
     <iframe src="https://stelpolva.moe/embed/notes/a9m293s809j800r8" data-misskey-embed-id="v1_e07ca10c-bc56-4458-ae6c-25ba1ce488a7" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" style="border: none; width: 100%; max-width: 500px; height: 300px; color-scheme: light dark;"></iframe>
     <script defer src="https://stelpolva.moe/embed.js"></script>
@@ -117,8 +117,8 @@ misskey：[https://misskey-hub.net/cn/servers](https://misskey-hub.net/cn/server
 2. 转发
 3. 表情回应：可以直接点击帖文中的表情，也可以点击已有的表情
 4. 便签：快捷按钮，在【设置-时间线和帖子】中打开
-5. 复制内容：可以一键复刻mfm
-6. 嵌入：将帖子嵌入网页，如上文的mfm语法演示
+5. 复制内容：可以一键复刻 mfm
+6. 嵌入：将帖子嵌入网页，如上文的 mfm 语法演示
 
 ### 导航栏
 
@@ -189,9 +189,9 @@ misskey：[https://misskey-hub.net/cn/servers](https://misskey-hub.net/cn/server
 
 1. **常规设置** 显示头像挂件、启用mfm语法、自动滚动页面
 2. **时间线和帖子** 折叠已经看过的内容、帖文下方显示便签按钮、显示回应数量
-3. **投稿窗口** 显示高级mfm选择器、设置默认帖子可见性
-4. **辅助功能** 启用mfm动画、字体大小
-5. **其他** 季节画面效果、tl缓存页数
+3. **投稿窗口** 显示高级 mfm 选择器、设置默认帖子可见性
+4. **辅助功能** 启用 mfm 动画、字体大小
+5. **其他** 季节画面效果、tl 缓存页数
 6. **导航栏** 完全的自定义，随自己喜好修改，未选中的内容显示在“更多”里
 7. **自定义css** 进阶设置
 

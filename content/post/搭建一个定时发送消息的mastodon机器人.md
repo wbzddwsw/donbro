@@ -10,7 +10,7 @@ image:
 
 ## 一些唠叨
 
-很久很久之前就对首页刷到的 bot 感兴趣，以前还把自己的账号标记成机器人玩（大家不要学），今天我终于拥有机器人账号了 `@w3w@o3o.ca` ！是发送特摄相关内容的，欢迎大家来玩！！！~~这篇博客不是教程吗怎么还夹带私货~~
+很久很久之前就对首页刷到的 bot 感兴趣，以前还把自己的账号标记成机器人玩（大家不要学），今天我终于拥有机器人账号了 [@Tokusatsu@mas.to](https://mas.to/@Tokusatsu) ！是发送特摄相关内容的，欢迎大家来玩！！！~~这篇博客不是教程吗怎么还夹带私货~~
 
 做事情有时候真的看缘分的，前两天突然就这么灵光一闪开始捣腾，刚开始做的是 misskey 的文字 bot，而且因为是从本地发帖，操作起来也相当简单。之后 kon酱给我发了[一个Firefish/Misskey上的定时发图bot](https://me.ag925.top/archives/6fcf4471.html)，再加上特摄真的很多表情包，勾起了我做图片bot的心，但是！我根本看不懂！！！
 
@@ -38,7 +38,7 @@ misskey 是有网盘的，kon 酱那个方案就是读取网盘里的图片列�
 
 ### 下载与注册
 
-1. 安装 Python：https://www.python.org/downloads
+1. 安装 Python：[https://www.python.org/downloads](https://www.python.org/downloads)
 
    下载自己电脑型号对应的版本，安装的时候下方有个 `Add Python to PATH` 必须勾选 
 
@@ -66,7 +66,7 @@ misskey 是有网盘的，kon 酱那个方案就是读取网盘里的图片列�
 
    具体操作可以参考这篇文章：[Hugo-小白博客部署记录](https://donbro.vercel.app/p/hugo/)
 
-4. 注册railway：https://railway.com/
+4. 注册railway：[https://railway.com/](https://railway.com/)
 
    点击右上角 `Sign in` ，选择用 github 账号登录
 

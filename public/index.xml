@@ -14,7 +14,7 @@
         
         <guid>http://localhost:1313/p/misskey/</guid>
         <description>&lt;blockquote&gt;
-&lt;p&gt;这篇文章是的扩展出来的misskey基础介绍，产生原因是我越写越啰嗦，于是干脆独立出来另成一篇了。&lt;/p&gt;
+&lt;p&gt;这篇文章是的扩展出来的 misskey 基础介绍，产生原因是我越写越啰嗦，于是干脆独立出来另成一篇了。&lt;/p&gt;
 &lt;p&gt;星屑作为 misskey 的一员基本遵循本指南的介绍，特色功能请看&lt;a class=&#34;link&#34; href=&#34;https://donbro.vercel.app/p/stelpolva/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;無名星屑（Stelpolva）食用指南&lt;/a&gt;
 
@@ -57,7 +57,7 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;同时由于他的代码是开源的，所以有开发者在其基础上进行了修改，形成了许多分支（fork），比如 sharkey ，可以理解为私人订制版 misskey。&lt;/p&gt;
 &lt;h2 id=&#34;注册账号&#34;&gt;注册账号
-&lt;/h2&gt;&lt;p&gt;找一个自己心仪的站点，绝大部分站点只需提供邮箱和申请理由，也有一些站点需要邀请码才可以注册，目前misskey的官方站点只允许日本ip注册，不在日本的朋友基本可以不用考虑。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;找一个自己心仪的站点，绝大部分站点只需提供邮箱和申请理由，也有一些站点需要邀请码才可以注册，目前 misskey 的官方站点只允许日本 ip 注册，不在日本的朋友基本可以不用考虑。&lt;/p&gt;
 &lt;p&gt;如果初次注册的站点使用后不太满意，后续搬家是非常轻松的，因此不必有什么负担，而且联邦宇宙很多用户都同时拥有多个”魂器“以发布不同内容。&lt;/p&gt;
 &lt;p&gt;这里提供两个地址供大家选择站点：&lt;/p&gt;
 &lt;p&gt;mastodon：&lt;a class=&#34;link&#34; href=&#34;https://joinmastodon.org/zh/servers&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -127,7 +127,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;站点logo：查看站点信息&lt;/li&gt;
+&lt;li&gt;站点 logo：查看站点信息&lt;/li&gt;
 &lt;li&gt;导航栏：可自定义的目录，没有选中的内容都在“更多”里面&lt;/li&gt;
 &lt;li&gt;时间轴：除了常见的主页轴、社交轴等，还有天线、频道等&lt;/li&gt;
 &lt;li&gt;帖子&lt;/li&gt;
@@ -179,14 +179,14 @@
 &lt;p&gt;提及&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;添加装饰：即MFM快速选择器，在【设置-投稿窗口】中打开&lt;/p&gt;
-&lt;p&gt;使用MFM的常见办法：&lt;/p&gt;
+&lt;p&gt;添加装饰：即 MFM 快速选择器，在【设置-投稿窗口】中打开&lt;/p&gt;
+&lt;p&gt;使用 MFM 的常见办法：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;输入&lt;code&gt;$&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;点击投稿窗口下面的调色盘按键&lt;/li&gt;
 &lt;li&gt;点击帖子右下角复制内容，再粘贴到自己的输入框&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;这里演示几种常用的mfm：&lt;/p&gt;
+&lt;p&gt;这里演示几种常用的 mfm ：&lt;/p&gt;
 &lt;iframe src=&#34;https://stelpolva.moe/embed/notes/a9m293s809j800r8&#34; data-misskey-embed-id=&#34;v1_e07ca10c-bc56-4458-ae6c-25ba1ce488a7&#34; loading=&#34;lazy&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; style=&#34;border: none; width: 100%; max-width: 500px; height: 300px; color-scheme: light dark;&#34;&gt;&lt;/iframe&gt;
 &lt;script defer src=&#34;https://stelpolva.moe/embed.js&#34;&gt;&lt;/script&gt;
 &lt;/li&gt;
@@ -210,8 +210,8 @@
 &lt;li&gt;转发&lt;/li&gt;
 &lt;li&gt;表情回应：可以直接点击帖文中的表情，也可以点击已有的表情&lt;/li&gt;
 &lt;li&gt;便签：快捷按钮，在【设置-时间线和帖子】中打开&lt;/li&gt;
-&lt;li&gt;复制内容：可以一键复刻mfm&lt;/li&gt;
-&lt;li&gt;嵌入：将帖子嵌入网页，如上文的mfm语法演示&lt;/li&gt;
+&lt;li&gt;复制内容：可以一键复刻 mfm&lt;/li&gt;
+&lt;li&gt;嵌入：将帖子嵌入网页，如上文的 mfm 语法演示&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&#34;导航栏&#34;&gt;导航栏
 &lt;/h3&gt;&lt;p&gt;&lt;strong&gt;一、时间线/时间轴/timeline&lt;/strong&gt;&lt;/p&gt;
@@ -313,9 +313,9 @@
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;常规设置&lt;/strong&gt; 显示头像挂件、启用mfm语法、自动滚动页面&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;时间线和帖子&lt;/strong&gt; 折叠已经看过的内容、帖文下方显示便签按钮、显示回应数量&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;投稿窗口&lt;/strong&gt; 显示高级mfm选择器、设置默认帖子可见性&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;辅助功能&lt;/strong&gt; 启用mfm动画、字体大小&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;其他&lt;/strong&gt; 季节画面效果、tl缓存页数&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;投稿窗口&lt;/strong&gt; 显示高级 mfm 选择器、设置默认帖子可见性&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;辅助功能&lt;/strong&gt; 启用 mfm 动画、字体大小&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;其他&lt;/strong&gt; 季节画面效果、tl 缓存页数&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;导航栏&lt;/strong&gt; 完全的自定义，随自己喜好修改，未选中的内容显示在“更多”里&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;自定义css&lt;/strong&gt; 进阶设置&lt;/li&gt;
 &lt;/ol&gt;
@@ -340,7 +340,18 @@
         
         <guid>http://localhost:1313/p/mastodonbot/</guid>
         <description>&lt;h2 id=&#34;一些唠叨&#34;&gt;一些唠叨
-&lt;/h2&gt;&lt;p&gt;很久很久之前就对首页刷到的 bot 感兴趣，以前还把自己的账号标记成机器人玩（大家不要学），今天我终于拥有机器人账号了 &lt;code&gt;@w3w@o3o.ca&lt;/code&gt; ！是发送特摄相关内容的，欢迎大家来玩！！！&lt;del&gt;这篇博客不是教程吗怎么还夹带私货&lt;/del&gt;&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;很久很久之前就对首页刷到的 bot 感兴趣，以前还把自己的账号标记成机器人玩（大家不要学），今天我终于拥有机器人账号了 &lt;a class=&#34;link&#34; href=&#34;https://mas.to/@Tokusatsu&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@Tokusatsu@mas.to&lt;/a&gt;
+
+
+&lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+    height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+    &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+    &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+        fill=&#34;currentColor&#34;&gt;
+&lt;/svg&gt;&lt;/span&gt;
+
+ ！是发送特摄相关内容的，欢迎大家来玩！！！&lt;del&gt;这篇博客不是教程吗怎么还夹带私货&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;做事情有时候真的看缘分的，前两天突然就这么灵光一闪开始捣腾，刚开始做的是 misskey 的文字 bot，而且因为是从本地发帖，操作起来也相当简单。之后 kon酱给我发了&lt;a class=&#34;link&#34; href=&#34;https://me.ag925.top/archives/6fcf4471.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;一个Firefish/Misskey上的定时发图bot&lt;/a&gt;
 
@@ -370,7 +381,18 @@
 &lt;h3 id=&#34;下载与注册&#34;&gt;下载与注册
 &lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;安装 Python：https://www.python.org/downloads&lt;/p&gt;
+&lt;p&gt;安装 Python：&lt;a class=&#34;link&#34; href=&#34;https://www.python.org/downloads&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.python.org/downloads&lt;/a&gt;
+
+
+&lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+    height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+    &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+    &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+        fill=&#34;currentColor&#34;&gt;
+&lt;/svg&gt;&lt;/span&gt;
+
+&lt;/p&gt;
 &lt;p&gt;下载自己电脑型号对应的版本，安装的时候下方有个 &lt;code&gt;Add Python to PATH&lt;/code&gt; 必须勾选&lt;/p&gt;
 &lt;details&gt;
 &lt;summary&gt;检查是否安装成功&lt;/summary&gt;
@@ -423,7 +445,18 @@
 &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;注册railway：https://railway.com/&lt;/p&gt;
+&lt;p&gt;注册railway：&lt;a class=&#34;link&#34; href=&#34;https://railway.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://railway.com/&lt;/a&gt;
+
+
+&lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+    height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+    &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+    &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+        fill=&#34;currentColor&#34;&gt;
+&lt;/svg&gt;&lt;/span&gt;
+
+&lt;/p&gt;
 &lt;p&gt;点击右上角 &lt;code&gt;Sign in&lt;/code&gt; ，选择用 github 账号登录&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
@@ -6459,7 +6492,7 @@
 &lt;p&gt;预定的帖子列表：查看编辑已定时的帖子&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;MFM语法使用说明书：查看MFM语法具体效果，可以直接复制&lt;/p&gt;
+&lt;p&gt;MFM语法使用说明书：查看 MFM 语法具体效果，可以直接复制&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;插件&lt;/p&gt;
@@ -6468,7 +6501,7 @@
 &lt;h3 id=&#34;导航栏&#34;&gt;导航栏
 &lt;/h3&gt;&lt;p&gt;&lt;strong&gt;一、时间线&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Bubble&lt;/strong&gt;：推荐时间线，显示站长选择的部分misskey系实例的公开帖子。相当于阉割版的全局时间线&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bubble&lt;/strong&gt;：推荐时间线，显示站长选择的部分 misskey 系实例的公开帖子。相当于阉割版的全局时间线&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;关注中&lt;/strong&gt;：显示“你关注的人”、“关注你的人”、“你的互关”的最新一条帖子。「只显示原创帖子」的简洁版主页，用户顺序按照最新帖子的发布时间排序，无法搜索&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;更多&lt;/strong&gt;：时光机在这里，可以显示指定时间的帖子，另外个人主页也有单独的时光机&lt;/li&gt;
 &lt;/ol&gt;
@@ -6480,8 +6513,8 @@
 &lt;li&gt;
 &lt;p&gt;频道帖子在星屑内只有关注频道的人才能刷到，外站的朋友则不影响&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;频道帖子在时间线上表现为帖子左边带有颜色条，帖子下方带有频道名，从外站看没有颜色条，频道名也会会变成对应tag&lt;/li&gt;
-&lt;li&gt;如果修改频道名，之前的帖子在外站看依然是之前的tag并不会更改&lt;/li&gt;
+&lt;li&gt;频道帖子在时间线上表现为帖子左边带有颜色条，帖子下方带有频道名，从外站看没有颜色条，频道名也会会变成对应 tag&lt;/li&gt;
+&lt;li&gt;如果修改频道名，之前的帖子在外站看依然是之前的 tag 并不会更改&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -6553,7 +6586,7 @@
 &lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;发帖框插件&lt;/strong&gt;：投稿窗口部分有介绍这个内容，使用的时候直接点击就可以发布到对应频道了&lt;/p&gt;
-&lt;p&gt;复制下面的css到“设置-插件-安装插件”：&lt;/p&gt;
+&lt;p&gt;复制下面的 css 到“设置-插件-安装插件”：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -6767,7 +6800,7 @@
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;二、设置&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;时间线和帖子&lt;/strong&gt; 自动折叠被回复帖子、自动折叠文件、时间线上的帖子分开显示、帖子风格（misskey风格的头像会跟随帖子上下滚动）、设置回应大小、显示帖子服务器来源&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;时间线和帖子&lt;/strong&gt; 自动折叠被回复帖子、自动折叠文件、时间线上的帖子分开显示、帖子风格（misskey 风格的头像会跟随帖子上下滚动）、设置回应大小、显示帖子服务器来源&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;辅助功能&lt;/strong&gt; 在帖子上点击会打开该帖子（关闭时要点击帖子右上角时间戳才能打开帖子）&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;其他&lt;/strong&gt; 一只猫猫朋友（非常可爱&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;导航栏&lt;/strong&gt; 完全的自定义，随自己喜好修改，未选中的内容显示在“更多”里&lt;/li&gt;
@@ -6788,9 +6821,9 @@
 &lt;li&gt;进入主题管理，选择你现在使用的主题&lt;/li&gt;
 &lt;li&gt;复制主题代码&lt;/li&gt;
 &lt;li&gt;进入安装主题，粘贴代码&lt;/li&gt;
-&lt;li&gt;将代码里bg的颜色从hex转换rgba（可以使用在线转换网站，搜一下就有），例如：#FF5733-&amp;gt;rgba(255, 87, 51, 1.0)&lt;/li&gt;
+&lt;li&gt;将代码里bg的颜色从 hex 转换 rgba（可以使用在线转换网站，搜一下就有），例如：#FF5733-&amp;gt;rgba(255, 87, 51, 1.0)&lt;/li&gt;
 &lt;li&gt;调整rgba中的最后一位，这个是控制透明度的，例：rgba(255, 87, 51, 0.45)&lt;/li&gt;
-&lt;li&gt;修改id和name，不要和已有主题重复，点击安装&lt;/li&gt;
+&lt;li&gt;修改 id 和 name，不要和已有主题重复，点击安装&lt;/li&gt;
 &lt;li&gt;在使用的主题里选择你刚刚安装的主题&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;五、表情符号调色板&lt;/strong&gt; 可以分别设置发帖表情和回应表情，以及修改默认的爱心表情&lt;/p&gt;
@@ -7039,7 +7072,7 @@
 &lt;p&gt;但是！好巧不巧！昨晚上床后，刷到一个非常完美的stack主题教程，我对stack的热情又重新燃起，或者说是一种不甘心，非得把它整明白不可，于是今天开工，初始化了博客1（上次合并的时候就是想初始化来着但是没成功），并且成功运行了！&lt;/p&gt;
 &lt;p&gt;之所以速度这么快，一是前几天的经验累积（怎么不算熟能生巧呢），二就是这个教程！天哪简直是菩萨级别，直接贴在这里供有需要的人参考，完全是傻子都可以照抄的程度！&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.xalaok.top/post/stack-modify/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;教程1&lt;/a&gt;
+    &gt;Hugo Stack 魔改美化&lt;/a&gt;
 
 
 &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
@@ -7049,8 +7082,9 @@
         fill=&#34;currentColor&#34;&gt;
 &lt;/svg&gt;&lt;/span&gt;
 
- &lt;a class=&#34;link&#34; href=&#34;https://thirdshire.com/hugo-stack-renovation/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;教程2&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://thirdshire.com/hugo-stack-renovation/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo Stack主题装修笔记&lt;/a&gt;
 
 
 &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
@@ -7316,7 +7350,7 @@ Use -h to get full help or, even better, run &#39;man ffmpeg&#39;
 &lt;p&gt;登录 vercel，点击右上角&lt;code&gt;头像&lt;/code&gt;，点击 &lt;code&gt;Dashboard&lt;/code&gt;，复制 Domains 下面自动分配网址域名&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;进入博客文件夹里的**\themes\stack\layouts\partials\comments\provider**，将&lt;strong&gt;waline.html&lt;/strong&gt;文件复制到对应的根目录文件夹&lt;/p&gt;
+&lt;p&gt;进入博客文件夹里的**\themes\stack\layouts\partials\comments\provider** ，将&lt;strong&gt;waline.html&lt;/strong&gt;文件复制到对应的根目录文件夹&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;在博客文件夹中打开 &lt;strong&gt;hugo.yaml&lt;/strong&gt;，下拉到 &lt;strong&gt;params&lt;/strong&gt;&lt;/p&gt;
