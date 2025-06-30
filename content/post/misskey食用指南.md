@@ -9,7 +9,7 @@ slug: misskey
 
 > 这篇文章是的扩展出来的misskey基础介绍，产生原因是我越写越啰嗦，于是干脆独立出来另成一篇了。
 >
-> 星屑作为 misskey 的一员基本遵循本指南的介绍，特色功能请看
+> 星屑作为 misskey 的一员基本遵循本指南的介绍，特色功能请看[無名星屑（Stelpolva）食用指南](https://donbro.vercel.app/p/stelpolva/)
 
 中文 fedi 几乎被 mastodon（长毛象）占领，我曾在许多 mastodon 站点活跃过，甚至都没有听说过 misskey 。而同为联邦宇宙的一部分，misskey 拥有更加丰富的功能，想到很多人因为 mastodon 过于简洁而离开，心中遗憾万分，所以想请大家看看 misskey 吧。
 
