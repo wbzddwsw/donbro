@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>小径指北 on 树响集</title>
-        <link>http://localhost:1313/categories/%E5%B0%8F%E5%BE%84%E6%8C%87%E5%8C%97/</link>
-        <description>Recent content in 小径指北 on 树响集</description>
+        <title>Misskey on 树响集</title>
+        <link>http://localhost:1313/tags/misskey/</link>
+        <description>Recent content in Misskey on 树响集</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WSW</copyright>
-        <lastBuildDate>Wed, 09 Apr 2025 09:52:03 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E5%B0%8F%E5%BE%84%E6%8C%87%E5%8C%97/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 09 Apr 2025 09:52:03 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/misskey/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>無名星屑（Stelpolva）食用指南</title>
         <link>http://localhost:1313/p/stelpolva/</link>
         <pubDate>Wed, 09 Apr 2025 09:52:03 +0800</pubDate>
