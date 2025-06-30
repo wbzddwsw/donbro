@@ -230,16 +230,10 @@ image:
 
 **四、主题** 在星屑本地搜主题有很多，也可以自己制作
 
-关于怎么把普通主题改成半透明：（教程来自星友`@bidyy` ）
+关于怎么把普通主题改成半透明：
 
-1. 进入设置-主题-看你现在用的主题是哪个
-2. 进入主题管理，选择你现在使用的主题
-3. 复制主题代码
-4. 进入安装主题，粘贴代码
-5. 将代码里bg的颜色从 hex 转换 rgba（可以使用在线转换网站，搜一下就有），例如：#FF5733->rgba(255, 87, 51, 1.0)
-6. 调整rgba中的最后一位，这个是控制透明度的，例：rgba(255, 87, 51, 0.45)
-7. 修改 id 和 name，不要和已有主题重复，点击安装
-8. 在使用的主题里选择你刚刚安装的主题
+<iframe src="https://stelpolva.moe/embed/notes/9z6aaiuvqpvv15lw" data-misskey-embed-id="v1_6b0afb0c-0b75-42f7-90b2-9ec3958aff66" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" style="border: none; width: 100%; max-width: 500px; height: 300px; color-scheme: light dark;"></iframe>
+<script defer src="https://stelpolva.moe/embed.js"></script>
 
 **五、表情符号调色板** 可以分别设置发帖表情和回应表情，以及修改默认的爱心表情
 
