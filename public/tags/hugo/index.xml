@@ -5119,7 +5119,7 @@
 &lt;p&gt;登录 vercel，点击右上角&lt;code&gt;头像&lt;/code&gt;，点击 &lt;code&gt;Dashboard&lt;/code&gt;，复制 Domains 下面自动分配网址域名&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;进入博客文件夹里的**\themes\stack\layouts\partials\comments\provider**，将&lt;strong&gt;waline.html&lt;/strong&gt;文件复制到对应的根目录文件夹&lt;/p&gt;
+&lt;p&gt;进入博客文件夹里的**\themes\stack\layouts\partials\comments\provider** ，将&lt;strong&gt;waline.html&lt;/strong&gt;文件复制到对应的根目录文件夹&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;在博客文件夹中打开 &lt;strong&gt;hugo.yaml&lt;/strong&gt;，下拉到 &lt;strong&gt;params&lt;/strong&gt;&lt;/p&gt;

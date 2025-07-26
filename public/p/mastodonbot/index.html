@@ -318,6 +318,20 @@
     </li>
     <li><a href="#后续维护更新">后续维护更新</a></li>
     <li><a href="#结语">结语</a></li>
+    <li><a href="#伟大的github">伟大的github</a>
+      <ol>
+        <li><a href="#获取-api-token">获取 API Token</a></li>
+        <li><a href="#注册-github-账号">注册 github 账号</a></li>
+        <li><a href="#部署github">部署github</a>
+          <ol>
+            <li><a href="#新建仓库">新建仓库</a></li>
+            <li><a href="#创建文件">创建文件</a></li>
+            <li><a href="#试运行">试运行</a></li>
+            <li><a href="#添加内容">添加内容</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
   </ol>
 </nav>
         </div>
@@ -386,7 +400,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 7 分钟
+                    阅读时长: 10 分钟
                 </time>
             </div>
         
@@ -440,6 +454,8 @@
 <p>1 和 2 都请 gpt 老师帮我实现了，3 依靠 mastodon 实现了，于是我美美入睡满心期待等第二天的帖子，然后一觉醒来什么都没有……</p>
 <p>这才知道本地的发帖程序只有电脑保持开机才可以运行，上午我没开电脑程序的发送请求就被系统拒绝了！！！</p>
 <p>询问 gpt 后无奈接受了部署云端的建议，又是一个我听都没听过的操作方案，经过一整天的不断调整，好歹是弄出来了，因此特意写这篇记录 <del>绝对不是因为太久没写博客了手痒</del></p>
+<blockquote>
+<p>2025.07.26：由于railway目前已经取消每月更新的免费额度，新用户只能免费使用一个月，所以本方案不再适用于白嫖党，但是没关系，我找gpt老师研究了最新的免费办法，并且相比起使用railway更加简单方便，请直接点击目录或者手动翻到本文第五节——伟大的github。</p></blockquote>
 <h2 id="正式部署">正式部署
 </h2><p>这个操作流程，我大概描述一下就是，在本地准备好文件，推送到 github 仓库，再把这个仓库部署到 railway ，让 railway 根据文件里写的脚本自动运行。</p>
 <p>听起来不是很难，问题不大我一步一步写。</p>
@@ -1004,6 +1020,525 @@
 </h2><p>不出意外的话这样就是成功了！中间其实还有一个步骤是 github 的授权没有给到 railway，导致新建项目的时候首页看不到那个 github 仓库，我记得自己重新搞了个什么授权操作，但是不记得具体操作步骤是什么了，也没有办法复刻这一步……</p>
 <p>总之如果有人根据我这个流程设置bot遇到了这个问题的话，可以评论留言或者从fedi联系我，看到界面我应该能想起来吧（大概</p>
 <p>本文到此结束了，感谢gpt老师对此做出的重大贡献，祝大家都能玩上喜欢的bot！！！</p>
+<hr>
+<h2 id="伟大的github">伟大的github
+</h2><blockquote>
+<p>这里介绍一个新的方案，依然会一步一步详细讲解，所以本节以上的内容都可以不用看直接跳过，当不存在就好了，没有删除只是为了留档。</p></blockquote>
+<h3 id="获取-api-token">获取 API Token
+</h3><ul>
+<li>
+<p>登录准备用来作为 bot 的 mastodon 账号，打开<code>设置</code>-<code>开发</code>，点击<code>创建新应用</code></p>
+</li>
+<li>
+<p>给应用取个名字，这个名字之后会出现在帖子下方用作发帖来源</p>
+</li>
+<li>
+<p>勾选权限，<code>write:media 上传媒体文件</code>和<code>write:statuses 发表嘟文</code>，再点击<code>提交</code></p>
+</li>
+<li>
+<p>点开应用，复制“你的访问令牌”，也就是 Token</p>
+<p><img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/55cd005c-9394-4824-b325-aac52d5e4297.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="1"
+	
+	
+></p>
+</li>
+</ul>
+<h3 id="注册-github-账号">注册 github 账号
+</h3><p>具体操作可以参考这篇文章：<a class="link" href="https://donbro.vercel.app/p/hugo/"  target="_blank" rel="noopener"
+    >Hugo-小白博客部署记录</a>
+
+
+<span style="white-space: nowrap;"><svg width=".7em"
+    height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+    <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+    <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+        fill="currentColor">
+</svg></span>
+
+</p>
+<h3 id="部署github">部署github
+</h3><h4 id="新建仓库">新建仓库
+</h4><ol>
+<li>
+<p>网页登录账号后，点击上方设置，找到 <code>Secrets and variables</code> - <code>Actions</code></p>
+<p><img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/e3655ad6-29b2-495e-a99b-baead3ae74cf.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="1"
+	
+	
+></p>
+</li>
+<li>
+<p>点击右边的绿色按钮 <code>New repository secret</code></p>
+<p><img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/8cacf9d5-f7db-40fe-a8c0-9ccc57cdece0.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="2"
+	
+	
+></p>
+</li>
+<li>
+<p>需要新建两个repository secret，内容如下：</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Name</th>
+          <th>Secret</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>ACCESS_TOKEN</td>
+          <td>访问令牌（在实例账号开发中复制</td>
+      </tr>
+      <tr>
+          <td>INSTANCE_URL</td>
+          <td>实例地址（后面不要加/，如 <a class="link" href="https://mas.to"  target="_blank" rel="noopener"
+    >https://mas.to</a>
+
+
+<span style="white-space: nowrap;"><svg width=".7em"
+    height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+    <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+    <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+        fill="currentColor">
+</svg></span>
+
+</td>
+      </tr>
+  </tbody>
+</table></div>
+</li>
+</ol>
+<h4 id="创建文件">创建文件
+</h4><ol>
+<li>
+<p>新建 <strong>bot.py</strong> 文件</p>
+<p>打开仓库，点击图上红色框框链接：<img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/8dd7519c-2275-4656-ac65-853abc506388.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="1"
+	
+	
+></p>
+<p>文件内容如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span><span class="lnt">87
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">import</span> <span class="n">random</span>
+</span></span><span class="line"><span class="cl"><span class="n">import</span> <span class="n">requests</span>
+</span></span><span class="line"><span class="cl"><span class="n">from</span> <span class="n">datetime</span> <span class="n">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timezone</span>
+</span></span><span class="line"><span class="cl"><span class="n">import</span> <span class="n">os</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ACCESS_TOKEN</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;ACCESS_TOKEN&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">INSTANCE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;INSTANCE_URL&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="ow">not</span> <span class="n">ACCESS_TOKEN</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">INSTANCE</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;请设置环境变量 ACCESS_TOKEN 和 INSTANCE_URL&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">TEXT_FILE</span> <span class="o">=</span> <span class="s2">&#34;sentences.txt&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">IMAGE_FOLDER</span> <span class="o">=</span> <span class="s2">&#34;images&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">get_random_content</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    随机获取待发送的内容（文字段落或图片路径）
+</span></span></span><span class="line"><span class="cl"><span class="s2">    1. 从文本文件中读取全文，用空行分隔成段落，每段可以是多行文本
+</span></span></span><span class="line"><span class="cl"><span class="s2">    2. 从图片文件夹读取所有支持格式的图片路径
+</span></span></span><span class="line"><span class="cl"><span class="s2">    3. 如果都没有内容返回 None
+</span></span></span><span class="line"><span class="cl"><span class="s2">    4. 随机返回其中一条内容
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">content_list</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">TEXT_FILE</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">with</span> <span class="n">open</span><span class="p">(</span><span class="n">TEXT_FILE</span><span class="p">,</span> <span class="s2">&#34;r&#34;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&#34;utf-8&#34;</span><span class="p">)</span> <span class="n">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">text</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="n">paragraphs</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span> <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">strip</span><span class="p">()]</span>
+</span></span><span class="line"><span class="cl">            <span class="n">content_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">paragraphs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">IMAGE_FOLDER</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">IMAGE_FOLDER</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">((</span><span class="s2">&#34;.png&#34;</span><span class="p">,</span> <span class="s2">&#34;.jpg&#34;</span><span class="p">,</span> <span class="s2">&#34;.jpeg&#34;</span><span class="p">,</span> <span class="s2">&#34;.gif&#34;</span><span class="p">,</span> <span class="s2">&#34;.webp&#34;</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">content_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">IMAGE_FOLDER</span><span class="p">,</span> <span class="n">file</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="ow">not</span> <span class="n">content_list</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;没有可发送的文字或图片。&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">None</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">content_list</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">upload_media</span><span class="p">(</span><span class="n">image_path</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">url</span> <span class="o">=</span> <span class="n">f</span><span class="s2">&#34;{INSTANCE}/api/v2/media&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;Authorization&#34;</span><span class="p">:</span> <span class="n">f</span><span class="s2">&#34;Bearer {ACCESS_TOKEN}&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">with</span> <span class="n">open</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span> <span class="s2">&#34;rb&#34;</span><span class="p">)</span> <span class="n">as</span> <span class="n">img</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;file&#34;</span><span class="p">:</span> <span class="n">img</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="n">files</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&#34;id&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&#34;图片上传失败：{response.text}&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">None</span>
+</span></span><span class="line"><span class="cl">    <span class="n">except</span> <span class="n">Exception</span> <span class="n">as</span> <span class="n">e</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&#34;上传图片异常：{e}&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">None</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">post_status</span><span class="p">(</span><span class="n">content</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">url</span> <span class="o">=</span> <span class="n">f</span><span class="s2">&#34;{INSTANCE}/api/v1/statuses&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;Authorization&#34;</span><span class="p">:</span> <span class="n">f</span><span class="s2">&#34;Bearer {ACCESS_TOKEN}&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">content</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">media_id</span> <span class="o">=</span> <span class="n">upload_media</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="ow">not</span> <span class="n">media_id</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span>
+</span></span><span class="line"><span class="cl">            <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;status&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="s2">&#34;media_ids[]&#34;</span><span class="p">:</span> <span class="p">[</span><span class="n">media_id</span><span class="p">]}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;status&#34;</span><span class="p">:</span> <span class="n">content</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&#34;{datetime.now(timezone.utc)} 状态码: {r.status_code}&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">except</span> <span class="n">Exception</span> <span class="n">as</span> <span class="n">e</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&#34;发帖异常：{e}&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">job</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&#34;{datetime.now(timezone.utc)} 开始执行定时任务&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">selected</span> <span class="o">=</span> <span class="n">get_random_content</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">selected</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;将发送：&#34;</span><span class="p">,</span> <span class="n">selected</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">post_status</span><span class="p">(</span><span class="n">selected</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;没有内容发送&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;机器人启动，执行一次任务后退出...&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">job</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>完成后应如图所示：<img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/3a9a003d-1f8c-47a0-acfb-5964ffe08b0d.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="1"
+	
+	
+></p>
+<p>点击右上角绿色的 <code>Commit changes</code> 提交</p>
+</li>
+<li>
+<p>新建 <strong>.github/workflows/schedule.yml</strong> 文件</p>
+<p>回到仓库页面，点击红色框框新建文件 ：<img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/488f2b37-3e13-478e-bc17-4e5dcdc512a9.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="4"
+	
+	
+></p>
+<p>文件内容如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">name: Mastodon Bot Scheduled Posting
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">on:
+</span></span><span class="line"><span class="cl">  schedule:
+</span></span><span class="line"><span class="cl">    - cron: &#39;0 1 * * *&#39;    # UTC 01:00 = 北京时间 09:00
+</span></span><span class="line"><span class="cl">    - cron: &#39;0 13 * * *&#39;   # UTC 13:00 = 北京时间 21:00
+</span></span><span class="line"><span class="cl">  workflow_dispatch:       # 添加这个就可以手动测试了
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">jobs:
+</span></span><span class="line"><span class="cl">  post:
+</span></span><span class="line"><span class="cl">    runs-on: ubuntu-latest
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    steps:
+</span></span><span class="line"><span class="cl">      - name: Checkout repo
+</span></span><span class="line"><span class="cl">        uses: actions/checkout@v3
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      - name: Setup Python
+</span></span><span class="line"><span class="cl">        uses: actions/setup-python@v4
+</span></span><span class="line"><span class="cl">        with:
+</span></span><span class="line"><span class="cl">          python-version: &#39;3.12&#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      - name: Install dependencies
+</span></span><span class="line"><span class="cl">        run: |
+</span></span><span class="line"><span class="cl">          pip install requests
+</span></span><span class="line"><span class="cl">          pip install schedule
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      - name: Run bot script
+</span></span><span class="line"><span class="cl">        env:
+</span></span><span class="line"><span class="cl">          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+</span></span><span class="line"><span class="cl">          INSTANCE_URL: ${{ secrets.INSTANCE_URL }}
+</span></span><span class="line"><span class="cl">        run: python bot.py
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>完成后应如图所示：<img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/842fa0d4-292e-49c3-99d7-a07b4bcc3eb2.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="1"
+	
+	
+></p>
+</li>
+</ol>
+<p><strong>注意：</strong>在文件名输入框内直接输入<code>/</code>会自动生成对应的文件夹</p>
+<ol start="3">
+<li>
+<p>新建 <strong>sentences.txt</strong> 文件</p>
+<p>这里放随机发帖的文字，采取空行分隔，空行与空行之间代表一次发帖内容：<img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/49f9178b-81fa-4402-a4ba-db60e8ea3af7.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="1"
+	
+	
+></p>
+</li>
+<li>
+<p>新建 <strong>images/test.txt</strong> 文件</p>
+<p><img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/7eec29cb-9b53-4721-9ca7-7cca23d002c1.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="1"
+	
+	
+></p>
+<p>提交后打开 images 文件夹，上传图片：<img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/29623af9-dbfa-430a-a45f-2d71a7c84c2c.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="1"
+	
+	
+></p>
+<p>打开 test.txt 文件，删除：<img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/c259fe3c-974a-48fa-835a-00546c97edcb.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="1"
+	
+	
+></p>
+<p>务必点击绿色按钮提交！<img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/36c0e368-d4dd-404e-b845-82d5fa8393b7.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="1"
+	
+	
+></p>
+</li>
+</ol>
+<h4 id="试运行">试运行
+</h4><ol>
+<li>
+<p>回到仓库页面，点击上方 <code>Actions</code></p>
+<p><img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/2729d0ba-2d59-453f-a830-cd66833c4bd0.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="1"
+	
+	
+></p>
+</li>
+<li>
+<p>选择 <code>Mastodon Bot Scheduled Posting</code></p>
+<p><img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/417f4c98-58a0-40a3-97a6-ec6afecc7838.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="1"
+	
+	
+></p>
+</li>
+<li>
+<p>点击 <code>Run workflow</code> ，<strong>Branch</strong> 选择 <code>main</code> ，最后点击绿色按钮运行</p>
+<p><img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/644a2321-6a06-4741-a5ee-d04bff97772c.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="1"
+	
+	
+></p>
+</li>
+<li>
+<p>检查bot账号是否正常发帖</p>
+</li>
+</ol>
+<h4 id="添加内容">添加内容
+</h4><ol>
+<li>
+<p>添加图片</p>
+<p>打开 <strong>images</strong> 文件夹，上传新的图片，为本次更新命名并推送更新</p>
+</li>
+<li>
+<p>添加文字</p>
+<p>打开 <strong>sentences.txt</strong> 文件，编辑内容并推送更新</p>
+</li>
+</ol>
 
 </section>
 
@@ -1168,7 +1703,7 @@
         
 
         发表了9篇文章 ·
-        总计2万7千字
+        总计2万9千字
         <br>
     </section>
 

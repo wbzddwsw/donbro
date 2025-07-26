@@ -391,11 +391,15 @@ git push -u origin main
 
 #### 新建仓库
 
-1. 网页登录账号后，点击上方设置，找到 `Secrets and variables` - `Actions` ![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/e3655ad6-29b2-495e-a99b-baead3ae74cf.png)
+1. 网页登录账号后，点击上方设置，找到 `Secrets and variables` - `Actions`
 
-2. 点击右边的绿色按钮 `New repository secret`![2](https://chatstorage.dvd.moe/dvdchat/dvdchat/8cacf9d5-f7db-40fe-a8c0-9ccc57cdece0.png)
+   ![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/e3655ad6-29b2-495e-a99b-baead3ae74cf.png)
 
-3. 需要新建两个repository secret，内容如下：
+2. 点击右边的绿色按钮 `New repository secret`
+
+   ![2](https://chatstorage.dvd.moe/dvdchat/dvdchat/8cacf9d5-f7db-40fe-a8c0-9ccc57cdece0.png)
+
+1. 需要新建两个repository secret，内容如下：
 
    | Name         | Secret                                   |
    | ------------ | ---------------------------------------- |
@@ -403,6 +407,7 @@ git push -u origin main
    | INSTANCE_URL | 实例地址（后面不要加/，如 https://mas.to |
 
    
+
 #### 创建文件
 1. 新建 **bot.py** 文件
 
@@ -545,26 +550,38 @@ git push -u origin main
 
    完成后应如图所示：![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/842fa0d4-292e-49c3-99d7-a07b4bcc3eb2.png)
 
-   点击右上角绿色的 `Commit changes` 提交
 
 <strong>注意：</strong>在文件名输入框内直接输入`/`会自动生成对应的文件夹
 
 3. 新建 **sentences.txt** 文件
-![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/49f9178b-81fa-4402-a4ba-db60e8ea3af7.png)
 
-   这里放随机发帖的文字，采取空行分隔，空行与空行之间代表一次发帖内容
+   这里放随机发帖的文字，采取空行分隔，空行与空行之间代表一次发帖内容：![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/49f9178b-81fa-4402-a4ba-db60e8ea3af7.png)
 
-4. 在**电脑本地磁盘**新建 **images** 文件夹，将想要随机发送的图片放入其中，点击新建，选择上传已有文件：
-![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/1aafc378-075d-451b-8dc8-f2f26f38fbe3.png)
-将刚刚建立的 **images** 文件夹直接拖到上传页面，并点击下方绿色按钮提交
+   
+
+4. 新建 **images/test.txt** 文件
+
+   ![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/7eec29cb-9b53-4721-9ca7-7cca23d002c1.png)
+
+   提交后打开 images 文件夹，上传图片：![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/29623af9-dbfa-430a-a45f-2d71a7c84c2c.png)
+
+   打开 test.txt 文件，删除：![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/c259fe3c-974a-48fa-835a-00546c97edcb.png)
+
+   务必点击绿色按钮提交！![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/36c0e368-d4dd-404e-b845-82d5fa8393b7.png)
 
 #### 试运行
 
-1. 回到仓库页面，点击上方 `Actions` ![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/2729d0ba-2d59-453f-a830-cd66833c4bd0.png)
+1. 回到仓库页面，点击上方 `Actions` 
 
-2. 选择 `Mastodon Bot Scheduled Posting` ![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/417f4c98-58a0-40a3-97a6-ec6afecc7838.png)
+   ![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/2729d0ba-2d59-453f-a830-cd66833c4bd0.png)
 
-3. 点击 `Run workflow` ，**Branch** 选择 `main` ，最后点击绿色按钮运行![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/644a2321-6a06-4741-a5ee-d04bff97772c.png)
+2. 选择 `Mastodon Bot Scheduled Posting` 
+
+   ![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/417f4c98-58a0-40a3-97a6-ec6afecc7838.png)
+
+3. 点击 `Run workflow` ，**Branch** 选择 `main` ，最后点击绿色按钮运行
+
+   ![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/644a2321-6a06-4741-a5ee-d04bff97772c.png)
 
 4. 检查bot账号是否正常发帖
 
