@@ -391,9 +391,11 @@ git push -u origin main
 
 #### 新建仓库
 
-1. 网页登录账号后，点击上方设置，找到 `Secrets and variables` - `Actions` ，点击右边的绿色按钮 `New repository secret`![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/e3655ad6-29b2-495e-a99b-baead3ae74cf.png)![2](https://chatstorage.dvd.moe/dvdchat/dvdchat/8cacf9d5-f7db-40fe-a8c0-9ccc57cdece0.png)
+1. 网页登录账号后，点击上方设置，找到 `Secrets and variables` - `Actions` ![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/e3655ad6-29b2-495e-a99b-baead3ae74cf.png)
 
-2. 需要新建两个repository secret，内容如下：
+2. 点击右边的绿色按钮 `New repository secret`![2](https://chatstorage.dvd.moe/dvdchat/dvdchat/8cacf9d5-f7db-40fe-a8c0-9ccc57cdece0.png)
+
+3. 需要新建两个repository secret，内容如下：
 
    | Name         | Secret                                   |
    | ------------ | ---------------------------------------- |
@@ -545,13 +547,16 @@ git push -u origin main
 
    点击右上角绿色的 `Commit changes` 提交
 
-**注意：**在文件名输入框内直接输入`/`会自动生成对应的文件夹
+<strong>注意：</strong>在文件名输入框内直接输入`/`会自动生成对应的文件夹
 
-3. 新建 **sentences.txt** 文件![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/49f9178b-81fa-4402-a4ba-db60e8ea3af7.png)
+3. 新建 **sentences.txt** 文件
+![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/49f9178b-81fa-4402-a4ba-db60e8ea3af7.png)
 
    这里放随机发帖的文字，采取空行分隔，空行与空行之间代表一次发帖内容
 
-4. 在**电脑本地磁盘**新建 **images** 文件夹，将想要随机发送的图片放入其中，点击新建，选择上传已有文件：![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/1aafc378-075d-451b-8dc8-f2f26f38fbe3.png)将刚刚建立的 **images** 文件夹直接拖到上传页面，并点击下方绿色按钮提交
+4. 在**电脑本地磁盘**新建 **images** 文件夹，将想要随机发送的图片放入其中，点击新建，选择上传已有文件：
+![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/1aafc378-075d-451b-8dc8-f2f26f38fbe3.png)
+将刚刚建立的 **images** 文件夹直接拖到上传页面，并点击下方绿色按钮提交
 
 #### 试运行
 
