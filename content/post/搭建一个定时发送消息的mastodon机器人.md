@@ -30,6 +30,8 @@ misskey 是有网盘的，kon 酱那个方案就是读取网盘里的图片列�
 
 询问 gpt 后无奈接受了部署云端的建议，又是一个我听都没听过的操作方案，经过一整天的不断调整，好歹是弄出来了，因此特意写这篇记录 ~~绝对不是因为太久没写博客了手痒~~
 
+> 2025.07.26：由于railway目前已经取消每月更新的免费额度，新用户只能免费使用一个月，所以本方案不再适用于白嫖党，但是没关系，我找gpt老师研究了最新的免费办法，并且相比起使用railway更加简单方便，请直接点击目录或者手动翻到本文第五节——伟大的github。
+
 ## 正式部署
 
 这个操作流程，我大概描述一下就是，在本地准备好文件，推送到 github 仓库，再把这个仓库部署到 railway ，让 railway 根据文件里写的脚本自动运行。
@@ -358,3 +360,216 @@ git push -u origin main
 总之如果有人根据我这个流程设置bot遇到了这个问题的话，可以评论留言或者从fedi联系我，看到界面我应该能想起来吧（大概
 
 本文到此结束了，感谢gpt老师对此做出的重大贡献，祝大家都能玩上喜欢的bot！！！
+
+
+
+---
+
+
+
+## 伟大的github
+
+>  这里介绍一个新的方案，依然会一步一步详细讲解，所以本节以上的内容都可以不用看直接跳过，当不存在就好了，没有删除只是为了留档。
+
+### 获取 API Token
+
+- 登录准备用来作为 bot 的 mastodon 账号，打开`设置`-`开发`，点击`创建新应用`
+
+- 给应用取个名字，这个名字之后会出现在帖子下方用作发帖来源
+
+- 勾选权限，`write:media 上传媒体文件`和`write:statuses 发表嘟文`，再点击`提交`
+
+- 点开应用，复制“你的访问令牌”，也就是 Token
+
+  ![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/55cd005c-9394-4824-b325-aac52d5e4297.jpg)
+
+### 注册 github 账号
+
+具体操作可以参考这篇文章：[Hugo-小白博客部署记录](https://donbro.vercel.app/p/hugo/)
+
+### 部署github
+
+#### 新建仓库
+
+1. 网页登录账号后，点击上方设置，找到 `Secrets and variables` - `Actions` ，点击右边的绿色按钮 `New repository secret`![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/e3655ad6-29b2-495e-a99b-baead3ae74cf.png)![2](https://chatstorage.dvd.moe/dvdchat/dvdchat/8cacf9d5-f7db-40fe-a8c0-9ccc57cdece0.png)
+
+2. 需要新建两个repository secret，内容如下：
+
+   | Name         | Secret                                   |
+   | ------------ | ---------------------------------------- |
+   | ACCESS_TOKEN | 访问令牌（在实例账号开发中复制           |
+   | INSTANCE_URL | 实例地址（后面不要加/，如 https://mas.to |
+
+   
+#### 创建文件
+1. 新建 **bot.py** 文件
+
+   打开仓库，点击图上红色框框链接：![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/8dd7519c-2275-4656-ac65-853abc506388.png)
+
+   文件内容如下：
+
+   ```
+   import random
+   import requests
+   from datetime import datetime, timezone
+   import os
+   
+   ACCESS_TOKEN = os.getenv('ACCESS_TOKEN')
+   INSTANCE = os.getenv('INSTANCE_URL')
+   
+   if not ACCESS_TOKEN or not INSTANCE:
+       print("请设置环境变量 ACCESS_TOKEN 和 INSTANCE_URL")
+       exit(1)
+   
+   TEXT_FILE = "sentences.txt"
+   IMAGE_FOLDER = "images"
+   
+   def get_random_content():
+       """
+       随机获取待发送的内容（文字段落或图片路径）
+       1. 从文本文件中读取全文，用空行分隔成段落，每段可以是多行文本
+       2. 从图片文件夹读取所有支持格式的图片路径
+       3. 如果都没有内容返回 None
+       4. 随机返回其中一条内容
+       """
+       content_list = []
+   
+       if os.path.exists(TEXT_FILE):
+           with open(TEXT_FILE, "r", encoding="utf-8") as f:
+               text = f.read()
+               paragraphs = [p.strip() for p in text.split('\n\n') if p.strip()]
+               content_list.extend(paragraphs)
+   
+       if os.path.isdir(IMAGE_FOLDER):
+           for file in os.listdir(IMAGE_FOLDER):
+               if file.lower().endswith((".png", ".jpg", ".jpeg", ".gif", ".webp")):
+                   content_list.append(os.path.join(IMAGE_FOLDER, file))
+   
+       if not content_list:
+           print("没有可发送的文字或图片。")
+           return None
+   
+       return random.choice(content_list)
+   
+   def upload_media(image_path):
+       url = f"{INSTANCE}/api/v2/media"
+       headers = {"Authorization": f"Bearer {ACCESS_TOKEN}"}
+       try:
+           with open(image_path, "rb") as img:
+               files = {"file": img}
+               response = requests.post(url, headers=headers, files=files)
+           if response.status_code == 200:
+               return response.json()["id"]
+           else:
+               print(f"图片上传失败：{response.text}")
+               return None
+       except Exception as e:
+           print(f"上传图片异常：{e}")
+           return None
+   
+   def post_status(content):
+       url = f"{INSTANCE}/api/v1/statuses"
+       headers = {"Authorization": f"Bearer {ACCESS_TOKEN}"}
+       try:
+           if os.path.isfile(content):
+               media_id = upload_media(content)
+               if not media_id:
+                   return
+               data = {"status": "", "media_ids[]": [media_id]}
+           else:
+               data = {"status": content}
+           r = requests.post(url, headers=headers, data=data)
+           print(f"{datetime.now(timezone.utc)} 状态码: {r.status_code}")
+           print(r.text)
+       except Exception as e:
+           print(f"发帖异常：{e}")
+   
+   def job():
+       print(f"{datetime.now(timezone.utc)} 开始执行定时任务")
+       selected = get_random_content()
+       if selected:
+           print("将发送：", selected)
+           post_status(selected)
+       else:
+           print("没有内容发送")
+   
+   if __name__ == "__main__":
+       print("机器人启动，执行一次任务后退出...")
+       job()
+   ```
+   完成后应如图所示：![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/3a9a003d-1f8c-47a0-acfb-5964ffe08b0d.png)
+
+   点击右上角绿色的 `Commit changes` 提交
+
+2. 新建 **.github/workflows/schedule.yml** 文件
+
+   回到仓库页面，点击红色框框新建文件 ：![4](https://chatstorage.dvd.moe/dvdchat/dvdchat/488f2b37-3e13-478e-bc17-4e5dcdc512a9.png)
+
+   文件内容如下：
+
+   ```
+   name: Mastodon Bot Scheduled Posting
+   
+   on:
+     schedule:
+       - cron: '0 1 * * *'    # UTC 01:00 = 北京时间 09:00
+       - cron: '0 13 * * *'   # UTC 13:00 = 北京时间 21:00
+     workflow_dispatch:       # 添加这个就可以手动测试了
+   
+   jobs:
+     post:
+       runs-on: ubuntu-latest
+   
+       steps:
+         - name: Checkout repo
+           uses: actions/checkout@v3
+   
+         - name: Setup Python
+           uses: actions/setup-python@v4
+           with:
+             python-version: '3.12'
+   
+         - name: Install dependencies
+           run: |
+             pip install requests
+             pip install schedule
+   
+         - name: Run bot script
+           env:
+             ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+             INSTANCE_URL: ${{ secrets.INSTANCE_URL }}
+           run: python bot.py
+   ```
+
+   完成后应如图所示：![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/842fa0d4-292e-49c3-99d7-a07b4bcc3eb2.png)
+
+   点击右上角绿色的 `Commit changes` 提交
+
+**注意：**在文件名输入框内直接输入`/`会自动生成对应的文件夹
+
+3. 新建 **sentences.txt** 文件![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/49f9178b-81fa-4402-a4ba-db60e8ea3af7.png)
+
+   这里放随机发帖的文字，采取空行分隔，空行与空行之间代表一次发帖内容
+
+4. 在**电脑本地磁盘**新建 **images** 文件夹，将想要随机发送的图片放入其中，点击新建，选择上传已有文件：![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/1aafc378-075d-451b-8dc8-f2f26f38fbe3.png)将刚刚建立的 **images** 文件夹直接拖到上传页面，并点击下方绿色按钮提交
+
+#### 试运行
+
+1. 回到仓库页面，点击上方 `Actions` ![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/2729d0ba-2d59-453f-a830-cd66833c4bd0.png)
+
+2. 选择 `Mastodon Bot Scheduled Posting` ![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/417f4c98-58a0-40a3-97a6-ec6afecc7838.png)
+
+3. 点击 `Run workflow` ，**Branch** 选择 `main` ，最后点击绿色按钮运行![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/644a2321-6a06-4741-a5ee-d04bff97772c.png)
+
+4. 检查bot账号是否正常发帖
+
+#### 添加内容
+
+1. 添加图片
+
+   打开 **images** 文件夹，上传新的图片，为本次更新命名并推送更新
+
+2. 添加文字
+
+   打开 **sentences.txt** 文件，编辑内容并推送更新
+
