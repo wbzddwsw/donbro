@@ -19,7 +19,7 @@
     {{ $headers := dict "Authorization" (print "Bearer " $authToken) }}
 
     <!-- 获取 API 数据 -->
-    {{ $dbFetch := getJSON $dbApiUrl $headers }}
+    {{ $dbFetch := resources.GetRemote $dbApiUrl (dict "headers" $headers) | transform.Unmarshal }}
 
     {{ if $dbFetch }}
         {{ $shelfType := $dbFetch.shelf_type }}
