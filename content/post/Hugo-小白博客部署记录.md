@@ -17,7 +17,7 @@ image:
 
    打开链接后往下拉，找到 **Assets** ，下载最新的带 **extended** 的版本，或者直接点 [hugo_extended_0.145.0_windows-amd64.zip](https://github.com/gohugoio/hugo/releases/download/v0.145.0/hugo_extended_0.145.0_windows-amd64.zip) 下载
 
-   下载后解压到博客文件夹在的位置，比如说，我在 D 盘建了一个 blog 文件，那么解压后的 hugo 文件夹就要移动到这个 blog 文件夹里（后文举例都用这个）
+   下载后解压到博客文件夹在的位置，比如说，我在 D 盘建了一个 blog 文件，那么解压后的 hugo 文件夹就要移动到这个 blog 文件夹里
 
 2. Git 下载地址：[https://git-scm.com](https://git-scm.com)
 
@@ -46,6 +46,8 @@ image:
 
 Hugo.exe 放在 D 盘的 blog 文件中，可以从文件上方看到文件路径为 **D:\blog\hugo_extended_0.145.0_windows-amd64** ，在地址栏复制路径
 
+![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/e100a623-de18-43e8-badd-b1737eacc049.png)
+
 1. <kbd>win</kbd>+<kbd>R</kbd>，输入`sysdm.cpl`，按<kbd>ENTER</kbd>回车
 2. 进入**高级**选项卡，点击`环境变量`
 3. 在**系统变量**部分，找到 **Path 变量**，点击`编辑`
@@ -73,67 +75,69 @@ Hugo.exe 放在 D 盘的 blog 文件中，可以从文件上方看到文件路�
 
    {{< card >}}如果没有看到这个界面，点击右上角`头像`，点击 `Dashboard`，点击右上角黑色的 `Add New project`{{< /card >}}
 
+   ![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/319eb82a-4c08-4f48-a249-d85d09abf865.png)
+
 4. 点击左边 `Deploy`，点击 **Git Scope**的`下拉列表`，点击 `Add GitHub Org or Account`，弹出安装窗口，点击 `Install`
 
 5. 在Git Scope下拉列表中点击`你的Github账户`，在右侧 Private Repository Name 位置输入仓库名，我这里输入 donbro <mark>（这个名字很重要！它决定了博客的域名！）</mark>，点击 `Create` ，大概等1分钟左右，会弹出来一个<b>Congratulations！</b>的弹窗，代表 Vercel 已经自动搭建好一个 Hugo 博客
 
-6. 点击 `Continue to Dashboard` 进入管理页面，Domains下面的 **donbro.vercel.app** 就是自动分配的访问网址域名，点击可以直接进入博客
+   ![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/27fddab7-3c9d-46c2-9dd2-4ef135a1a17d.png)
 
-7. 点击右上角`头像`，点击 `Dashboard`，看到刚刚建立的 Hugo 项目，点击项目`右上角三个点`后再点击 `Setting` 进入设置
+   ![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/984cba23-5ad6-4a14-bc80-aa69e72c84c4.png)
 
-8. 点击左侧 `Environment Variables` ，key 处填写 `HUGO_VERSION`，Value 处填写`版本号`(上面写了怎么查)，最后点击 `save`
+6. 点击 `Continue to Dashboard` 进入管理页面，Domains下面的是自动分配的访问网址域名，点击可以直接进入博客。点击 `Setting` 进入设置
+
+   ![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/8296b3a6-1608-4d6e-b42b-ca7056926677.png)
+
+7. 点击左侧 `Environment Variables` ，key 处填写 `HUGO_VERSION`，Value 处填写`版本号`(上面写了怎么查)，最后点击 `save`
+
+   ![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/15001f66-3ace-4d19-89b9-883ead5b5a8c.png)
+
+8. 新建好的博客打开后是这样的：
+
+   ![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/82c38fcc-294a-4a08-98af-ffb0ed26ab4a.png)
 
 ## 推送到Github
 
 这个博客更新的顺序是，你在本地新建一篇md文件，然后通过 github Desktop 同步更新到 Github，然后再更新到你的博客域名
 
 1. 打开 Github Desktop，登录 Github 账号，选择 `Clone a repository from the internet…`（也就是把刚刚在 vercel 建立的项目克隆到 github ）
-2. 跳出的 Clone a repository 弹框中，注意下面的 **Local path**，确认选择的是自动建立的 donbro 空文件夹
-3. 点击左边 `Changes` 栏，点击文件名可以看到具体内容，`勾选要同步的文件`，下方 `Summary(required)` 为本次更新行为命名，再点击最下面 `Commit to main` 提交，最后点击上方第三个大黑框 `Push origin` 进行推送
-4. 登录 github 网页，点击右上角`头像`，选择 `Your repositories` ，点击 `donbro` 仓库，左边是更新记录和文件，右边可以看到一个蓝色链接 [donbro.vercel.app](https://donbro.vercel.app/) ，点击就可以进入博客，也可以从vercel项目中进入
+
+2. 跳出的 Clone a repository 弹框中，注意下面的 **Local path**，确认选择的是自动建立的空文件夹
+
+   ![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/69768c84-3aec-4f61-b59c-8d1d4ea777dc.png)
+
+3. 点击左边 `Changes` 栏，点击文件名可以看到具体内容，`勾选要同步的文件`，下方 `Summary(required)` 为本次更新行为命名，再点击最下面 `Commit to main` 确认提交，最后点击上方第三个大黑框 `Push origin` 进行推送
+
+   ![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/fba25ad8-aa28-4508-9cd2-0cc09512243b.png)
+
+   **注：右键具体文件选择 discard changes 可以撤销该修改**
+
+4. 登录 github 网页，点击右上角`头像`，选择 `Your repositories` ，点击仓库，左边是更新记录和文件，右边可以看到一个蓝色链接，点击就可以进入博客，也可以从vercel项目中进入
+
+   ![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/2d42c636-1be6-4189-9748-8afb4cfe111b.png)
 
 {{< detail "如果你想在同步到 github 之前预览效果" >}}
 
-<p>编辑好文件后，在<b>donbro</b>文件夹的空白处单击右键，选择<b>Open Git Bash Here</b>，在弹出的命令行界面中输入<b>hugo server</b>，如果步骤正确，会显示：</p>
+<p>编辑好文件后，在<b>博客</b>文件夹的空白处单击右键，选择 <b>Open Git Bash Here</b>，在弹出的命令行界面中输入 <b>hugo server</b>，如果步骤正确，会显示：</p>
 
-<pre><code class="code-highlight"><span class="code-line line-number" line="1">Watching for changes in D:\blog\github_wsw_hugo\donbro\{archetypes,content,theme
-s}
-Watching for config changes in D:\blog\github_wsw_hugo\donbro\config.toml
-Start building sites …
-hugo v0.145.0-666444f0a52132f9fec9f71cf25b441cc6a4f355+extended windows/amd64 Bu
-ildDate=2025-02-26T15:41:25Z VendorInfo=gohugoio
+![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/60e653bf-84eb-46ff-ae72-371c08b421b4.png)
 
-
-          | ZH-CN
--------------------+--------
-Pages            |    11
-Paginator pages  |     0
-Non-page files   |     0
-Static files     |    11
-Processed images |     0
-Aliases          |     0
-Cleaned          |     0
-
-Built in 110 ms
-Environment: "development"
-Serving pages from disk
-Running in Fast Render Mode. For full rebuilds on change: hugo server --disableF
-astRender
-Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
-Press Ctrl+C to stop
-</span></code></pre>
-
-<p>显示结果最后的 http://localhost:1313 就是预览网址</p>
+<p>显示结果最后的 http://localhost:1313 就是预览网址，日常更新时可以在这个网址同步查看效果，确认无误再推送</p>
 
 {{< /detail >}}
 
 ## 新建文章
 
-在 **donbro** 文件夹的空白处单击右键，选择 `Open Git Bash Here`，在弹出的命令行界面中输入 `hugo new posts/文章名字.md`，回车后，hugo 会在 **\donbro\content\posts** 文件夹中创建一个新的 md 文件，用 Markdown 编辑器（比如 Tyopa ）打开后，就可以写文章了
+在 **donbro** 文件夹的空白处单击右键，选择 `Open Git Bash Here`，在弹出的命令行界面中输入 `hugo new posts/文章名字.md` 
+
+![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/a506b2a3-873e-461c-a4b9-a7340cdf9bb3.png)
+
+回车后，hugo 会在 **\\仓库名字\content\posts** 文件夹中创建一个新的 md 文件，用 Markdown 编辑器（比如 Tyopa ）打开后，就可以写文章了
 
 ### 文章属性模板
 
-用以指定文章的标题、分类、Tag等，打开 **\donbro\content\posts\archetypes** 文件夹下的 `default.md` 文件，将下面的代码粘贴进去，不需要的属性可以自由删除：
+用以指定文章的标题、分类、Tag等，打开 **\仓库名字\content\posts\archetypes** 文件夹下的 `default.md` 文件，将下面的代码粘贴进去，不需要的属性可以自由删除：
 
 ```
 title: "{{ replace .Name "-" " " | title }}"

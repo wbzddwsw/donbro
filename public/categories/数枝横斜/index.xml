@@ -661,7 +661,8 @@
 &lt;/h3&gt;&lt;h4 id=&#34;新建仓库&#34;&gt;新建仓库
 &lt;/h4&gt;&lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;网页登录账号后，点击上方设置，找到 &lt;code&gt;Secrets and variables&lt;/code&gt; - &lt;code&gt;Actions&lt;/code&gt; &lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/e3655ad6-29b2-495e-a99b-baead3ae74cf.png&#34;
+&lt;p&gt;网页登录账号后，点击上方设置，找到 &lt;code&gt;Secrets and variables&lt;/code&gt; - &lt;code&gt;Actions&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/e3655ad6-29b2-495e-a99b-baead3ae74cf.png&#34;
 	
 	
 	
@@ -673,7 +674,8 @@
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;点击右边的绿色按钮 &lt;code&gt;New repository secret&lt;/code&gt;&lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/8cacf9d5-f7db-40fe-a8c0-9ccc57cdece0.png&#34;
+&lt;p&gt;点击右边的绿色按钮 &lt;code&gt;New repository secret&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/8cacf9d5-f7db-40fe-a8c0-9ccc57cdece0.png&#34;
 	
 	
 	
@@ -1015,14 +1017,13 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;点击右上角绿色的 &lt;code&gt;Commit changes&lt;/code&gt; 提交&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;在文件名输入框内直接输入&lt;code&gt;/&lt;/code&gt;会自动生成对应的文件夹&lt;/p&gt;
 &lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;
-&lt;p&gt;新建 &lt;strong&gt;sentences.txt&lt;/strong&gt; 文件
-&lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/49f9178b-81fa-4402-a4ba-db60e8ea3af7.png&#34;
+&lt;p&gt;新建 &lt;strong&gt;sentences.txt&lt;/strong&gt; 文件&lt;/p&gt;
+&lt;p&gt;这里放随机发帖的文字，采取空行分隔，空行与空行之间代表一次发帖内容：&lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/49f9178b-81fa-4402-a4ba-db60e8ea3af7.png&#34;
 	
 	
 	
@@ -1032,11 +1033,10 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;这里放随机发帖的文字，采取空行分隔，空行与空行之间代表一次发帖内容&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;在&lt;strong&gt;电脑本地磁盘&lt;/strong&gt;新建 &lt;strong&gt;images&lt;/strong&gt; 文件夹，将想要随机发送的图片放入其中，点击新建，选择上传已有文件：
-&lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/1aafc378-075d-451b-8dc8-f2f26f38fbe3.png&#34;
+&lt;p&gt;新建 &lt;strong&gt;images/test.txt&lt;/strong&gt; 文件&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/7eec29cb-9b53-4721-9ca7-7cca23d002c1.png&#34;
 	
 	
 	
@@ -1045,14 +1045,44 @@
 		alt=&#34;1&#34;
 	
 	
-&gt;
-将刚刚建立的 &lt;strong&gt;images&lt;/strong&gt; 文件夹直接拖到上传页面，并点击下方绿色按钮提交&lt;/p&gt;
+&gt;&lt;/p&gt;
+&lt;p&gt;提交后打开 images 文件夹，上传图片：&lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/29623af9-dbfa-430a-a45f-2d71a7c84c2c.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;1&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;打开 test.txt 文件，删除：&lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/c259fe3c-974a-48fa-835a-00546c97edcb.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;1&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;务必点击绿色按钮提交！&lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/36c0e368-d4dd-404e-b845-82d5fa8393b7.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;1&#34;
+	
+	
+&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h4 id=&#34;试运行&#34;&gt;试运行
 &lt;/h4&gt;&lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;回到仓库页面，点击上方 &lt;code&gt;Actions&lt;/code&gt; &lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/2729d0ba-2d59-453f-a830-cd66833c4bd0.png&#34;
+&lt;p&gt;回到仓库页面，点击上方 &lt;code&gt;Actions&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/2729d0ba-2d59-453f-a830-cd66833c4bd0.png&#34;
 	
 	
 	
@@ -1064,7 +1094,8 @@
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;选择 &lt;code&gt;Mastodon Bot Scheduled Posting&lt;/code&gt; &lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/417f4c98-58a0-40a3-97a6-ec6afecc7838.png&#34;
+&lt;p&gt;选择 &lt;code&gt;Mastodon Bot Scheduled Posting&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/417f4c98-58a0-40a3-97a6-ec6afecc7838.png&#34;
 	
 	
 	
@@ -1076,7 +1107,8 @@
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;点击 &lt;code&gt;Run workflow&lt;/code&gt; ，&lt;strong&gt;Branch&lt;/strong&gt; 选择 &lt;code&gt;main&lt;/code&gt; ，最后点击绿色按钮运行&lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/644a2321-6a06-4741-a5ee-d04bff97772c.png&#34;
+&lt;p&gt;点击 &lt;code&gt;Run workflow&lt;/code&gt; ，&lt;strong&gt;Branch&lt;/strong&gt; 选择 &lt;code&gt;main&lt;/code&gt; ，最后点击绿色按钮运行&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/644a2321-6a06-4741-a5ee-d04bff97772c.png&#34;
 	
 	
 	
@@ -6511,7 +6543,7 @@ Press Ctrl+C to stop
 &lt;/svg&gt;&lt;/span&gt;
 
  下载&lt;/p&gt;
-&lt;p&gt;下载后解压到博客文件夹在的位置，比如说，我在 D 盘建了一个 blog 文件，那么解压后的 hugo 文件夹就要移动到这个 blog 文件夹里（后文举例都用这个）&lt;/p&gt;
+&lt;p&gt;下载后解压到博客文件夹在的位置，比如说，我在 D 盘建了一个 blog 文件，那么解压后的 hugo 文件夹就要移动到这个 blog 文件夹里&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Git 下载地址：&lt;a class=&#34;link&#34; href=&#34;https://git-scm.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -6592,6 +6624,16 @@ Press Ctrl+C to stop
 &lt;/ol&gt;
 &lt;h2 id=&#34;安装hugo&#34;&gt;安装HUGO
 &lt;/h2&gt;&lt;p&gt;Hugo.exe 放在 D 盘的 blog 文件中，可以从文件上方看到文件路径为 &lt;strong&gt;D:\blog\hugo_extended_0.145.0_windows-amd64&lt;/strong&gt; ，在地址栏复制路径&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/e100a623-de18-43e8-badd-b1737eacc049.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;1&#34;
+	
+	
+&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;kbd&gt;win&lt;/kbd&gt;+&lt;kbd&gt;R&lt;/kbd&gt;，输入&lt;code&gt;sysdm.cpl&lt;/code&gt;，按&lt;kbd&gt;ENTER&lt;/kbd&gt;回车&lt;/li&gt;
 &lt;li&gt;进入&lt;strong&gt;高级&lt;/strong&gt;选项卡，点击&lt;code&gt;环境变量&lt;/code&gt;&lt;/li&gt;
@@ -6633,79 +6675,161 @@ Press Ctrl+C to stop
       &lt;div class=&#34;content&#34;&gt; 如果没有看到这个界面，点击右上角&lt;code&gt;头像&lt;/code&gt;，点击 &lt;code&gt;Dashboard&lt;/code&gt;，点击右上角黑色的 &lt;code&gt;Add New project&lt;/code&gt; &lt;/div&gt;
     &lt;/div&gt;
 
+&lt;p&gt;&lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/319eb82a-4c08-4f48-a249-d85d09abf865.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;1&#34;
+	
+	
+&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;点击左边 &lt;code&gt;Deploy&lt;/code&gt;，点击 &lt;strong&gt;Git Scope&lt;/strong&gt;的&lt;code&gt;下拉列表&lt;/code&gt;，点击 &lt;code&gt;Add GitHub Org or Account&lt;/code&gt;，弹出安装窗口，点击 &lt;code&gt;Install&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;在Git Scope下拉列表中点击&lt;code&gt;你的Github账户&lt;/code&gt;，在右侧 Private Repository Name 位置输入仓库名，我这里输入 donbro &lt;mark&gt;（这个名字很重要！它决定了博客的域名！）&lt;/mark&gt;，点击 &lt;code&gt;Create&lt;/code&gt; ，大概等1分钟左右，会弹出来一个&lt;b&gt;Congratulations！&lt;/b&gt;的弹窗，代表 Vercel 已经自动搭建好一个 Hugo 博客&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/27fddab7-3c9d-46c2-9dd2-4ef135a1a17d.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;1&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/984cba23-5ad6-4a14-bc80-aa69e72c84c4.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;1&#34;
+	
+	
+&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;点击 &lt;code&gt;Continue to Dashboard&lt;/code&gt; 进入管理页面，Domains下面的 &lt;strong&gt;donbro.vercel.app&lt;/strong&gt; 就是自动分配的访问网址域名，点击可以直接进入博客&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;点击右上角&lt;code&gt;头像&lt;/code&gt;，点击 &lt;code&gt;Dashboard&lt;/code&gt;，看到刚刚建立的 Hugo 项目，点击项目&lt;code&gt;右上角三个点&lt;/code&gt;后再点击 &lt;code&gt;Setting&lt;/code&gt; 进入设置&lt;/p&gt;
+&lt;p&gt;点击 &lt;code&gt;Continue to Dashboard&lt;/code&gt; 进入管理页面，Domains下面的是自动分配的访问网址域名，点击可以直接进入博客。点击 &lt;code&gt;Setting&lt;/code&gt; 进入设置&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/8296b3a6-1608-4d6e-b42b-ca7056926677.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;1&#34;
+	
+	
+&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;点击左侧 &lt;code&gt;Environment Variables&lt;/code&gt; ，key 处填写 &lt;code&gt;HUGO_VERSION&lt;/code&gt;，Value 处填写&lt;code&gt;版本号&lt;/code&gt;(上面写了怎么查)，最后点击 &lt;code&gt;save&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/15001f66-3ace-4d19-89b9-883ead5b5a8c.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;1&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;新建好的博客打开后是这样的：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/82c38fcc-294a-4a08-98af-ffb0ed26ab4a.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;1&#34;
+	
+	
+&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;推送到github&#34;&gt;推送到Github
 &lt;/h2&gt;&lt;p&gt;这个博客更新的顺序是，你在本地新建一篇md文件，然后通过 github Desktop 同步更新到 Github，然后再更新到你的博客域名&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;打开 Github Desktop，登录 Github 账号，选择 &lt;code&gt;Clone a repository from the internet…&lt;/code&gt;（也就是把刚刚在 vercel 建立的项目克隆到 github ）&lt;/li&gt;
-&lt;li&gt;跳出的 Clone a repository 弹框中，注意下面的 &lt;strong&gt;Local path&lt;/strong&gt;，确认选择的是自动建立的 donbro 空文件夹&lt;/li&gt;
-&lt;li&gt;点击左边 &lt;code&gt;Changes&lt;/code&gt; 栏，点击文件名可以看到具体内容，&lt;code&gt;勾选要同步的文件&lt;/code&gt;，下方 &lt;code&gt;Summary(required)&lt;/code&gt; 为本次更新行为命名，再点击最下面 &lt;code&gt;Commit to main&lt;/code&gt; 提交，最后点击上方第三个大黑框 &lt;code&gt;Push origin&lt;/code&gt; 进行推送&lt;/li&gt;
-&lt;li&gt;登录 github 网页，点击右上角&lt;code&gt;头像&lt;/code&gt;，选择 &lt;code&gt;Your repositories&lt;/code&gt; ，点击 &lt;code&gt;donbro&lt;/code&gt; 仓库，左边是更新记录和文件，右边可以看到一个蓝色链接 &lt;a class=&#34;link&#34; href=&#34;https://donbro.vercel.app/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;donbro.vercel.app&lt;/a&gt;
-
-
-&lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
-    height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
-    &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
-    &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
-        fill=&#34;currentColor&#34;&gt;
-&lt;/svg&gt;&lt;/span&gt;
-
- ，点击就可以进入博客，也可以从vercel项目中进入&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开 Github Desktop，登录 Github 账号，选择 &lt;code&gt;Clone a repository from the internet…&lt;/code&gt;（也就是把刚刚在 vercel 建立的项目克隆到 github ）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;跳出的 Clone a repository 弹框中，注意下面的 &lt;strong&gt;Local path&lt;/strong&gt;，确认选择的是自动建立的空文件夹&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/69768c84-3aec-4f61-b59c-8d1d4ea777dc.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;1&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;点击左边 &lt;code&gt;Changes&lt;/code&gt; 栏，点击文件名可以看到具体内容，&lt;code&gt;勾选要同步的文件&lt;/code&gt;，下方 &lt;code&gt;Summary(required)&lt;/code&gt; 为本次更新行为命名，再点击最下面 &lt;code&gt;Commit to main&lt;/code&gt; 确认提交，最后点击上方第三个大黑框 &lt;code&gt;Push origin&lt;/code&gt; 进行推送&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/fba25ad8-aa28-4508-9cd2-0cc09512243b.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;1&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;登录 github 网页，点击右上角&lt;code&gt;头像&lt;/code&gt;，选择 &lt;code&gt;Your repositories&lt;/code&gt; ，点击仓库，左边是更新记录和文件，右边可以看到一个蓝色链接，点击就可以进入博客，也可以从vercel项目中进入&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/2d42c636-1be6-4189-9748-8afb4cfe111b.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;1&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 &lt;details&gt;
     &lt;summary&gt;如果你想在同步到 github 之前预览效果&lt;/summary&gt;
-    &lt;p&gt;编辑好文件后，在&lt;b&gt;donbro&lt;/b&gt;文件夹的空白处单击右键，选择&lt;b&gt;Open Git Bash Here&lt;/b&gt;，在弹出的命令行界面中输入&lt;b&gt;hugo server&lt;/b&gt;，如果步骤正确，会显示：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;code-highlight&#34;&gt;&lt;span class=&#34;code-line line-number&#34; line=&#34;1&#34;&gt;Watching for changes in D:\blog\github_wsw_hugo\donbro\{archetypes,content,theme
-s}
-Watching for config changes in D:\blog\github_wsw_hugo\donbro\config.toml
-Start building sites …
-hugo v0.145.0-666444f0a52132f9fec9f71cf25b441cc6a4f355+extended windows/amd64 Bu
-ildDate=2025-02-26T15:41:25Z VendorInfo=gohugoio
-
-
-          | ZH-CN
--------------------+--------
-Pages            |    11
-Paginator pages  |     0
-Non-page files   |     0
-Static files     |    11
-Processed images |     0
-Aliases          |     0
-Cleaned          |     0
-
-Built in 110 ms
-Environment: &#34;development&#34;
-Serving pages from disk
-Running in Fast Render Mode. For full rebuilds on change: hugo server --disableF
-astRender
-Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
-Press Ctrl+C to stop
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;显示结果最后的 http://localhost:1313 就是预览网址&lt;/p&gt;
+    &lt;p&gt;编辑好文件后，在&lt;b&gt;博客&lt;/b&gt;文件夹的空白处单击右键，选择 &lt;b&gt;Open Git Bash Here&lt;/b&gt;，在弹出的命令行界面中输入 &lt;b&gt;hugo server&lt;/b&gt;，如果步骤正确，会显示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/60e653bf-84eb-46ff-ae72-371c08b421b4.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;1&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;显示结果最后的 http://localhost:1313 就是预览网址，日常更新时可以在这个网址同步查看效果，确认无误再推送&lt;/p&gt;
 
 &lt;/details&gt;
 
 &lt;h2 id=&#34;新建文章&#34;&gt;新建文章
-&lt;/h2&gt;&lt;p&gt;在 &lt;strong&gt;donbro&lt;/strong&gt; 文件夹的空白处单击右键，选择 &lt;code&gt;Open Git Bash Here&lt;/code&gt;，在弹出的命令行界面中输入 &lt;code&gt;hugo new posts/文章名字.md&lt;/code&gt;，回车后，hugo 会在 &lt;strong&gt;\donbro\content\posts&lt;/strong&gt; 文件夹中创建一个新的 md 文件，用 Markdown 编辑器（比如 Tyopa ）打开后，就可以写文章了&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;在 &lt;strong&gt;donbro&lt;/strong&gt; 文件夹的空白处单击右键，选择 &lt;code&gt;Open Git Bash Here&lt;/code&gt;，在弹出的命令行界面中输入 &lt;code&gt;hugo new posts/文章名字.md&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/a506b2a3-873e-461c-a4b9-a7340cdf9bb3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;1&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;回车后，hugo 会在 &lt;strong&gt;\仓库名字\content\posts&lt;/strong&gt; 文件夹中创建一个新的 md 文件，用 Markdown 编辑器（比如 Tyopa ）打开后，就可以写文章了&lt;/p&gt;
 &lt;h3 id=&#34;文章属性模板&#34;&gt;文章属性模板
-&lt;/h3&gt;&lt;p&gt;用以指定文章的标题、分类、Tag等，打开 &lt;strong&gt;\donbro\content\posts\archetypes&lt;/strong&gt; 文件夹下的 &lt;code&gt;default.md&lt;/code&gt; 文件，将下面的代码粘贴进去，不需要的属性可以自由删除：&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;用以指定文章的标题、分类、Tag等，打开 &lt;strong&gt;\仓库名字\content\posts\archetypes&lt;/strong&gt; 文件夹下的 &lt;code&gt;default.md&lt;/code&gt; 文件，将下面的代码粘贴进去，不需要的属性可以自由删除：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -6748,6 +6872,52 @@ Press Ctrl+C to stop
 &lt;/svg&gt;&lt;/span&gt;
 
 ，大（剩）家（下）自（的）由（我）发（不）挥（会）吧（了）！&lt;/p&gt;
+&lt;p&gt;但是！话又说回来，还是给大家简单演示一下怎么安装，示例主题是&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;stack&lt;/a&gt;
+
+
+&lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+    height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+    &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+    &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+        fill=&#34;currentColor&#34;&gt;
+&lt;/svg&gt;&lt;/span&gt;
+
+：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/88cd0c98-c6c4-4963-9d08-221b13ec762b.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;1&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在&lt;b&gt;博客&lt;/b&gt;文件夹的空白处单击右键，选择 &lt;b&gt;Open Git Bash Here&lt;/b&gt;，在弹出的命令行界面中输入：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git submodule add https://github.com/CaiJimmy/hugo-theme-stack.git themes/hugo-theme-stack
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;显示这样就是成功了：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chatstorage.dvd.moe/dvdchat/dvdchat/06d07802-6cc9-4509-8da0-17783cac3dce.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;1&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </description>
         </item>
         
