@@ -1024,6 +1024,77 @@ code {
 
 参考[赛博房子装修计划（4）自定义emoji](https://xyzxy.me/p/赛博房子装修计划4自定义emoji/)
 
+#### 添加bgm
+
+![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/b8950f2f-7676-4682-aaa9-94892388124b.png)
+
+1. 准备封面图片，放入 **static** 文件夹
+2. 准备音乐文件，放入 **static\music** 文件夹
+
+<details>
+    <summary><strong>代码</strong> 1.新建 layouts/partials/music.html ：</summary>
+
+```
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    <!-- require MetingJS -->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+</head>
+
+<body>
+    <div class="demo">
+        <div id="player1">
+        </div>
+    </div>
+    <script>
+        var ap = new APlayer
+            ({
+                element: document.getElementById('player1'),
+                fixed: true,
+                autoplay: false, //自动播放
+                mini: true,
+                theme: '#f8f4fc',
+                loop: 'all', //循环播放, 可选值: ‘all’, ‘one’, ’none’
+                order: 'random', //音频循环顺序, 可选值: ’list’, ‘random’
+                preload: 'auto', //预加载，可选值: ’none’, ‘metadata’, ‘auto’
+                volume: 0.4, //默认音量
+                mutex: true,
+                listFolded: true, //列表默认折叠
+                listMaxHeight: '500px', //	列表最大高度
+                lrcType: 0,
+                music: [
+                    {
+                        name: 'name', //歌名
+                        artist: 'artist', //歌手
+                        url: 'music/歌名.mp3', //歌曲链接
+                        cover: 'cover.jpg' //封面图
+                    }
+                ]
+            });
+        //ap.init();
+    </script>
+</body>
+```
+
+</details>
+
+<details>
+<summary><strong>代码</strong> 2.在layouts/partials/footer/custom.html 里添加：</summary>
+
+```
+{{ partial "music" . }}
+```
+
+</details>
+
+
+
+
 ## 短代码应用
 
 > custom.scss 在 \assets\scss 文件中，新建x.html文件放在 \layouts\shortcodes

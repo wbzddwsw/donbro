@@ -45,15 +45,7 @@
         }
     })();
 </script>
-
-        <iframe
-          src="/bgm-player.html"
-          style="position:fixed; bottom:20px; right:20px; width:140px; height:40px; border:none; z-index:9999; background:transparent;"
-          scrolling="no"
-        ></iframe>
-
-        
-        <div id="pjax-container" class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
     <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
@@ -355,6 +347,7 @@
             <li><a href="#外部链接后面显示图标">外部链接后面显示图标</a></li>
             <li><a href="#返回顶部按钮">返回顶部按钮</a></li>
             <li><a href="#自定义emoji">自定义emoji</a></li>
+            <li><a href="#添加bgm">添加bgm</a></li>
           </ol>
         </li>
       </ol>
@@ -471,7 +464,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 20 分钟
+                    阅读时长: 21 分钟
                 </time>
             </div>
         
@@ -2274,6 +2267,129 @@
 </svg></span>
 
 </p>
+<h4 id="添加bgm">添加bgm
+</h4><p><img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/b8950f2f-7676-4682-aaa9-94892388124b.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="1"
+	
+	
+></p>
+<ol>
+<li>准备封面图片，放入 <strong>static</strong> 文件夹</li>
+<li>准备音乐文件，放入 <strong>static\music</strong> 文件夹</li>
+</ol>
+<details>
+    <summary><strong>代码</strong> 1.新建 layouts/partials/music.html ：</summary>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">&lt;!</span><span class="n">DOCTYPE</span> <span class="n">html</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="n">html</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;!--</span> <span class="n">require</span> <span class="n">APlayer</span> <span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&#34;stylesheet&#34;</span> <span class="n">href</span><span class="o">=</span><span class="s2">&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s2">&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js&#34;</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;!--</span> <span class="n">require</span> <span class="n">MetingJS</span> <span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s2">&#34;https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js&#34;</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="n">div</span> <span class="k">class</span><span class="o">=</span><span class="s2">&#34;demo&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">div</span> <span class="n">id</span><span class="o">=</span><span class="s2">&#34;player1&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">var</span> <span class="n">ap</span> <span class="o">=</span> <span class="n">new</span> <span class="n">APlayer</span>
+</span></span><span class="line"><span class="cl">            <span class="p">({</span>
+</span></span><span class="line"><span class="cl">                <span class="n">element</span><span class="p">:</span> <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s1">&#39;player1&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">fixed</span><span class="p">:</span> <span class="bp">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">autoplay</span><span class="p">:</span> <span class="bp">false</span><span class="p">,</span> <span class="o">//</span><span class="err">自动播放</span>
+</span></span><span class="line"><span class="cl">                <span class="n">mini</span><span class="p">:</span> <span class="bp">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">theme</span><span class="p">:</span> <span class="s1">&#39;#f8f4fc&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">loop</span><span class="p">:</span> <span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="o">//</span><span class="err">循环播放</span><span class="p">,</span> <span class="err">可选值</span><span class="p">:</span> <span class="err">‘</span><span class="n">all</span><span class="err">’</span><span class="p">,</span> <span class="err">‘</span><span class="n">one</span><span class="err">’</span><span class="p">,</span> <span class="err">’</span><span class="n">none</span><span class="err">’</span>
+</span></span><span class="line"><span class="cl">                <span class="n">order</span><span class="p">:</span> <span class="s1">&#39;random&#39;</span><span class="p">,</span> <span class="o">//</span><span class="err">音频循环顺序</span><span class="p">,</span> <span class="err">可选值</span><span class="p">:</span> <span class="err">’</span><span class="n">list</span><span class="err">’</span><span class="p">,</span> <span class="err">‘</span><span class="n">random</span><span class="err">’</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">preload</span><span class="p">:</span> <span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="o">//</span><span class="err">预加载，可选值</span><span class="p">:</span> <span class="err">’</span><span class="n">none</span><span class="err">’</span><span class="p">,</span> <span class="err">‘</span><span class="n">metadata</span><span class="err">’</span><span class="p">,</span> <span class="err">‘</span><span class="n">auto</span><span class="err">’</span>
+</span></span><span class="line"><span class="cl">                <span class="n">volume</span><span class="p">:</span> <span class="mf">0.4</span><span class="p">,</span> <span class="o">//</span><span class="err">默认音量</span>
+</span></span><span class="line"><span class="cl">                <span class="n">mutex</span><span class="p">:</span> <span class="bp">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">listFolded</span><span class="p">:</span> <span class="bp">true</span><span class="p">,</span> <span class="o">//</span><span class="err">列表默认折叠</span>
+</span></span><span class="line"><span class="cl">                <span class="n">listMaxHeight</span><span class="p">:</span> <span class="s1">&#39;500px&#39;</span><span class="p">,</span> <span class="o">//</span>	<span class="err">列表最大高度</span>
+</span></span><span class="line"><span class="cl">                <span class="n">lrcType</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">music</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">name</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="o">//</span><span class="err">歌名</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">artist</span><span class="p">:</span> <span class="s1">&#39;artist&#39;</span><span class="p">,</span> <span class="o">//</span><span class="err">歌手</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">url</span><span class="p">:</span> <span class="s1">&#39;music/歌名.mp3&#39;</span><span class="p">,</span> <span class="o">//</span><span class="err">歌曲链接</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">cover</span><span class="p">:</span> <span class="s1">&#39;cover.jpg&#39;</span> <span class="o">//</span><span class="err">封面图</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="p">});</span>
+</span></span><span class="line"><span class="cl">        <span class="o">//</span><span class="n">ap</span><span class="o">.</span><span class="n">init</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></details>
+<details>
+<summary><strong>代码</strong> 2.在layouts/partials/footer/custom.html 里添加：</summary>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{{ partial &#34;music&#34; . }}
+</span></span></code></pre></td></tr></table>
+</div>
+</div></details>
 <h2 id="短代码应用">短代码应用
 </h2><blockquote>
 <p>custom.scss 在 \assets\scss 文件中，新建x.html文件放在 \layouts\shortcodes</p>
@@ -5779,7 +5895,6 @@
 
             </main>
         </div>
-
         <script 
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
@@ -5950,13 +6065,52 @@
   }
 </style>
 
-<iframe src="/bgm-player.html" 
-        style="position:fixed;bottom:20px;right:20px;width:140px;height:40px;border:none;z-index:9999;background:transparent;"
-        scrolling="no">
-</iframe>
+<!DOCTYPE html>
+<html>
 
+<head>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+</head>
 
+<body>
+    <div class="demo">
+        <div id="player1">
+        </div>
+    </div>
+    <script>
+        var ap = new APlayer
+            ({
+                element: document.getElementById('player1'),
+                fixed: true,
+                autoplay: false,
+                mini: true,
+                theme: '#f8f4fc',
+                loop: 'all',
+                order: 'random',
+                preload: 'auto',
+                volume: 0.1,
+                mutex: true,
+                listFolded: true,
+                listMaxHeight: '500px',
+                lrcType: 0,
+                music: [
+                    {
+                        name: 'Bliss',
+                        artist: 'milet',
+                        url: 'music/Bliss.mp3',
+                        cover: 'cover.jpg'
+                    }
+                ]
+            });
         
-        <script src="https://instant.page/5.1.0" type="module" defer></script>
+    </script>
+</body>
+
+
+
     </body>
 </html>
