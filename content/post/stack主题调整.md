@@ -1068,12 +1068,14 @@ code {
                 listMaxHeight: '500px', //	列表最大高度
                 lrcType: 0,
                 music: [
-                    {
-                        name: 'name', //歌名
-                        artist: 'artist', //歌手
-                        url: 'music/歌名.mp3', //歌曲链接
-                        cover: 'cover.jpg' //封面图
-                    }
+                    {   name: 'Bliss', //歌名
+                        artist: 'milet', //歌手
+                        url: 'music/Bliss.mp3', 歌曲链接
+                        cover: 'cover.jpg'}, //封面
+                    {   name: '涉川',
+                        artist: '不才',
+                        url: 'music/涉川.mp3',
+                        cover: 'cover.jpg'}
                 ]
             });
         //ap.init();
