@@ -2300,6 +2300,14 @@ img.message__img {
 
 #### neodb
 
+{{< neodb "https://neodb.social/movie/1UcIpcTNHdfkaR8Oy4ilsm" >}} 在这里写评论内容，留白则自动拉取标记短评{{< /neodb >}}
+
+```
+{< neodb "NeoDB网址" >} 在这里写评论内容，留白则自动拉取标记短评{< /neodb >}
+```
+
+
+
 参考[Blog | 菜谱：用NeoDB短代码展示书影游短评](https://mantyke.icu/posts/2025/blogglowup/)，另有修正如下：
 
 1. **neodb.html** 中有两处：
