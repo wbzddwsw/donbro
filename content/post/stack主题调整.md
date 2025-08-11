@@ -2319,7 +2319,7 @@ img.message__img {
 {{ $dbUrl := .Get 0 }}
 {{ $apiUrl := "https://neodb.social/api/me/shelf/item/" }}
 {{ $itemUuid := "" }}
-{{ $authToken := "iSK2jvTstcBcGqdIbZ6vJNU2t-PWJG958AeAWVYRV9Zlu8WI0mB2yVNTtw" }} <!-- 请替换为你的 API Personal Token -->
+{{ $authToken := "你的Token" }} <!-- 请替换为你的 API Personal Token -->
 
 <!-- 判断是否为开发模式 -->
 {{ if eq (hugo.Environment) "production" }}
