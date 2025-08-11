@@ -1070,12 +1070,12 @@ code {
                 music: [
                     {   name: 'Bliss', //歌名
                         artist: 'milet', //歌手
-                        url: 'music/Bliss.mp3', 歌曲链接
-                        cover: 'cover.jpg'}, //封面
+                        url: '{{ "music/Bliss.mp3" | relURL }}', //歌曲链接
+                        cover: '{{ "cover.jpg" | relURL }}'}, //封面
                     {   name: '涉川',
                         artist: '不才',
-                        url: 'music/涉川.mp3',
-                        cover: 'cover.jpg'}
+                        url: '{{ "music/涉川.mp3" | relURL }}',
+                        cover: '{{ "cover.jpg" | relURL }}'}
                 ]
             });
         //ap.init();
