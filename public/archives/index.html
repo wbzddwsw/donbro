@@ -280,19 +280,6 @@
             <div class="article-list--tile">
                 
                     
-<article class="">
-    <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">未分类</h2>
-        </div>
-    </a>
-</article>
-
-                
-                    
 <article class="has-image">
     <a href="/categories/%E5%B0%8F%E5%BE%84%E6%8C%87%E5%8C%97/">
         
@@ -575,8 +562,6 @@
         
         
         
-        
-        
 
         发表了9篇文章 ·
         总计2万9千字
@@ -762,6 +747,51 @@
     z-index: -1;
   }
 </style>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+</head>
+
+<body>
+    <div class="demo">
+        <div id="player1">
+        </div>
+    </div>
+    <script>
+        var ap = new APlayer
+            ({
+                element: document.getElementById('player1'),
+                fixed: true,
+                autoplay: false,
+                mini: true,
+                theme: '#f8f4fc',
+                loop: 'all',
+                order: 'random',
+                preload: 'auto',
+                volume: 0.1,
+                mutex: true,
+                listFolded: true,
+                listMaxHeight: '500px',
+                lrcType: 0,
+                music: [
+                    {
+                        name: 'Bliss',
+                        artist: 'milet',
+                        url: 'music/Bliss.mp3',
+                        cover: 'cover.jpg'
+                    }
+                ]
+            });
+        
+    </script>
+</body>
 
 
 

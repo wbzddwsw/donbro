@@ -673,6 +673,7 @@
 	
 	
 ></p>
+<p><strong>注：右键具体文件选择 discard changes 可以撤销该修改</strong></p>
 </li>
 <li>
 <p>登录 github 网页，点击右上角<code>头像</code>，选择 <code>Your repositories</code> ，点击仓库，左边是更新记录和文件，右边可以看到一个蓝色链接，点击就可以进入博客，也可以从vercel项目中进入</p>
@@ -706,8 +707,8 @@
 </details>
 
 <h2 id="新建文章">新建文章
-</h2><p>在 <strong>donbro</strong> 文件夹的空白处单击右键，选择 <code>Open Git Bash Here</code>，在弹出的命令行界面中输入 <code>hugo new posts/文章名字.md</code></p>
-<p><img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/a506b2a3-873e-461c-a4b9-a7340cdf9bb3.png"
+</h2><p>在博客文件夹的空白处单击右键，选择 <code>Open Git Bash Here</code>，在弹出的命令行界面中输入 <code>hugo new posts/文章名字.md</code></p>
+<p><img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/46abb6f6-b8e7-43f0-807a-da06cb4a7ab3.png"
 	
 	
 	
@@ -762,52 +763,6 @@
 </svg></span>
 
 ，大（剩）家（下）自（的）由（我）发（不）挥（会）吧（了）！</p>
-<p>但是！话又说回来，还是给大家简单演示一下怎么安装，示例主题是<a class="link" href="https://themes.gohugo.io/themes/hugo-theme-stack/"  target="_blank" rel="noopener"
-    >stack</a>
-
-
-<span style="white-space: nowrap;"><svg width=".7em"
-    height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
-    <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
-    <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
-        fill="currentColor">
-</svg></span>
-
-：</p>
-<p><img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/88cd0c98-c6c4-4963-9d08-221b13ec762b.png"
-	
-	
-	
-	loading="lazy"
-	
-		alt="1"
-	
-	
-></p>
-<ol>
-<li>
-<p>在<b>博客</b>文件夹的空白处单击右键，选择 <b>Open Git Bash Here</b>，在弹出的命令行界面中输入：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git submodule add https://github.com/CaiJimmy/hugo-theme-stack.git themes/hugo-theme-stack
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>显示这样就是成功了：</p>
-<p><img src="https://chatstorage.dvd.moe/dvdchat/dvdchat/06d07802-6cc9-4509-8da0-17783cac3dce.png"
-	
-	
-	
-	loading="lazy"
-	
-		alt="1"
-	
-	
-></p>
-</li>
-</ol>
 
 </section>
 
@@ -937,8 +892,6 @@
     
     
     <section class="totalcount">
-        
-        
         
         
         
@@ -1235,6 +1188,51 @@
     z-index: -1;
   }
 </style>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+</head>
+
+<body>
+    <div class="demo">
+        <div id="player1">
+        </div>
+    </div>
+    <script>
+        var ap = new APlayer
+            ({
+                element: document.getElementById('player1'),
+                fixed: true,
+                autoplay: false,
+                mini: true,
+                theme: '#f8f4fc',
+                loop: 'all',
+                order: 'random',
+                preload: 'auto',
+                volume: 0.1,
+                mutex: true,
+                listFolded: true,
+                listMaxHeight: '500px',
+                lrcType: 0,
+                music: [
+                    {
+                        name: 'Bliss',
+                        artist: 'milet',
+                        url: 'music/Bliss.mp3',
+                        cover: 'cover.jpg'
+                    }
+                ]
+            });
+        
+    </script>
+</body>
 
 
 

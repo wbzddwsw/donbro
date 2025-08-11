@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8" />
+<title>BGM Player</title>
+<style>
+  body {
+    margin: 0; background: transparent;
+  }
+  #bgm-btn {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+  }
+  #bgm-btn:hover {
+    background: #e68900;
+  }
+</style>
+</head>
+<body>
+
+<button id="bgm-btn">▶️ 播放音乐</button>
+<audio id="bgm-audio" loop>
+  <source src="/music/bgm.mp3" type="audio/mpeg" />
+</audio>
+
+<script>
+const audio = document.getElementById("bgm-audio");
+const btn = document.getElementById("bgm-btn");
+let playing = false;
+
+btn.addEventListener("click", () => {
+  if (!playing) {
+    audio.play().then(() => {
+      btn.textContent = "⏸ 暂停音乐";
+      playing = true;
+    }).catch(e => {
+      console.log("播放失败", e);
+    });
+  } else {
+    audio.pause();
+    btn.textContent = "▶️ 播放音乐";
+    playing = false;
+  }
+});
+</script>
+
+</body>
+</html>
