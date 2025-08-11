@@ -2300,24 +2300,138 @@ img.message__img {
 
 #### neodb
 
+参考[Blog | 菜谱：用NeoDB短代码展示书影游短评](https://mantyke.icu/posts/2025/blogglowup/)，另有修正如下：
 
+1. **neodb.html** 中有两处：
+
+```
+<div class="db-card-post">
+    <img src="" <!-- 占位图片链接 -->
+         alt="Placeholder Image" 
+         style="max-width: 100%; height: auto;" 
+         id="{{ $uniqueId }}">
+</div>
+
+<div class="db-card-post">
+    <img src="" <!-- 占位图片链接 -->
+         alt="开发模式占位图片" 
+         style="max-width: 100%; height: auto;">
+</div>       
+```
+
+需要修改成：
+
+```
+<div class="db-card-post">
+    <!-- 占位图片链接 -->
+    <img src="" 
+         alt="Placeholder Image" 
+         style="max-width: 100%; height: auto;" 
+         id="{{ $uniqueId }}">
+</div>
+
+<div class="db-card-post">
+    <!-- 占位图片链接 -->
+    <img src="" 
+         alt="开发模式占位图片" 
+         style="max-width: 100%; height: auto;">
+</div> 
+```
+
+因为` <!-- 占位图片链接 -->`是注释不能出现在属性值中
 
 <details>
-<summary><strong>代码</strong> 1.在 /layouts/shortcodes/neodb.html 中添加：</summary>
+<summary><strong>代码</strong> 2.在 /assets/scss/custom.scss 中添加：（原帖是css，此处改成scss）</summary>
 
-
-```
-
-```
-
-</details>
-
-<details>
-<summary><strong>代码</strong> 2.在 /assets/scss/custom.scss 中添加：</summary>
 
 
 ```
- 
+ // Neodb card style
+.db-card {
+  margin: 0;
+  background: var(--color-codebg);
+  border-radius: 7px;
+  box-shadow: none;
+  font-size: 14px;
+  padding-top: 10px;
+
+  &-subject {
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.6;
+    position: relative;
+    font-size: inherit; // 继承全局字体大小
+  }
+
+  &-content {
+    flex: 1 1 auto;
+    overflow: auto;
+    margin-top: 8px;
+  }
+
+  &-post {
+    width: 100px;
+    margin-right: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex: 0 0 auto;
+
+    img {
+      width: 100px !important;
+      height: 150px !important;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+  }
+
+  &-title {
+    padding-top: 8px; // 轻微调整标题的高度
+    margin-bottom: 3px;
+    color: #fff;
+    font-weight: bold;
+
+    a {
+      text-decoration: none !important;
+    }
+  }
+
+  &-rating,
+  &-comment,
+  &-cate {
+    font-size: inherit; // 继承全局字体大小
+  }
+
+  &-comment {
+    margin-top: -5px;
+    color: var(--card-text-color-main);
+    max-height: none;
+    overflow: visible;
+  }
+
+  &-cate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1px 8px;
+    font-style: italic;
+    border-radius: 0 8px 0 8px;
+    text-transform: capitalize;
+    background: #6b0f0f;
+    color: #fff;
+  }
+}
+
+.dark {
+  .db-card {
+    background: var(--color-codebg);
+  }
+}
+
+@media (max-width: 600px) {
+  .db-card {
+    margin: 0.8rem 0.5rem;
+  }
+}
 ```
 
 </details>
