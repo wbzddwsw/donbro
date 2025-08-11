@@ -129,9 +129,9 @@ Hugo.exe 放在 D 盘的 blog 文件中，可以从文件上方看到文件路�
 
 ## 新建文章
 
-在 **donbro** 文件夹的空白处单击右键，选择 `Open Git Bash Here`，在弹出的命令行界面中输入 `hugo new posts/文章名字.md` 
+在博客文件夹的空白处单击右键，选择 `Open Git Bash Here`，在弹出的命令行界面中输入 `hugo new posts/文章名字.md` 
 
-![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/a506b2a3-873e-461c-a4b9-a7340cdf9bb3.png)
+![1](https://chatstorage.dvd.moe/dvdchat/dvdchat/46abb6f6-b8e7-43f0-807a-da06cb4a7ab3.png)
 
 回车后，hugo 会在 **\\仓库名字\content\posts** 文件夹中创建一个新的 md 文件，用 Markdown 编辑器（比如 Tyopa ）打开后，就可以写文章了
 
