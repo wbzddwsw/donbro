@@ -33,12 +33,12 @@
                 music: [
                     {   name: 'Bliss',
                         artist: 'milet',
-                        url: 'music/Bliss.mp3',
-                        cover: 'cover.jpg'},
+                        url: '{{ "music/Bliss.mp3" | relURL }}',
+                        cover: '{{ "cover.jpg" | relURL }}'},
                     {   name: '涉川',
                         artist: '不才',
-                        url: 'music/涉川.mp3',
-                        cover: 'cover.jpg'}
+                        url: '{{ "music/涉川.mp3" | relURL }}',
+                        cover: '{{ "cover.jpg" | relURL }}'}
                 ]
             });
         //ap.init();
