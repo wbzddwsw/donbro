@@ -100,18 +100,19 @@ Press Ctrl+C to stop
 
 ```
 waline:
-            serverURL: https://***/
-            lang: zh-cn
-            pageview: ***
-            emoji:
-                - https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs
-                - https://gcore.jsdelivr.net/gh/norevi/blob-emoji-for-waline@2.0/blobs-gif
-                - https://gcore.jsdelivr.net/gh/norevi/blob-emoji-for-waline@2.0/blobs-png
-                - https://gcore.jsdelivr.net/gh/Saidosi/azuki-emoji-for-waline@1.0/azukisan/
-            requiredMeta:
-                - name
-                - email
-                - url
-            locale:
-                admin: Admin
-                placeholder:
+  serverURL: https://***/
+  lang: zh-cn
+  pageview: ***
+  emoji:
+    - https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs
+    - https://gcore.jsdelivr.net/gh/norevi/blob-emoji-for-waline@2.0/blobs-gif
+    - https://gcore.jsdelivr.net/gh/norevi/blob-emoji-for-waline@2.0/blobs-png
+    - https://gcore.jsdelivr.net/gh/Saidosi/azuki-emoji-for-waline@1.0/azukisan/
+  requiredMeta:
+    - name
+    - email
+    - url
+  locale:
+    admin: Admin
+    placeholder:
+```
