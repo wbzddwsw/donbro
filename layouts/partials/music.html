@@ -1,46 +1,95 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <!-- require APlayer -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-    <!-- require MetingJS -->
-    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+  <meta charset="UTF-8" />
+  <title>音乐播放器测试</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
 </head>
-
 <body>
-    <div class="demo">
-        <div id="player1">
-        </div>
-    </div>
-    <script>
-        var ap = new APlayer
-            ({
-                element: document.getElementById('player1'),
-                fixed: true,
-                autoplay: false,
-                mini: true,
-                theme: '#f8f4fc',
-                loop: 'all',
-                order: 'random',
-                preload: 'auto',
-                volume: 0.2,
-                mutex: true,
-                listFolded: true,
-                listMaxHeight: '500px',
-                lrcType: 0,
-                music: [
-                    {   name: 'Bliss',
-                        artist: 'milet',
-                        url: '{{ "music/Bliss.mp3" | relURL }}',
-                        cover: '{{ "cover.jpg" | relURL }}'},
-                    {   name: '涉川',
-                        artist: '不才',
-                        url: '{{ "music/涉川.mp3" | relURL }}',
-                        cover: '{{ "cover.jpg" | relURL }}'}
-                ]
-            });
-        //ap.init();
-    </script>
+  <div class="demo">
+    <div id="player1"></div>
+  </div>
+
+  <script>
+    // 这里可以直接复制上面 music-player.html 里的JS部分
+    var ap = new APlayer({
+      element: document.getElementById('player1'),
+      fixed: true,
+      autoplay: false,
+      mini: true,
+      theme: '#f8f4fc',
+      loop: 'all',
+      order: 'random',
+      preload: 'auto',
+      volume: 0.2,
+      mutex: true,
+      listFolded: true,
+      listMaxHeight: '500px',
+      lrcType: 0,
+      music: [
+        {
+          name: 'Bliss',
+          artist: 'milet',
+          url: 'music/Bliss.mp3',
+          cover: 'cover.jpg'
+        },
+        {
+          name: '涉川',
+          artist: '不才',
+          url: 'music/涉川.mp3',
+          cover: 'cover.jpg'
+        }
+      ]
+    });
+
+    let restoring = true;
+
+    window.addEventListener('load', function () {
+      const savedIndex = localStorage.getItem('aplayer-currentIndex');
+      const savedTime = localStorage.getItem('aplayer-currentTime');
+      const savedPaused = localStorage.getItem('aplayer-paused');
+
+      if (savedIndex !== null) {
+        ap.list.switch(parseInt(savedIndex));
+      }
+      if (savedTime !== null) {
+        const time = parseFloat(savedTime);
+        if (!isNaN(time) && isFinite(time)) {
+          ap.seek(time);
+        }
+      }
+      if (savedPaused === 'false') {
+        ap.play().catch(() => {});
+      }
+      restoring = false;
+    });
+
+    ap.on('timeupdate', function (currentTime) {
+      if (!restoring) {
+        localStorage.setItem('aplayer-currentTime', currentTime);
+      }
+    });
+
+    ap.on('switch', function (index) {
+      if (!restoring) {
+        localStorage.setItem('aplayer-currentIndex', index);
+        localStorage.setItem('aplayer-currentTime', 0);
+      }
+    });
+
+    ap.on('pause', function () {
+      if (!restoring) {
+        localStorage.setItem('aplayer-paused', 'true');
+      }
+    });
+
+    ap.on('play', function () {
+      if (!restoring) {
+        localStorage.setItem('aplayer-paused', 'false');
+      }
+    });
+  </script>
 </body>
+</html>

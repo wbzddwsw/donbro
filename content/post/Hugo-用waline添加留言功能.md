@@ -93,3 +93,25 @@ Press Ctrl+C to stop
 1. 部署完成后，请访问你的域名进行注册。首个注册的人会被设定成管理员。
 2. 管理员登陆后，即可看到评论管理界面。在这里可以修改、标记或删除评论。 
 3. 用户也可通过评论框注册账号，登陆后会跳转到自己的档案页。
+
+### 添加emoji
+
+打开 hugo.yaml，找到 waline 部分，在 `emoji:` 下面添加表情链接。示例如下：
+
+```
+waline:
+            serverURL: https://***/
+            lang: zh-cn
+            pageview: ***
+            emoji:
+                - https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs
+                - https://gcore.jsdelivr.net/gh/norevi/blob-emoji-for-waline@2.0/blobs-gif
+                - https://gcore.jsdelivr.net/gh/norevi/blob-emoji-for-waline@2.0/blobs-png
+                - https://gcore.jsdelivr.net/gh/Saidosi/azuki-emoji-for-waline@1.0/azukisan/
+            requiredMeta:
+                - name
+                - email
+                - url
+            locale:
+                admin: Admin
+                placeholder:

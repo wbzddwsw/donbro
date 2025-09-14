@@ -109,7 +109,10 @@ params:
             lang: zh-cn
             pageview: 也许你想留下些什么……
             emoji:
-                - https://unpkg.com/@waline/emojis@1.0.1/weibo
+                - https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs
+                - https://gcore.jsdelivr.net/gh/norevi/blob-emoji-for-waline@2.0/blobs-gif
+                - https://gcore.jsdelivr.net/gh/norevi/blob-emoji-for-waline@2.0/blobs-png
+                - https://gcore.jsdelivr.net/gh/Saidosi/azuki-emoji-for-waline@1.0/azukisan/
             requiredMeta:
                 - name
                 - email

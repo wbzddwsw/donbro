@@ -672,6 +672,27 @@ a {
 
 </details>
 
+
+
+#### 删除亮/暗模式按钮
+
+<details>
+<summary><strong>代码</strong> 在 /layouts/partials/sidebar/left.html 中删除：</summary>
+
+
+```
+……
+<li id="dark-mode-toggle">
+    {{ partial "helper/icon" "toggle-left" }}
+    {{ partial "helper/icon" "toggle-right" }}
+    <span>{{ T "darkMode" }}</span>
+</li>
+……
+```
+
+</details>
+
+
 ### 内容
 
 #### 图片居中
